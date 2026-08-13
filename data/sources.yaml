@@ -1,0 +1,17 @@
+rss_sources:
+  - name: "The Verge Tech"
+    url: "https://www.theverge.com/rss/index.xml"
+  - name: "GSMArena"
+    url: "https://www.gsmarena.com/rss-news-reviews.php3"
+  - name: "9to5Mac"
+    url: "https://9to5mac.com/feed/"
+  - name: "Wccftech"
+    url: "https://wccftech.com/feed/"
+
+youtube_channels:
+  - name: "MKBHD"
+    channel_id: "UCBJycsmduvYEL83R_U4JriQ"
+  - name: "Dave2D"
+    channel_id: "UCVYamHliCI9rw1tHR1xbkfw"
+  - name: "Linus Tech Tips"
+    channel_id: "UCXuqSBlHAE6Xw-yeJA0Tunw"

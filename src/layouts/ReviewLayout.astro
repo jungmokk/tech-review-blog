@@ -1,0 +1,50 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+
+const { frontmatter } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org/",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": frontmatter.device || frontmatter.title
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": String(frontmatter.score || 9.0),
+    "bestRating": "10"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Tech Review Blog"
+  }
+};
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{frontmatter.title} | TECH REVIEW</title>
+  <meta name="description" content={frontmatter.summary} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+</head>
+<body>
+  <Header />
+  <main class="container" style="padding: 40px 20px;">
+    <article class="review-article">
+      <span class="badge">{frontmatter.category}</span>
+      <h1 style="font-size: 2.2rem; margin: 12px 0;">{frontmatter.title}</h1>
+      <p style="color: var(--text-muted); margin-bottom: 24px;">발행일: {frontmatter.date} • 추천 평점: ⭐ {frontmatter.score} / 10</p>
+      <slot />
+    </article>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2026 Tech Review Blog. Automated AI Data Synthesis Pipeline.</p>
+    </div>
+  </footer>
+</body>
+</html>
