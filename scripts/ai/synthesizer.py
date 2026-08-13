@@ -4,9 +4,12 @@ import re
 
 def generate_review_mdx(device_name, raw_facts):
     """
-    Gemini 2.5 Flash API를 사용하여 해외/국내 테크 소스를 교차 검증하고 고품질 한글 리뷰 MDX를 자동 생성합니다.
+    Gemini, DeepSeek, Qwen 등 선택된 AI 모델 API를 사용하여 테크 리뷰 포스트 MDX를 생성합니다.
     """
-    api_key = os.environ.get("GEMINI_API_KEY")
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
+    qwen_key = os.environ.get("QWEN_API_KEY")
+    
     slug = re.sub(r'[^a-z0-9]+', '-', device_name.lower()).strip('-')
 
     prompt = f"""
@@ -17,7 +20,7 @@ def generate_review_mdx(device_name, raw_facts):
 
 다음 요구사항에 맞춰 고품질 마크다운(MDX) 리뷰 포스트를 완성하세요:
 
-[필수 Frontmatter]
+[필수 Frontmatter 형식]
 ---
 title: "{device_name} 심층 리뷰: 장단점과 실사용 퍼포먼스 총정리"
 date: "2026-08-13"
@@ -32,7 +35,6 @@ cons:
   - "전작 대비 상승한 가격 부담"
 ---
 
-[필수 본문 구조]
 # {device_name} 심층 리뷰 및 실사용 가이드
 
 해외 주요 매체와 수집된 사용자 데이터 및 벤치마크 결과를 바탕으로 종합 정리한 **{device_name}** 리뷰입니다.
@@ -68,19 +70,52 @@ cons:
 ## 💡 총평 및 구매 가이드
 """
 
-    if api_key:
+    # 1. DeepSeek API 우선 호환 (OpenAI 규격)
+    if deepseek_key:
+        try:
+            from openai import OpenAI
+            client = OpenAI(api_key=deepseek_key, base_url="https://api.deepseek.com")
+            print("[AI Synthesizer] DeepSeek V3 모델 사용 중...")
+            response = client.chat.completions.create(
+                model="deepseek-chat",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7
+            )
+            return slug, response.choices[0].message.content
+        except Exception as e:
+            print(f"[AI Synthesizer] DeepSeek API 오류: {e}")
+
+    # 2. Qwen API 호환
+    if qwen_key:
+        try:
+            from openai import OpenAI
+            # DashScope OpenAI 호환 엔드포인트
+            client = OpenAI(api_key=qwen_key, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+            print("[AI Synthesizer] Qwen 2.5 모델 사용 중...")
+            response = client.chat.completions.create(
+                model="qwen-max",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7
+            )
+            return slug, response.choices[0].message.content
+        except Exception as e:
+            print(f"[AI Synthesizer] Qwen API 오류: {e}")
+
+    # 3. Gemini API 호환
+    if gemini_key:
         try:
             from google import genai
-            client = genai.Client(api_key=api_key)
+            client = genai.Client(api_key=gemini_key)
+            print("[AI Synthesizer] Gemini 2.5 Flash 모델 사용 중...")
             response = client.models.generate_content(
                 model='gemini-2.5-flash',
                 contents=prompt
             )
             return slug, response.text
         except Exception as e:
-            print(f"[AI Synthesizer] Gemini API 호출 오류: {e}")
+            print(f"[AI Synthesizer] Gemini API 오류: {e}")
 
-    # Fallback template when API Key is absent in local environment
+    # Fallback template
     mock_mdx = f"""---
 title: "{device_name} 심층 리뷰: 장단점과 가성비 총정리"
 date: "2026-08-13"
