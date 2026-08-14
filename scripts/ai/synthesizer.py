@@ -2,6 +2,13 @@ import os
 import json
 import re
 
+def clean_mdx_content(text: str) -> str:
+    text = text.strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:markdown|mdx)?\r?\n", "", text)
+        text = re.sub(r"\r?\n```$", "", text)
+    return text.strip()
+
 def generate_review_mdx(device_name, raw_facts):
     """
     Gemini, DeepSeek, Qwen 등 선택된 AI 모델 API를 사용하여 테크 리뷰 포스트 MDX를 생성합니다.
@@ -10,7 +17,29 @@ def generate_review_mdx(device_name, raw_facts):
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
     qwen_key = os.environ.get("QWEN_API_KEY")
     
-    slug = re.sub(r'[^a-z0-9]+', '-', device_name.lower()).strip('-')
+    slug = device_name.lower()
+    slug_map = {
+        "갤럭시": "galaxy",
+        "포드": "fold",
+        "폴드": "fold",
+        "플립": "flip",
+        "아이폰": "iphone",
+        "맥북": "macbook",
+        "아이패드": "ipad",
+        "울트라": "ultra",
+        "플러스": "plus",
+        "프로": "pro",
+        "맥스": "max",
+        "에어": "air",
+        "워치": "watch",
+        "버즈": "buds",
+        "에어팟": "airpods",
+    }
+    for k, v in slug_map.items():
+        slug = slug.replace(k, v)
+    slug = re.sub(r'[^a-z0-9가-힣]+', '-', slug).strip('-')
+    if not slug:
+        slug = "review-post"
 
     prompt = f"""
 당신은 대한민국 최고 수준의 IT/테크 전문 리뷰 에디터입니다.
@@ -74,11 +103,11 @@ cons:
     if qwen_key:
         try:
             from openai import OpenAI
-            qwen_base_url = os.environ.get(
-                "QWEN_BASE_URL", 
-                "https://ws-gv65z0e7ds9mibcp.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+            qwen_base_url = (
+                os.environ.get("QWEN_BASE_URL")
+                or "https://ws-gv65z0e7ds9mibcp.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
             )
-            qwen_model = os.environ.get("QWEN_MODEL", "qwen-max")
+            qwen_model = os.environ.get("QWEN_MODEL") or "qwen-max"
             
             client = OpenAI(api_key=qwen_key, base_url=qwen_base_url)
             print(f"[AI Synthesizer] Qwen 모델 ({qwen_model}) 호출 중... (엔드포인트: {qwen_base_url})")
@@ -87,7 +116,8 @@ cons:
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.7
             )
-            return slug, response.choices[0].message.content
+            content = clean_mdx_content(response.choices[0].message.content)
+            return slug, content
         except Exception as e:
             print(f"[AI Synthesizer] Qwen API 오류: {e}")
 
@@ -102,7 +132,7 @@ cons:
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.7
             )
-            return slug, response.choices[0].message.content
+            return slug, clean_mdx_content(response.choices[0].message.content)
         except Exception as e:
             print(f"[AI Synthesizer] DeepSeek API 오류: {e}")
 
@@ -116,7 +146,7 @@ cons:
                 model='gemini-2.5-flash',
                 contents=prompt
             )
-            return slug, response.text
+            return slug, clean_mdx_content(response.text)
         except Exception as e:
             print(f"[AI Synthesizer] Gemini API 오류: {e}")
 

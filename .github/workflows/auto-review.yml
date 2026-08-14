@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: '0 0 * * *' # 매일 한국 시간 오전 9시 (UTC 00:00)
   workflow_dispatch: # 수동 실행 버튼 지원
+    inputs:
+      device:
+        description: '리뷰를 생성할 특정 기기명 (예: 갤럭시 Z 폴드8, M4 Mac Mini / 비워둘 경우 RSS 자동 감지)'
+        required: false
+        default: '갤럭시 Z 폴드8'
+        type: string
+      force:
+        description: '이미 발행된 기기라도 강제 재생성 여부'
+        required: false
+        default: true
+        type: boolean
 
 jobs:
   build-and-generate:
@@ -30,8 +41,18 @@ jobs:
           QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
           QWEN_BASE_URL: ${{ secrets.QWEN_BASE_URL }}
           QWEN_MODEL: ${{ secrets.QWEN_MODEL }}
+          TARGET_DEVICE: ${{ inputs.device }}
+          FORCE_GENERATE: ${{ inputs.force }}
         run: |
-          python scripts/generate.py
+          CMD="python scripts/generate.py"
+          if [ -n "$TARGET_DEVICE" ]; then
+            CMD="$CMD --device \"$TARGET_DEVICE\""
+          fi
+          if [ "$FORCE_GENERATE" = "true" ]; then
+            CMD="$CMD --force"
+          fi
+          echo "Executing: $CMD"
+          eval $CMD
 
       - name: Commit and Push New Review
         uses: stefanzweifel/git-auto-commit-action@v5
