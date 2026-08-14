@@ -4,9 +4,20 @@ import re
 
 def clean_mdx_content(text: str) -> str:
     text = text.strip()
+    # 1. 코드 블록(```markdown ... ```)으로 감싸진 경우 내부 Frontmatter 본문만 추출
+    match = re.search(r'```(?:markdown|mdx)?\s*\n(---[\s\S]+?)\n```', text)
+    if match:
+        return match.group(1).strip()
+    
+    # 2. Frontmatter로 바로 시작하는 경우 후속 닫는 코드블록 및 부가 설명 제거
+    if text.startswith("---"):
+        parts = re.split(r'\n```', text, maxsplit=1)
+        return parts[0].strip()
+        
+    # 3. 일반적인 코드 펜스 제거
     if text.startswith("```"):
         text = re.sub(r"^```(?:markdown|mdx)?\r?\n", "", text)
-        text = re.sub(r"\r?\n```$", "", text)
+        text = re.sub(r"\r?\n```[\s\S]*$", "", text)
     return text.strip()
 
 def generate_review_mdx(device_name, raw_facts):
