@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from sources.image_fetcher import fetch_real_device_images
 
 def clean_mdx_content(text: str) -> str:
     text = text.strip()
@@ -23,6 +24,7 @@ def clean_mdx_content(text: str) -> str:
 def generate_review_mdx(device_name, raw_facts):
     """
     Gemini, DeepSeek, Qwen 등 선택된 AI 모델 API를 사용하여 테크 리뷰 포스트 MDX를 생성합니다.
+    웹(유튜브 및 테크 매체)에서 실제 기기 핸즈온 사진을 자동 수집하여 본문에 배치합니다.
     """
     gemini_key = os.environ.get("GEMINI_API_KEY")
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
@@ -52,22 +54,43 @@ def generate_review_mdx(device_name, raw_facts):
     if not slug:
         slug = "review-post"
 
+    # 웹/유튜브에서 실제 기기 핸즈온 이미지 자동 수집
+    real_images = raw_facts.get("images")
+    if not real_images:
+        try:
+            real_images = fetch_real_device_images(device_name, slug, max_images=3)
+            raw_facts["images"] = real_images
+        except Exception as img_err:
+            print(f"[Synthesizer] 이미지 수집 중 예외 발생: {img_err}")
+            real_images = []
+
+    image_guide = ""
+    if real_images:
+        image_guide = "본문에 사용할 수 있는 실제 웹/유튜브 기기 핸즈온 사진 목록입니다. 도입부 하단 및 소제목 아래에 적절히 마크다운 이미지 태그(![설명](경로)\\n*▲ 캡션*)로 배치하세요:\n"
+        for img in real_images:
+            image_guide += f"- 이미지 경로: {img['url']} | 캡션: {img['caption']}\n"
+
     prompt = f"""
 당신은 대한민국 최고의 네이버 테크 전문 블로거(‘테크티노의 IT 이야기’ 스타일)입니다.
 독자가 실제로 공감하고 몰입할 수 있도록 기계적/교과서적 AI 말투("~분석합니다", "~보여줍니다")를 완전히 버리고, 실제 손에 쥐고 써본 블로거의 친근하고 신뢰도 높은 자연스러운 경어체("~인데요", "~인 것 같습니다", "~생각됩니다")로 작성하세요.
+절대 AI 가상 이미지를 지어내지 말고, 아래 제공된 실제 기기 사진 목록만 사용하세요.
 
 대상 리뷰 기기: {device_name}
 수집된 소스 정보:
 {json.dumps(raw_facts, ensure_ascii=False, indent=2)}
 
-다음 6가지 핵심 공식을 완벽히 적용하여 완성도 높은 마크다운(MDX) 포스트를 작성하세요:
+{image_guide}
 
-1. **[도입부 스토리텔링]**: 일상에서 기기 교체를 고민하게 되는 실제 배경(업무, 영상 시청, 손목 피로도 등)으로 자연스럽게 시작.
+다음 7가지 핵심 공식을 완벽히 적용하여 완성도 높은 마크다운(MDX) 포스트를 작성하세요:
+
+1. **[도입부 스토리텔링 & 실물 Hero 사진]**: 일상 속 고민으로 시작하고, 도입부 직후 실제 기기 사진(![설명](URL)) 배치.
 2. **[핵심 3줄 요약]**: 바쁜 독자를 위해 도입부 직후 번호 매긴 명확한 3줄 요약(①, ②, ③) 제시.
 3. **[목차]**: 본문 주요 소제목 4~5개 나열.
 4. **[질문형/대화형 소제목 & 첫 문장 볼드 리드]**: 각 소제목은 흥미를 유발하는 질문형으로 작성하고, 바로 아래 첫 줄에 **핵심 결론을 담은 굵은 리드 문장** 배치.
-5. **[소주제별 분할 비교 표]**: 큰 표 하나 대신, 디자인/무게 표, 성능/디스플레이 표, 카메라/배터리 표, 최종 비교 표를 각 섹션에 나누어 배치.
-6. **[마무리 한마디 & 소통형 총평]**: `마무리 한마디 : ...`와 함께 독자 댓글 참여를 유도하는 열린 질문으로 마무리.
+5. **[섹션별 실물 사진 & 분할 비교 표]**: 각 소제목 아래에 관련된 실제 핸즈온 사진과 미니 비교표를 적재적소에 배치.
+6. **[솔직한 단점 3가지]**: 가차 없는 체크포인트 명시.
+7. **[마무리 한마디 & 소통형 총평]**: `마무리 한마디 : ...`와 함께 독자 댓글 참여를 유도하는 열린 질문으로 마무리.
+
 
 [Frontmatter 및 마크다운 출력 규격]
 ---
@@ -244,7 +267,17 @@ cons:
         except Exception as e:
             print(f"[AI Synthesizer] Gemini API 오류: {e}")
 
-    # Fallback template (Naver Top Tech Blog Style)
+    # Fallback template (Naver Top Tech Blog Style with Real Images)
+    hero_img = ""
+    sec1_img = ""
+    sec2_img = ""
+    if real_images and len(real_images) > 0:
+        hero_img = f"\n![{device_name} 실물 핸즈온]({real_images[0]['url']})\n*{real_images[0]['caption']}*\n"
+    if real_images and len(real_images) > 1:
+        sec1_img = f"\n![{device_name} 디자인 실물]({real_images[1]['url']})\n*{real_images[1]['caption']}*\n"
+    if real_images and len(real_images) > 2:
+        sec2_img = f"\n![{device_name} 디스플레이 및 기능]({real_images[2]['url']})\n*{real_images[2]['caption']}*\n"
+
     mock_mdx = f"""---
 title: "고민 끝에 결정했다: {device_name} 실사용 솔직 후기 및 장단점"
 date: "2026-08-14"
@@ -266,7 +299,7 @@ cons:
 폴더블 스마트폰을 고민 중이거나 기변 타이밍을 재고 계신 분들이라면 올해는 유독 생각이 많아질 수밖에 없습니다. 평소 출퇴근길 영상 시청이나 업무 중 대화면 멀티윈도우를 자주 쓰다 보니 폴더블 신제품에는 항상 눈길이 가는데요. 
 
 그동안은 "아직 주름이나 두께 때문에 시기상조"라는 의견도 많았지만, 이번 모델은 완성도 면에서 꽤 유의미한 변화를 보여주고 있습니다. 단순 스펙 비교를 넘어 실제 손에 쥐었을 때의 체감과 솔직한 장단점을 정리해 보았습니다.
-
+{hero_img}
 ---
 
 ### 📌 핵심 3줄 요약
@@ -290,7 +323,7 @@ cons:
 **접었을 때의 두께감이 확 줄어들면서 손목에 가해지는 부담이 눈에 띄게 줄었습니다.**
 
 {device_name}은 기존보다 가로 폭이 약간 넓어지고 두께가 얇아지면서 커버 화면 활용성이 크게 좋아졌습니다. 내부는 7.6인치 Dynamic AMOLED 2X, 외부는 5.5인치 커버 디스플레이를 갖추었습니다.
-
+{sec1_img}
 | 디자인 비교 항목 | 상세 스펙 및 체감 |
 | :--- | :--- |
 | **접었을 때 두께** | 약 10.5mm (바형 플래그십 폰과 유사한 그립감) |
@@ -307,7 +340,7 @@ cons:
 **최신 3nm 플래그십 프로세서가 탑재되어 고사양 게임과 멀티태스킹 모두 쾌적합니다.**
 
 주요 성능 사양을 정리하면 다음과 같습니다:
-
+{sec2_img}
 | 항목 | 상세 사양 및 특징 |
 | :--- | :--- |
 | **프로세서 (AP)** | 최신 3nm 옥타코어 플래그십 칩셋 |
@@ -316,6 +349,7 @@ cons:
 | **최대 피크 밝기** | 최대 2,600nits (야외 직사광선 시인성 우수) |
 
 앱 3개를 동시에 띄워놓고 작업하거나 고사양 게임(원신 등)을 구동해도 프레임 드랍 없이 부드럽게 유지되며, 대형 베이퍼 챔버 덕분에 발열이 특정 부위에 몰리지 않고 고르게 분산됩니다.
+
 
 ---
 
