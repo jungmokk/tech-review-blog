@@ -23,7 +23,7 @@ def generate_review_mdx(device_name, raw_facts):
 [필수 Frontmatter 형식]
 ---
 title: "{device_name} 심층 리뷰: 장단점과 실사용 퍼포먼스 총정리"
-date: "2026-08-13"
+date: "2026-08-14"
 device: "{device_name}"
 score: 9.2
 category: "스마트폰/IT"
@@ -70,7 +70,28 @@ cons:
 ## 💡 총평 및 구매 가이드
 """
 
-    # 1. DeepSeek API 우선 호환 (OpenAI 규격)
+    # 1. Qwen API 호환 (전용 Aliyun MaaS / DashScope 엔드포인트 지원)
+    if qwen_key:
+        try:
+            from openai import OpenAI
+            qwen_base_url = os.environ.get(
+                "QWEN_BASE_URL", 
+                "https://ws-gv65z0e7ds9mibcp.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+            )
+            qwen_model = os.environ.get("QWEN_MODEL", "qwen-max")
+            
+            client = OpenAI(api_key=qwen_key, base_url=qwen_base_url)
+            print(f"[AI Synthesizer] Qwen 모델 ({qwen_model}) 호출 중... (엔드포인트: {qwen_base_url})")
+            response = client.chat.completions.create(
+                model=qwen_model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7
+            )
+            return slug, response.choices[0].message.content
+        except Exception as e:
+            print(f"[AI Synthesizer] Qwen API 오류: {e}")
+
+    # 2. DeepSeek API 호환 (OpenAI 규격)
     if deepseek_key:
         try:
             from openai import OpenAI
@@ -84,22 +105,6 @@ cons:
             return slug, response.choices[0].message.content
         except Exception as e:
             print(f"[AI Synthesizer] DeepSeek API 오류: {e}")
-
-    # 2. Qwen API 호환
-    if qwen_key:
-        try:
-            from openai import OpenAI
-            # DashScope OpenAI 호환 엔드포인트
-            client = OpenAI(api_key=qwen_key, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
-            print("[AI Synthesizer] Qwen 2.5 모델 사용 중...")
-            response = client.chat.completions.create(
-                model="qwen-max",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.7
-            )
-            return slug, response.choices[0].message.content
-        except Exception as e:
-            print(f"[AI Synthesizer] Qwen API 오류: {e}")
 
     # 3. Gemini API 호환
     if gemini_key:
@@ -118,7 +123,7 @@ cons:
     # Fallback template
     mock_mdx = f"""---
 title: "{device_name} 심층 리뷰: 장단점과 가성비 총정리"
-date: "2026-08-13"
+date: "2026-08-14"
 device: "{device_name}"
 score: 9.2
 category: "스마트폰/IT"
