@@ -157,6 +157,12 @@ cons:
 "{device_name}에 대한 종합 총평과 사전예약/자급제 구매 팁을 직설적으로 제시합니다."
 """
 
+    system_prompt = (
+        "당신은 대한민국 최고의 IT/테크 전문 리뷰 에디터(유튜브 '잇섭' 스타일)입니다. "
+        "모든 답변과 마크다운 본문은 처음부터 끝까지 100% 자연스럽고 유창한 한국어로만 작성해야 합니다. "
+        "중국어(한자)나 기타 외국어 혼용, 불필요한 언어 전환을 엄격히 금지합니다."
+    )
+
     # 1. Qwen API 호환 (전용 Aliyun MaaS / DashScope 엔드포인트 지원)
     if qwen_key:
         try:
@@ -171,7 +177,10 @@ cons:
             print(f"[AI Synthesizer] Qwen 모델 ({qwen_model}) 호출 중... (엔드포인트: {qwen_base_url})")
             response = client.chat.completions.create(
                 model=qwen_model,
-                messages=[{"role": "user", "content": prompt}],
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt}
+                ],
                 temperature=0.7
             )
             content = clean_mdx_content(response.choices[0].message.content)
@@ -187,7 +196,10 @@ cons:
             print("[AI Synthesizer] DeepSeek V3 모델 사용 중...")
             response = client.chat.completions.create(
                 model="deepseek-chat",
-                messages=[{"role": "user", "content": prompt}],
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt}
+                ],
                 temperature=0.7
             )
             return slug, clean_mdx_content(response.choices[0].message.content)
@@ -202,7 +214,7 @@ cons:
             print("[AI Synthesizer] Gemini 2.5 Flash 모델 사용 중...")
             response = client.models.generate_content(
                 model='gemini-2.5-flash',
-                contents=prompt
+                contents=f"{system_prompt}\n\n{prompt}"
             )
             return slug, clean_mdx_content(response.text)
         except Exception as e:
