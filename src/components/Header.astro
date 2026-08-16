@@ -1,15 +1,23 @@
 ---
+import ThemeToggle from './ThemeToggle.astro';
+import LanguageSelector from './LanguageSelector.astro';
 ---
 <header class="header">
   <div class="container header-inner">
     <a href="/" class="logo">
       <span>⚡ TECH SPEC BLOG</span>
     </a>
+    
     <nav class="nav-links">
       <a href="/" class="nav-link">홈</a>
       <a href="/specs" class="nav-link" style="color: var(--accent-cyan); font-weight: 700;">📱 스펙 백과사전</a>
       <a href="/#reviews" class="nav-link">최신 리뷰</a>
       <a href="/about" class="nav-link">소개</a>
     </nav>
+
+    <div class="header-actions" style="display: flex; align-items: center; gap: 10px;">
+      <LanguageSelector />
+      <ThemeToggle />
+    </div>
   </div>
 </header>

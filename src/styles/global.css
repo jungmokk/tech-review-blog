@@ -22,6 +22,82 @@
   --radius-lg: 24px;
 }
 
+/* Light Theme Variables & Overrides */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-hover: rgba(2, 132, 199, 0.5);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --accent-cyan: #0284c7;
+  --accent-indigo: #2563eb;
+}
+
+[data-theme="light"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .bento-card,
+[data-theme="light"] .card,
+[data-theme="light"] .spec-card,
+[data-theme="light"] .sidebar-card,
+[data-theme="light"] .verdict-box,
+[data-theme="light"] .video-card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .verdict-title,
+[data-theme="light"] .verdict-score-num,
+[data-theme="light"] .bento-title,
+[data-theme="light"] .hero-title,
+[data-theme="light"] .spec-name,
+[data-theme="light"] .video-card-title,
+[data-theme="light"] .sidebar-title {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .hero-badge-pill {
+  background: rgba(2, 132, 199, 0.1) !important;
+  border-color: rgba(2, 132, 199, 0.3) !important;
+}
+
+[data-theme="light"] footer {
+  background: #f1f5f9 !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+/* Google Translate Widget Optimization */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+.VIpgJd-ZVi9od-ORLlOd-OEVmcd {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
