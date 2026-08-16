@@ -6,6 +6,7 @@ export async function GET() {
 
   const pages = [
     '',
+    'specs',
     ...reviews.map((post) => `reviews/${post.slug}`),
   ];
 

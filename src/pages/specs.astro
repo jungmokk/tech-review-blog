@@ -1,0 +1,459 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import smartphones from '../data/smartphones.json';
+
+const totalCount = smartphones.length;
+const brands = ['전체', 'Samsung', 'Apple', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'OnePlus', 'Huawei', 'Honor', '기타'];
+const years = ['전체', '2026', '2025', '2024', '2023'];
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스마트폰 스펙 백과사전 (2023~2026.01) | TECH SPEC BLOG</title>
+  <meta name="description" content="2023년부터 2026년 1월까지 출시된 삼성, 애플, 구글, 샤오미, 비보, 오포, 화웨이 등 모든 스마트폰의 상세 스펙 명세표와 1:1 비교를 제공하는 스펙 백과사전입니다." />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="스마트폰 스펙 백과사전 (2023~2026.01) | TECH SPEC BLOG" />
+  <meta property="og:description" content="2023년부터 2026년 1월까지 출시된 삼성, 애플, 구글, 샤오미, 비보, 오포, 화웨이 등 모든 스마트폰의 상세 스펙 명세표와 1:1 비교를 제공하는 스펙 백과사전입니다." />
+  <meta property="og:url" content="https://tech-review-blog.vercel.app/specs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="스마트폰 스펙 백과사전 (2023~2026.01) | TECH SPEC BLOG" />
+  <meta name="twitter:description" content="2023년부터 2026년 1월까지 출시된 모든 스마트폰 상세 스펙 데이터베이스" />
+
+  <GoogleAnalytics />
+</head>
+<body>
+  <Header />
+
+  <section class="hero" style="padding: 60px 0 40px;">
+    <div class="container">
+      <div class="hero-badge">
+        <span>📚 2023 ~ 2026.01 글로벌 & 중국 스마트폰 스펙 백과사전</span>
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3rem);">스마트폰 정밀 스펙 백과</h1>
+      <p>
+        삼성, 애플, 구글부터 샤오미, 비보, 오포, 화웨이까지<br />
+        총 <strong>{totalCount}개 기기</strong>의 프로세서, 디스플레이, 카메라, 배터리 정밀 스펙을 검색하고 비교해 보세요.
+      </p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-bottom: 100px;">
+    <!-- Control & Filter Panel -->
+    <div class="specs-control-panel">
+      <!-- Search Input -->
+      <div class="search-bar-wrapper">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="specSearchInput" 
+          class="search-input" 
+          placeholder="기기명 (예: Galaxy S24, iPhone 16, 샤오미 15), 프로세서 (Snapdragon 8 Elite, A18) 검색..." 
+        />
+      </div>
+
+      <!-- Brand Filter -->
+      <div class="filter-group">
+        <span class="filter-label">제조사 :</span>
+        <div class="filter-chips" id="brandChips">
+          {brands.map((brand, idx) => (
+            <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-brand={brand}>
+              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (iPhone)' : brand}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Year Filter -->
+      <div class="filter-group">
+        <span class="filter-label">출시연도 :</span>
+        <div class="filter-chips" id="yearChips">
+          {years.map((year, idx) => (
+            <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-year={year}>
+              {year === '전체' ? '전체 연도' : year === '2026' ? '2026년 (1월)' : `${year}년`}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Meta -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="color: var(--text-muted); font-size: 0.95rem;">
+        검색 및 필터 결과: <strong id="resultCount" style="color: var(--accent-cyan); font-size: 1.1rem;">{totalCount}</strong>개 기기
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        * 기기를 2개 선택하여 <strong>1:1 스펙 맞비교</strong>를 할 수 있습니다.
+      </div>
+    </div>
+
+    <!-- Spec Cards Grid -->
+    <div class="grid" id="specCardsGrid">
+      {smartphones.map((item) => (
+        <div 
+          class="spec-card" 
+          data-id={item.id}
+          data-brand={item.brand}
+          data-year={item.release_year}
+          data-name={`${item.name} ${item.name_kr} ${item.specs.ap} ${item.specs.camera}`.toLowerCase()}
+        >
+          <div class="spec-card-header">
+            <div>
+              <span class="badge" style="margin-bottom: 8px;">{item.brand_kr} • {item.release_date}</span>
+              <h3 class="spec-card-title">{item.name}</h3>
+              <div class="spec-card-sub">{item.name_kr}</div>
+            </div>
+            <span style="font-size: 0.8rem; padding: 4px 8px; border-radius: 6px; background: rgba(255,255,255,0.05); color: var(--text-muted);">
+              {item.category}
+            </span>
+          </div>
+
+          <div class="spec-summary-list">
+            <div class="spec-summary-item">
+              <span class="spec-summary-label">⚡ 프로세서</span>
+              <span class="spec-summary-val">{item.specs.ap}</span>
+            </div>
+            <div class="spec-summary-item">
+              <span class="spec-summary-label">🖥️ 화면</span>
+              <span class="spec-summary-val">{item.specs.display}</span>
+            </div>
+            <div class="spec-summary-item">
+              <span class="spec-summary-label">📷 카메라</span>
+              <span class="spec-summary-val">{item.specs.camera}</span>
+            </div>
+            <div class="spec-summary-item">
+              <span class="spec-summary-label">🔋 배터리</span>
+              <span class="spec-summary-val">{item.specs.battery}</span>
+            </div>
+            <div class="spec-summary-item">
+              <span class="spec-summary-label">💰 출고가</span>
+              <span class="spec-summary-val" style="color: var(--accent-cyan); font-weight: 600;">{item.specs.price_krw}</span>
+            </div>
+          </div>
+
+          <div class="spec-card-actions">
+            <button class="btn-detail" data-action="detail" data-id={item.id}>
+              📖 전체 스펙 보기
+            </button>
+            <button class="btn-compare-check" data-action="compare-toggle" data-id={item.id}>
+              + 비교함
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+
+  <!-- 1:1 Compare Floating Bottom Bar -->
+  <div class="compare-floating-bar" id="compareFloatingBar">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span class="compare-badge-pill">⚖️ 비교함</span>
+      <span id="compareSelectedText" style="font-size: 0.9rem; color: #ffffff;">0 / 2 기기 선택됨</span>
+    </div>
+    <button class="btn-launch-compare" id="btnOpenCompare">
+      1:1 스펙 비교하기 ➔
+    </button>
+  </div>
+
+  <!-- Detail Spec Modal -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeDetailModal">✕</button>
+      <div id="detailModalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 1:1 Comparison Modal -->
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal-content" style="max-width: 1000px;">
+      <button class="modal-close-btn" id="closeCompareModal">✕</button>
+      <h2 style="font-size: 1.6rem; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <span>⚖️ 1:1 스마트폰 정밀 스펙 맞비교</span>
+      </h2>
+      <div id="compareModalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Tech Review Blog. 2023-2026.01 Smartphone Spec Encyclopedia.</p>
+    </div>
+  </footer>
+
+  <Analytics />
+
+  <!-- Client Interaction Logic -->
+  <script is:inline define:vars={{ rawData: smartphones }}>
+    const allData = rawData;
+    let selectedBrand = '전체';
+    let selectedYear = '전체';
+    let searchQuery = '';
+    const selectedForCompare = new Set();
+
+    // DOM Elements
+    const searchInput = document.getElementById('specSearchInput');
+    const brandChips = document.querySelectorAll('#brandChips .chip-btn');
+    const yearChips = document.querySelectorAll('#yearChips .chip-btn');
+    const cards = document.querySelectorAll('.spec-card');
+    const resultCount = document.getElementById('resultCount');
+    const compareFloatingBar = document.getElementById('compareFloatingBar');
+    const compareSelectedText = document.getElementById('compareSelectedText');
+    const btnOpenCompare = document.getElementById('btnOpenCompare');
+
+    const detailModal = document.getElementById('detailModal');
+    const detailModalBody = document.getElementById('detailModalBody');
+    const closeDetailModal = document.getElementById('closeDetailModal');
+
+    const compareModal = document.getElementById('compareModal');
+    const compareModalBody = document.getElementById('compareModalBody');
+    const closeCompareModal = document.getElementById('closeCompareModal');
+
+    // Filter Function
+    function applyFilters() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const brand = card.getAttribute('data-brand');
+        const year = card.getAttribute('data-year');
+        const nameData = card.getAttribute('data-name') || '';
+
+        let matchBrand = false;
+        if (selectedBrand === '전체') {
+          matchBrand = true;
+        } else if (selectedBrand === '기타') {
+          matchBrand = !['Samsung', 'Apple', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'OnePlus', 'Huawei', 'Honor'].includes(brand);
+        } else {
+          matchBrand = (brand === selectedBrand);
+        }
+
+        const matchYear = (selectedYear === '전체' || year === selectedYear);
+        const matchSearch = (!searchQuery || nameData.includes(searchQuery.toLowerCase()));
+
+        if (matchBrand && matchYear && matchSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      resultCount.innerText = visibleCount;
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      applyFilters();
+    });
+
+    brandChips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        brandChips.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedBrand = btn.getAttribute('data-brand');
+        applyFilters();
+      });
+    });
+
+    yearChips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        yearChips.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedYear = btn.getAttribute('data-year');
+        applyFilters();
+      });
+    });
+
+    // Delegate Click for Cards (Detail & Compare Toggle)
+    document.getElementById('specCardsGrid').addEventListener('click', (e) => {
+      const detailBtn = e.target.closest('[data-action="detail"]');
+      const compareBtn = e.target.closest('[data-action="compare-toggle"]');
+
+      if (detailBtn) {
+        const id = detailBtn.getAttribute('data-id');
+        openDetail(id);
+      } else if (compareBtn) {
+        const id = compareBtn.getAttribute('data-id');
+        toggleCompare(id, compareBtn);
+      }
+    });
+
+    // Open Detail Modal
+    function openDetail(id) {
+      const item = allData.find(d => d.id === id);
+      if (!item) return;
+
+      detailModalBody.innerHTML = `
+        <div style="margin-bottom: 24px;">
+          <span class="badge">${item.brand_kr} • ${item.release_date}</span>
+          <h2 style="font-size: 1.8rem; color: #ffffff; margin: 8px 0;">${item.name} (${item.name_kr})</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">분류: ${item.category} • 공식 출시 가격: <strong style="color: var(--accent-cyan);">${item.specs.price_krw}</strong></p>
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan); width: 25%;">⚡ 프로세서 (AP)</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.ap}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🖥️ 디스플레이</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.display}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💾 메모리 & 스토리지</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.ram_storage}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📷 카메라 시스템</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.camera}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🔋 배터리 & 충전</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.battery}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📐 크기 & 무게</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.dimensions_weight}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🛡️ OS & 내구성</td>
+              <td style="padding: 12px; color: #f1f5f9;">${item.specs.os_durability}</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💰 출시 가격</td>
+              <td style="padding: 12px; color: #f1f5f9; font-weight: 700;">${item.specs.price_krw}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+
+      detailModal.classList.add('open');
+    }
+
+    // Toggle Compare Selection
+    function toggleCompare(id, btn) {
+      if (selectedForCompare.has(id)) {
+        selectedForCompare.delete(id);
+        btn.classList.remove('checked');
+        btn.innerText = '+ 비교함';
+      } else {
+        if (selectedForCompare.size >= 2) {
+          alert('비교는 한 번에 최대 2대까지 가능합니다. 기존 기기를 취소 후 선택해 주세요.');
+          return;
+        }
+        selectedForCompare.add(id);
+        btn.classList.add('checked');
+        btn.innerText = '✓ 선택됨';
+      }
+
+      updateCompareBar();
+    }
+
+    function updateCompareBar() {
+      const count = selectedForCompare.size;
+      compareSelectedText.innerText = `${count} / 2 기기 선택됨`;
+
+      if (count > 0) {
+        compareFloatingBar.classList.add('show');
+      } else {
+        compareFloatingBar.classList.remove('show');
+      }
+    }
+
+    // Open Compare Modal
+    btnOpenCompare.addEventListener('click', () => {
+      if (selectedForCompare.size < 2) {
+        alert('스펙을 비교하려면 2개의 기기를 선택해 주세요.');
+        return;
+      }
+
+      const ids = Array.from(selectedForCompare);
+      const itemA = allData.find(d => d.id === ids[0]);
+      const itemB = allData.find(d => d.id === ids[1]);
+
+      if (!itemA || !itemB) return;
+
+      compareModalBody.innerHTML = `
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+          <thead>
+            <tr style="background: rgba(0, 242, 254, 0.15); border-bottom: 2px solid var(--accent-cyan);">
+              <th style="padding: 14px; text-align: left; color: var(--accent-cyan); width: 22%;">스펙 비교 항목</th>
+              <th style="padding: 14px; text-align: left; color: #ffffff; width: 39%; font-size: 1.1rem;">
+                <div>${itemA.name}</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">${itemA.brand_kr} • ${itemA.release_date}</div>
+              </th>
+              <th style="padding: 14px; text-align: left; color: #ffffff; width: 39%; font-size: 1.1rem;">
+                <div>${itemB.name}</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">${itemB.brand_kr} • ${itemB.release_date}</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">⚡ 프로세서 (AP)</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.ap}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.ap}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🖥️ 디스플레이</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.display}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.display}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💾 메모리 & 용량</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.ram_storage}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.ram_storage}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📷 카메라 시스템</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.camera}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.camera}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🔋 배터리 & 충전</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.battery}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.battery}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📐 크기 & 무게</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.dimensions_weight}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.dimensions_weight}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🛡️ OS & 내구성</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.os_durability}</td>
+              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.os_durability}</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💰 출시 가격</td>
+              <td style="padding: 12px; color: var(--accent-cyan); font-weight: 700;">${itemA.specs.price_krw}</td>
+              <td style="padding: 12px; color: var(--accent-cyan); font-weight: 700;">${itemB.specs.price_krw}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+
+      compareModal.classList.add('open');
+    });
+
+    // Close Modals
+    closeDetailModal.addEventListener('click', () => detailModal.classList.remove('open'));
+    closeCompareModal.addEventListener('click', () => compareModal.classList.remove('open'));
+
+    window.addEventListener('click', (e) => {
+      if (e.target === detailModal) detailModal.classList.remove('open');
+      if (e.target === compareModal) compareModal.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
