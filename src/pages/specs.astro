@@ -450,23 +450,35 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
 
       // Inject iframe with enhanced embed fallback
       videoFrameContainer.innerHTML = `
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0&playsinline=1" 
-          title="${title}"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
-          style="width: 100%; height: 100%; border: none; border-radius: 8px;"
-        ></iframe>
-        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <div style="font-size: 0.85rem; color: var(--text-muted);">
-            💡 동영상 임베드가 제한된 경우 아래 버튼으로 YouTube에서 바로 시청하세요.
-          </div>
+        <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.4); padding: 8px 14px; border-radius: 6px;">
+          <span style="font-size: 0.85rem; color: #fca5a5;">
+            🎬 외부 임베드 재생이 제한된 경우 아래 버튼으로 YouTube에서 바로 시청하세요:
+          </span>
+          <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: #ffffff; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-decoration: none;">
+            ▶ YouTube에서 원본 보기 ➔
+          </a>
+        </div>
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden;">
+          <iframe 
+            src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1" 
+            title="${title}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+          ></iframe>
+        </div>
+        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <span style="font-size: 0.82rem; color: var(--text-muted);">
+            📺 테크 리뷰 & 실기 벤치마크 영상
+          </span>
           <div style="display: flex; gap: 8px;">
-            <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: #ffffff; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: background 0.2s;">
-              ▶ YouTube에서 직접 보기
+            <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="background: #dc2626; color: #ffffff; padding: 6px 12px; border-radius: 4px; font-size: 0.82rem; font-weight: 700; text-decoration: none;">
+              ▶ YouTube로 이동
             </a>
-            <a href="${searchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); color: #e2e8f0; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">
-              🔍 관련 영상 검색
+            <a href="${searchUrl}" target="_blank" rel="noopener noreferrer" style="background: rgba(255,255,255,0.1); color: #e2e8f0; padding: 6px 12px; border-radius: 4px; font-size: 0.82rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">
+              🔍 실시간 리뷰 검색
             </a>
           </div>
         </div>
