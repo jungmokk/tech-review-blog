@@ -10,7 +10,7 @@ const phoneCount = devices.filter((d: any) => d.device_type === '스마트폰').
 const tabletCount = devices.filter((d: any) => d.device_type === '태블릿').length;
 
 const deviceTypes = ['전체', '스마트폰', '태블릿'];
-const brands = ['전체', 'Samsung', 'Apple', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'OnePlus', 'Lenovo', 'Huawei', 'Honor', '기타'];
+const brands = ['전체', 'Samsung', 'Apple', 'Google', 'Xiaomi', 'Lenovo', 'iMuz', 'Vivo', 'Oppo', 'OnePlus', 'Huawei', 'Honor', '기타'];
 const years = ['전체', '2026', '2025', '2024', '2023'];
 ---
 <!DOCTYPE html>
@@ -19,12 +19,12 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>스마트폰 & 태블릿 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG</title>
-  <meta name="description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy, 애플 iPad/iPhone, 구글 Pixel, 샤오미, 비보, 레노버 등 모든 스마트폰과 태블릿의 상세 스펙 명세표와 1:1 비교를 제공하는 테크 스펙 백과사전입니다." />
+  <meta name="description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy, 애플 iPad/iPhone, 레노버 샤오신패드, 아이뮤즈 뮤패드, 올도큐브 등 모든 스마트폰과 가성비 태블릿의 상세 스펙 명세표와 1:1 비교를 제공합니다." />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="스마트폰 & 태블릿 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG" />
-  <meta property="og:description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy, 애플 iPad/iPhone, 구글 Pixel, 샤오미, 레노버 등 모든 스마트폰과 태블릿의 상세 스펙 명세표와 1:1 비교를 제공합니다." />
+  <meta property="og:description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy, 애플 iPad/iPhone, 레노버 샤오신패드, 아이뮤즈 뮤패드, 올도큐브 등 모든 스마트폰과 가성비 태블릿의 상세 스펙 명세표와 1:1 비교를 제공합니다." />
   <meta property="og:url" content="https://tech-review-blog.vercel.app/specs" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="스마트폰 & 태블릿 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG" />
@@ -44,7 +44,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         스마트폰 & 태블릿 정밀 스펙 백과
       </h1>
       <p style="margin-top: 8px;">
-        삼성 Galaxy (스마트폰 & 탭 S10), 애플 (iPhone & iPad Pro M4), 샤오미, 레노버 Y700부터 중국 플래그십까지<br />
+        Galaxy Z Fold8 / 탭 S10, iPad Pro M4부터 레노버 샤오신패드 프로, 아이뮤즈 뮤패드, 올도큐브 iPlay까지<br />
         총 <strong>{totalCount}개 기기</strong> (스마트폰 {phoneCount}종 + 태블릿 {tabletCount}종)의 프로세서, 디스플레이, 배터리 정밀 사양을 검색하고 비교해 보세요.
       </p>
     </div>
@@ -60,7 +60,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
           type="text" 
           id="specSearchInput" 
           class="search-input" 
-          placeholder="기기명 (예: Galaxy Z Fold8, iPad Pro M4, Y700), 프로세서 (M4, Snapdragon 8 Elite, Dimensity 9300) 검색..." 
+          placeholder="기기명 (예: 샤오신패드 12.7, 뮤패드 K11, iPad M4, Fold8), 칩셋 (Dimensity 8300, Helio G99) 검색..." 
         />
       </div>
 
@@ -82,7 +82,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         <div class="filter-chips" id="brandChips">
           {brands.map((brand, idx) => (
             <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-brand={brand}>
-              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (Apple)' : brand === 'Lenovo' ? '레노버 (Lenovo)' : brand}
+              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (Apple)' : brand === 'Lenovo' ? '레노버 (샤오신/리전)' : brand === 'iMuz' ? '아이뮤즈 (뮤패드)' : brand}
             </button>
           ))}
         </div>

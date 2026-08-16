@@ -1,13 +1,16 @@
 import json
 import os
 
-# 기존 스마트폰 리스트 로드 또는 포함
+# 기존 스마트폰 리스트 로드 (스마트폰만 필터링)
 with open("src/data/smartphones.json", "r", encoding="utf-8") as f:
-    smartphones = json.load(f)
+    raw_list = json.load(f)
 
-# 스마트폰 데이터에 device_type = "스마트폰" 부여
-for sp in smartphones:
-    sp["device_type"] = "스마트폰"
+smartphones = []
+for item in raw_list:
+    if item.get("device_type") == "태블릿":
+        continue
+    item["device_type"] = "스마트폰"
+    smartphones.append(item)
 
 # 2023 ~ 2026년 8월 현재까지 주요 프리미엄 및 가성비 태블릿 데이터베이스
 tablets = [
@@ -400,52 +403,227 @@ tablets = [
             "price_krw": "약 36만 원부터"
         }
     },
+    # ==========================================
+    # 가성비 태블릿 명작 (샤오신패드, 뮤패드, 올도큐브, 레드미/포코 등)
+    # ==========================================
     {
-        "id": "huawei-matepad-pro-13-2",
-        "name": "Huawei MatePad Pro 13.2",
-        "name_kr": "화웨이 메이트패드 프로 13.2",
-        "brand": "Huawei",
-        "brand_kr": "화웨이",
+        "id": "lenovo-xiaoxin-pad-pro-12-7-2025",
+        "name": "Lenovo Xiaoxin Pad Pro 12.7 (2025)",
+        "name_kr": "레노버 샤오신패드 프로 12.7 2025",
+        "brand": "Lenovo",
+        "brand_kr": "레노버",
         "device_type": "태블릿",
-        "release_year": 2023,
-        "release_date": "2023-09",
-        "category": "Pro Tablet",
+        "release_year": 2024,
+        "release_date": "2024-07",
+        "category": "Budget/Mid-Range Tablet",
         "specs": {
-            "ap": "HiSilicon Kirin 9000S (7nm)",
-            "display": "13.2인치 플렉시블 OLED (2880x1920, 144Hz, 3:2 비율, 1000nits 피크, 베젤 3.4mm)",
-            "ram_storage": "12GB / 16GB RAM + 256GB / 512GB / 1TB",
-            "camera": "1300만 + 800만 초광각 / 1600만 + 3D ToF 전면",
-            "battery": "10,100mAh (88W 초고속 유선 충전)",
-            "dimensions_weight": "289.1 x 196.1 x 5.5mm / 580g (13인치급 최경량)",
-            "os_durability": "HarmonyOS 4 / 니어링크(NearLink) 스타일러스 1만 단계 필압",
-            "price_krw": "약 105만 원부터"
+            "ap": "MediaTek Dimensity 8300 (4nm 고성능 AP)",
+            "display": "12.7인치 2.9K LCD (2944x1840, 144Hz, 400nits, DCI-P3, 나노 매트 소프트 에디션 옵션)",
+            "ram_storage": "8GB / 12GB LPDDR5X + 128GB / 256GB UFS 4.0 + MicroSD 지원(최대 1TB)",
+            "camera": "1300만 메인 후면 / 800만 전면",
+            "battery": "10,200mAh (45W 고속 충전 지원)",
+            "dimensions_weight": "291.8 x 189.2 x 6.9mm / 615g (메탈 유니바디)",
+            "os_durability": "ZUI 16 (Android 14) / 4개 JBL 스피커(Dolby Atmos)",
+            "price_krw": "약 26만~32만 원 (가성비 종결자)"
         }
     },
     {
-        "id": "google-pixel-tablet",
-        "name": "Google Pixel Tablet",
-        "name_kr": "구글 픽셀 태블릿",
-        "brand": "Google",
-        "brand_kr": "구글",
+        "id": "lenovo-xiaoxin-pad-pro-12-7-2023",
+        "name": "Lenovo Xiaoxin Pad Pro 12.7 (2023)",
+        "name_kr": "레노버 샤오신패드 프로 12.7 2023",
+        "brand": "Lenovo",
+        "brand_kr": "레노버",
         "device_type": "태블릿",
         "release_year": 2023,
-        "release_date": "2023-06",
-        "category": "Home Tablet",
+        "release_date": "2023-08",
+        "category": "Budget/Mid-Range Tablet",
         "specs": {
-            "ap": "Google Tensor G2 (5nm / Titan M2 보안 칩)",
-            "display": "10.95인치 IPS LCD (2560x1600, 60Hz, 16:10 비율, 500nits, USI 2.0 펜 지원)",
-            "ram_storage": "8GB LPDDR5 + 128GB / 256GB UFS 3.1",
-            "camera": "800만 전면 / 800만 후면 (구글 텐서 카메라 AI 기능)",
-            "battery": "27Wh (약 7,020mAh 상당, 15W 충전)",
-            "dimensions_weight": "258 x 169 x 8.1mm / 493g / 나노 세라믹 코팅 알루미늄",
-            "os_durability": "Android 13 -> 15 지원 / 자석식 충전 스피커 독(Hub Mode) 기본 제공",
-            "price_krw": "약 68만 원부터"
+            "ap": "Snapdragon 870 (7nm 명작 칩셋)",
+            "display": "12.7인치 2.9K LCD (2944x1840, 144Hz, 400nits, HDR10)",
+            "ram_storage": "8GB LPDDR5 + 128GB / 256GB UFS 3.1 + MicroSD 지원",
+            "camera": "800만 후면 / 1300만 전면 초광각",
+            "battery": "10,200mAh (20W 고속 충전)",
+            "dimensions_weight": "293.4 x 190.8 x 6.9mm / 615g (풀 메탈 유니바디)",
+            "os_durability": "ZUI 15 (Android 13) / 쿼드 JBL 스피커",
+            "price_krw": "약 21만~25만 원 (역대급 직구 가성비 대란템)"
+        }
+    },
+    {
+        "id": "lenovo-xiaoxin-pad-2024",
+        "name": "Lenovo Xiaoxin Pad 2024",
+        "name_kr": "레노버 샤오신패드 2024 11인치",
+        "brand": "Lenovo",
+        "brand_kr": "레노버",
+        "device_type": "태블릿",
+        "release_year": 2023,
+        "release_date": "2023-11",
+        "category": "Budget Tablet",
+        "specs": {
+            "ap": "Snapdragon 685 (6nm)",
+            "display": "11.0인치 FHD+ IPS LCD (1920x1200, 90Hz, 400nits, TUV 라인란드 시력보호)",
+            "ram_storage": "6GB / 8GB LPDDR4X + 128GB UFS 2.2 + MicroSD 슬롯",
+            "camera": "800만 후면 / 800만 전면",
+            "battery": "7,040mAh (20W 유선 충전)",
+            "dimensions_weight": "255.3 x 166.9 x 7.1mm / 465g / 3.5mm 이어폰 잭 탑재",
+            "os_durability": "ZUI 15 / 쿼드 스피커 / 인강 및 영상감상 최적화",
+            "price_krw": "약 11만~14만 원 (입문용 극가성비)"
+        }
+    },
+    {
+        "id": "imuz-mupad-k11-plus",
+        "name": "iMuz muPAD K11 PLUS",
+        "name_kr": "아이뮤즈 뮤패드 K11 PLUS (LTE)",
+        "brand": "iMuz",
+        "brand_kr": "아이뮤즈",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-03",
+        "category": "Budget/Mid-Range Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 (6nm 옥타코어)",
+            "display": "11.0인치 2K IPS LCD (2000x1200, 90Hz 고주사율, 400nits, 인셀 터치)",
+            "ram_storage": "8GB LPDDR4X + 128GB / 256GB UFS 2.2 + MicroSD(최대 2TB)",
+            "camera": "1300만 후면(AF/플래시) + 500만 전면",
+            "battery": "8,590mAh (20W 고속 충전, PD 지원)",
+            "dimensions_weight": "256.9 x 168.4 x 7.4mm / 506g (알루미늄 바디)",
+            "os_durability": "Android 14 순정 OS / LTE 통신 & GPS & 지자기 센서 완비(네비게이션 최강) / 와이드바인 L1",
+            "price_krw": "199,000원부터 (국내 정발 A/S 1티어)"
+        }
+    },
+    {
+        "id": "imuz-mupad-k10-plus",
+        "name": "iMuz muPAD K10 PLUS",
+        "name_kr": "아이뮤즈 뮤패드 K10 PLUS",
+        "brand": "iMuz",
+        "brand_kr": "아이뮤즈",
+        "device_type": "태블릿",
+        "release_year": 2023,
+        "release_date": "2023-09",
+        "category": "Budget Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 (6nm)",
+            "display": "10.4인치 2K IPS LCD (2000x1200, 60Hz, 400nits, 완벽 밀착 인셀)",
+            "ram_storage": "4GB / 8GB RAM + 64GB / 128GB UFS 2.1 + MicroSD 확장",
+            "camera": "500만 후면 / 500만 전면",
+            "battery": "6,100mAh (20W 고속 충전)",
+            "dimensions_weight": "246.8 x 156.6 x 7.7mm / 453g",
+            "os_durability": "Android 13 / 와이드바인 L1 넷플릭스 FHD / 쿼드 스피커",
+            "price_krw": "149,000원부터 (국민 가성비 태블릿)"
+        }
+    },
+    {
+        "id": "alldocube-iplay-60-mini-pro",
+        "name": "ALLDOCUBE iPlay 60 mini Pro",
+        "name_kr": "올도큐브 iPlay 60 미니 프로",
+        "brand": "ALLDOCUBE",
+        "brand_kr": "올도큐브",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-05",
+        "category": "Compact Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 (6nm)",
+            "display": "8.4인치 FHD+ IPS LCD (1920x1200, 90Hz, 350nits, 인셀 풀라미네이션)",
+            "ram_storage": "8GB RAM + 128GB / 256GB UFS 2.2 + MicroSD",
+            "camera": "1300만 후면(플래시) + 500만 전면",
+            "battery": "6,050mAh (18W 고속 충전)",
+            "dimensions_weight": "202.7 x 126 x 7.9mm / 310g (한 손에 쏙 들어오는 크기)",
+            "os_durability": "Android 14 / LTE 듀얼 SIM & GPS 지원 / 와이드바인 L1 넷플릭스 인증",
+            "price_krw": "약 13만~16만 원 (8인치 LTE 가성비 최강)"
+        }
+    },
+    {
+        "id": "alldocube-iplay-50-mini-pro-nfe",
+        "name": "ALLDOCUBE iPlay 50 mini Pro NFE",
+        "name_kr": "올도큐브 iPlay 50 미니 프로 NFE",
+        "brand": "ALLDOCUBE",
+        "brand_kr": "올도큐브",
+        "device_type": "태블릿",
+        "release_year": 2023,
+        "release_date": "2023-12",
+        "category": "Compact Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 (6nm)",
+            "display": "8.4인치 FHD+ IPS LCD (1920x1200, 60Hz, 320nits)",
+            "ram_storage": "8GB RAM + 128GB / 256GB UFS 2.2 + MicroSD",
+            "camera": "1300만 후면 / 500만 전면",
+            "battery": "5,000mAh (18W 충전)",
+            "dimensions_weight": "202.7 x 126 x 7.5mm / 306g",
+            "os_durability": "Android 13 / 넷플릭스 L1 공식 인증 / LTE 데이터 가능",
+            "price_krw": "약 12만~14만 원"
+        }
+    },
+    {
+        "id": "redmi-pad-pro",
+        "name": "Redmi Pad Pro",
+        "name_kr": "샤오미 레드미 패드 프로 12.1",
+        "brand": "Xiaomi",
+        "brand_kr": "샤오미",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-04",
+        "category": "Budget/Mid-Range Tablet",
+        "specs": {
+            "ap": "Snapdragon 7s Gen 2 (4nm)",
+            "display": "12.1인치 2.5K LCD (2560x1600, 120Hz, 16:10 비율, 600nits, 고릴라 글래스 3)",
+            "ram_storage": "6GB / 8GB LPDDR4X + 128GB / 256GB UFS 2.2 + MicroSD 확장(최대 1.5TB)",
+            "camera": "800만 후면 / 800만 전면",
+            "battery": "10,000mAh 대용량 (33W 고속 충전)",
+            "dimensions_weight": "280.0 x 181.85 x 7.52mm / 571g (메탈 일체형 바디)",
+            "os_durability": "Xiaomi HyperOS (Android 14) / 4개 돌비 애트모스 스피커 / 3.5mm 이어폰 잭",
+            "price_krw": "279,000원부터 (12인치 대화면 가성비 종결)"
+        }
+    },
+    {
+        "id": "poco-pad",
+        "name": "POCO Pad",
+        "name_kr": "포코 패드 12.1",
+        "brand": "Xiaomi",
+        "brand_kr": "샤오미",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-05",
+        "category": "Budget/Mid-Range Tablet",
+        "specs": {
+            "ap": "Snapdragon 7s Gen 2 (4nm)",
+            "display": "12.1인치 2.5K LCD (2560x1600, 120Hz, 600nits 피크)",
+            "ram_storage": "8GB LPDDR4X + 256GB UFS 2.2 + MicroSD",
+            "camera": "800만 후면 / 800만 전면",
+            "battery": "10,000mAh (33W 고속 유선 충전)",
+            "dimensions_weight": "280.0 x 181.85 x 7.52mm / 571g",
+            "os_durability": "Xiaomi HyperOS for POCO / 쿼드 스피커",
+            "price_krw": "약 28만~31만 원"
+        }
+    },
+    {
+        "id": "redmi-pad-se",
+        "name": "Redmi Pad SE",
+        "name_kr": "샤오미 레드미 패드 SE 11인치",
+        "brand": "Xiaomi",
+        "brand_kr": "샤오미",
+        "device_type": "태블릿",
+        "release_year": 2023,
+        "release_date": "2023-08",
+        "category": "Budget Tablet",
+        "specs": {
+            "ap": "Snapdragon 680 (6nm)",
+            "display": "11.0인치 FHD+ IPS LCD (1920x1200, 90Hz, 400nits)",
+            "ram_storage": "4GB / 6GB / 8GB RAM + 128GB / 256GB + MicroSD(최대 1TB)",
+            "camera": "800만 후면 / 500만 전면",
+            "battery": "8,000mAh (10W/18W 충전)",
+            "dimensions_weight": "255.5 x 167.1 x 7.36mm / 478g (알루미늄 유니바디)",
+            "os_durability": "MIUI Pad 14 -> HyperOS / 쿼드 스피커 / 3.5mm 잭",
+            "price_krw": "149,000원부터 (학생·인강용 국민 태블릿)"
         }
     }
 ]
 
-# 전체 디바이스 = 스마트폰 + 태블릿
-all_devices = smartphones + tablets
+# 전체 디바이스 = 스마트폰 + 태블릿 (ID 중복 제거)
+unique_devices_map = {}
+for dev in smartphones + tablets:
+    unique_devices_map[dev["id"]] = dev
+
+all_devices = list(unique_devices_map.values())
 
 def build():
     os.makedirs("src/data", exist_ok=True)
@@ -460,7 +638,9 @@ def build():
     with open(out_path_devices, "w", encoding="utf-8") as f:
         json.dump(all_devices, f, ensure_ascii=False, indent=2)
         
-    print(f"✅ 총 {len(all_devices)}개 (스마트폰 {len(smartphones)}종 + 태블릿 {len(tablets)}종) 디바이스 데이터베이스가 생성되었습니다.")
+    sp_count = sum(1 for d in all_devices if d.get("device_type") == "스마트폰")
+    tb_count = sum(1 for d in all_devices if d.get("device_type") == "태블릿")
+    print(f"✅ 총 {len(all_devices)}개 (스마트폰 {sp_count}종 + 태블릿 {tb_count}종) 디바이스 데이터베이스가 생성되었습니다.")
 
 if __name__ == "__main__":
     build()
