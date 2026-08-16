@@ -3,8 +3,14 @@ import Header from '../components/Header.astro';
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 const { frontmatter } = Astro.props;
+
+const allReviews = await getCollection('reviews');
+const recentReviews = allReviews
+  .filter((r: CollectionEntry<'reviews'>) => r.data.device !== frontmatter.device)
+  .slice(0, 4);
 
 const jsonLd = {
   "@context": "https://schema.org/",
@@ -46,19 +52,124 @@ const jsonLd = {
 </head>
 <body>
   <Header />
-  <main class="container" style="padding: 40px 20px;">
-    <article class="review-article">
-      <span class="badge">{frontmatter.category}</span>
-      <h1 style="font-size: 2.2rem; margin: 12px 0;">{frontmatter.title}</h1>
-      <p style="color: var(--text-muted); margin-bottom: 24px;">발행일: {frontmatter.date} • 추천 평점: ⭐ {frontmatter.score} / 10</p>
-      <slot />
-    </article>
+
+  <main class="container" style="padding-top: 40px; padding-bottom: 80px;">
+    <div class="review-layout-grid">
+      <!-- Main Content (Left Column) -->
+      <article class="review-article">
+        <span class="badge">{frontmatter.category || '스마트폰/IT'}</span>
+        <h1>{frontmatter.title}</h1>
+        
+        <div class="review-meta">
+          <span>📅 발행일: {frontmatter.date}</span>
+          <span>•</span>
+          <span>⚡ 추천 평점: <strong style="color: var(--accent-cyan);">⭐ {frontmatter.score} / 10</strong></span>
+          <span>•</span>
+          <span>기기명: {frontmatter.device}</span>
+        </div>
+
+        <slot />
+      </article>
+
+      <!-- Sticky Sidebar (Right Column for Desktop) -->
+      <aside class="sidebar">
+        <!-- Score Card Widget -->
+        <div class="sidebar-card">
+          <div class="sidebar-title">
+            <span>📊 종합 평가 요약</span>
+          </div>
+          <div class="score-badge-large">
+            <div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">총점 (10점 만점)</div>
+              <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">{frontmatter.device}</div>
+            </div>
+            <div class="score-num">{frontmatter.score}</div>
+          </div>
+
+          {frontmatter.pros && frontmatter.pros.length > 0 && (
+            <div class="mini-pros-cons" style="margin-bottom: 16px;">
+              <strong style="font-size: 0.85rem; color: #86efac;">👍 핵심 장점</strong>
+              {frontmatter.pros.slice(0, 2).map((pro: string) => (
+                <div class="mini-item mini-pros">
+                  <span>✓</span>
+                  <span>{pro}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {frontmatter.cons && frontmatter.cons.length > 0 && (
+            <div class="mini-pros-cons">
+              <strong style="font-size: 0.85rem; color: #fca5a5;">👎 고려할 단점</strong>
+              {frontmatter.cons.slice(0, 2).map((con: string) => (
+                <div class="mini-item mini-cons">
+                  <span>✕</span>
+                  <span>{con}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <!-- Share Widget -->
+        <div class="sidebar-card">
+          <div class="sidebar-title">
+            <span>🔗 리뷰 공유하기</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+            이 기기 리뷰가 도움이 되셨다면 링크를 복사하여 공유해 보세요.
+          </p>
+          <button class="share-btn" id="copyUrlBtn">
+            📋 현재 글 링크 복사
+          </button>
+        </div>
+
+        <!-- Recent Reviews Widget -->
+        {recentReviews.length > 0 && (
+          <div class="sidebar-card">
+            <div class="sidebar-title">
+              <span>🔥 다른 최신 리뷰</span>
+            </div>
+            <div>
+              {recentReviews.map((post: CollectionEntry<'reviews'>) => (
+                <div class="recent-review-item">
+                  <a href={`/reviews/${post.slug}`}>
+                    {post.data.title}
+                  </a>
+                  <div class="recent-review-meta">
+                    <span>{post.data.category || '테크'}</span>
+                    <span style="color: var(--accent-cyan);">⭐ {post.data.score}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
   </main>
+
   <footer>
     <div class="container">
       <p>© 2026 Tech Review Blog. Automated AI Data Synthesis Pipeline.</p>
     </div>
   </footer>
+
   <Analytics />
+
+  <script is:inline>
+    const btn = document.getElementById('copyUrlBtn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const originalText = btn.innerText;
+          btn.innerText = '✅ 링크 복사 완료!';
+          setTimeout(() => {
+            btn.innerText = originalText;
+          }, 2000);
+        });
+      });
+    }
+  </script>
 </body>
 </html>

@@ -6,6 +6,8 @@ import Analytics from '@vercel/analytics/astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 const allReviews = await getCollection('reviews');
+// 최신 날짜순 정렬
+allReviews.sort((a, b) => new Date(b.data.date || '').getTime() - new Date(a.data.date || '').getTime());
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -22,6 +24,7 @@ const allReviews = await getCollection('reviews');
   <meta property="og:url" content="https://tech-review-blog.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TECH REVIEW BLOG | 초고속 AI 자동화 테크 기기 리뷰" />
+  <meta name="twitter:description" content="해외/국내 최신 IT 기기 리뷰와 팩트 데이터를 자동 분석하여 제공하는 고성능 테크 리뷰 블로그입니다." />
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="google7dc3c11a8bcb6b9d" />
 
@@ -32,27 +35,54 @@ const allReviews = await getCollection('reviews');
   
   <section class="hero">
     <div class="container">
-      <h1>테크 기기 심층 데이터 리뷰</h1>
-      <p>AI 교차 검증 파이프라인으로 정확한 스펙, 실사용 장단점, 검색 트래픽 최적화 정보를 한눈에 확인하세요.</p>
+      <div class="hero-badge">
+        <span>⚡ 24/7 AI 실시간 테크 데이터 파이프라인 가동 중</span>
+      </div>
+      <h1>최신 테크 기기 심층 데이터 리뷰</h1>
+      <p>
+        해외/국내 유력 IT 미디어와 실사용 유튜브 리뷰 데이터를 교차 분석하여<br />
+        가장 솔직하고 객관적인 스펙, 실체감 장단점, 구매 가이드를 제공합니다.
+      </p>
     </div>
   </section>
 
-  <main class="container" id="reviews" style="padding-bottom: 60px;">
-    <h2 style="font-size: 1.6rem; border-left: 4px solid var(--accent-cyan); padding-left: 12px; margin-bottom: 20px;">
-      최신 리뷰 데이터
-    </h2>
+  <main class="container" id="reviews" style="padding-bottom: 80px;">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">최신 기기 리뷰 분석</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
+          실제 핸즈온 사진 및 벤치마크 팩트가 검증된 최신 리뷰 목록입니다.
+        </p>
+      </div>
+      <div style="color: var(--accent-cyan); font-weight: 600; font-size: 0.95rem;">
+        총 {allReviews.length}개 기기 분석 완료
+      </div>
+    </div>
 
     <div class="grid">
       {allReviews.map((post: CollectionEntry<'reviews'>) => (
         <a href={`/reviews/${post.slug}`} class="card">
-          <div>
-            <span class="badge">{post.data.category || '테크'}</span>
-            <h3 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 8px;">{post.data.title}</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">{post.data.summary}</p>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <span class="badge">{post.data.category || '스마트폰/IT'}</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">{post.data.date}</span>
           </div>
-          <div style="margin-top: auto; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--accent-cyan);">
-            <span>⭐ 평점: {post.data.score}</span>
-            <span>더보기 →</span>
+
+          <div>
+            <h3 style="font-size: 1.25rem; color: var(--text-main); line-height: 1.4; margin-bottom: 10px; font-weight: 700;">
+              {post.data.title}
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+              {post.data.summary}
+            </p>
+          </div>
+
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="font-size: 1rem; color: #fbbf24;">⭐</span>
+              <strong style="color: var(--text-main); font-size: 0.95rem;">{post.data.score}</strong>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">/ 10</span>
+            </div>
+            <span style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">리뷰 보기 →</span>
           </div>
         </a>
       ))}
@@ -64,6 +94,7 @@ const allReviews = await getCollection('reviews');
       <p>© 2026 Tech Review Blog. Powered by Astro & AI Automation Pipeline.</p>
     </div>
   </footer>
+
   <Analytics />
 </body>
 </html>
