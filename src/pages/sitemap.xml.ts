@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 
 export async function GET() {
   const reviews = await getCollection('reviews');
-  const siteUrl = 'https://techreview-blog.vercel.app';
+  const siteUrl = 'https://tech-review-blog.vercel.app';
 
   const pages = [
     '',

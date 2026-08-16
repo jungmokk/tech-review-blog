@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from datetime import datetime
 from sources.image_fetcher import fetch_real_device_images
 
 def clean_mdx_content(text: str) -> str:
@@ -64,6 +65,8 @@ def generate_review_mdx(device_name, raw_facts):
             print(f"[Synthesizer] 이미지 수집 중 예외 발생: {img_err}")
             real_images = []
 
+    today_str = datetime.now().strftime("%Y-%m-%d")
+
     image_guide = ""
     if real_images:
         image_guide = "본문에 사용할 수 있는 실제 웹/유튜브 기기 핸즈온 사진 목록입니다. 도입부 하단 및 소제목 아래에 적절히 마크다운 이미지 태그(![설명](경로)\\n*▲ 캡션*)로 배치하세요:\n"
@@ -95,7 +98,7 @@ def generate_review_mdx(device_name, raw_facts):
 [Frontmatter 및 마크다운 출력 규격]
 ---
 title: "고민 끝에 결정했다: {device_name} 실사용 솔직 후기 및 장단점"
-date: "2026-08-14"
+date: "{today_str}"
 device: "{device_name}"
 score: 9.3
 category: "스마트폰/IT"
@@ -280,7 +283,7 @@ cons:
 
     mock_mdx = f"""---
 title: "고민 끝에 결정했다: {device_name} 실사용 솔직 후기 및 장단점"
-date: "2026-08-14"
+date: "{today_str}"
 device: "{device_name}"
 score: 9.3
 category: "스마트폰/IT"

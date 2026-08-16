@@ -31,6 +31,16 @@ const jsonLd = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{frontmatter.title} | TECH REVIEW</title>
   <meta name="description" content={frontmatter.summary} />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={`${frontmatter.title} | TECH REVIEW`} />
+  <meta property="og:description" content={frontmatter.summary} />
+  <meta property="og:url" content={Astro.url.href} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${frontmatter.title} | TECH REVIEW`} />
+  <meta name="twitter:description" content={frontmatter.summary} />
+
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
   <GoogleAnalytics />
 </head>
