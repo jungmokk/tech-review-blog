@@ -138,7 +138,7 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+      <div class="reviews-grid-feed">
         {feedPosts.map((post) => (
           <a href={`/reviews/${post.slug}`} class="card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease;">
             <!-- Live YouTube Video Thumbnail -->

@@ -116,7 +116,7 @@ const feedPosts = enReviews.map((post: CollectionEntry<'reviews'>) => {
     <!-- Reviews Grid -->
     <section id="reviews" style="margin-bottom: 60px;">
       <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 24px;">All In-Depth Reviews</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+      <div class="reviews-grid-feed">
         {feedPosts.map((post) => (
           <a href={`/en/reviews/${post.pureSlug}`} class="card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease;">
             <div style="position: relative; height: 200px;">
