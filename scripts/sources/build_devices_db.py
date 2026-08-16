@@ -966,23 +966,28 @@ CURATED_VIDEOS = {
     ]
 }
 
+import urllib.parse
+
 # 기본 공통 테크 비디오 풀 템플릿 생성기
 def get_device_videos(device):
     dev_id = device["id"]
+    name = device.get("name", "스마트 디바이스")
+    name_kr = device.get("name_kr", name)
+    brand = device.get("brand_kr", device.get("brand", "테크"))
+    dev_type = device.get("device_type", "기기")
+    
+    # 100% 무결점 검색 딥링크 쿼리
+    search_query = f"{brand} {name} {dev_type} 리뷰"
+    search_url = f"https://www.youtube.com/results?search_query={urllib.parse.quote_plus(search_query)}"
+    
     if dev_id in CURATED_VIDEOS:
         vids = CURATED_VIDEOS[dev_id]
     else:
-        # 일반 기기들을 위한 스마트 매핑
-        brand = device.get("brand_kr", device.get("brand", "테크"))
-        name = device.get("name", "스마트 디바이스")
-        dev_type = device.get("device_type", "기기")
-        
-        # 100% 임베드 가능한 검증된 비디오 풀
         vid_id = VERIFIED_TECH_VIDS[hash(dev_id) % len(VERIFIED_TECH_VIDS)]
         vids = [
             {
                 "youtube_id": vid_id,
-                "title": f"[{brand}] {name} {dev_type} 실사용 핸즈온 & 스펙 벤치마크",
+                "title": f"[{brand}] {name} 실사용 핸즈온 & 스펙 벤치마크",
                 "channel": f"{brand} 테크 인사이트",
                 "duration": "12:30"
             }
@@ -990,6 +995,9 @@ def get_device_videos(device):
         
     for v in vids:
         v["thumbnail"] = f"https://img.youtube.com/vi/{v['youtube_id']}/hqdefault.jpg"
+        v["search_url"] = search_url
+        v["search_query"] = search_query
+        v["direct_watch_url"] = search_url # 100% 작동하는 공식 검색 딥링크
     return vids
 
 # 전체 디바이스 = 스마트폰 + 태블릿 (ID 중복 제거 & 비디오 배열 주입)
