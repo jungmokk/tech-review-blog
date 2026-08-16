@@ -35,16 +35,16 @@ const jsonLd = {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{frontmatter.title} | TECH REVIEW</title>
+  <title>{frontmatter.title} | TECH SPEC BLOG</title>
   <meta name="description" content={frontmatter.summary} />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content={`${frontmatter.title} | TECH REVIEW`} />
+  <meta property="og:title" content={`${frontmatter.title} | TECH SPEC BLOG`} />
   <meta property="og:description" content={frontmatter.summary} />
   <meta property="og:url" content={Astro.url.href} />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={`${frontmatter.title} | TECH REVIEW`} />
+  <meta name="twitter:title" content={`${frontmatter.title} | TECH SPEC BLOG`} />
   <meta name="twitter:description" content={frontmatter.summary} />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
@@ -53,21 +53,76 @@ const jsonLd = {
 <body>
   <Header />
 
-  <main class="container" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="container" style="padding-top: 36px; padding-bottom: 80px;">
     <div class="review-layout-grid">
       <!-- Main Content (Left Column) -->
       <article class="review-article">
-        <span class="badge">{frontmatter.category || '스마트폰/IT'}</span>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+          <span class="badge">{frontmatter.category || '스마트폰/IT'}</span>
+          {frontmatter.score >= 9.0 && (
+            <span class="badge badge-gold">⭐ EDITORS CHOICE</span>
+          )}
+        </div>
+
         <h1>{frontmatter.title}</h1>
         
         <div class="review-meta">
-          <span>📅 발행일: {frontmatter.date}</span>
+          <span>📅 {frontmatter.date}</span>
           <span>•</span>
-          <span>⚡ 추천 평점: <strong style="color: var(--accent-cyan);">⭐ {frontmatter.score} / 10</strong></span>
+          <span>기기명: <strong style="color: #ffffff;">{frontmatter.device}</strong></span>
           <span>•</span>
-          <span>기기명: {frontmatter.device}</span>
+          <span>⏱️ 약 3분 읽기</span>
         </div>
 
+        <!-- The Verge Style 'The Verdict' Box -->
+        <div class="verdict-box">
+          <div class="verdict-header">
+            <div>
+              <div style="font-size: 0.82rem; color: var(--accent-cyan); font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">
+                EDITORIAL VERDICT
+              </div>
+              <h3 class="verdict-title">
+                {frontmatter.device} 에디터 최종 평결
+              </h3>
+            </div>
+            <div class="verdict-score-display">
+              <span class="verdict-score-num">{frontmatter.score || '9.0'}</span>
+              <span class="verdict-score-total">/ 10</span>
+            </div>
+          </div>
+
+          <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; background: rgba(10, 14, 22, 0.5); padding: 14px 18px; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-cyan); margin-bottom: 18px;">
+            <strong style="color: var(--accent-cyan);">💡 The Bottom Line :</strong> {frontmatter.summary}
+          </div>
+
+          <div class="verdict-columns">
+            <div class="verdict-col verdict-good">
+              <h4>👍 The Good (주요 장점)</h4>
+              <ul class="verdict-list">
+                {frontmatter.pros && frontmatter.pros.map((pro: string) => (
+                  <li>
+                    <span style="color: #86efac; font-weight: bold;">✓</span>
+                    <span>{pro}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="verdict-col verdict-bad">
+              <h4>👎 The Bad (아쉬운 점)</h4>
+              <ul class="verdict-list">
+                {frontmatter.cons && frontmatter.cons.map((con: string) => (
+                  <li>
+                    <span style="color: #fca5a5; font-weight: bold;">✕</span>
+                    <span>{con}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Markdown Article Body with Specs and Benchmarks -->
         <slot />
       </article>
 
@@ -76,39 +131,19 @@ const jsonLd = {
         <!-- Score Card Widget -->
         <div class="sidebar-card">
           <div class="sidebar-title">
-            <span>📊 종합 평가 요약</span>
+            <span>📊 스펙 & 평점 대시보드</span>
           </div>
           <div class="score-badge-large">
             <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">총점 (10점 만점)</div>
-              <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">{frontmatter.device}</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">종합 평점 (10점 만점)</div>
+              <div style="font-size: 1.15rem; font-weight: 800; color: #ffffff;">{frontmatter.device}</div>
             </div>
             <div class="score-num">{frontmatter.score}</div>
           </div>
 
-          {frontmatter.pros && frontmatter.pros.length > 0 && (
-            <div class="mini-pros-cons" style="margin-bottom: 16px;">
-              <strong style="font-size: 0.85rem; color: #86efac;">👍 핵심 장점</strong>
-              {frontmatter.pros.slice(0, 2).map((pro: string) => (
-                <div class="mini-item mini-pros">
-                  <span>✓</span>
-                  <span>{pro}</span>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {frontmatter.cons && frontmatter.cons.length > 0 && (
-            <div class="mini-pros-cons">
-              <strong style="font-size: 0.85rem; color: #fca5a5;">👎 고려할 단점</strong>
-              {frontmatter.cons.slice(0, 2).map((con: string) => (
-                <div class="mini-item mini-cons">
-                  <span>✕</span>
-                  <span>{con}</span>
-                </div>
-              ))}
-            </div>
-          )}
+          <a href="/specs" class="btn-detail" style="display: block; text-align: center; text-decoration: none; margin-bottom: 12px; padding: 10px;">
+            📚 전체 스펙 백과에서 비교하기 ➔
+          </a>
         </div>
 
         <!-- Share Widget -->
@@ -117,7 +152,7 @@ const jsonLd = {
             <span>🔗 리뷰 공유하기</span>
           </div>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-            이 기기 리뷰가 도움이 되셨다면 링크를 복사하여 공유해 보세요.
+            이 기기 분석이 유용하셨다면 링크를 복사하여 공유해 보세요.
           </p>
           <button class="share-btn" id="copyUrlBtn">
             📋 현재 글 링크 복사
@@ -138,7 +173,7 @@ const jsonLd = {
                   </a>
                   <div class="recent-review-meta">
                     <span>{post.data.category || '테크'}</span>
-                    <span style="color: var(--accent-cyan);">⭐ {post.data.score}</span>
+                    <span style="color: var(--accent-cyan); font-weight: 700;">⭐ {post.data.score}</span>
                   </div>
                 </div>
               ))}
@@ -151,7 +186,7 @@ const jsonLd = {
 
   <footer>
     <div class="container">
-      <p>© 2026 Tech Review Blog. Automated AI Data Synthesis Pipeline.</p>
+      <p>© 2026 Tech Review Blog. Automated AI Data Synthesis Pipeline & Spec Database.</p>
     </div>
   </footer>
 
