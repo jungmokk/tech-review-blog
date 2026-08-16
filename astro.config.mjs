@@ -5,4 +5,11 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://tech-review-blog.vercel.app',
   integrations: [mdx()],
+  i18n: {
+    defaultLocale: 'ko',
+    locales: ['ko', 'en', 'ja'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });
