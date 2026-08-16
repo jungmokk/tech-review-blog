@@ -9,27 +9,28 @@ import devices from '../data/smartphones.json';
 const totalCount = devices.length;
 const phoneCount = devices.filter((d: any) => d.device_type === '스마트폰').length;
 const tabletCount = devices.filter((d: any) => d.device_type === '태블릿').length;
+const ebookCount = devices.filter((d: any) => d.device_type === '이북리더기').length;
 
-const deviceTypes = ['전체', '스마트폰', '태블릿'];
-const brands = ['전체', 'Samsung', 'Apple', 'Google', 'Xiaomi', 'Lenovo', 'iMuz', 'ALLDOCUBE', 'Oppo', 'Vivo', 'OnePlus', 'Huawei', 'Honor', '기타'];
-const years = ['전체', '2026', '2025', '2024', '2023'];
+const deviceTypes = ['전체', '스마트폰', '태블릿', '이북리더기'];
+const brands = ['전체', 'Samsung', 'Apple', 'Onyx BOOX', 'Xiaomi', 'Amazon', 'Kobo', 'Bigme', 'Hisense', 'Crema', 'Meebook', 'Lenovo', 'iMuz', 'ALLDOCUBE', 'Oppo', 'Vivo', 'Google', 'Huawei', '기타'];
+const years = ['전체', '2026', '2025', '2024', '2023', '2022'];
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>스마트폰 & 태블릿 스펙 & 실사용 비디오 백과사전 | TECH SPEC BLOG</title>
-  <meta name="description" content="2023년부터 2026년 8월 현재까지 출시된 모든 스마트폰과 태블릿의 상세 스펙 명세표와 1:1 비교, 그리고 유튜브 실사용 핸즈온 리뷰 비디오 풀을 제공합니다." />
+  <title>스마트폰 · 태블릿 · 이북리더기 스펙 & 실사용 비디오 백과사전 | TECH SPEC BLOG</title>
+  <meta name="description" content="2022년부터 2026년 최신 기기까지 164종 스마트폰, 태블릿, E-Ink 이북리더기의 정밀 사양표와 1:1 맞비교, 유튜브 실사용 리뷰 영상을 제공합니다." />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="스마트폰 & 태블릿 스펙 & 비디오 풀 백과사전 | TECH SPEC BLOG" />
-  <meta property="og:description" content="134종 스마트폰·태블릿 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
+  <meta property="og:title" content="스마트폰 · 태블릿 · 이북리더기 스펙 & 비디오 풀 백과사전 | TECH SPEC BLOG" />
+  <meta property="og:description" content="164종 스마트폰·태블릿·이북리더기 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
   <meta property="og:url" content="https://tech-review-blog.vercel.app/specs" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="스마트폰 & 태블릿 스펙 & 비디오 풀 백과사전 | TECH SPEC BLOG" />
-  <meta name="twitter:description" content="134종 스마트폰·태블릿 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
+  <meta name="twitter:title" content="스마트폰 · 태블릿 · 이북리더기 스펙 & 비디오 풀 백과사전 | TECH SPEC BLOG" />
+  <meta name="twitter:description" content="164종 스마트폰·태블릿·이북리더기 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
 
   <GoogleAnalytics />
   <GoogleAdSense />
@@ -40,14 +41,14 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
   <section class="hero" style="padding: 48px 0 28px;">
     <div class="container">
       <div class="hero-badge">
-        <span>🎬 2023 ~ 2026 스마트폰 & 태블릿 스펙 + 실사용 비디오 풀 통합</span>
+        <span>🎬 2022 ~ 2026 스마트폰 · 태블릿 · 이북리더기 스펙 + 실사용 비디오 풀 통합</span>
       </div>
       <h1 style="font-size: clamp(2rem, 3.8vw, 2.8rem); margin-top: 8px;">
-        스마트폰 & 태블릿 정밀 스펙 & 비디오 풀
+        스마트폰 · 태블릿 · 이북리더기 정밀 스펙 & 비디오 풀
       </h1>
       <p style="margin-top: 8px;">
-        Galaxy Z Fold8 / 탭 S10 Ultra, iPad Pro M4, 샤오신패드 12.7, 뮤패드 K11, 올도큐브 iPlay 80까지<br />
-        총 <strong>{totalCount}개 기기</strong>의 상세 명세표와 <strong>실제 유튜브 핸즈온 리뷰 영상</strong>을 한곳에서 시청하세요.
+        Galaxy S26 / Fold8, iPad Pro M4, 오닉스 팔마 2, 킨들 컬러소프트, 샤오미 잉크팜까지<br />
+        총 <strong>{totalCount}개 기기</strong>의 상세 명세표와 <strong>실제 유튜브 핸즈온 리뷰 영상</strong>을 한곳에서 비교하고 시청하세요.
       </p>
 
       <!-- View Mode Switcher -->
@@ -74,7 +75,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
           type="text" 
           id="specSearchInput" 
           class="search-input" 
-          placeholder="기기명 (예: Galaxy Fold8, iPad M4, 샤오신패드, 뮤패드), 프로세서 (M4, 8 Elite, G99) 검색..." 
+          placeholder="기기명 (예: 오닉스 팔마, 킨들, 잉크팜, Fold8, iPad M4), 프로세서, E-Ink 패널 검색..." 
         />
       </div>
 
@@ -84,7 +85,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         <div class="filter-chips" id="typeChips">
           {deviceTypes.map((type, idx) => (
             <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-type={type}>
-              {type === '전체' ? `전체 기기 (${totalCount})` : type === '스마트폰' ? `📱 스마트폰 (${phoneCount})` : `📟 태블릿 (${tabletCount})`}
+              {type === '전체' ? `전체 기기 (${totalCount})` : type === '스마트폰' ? `📱 스마트폰 (${phoneCount})` : type === '태블릿' ? `📟 태블릿 (${tabletCount})` : `📚 이북리더기 (${ebookCount})`}
             </button>
           ))}
         </div>
@@ -96,7 +97,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         <div class="filter-chips" id="brandChips">
           {brands.map((brand, idx) => (
             <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-brand={brand}>
-              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (Apple)' : brand === 'Lenovo' ? '레노버 (샤오신/리전)' : brand === 'iMuz' ? '아이뮤즈 (뮤패드)' : brand === 'ALLDOCUBE' ? '올도큐브 (iPlay)' : brand === 'Oppo' ? '오포 (OPPO)' : brand}
+              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (Apple)' : brand === 'Onyx BOOX' ? '오닉스 (BOOX)' : brand === 'Xiaomi' ? '샤오미/모안' : brand === 'Amazon' ? '아마존 (Kindle)' : brand === 'Kobo' ? '코보 (Kobo)' : brand === 'Bigme' ? '빅미 (Bigme)' : brand === 'Hisense' ? '하이센스 (Hisense)' : brand === 'Crema' ? '크레마/리디' : brand === 'Meebook' ? '미북 (Meebook)' : brand === 'Lenovo' ? '레노버' : brand === 'iMuz' ? '아이뮤즈' : brand === 'ALLDOCUBE' ? '올도큐브' : brand}
             </button>
           ))}
         </div>
