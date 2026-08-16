@@ -1,24 +1,29 @@
 ---
 import Header from '../components/Header.astro';
 import '../styles/global.css';
-import { getCollection } from 'astro:content';
-import Analytics from '@vercel/analytics/astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import GoogleAdSense from '../components/GoogleAdSense.astro';
 import devices from '../data/smartphones.json';
 
 const allReviews = await getCollection('reviews');
-// 최신 날짜순 정렬
-allReviews.sort((a, b) => new Date(b.data.date || '').getTime() - new Date(a.data.date || '').getTime());
+// 한국어 원본 리뷰만 필터링 (en/, ja/ 제외)
+const koReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => !r.slug.includes('/'));
+koReviews.sort((a, b) => new Date(b.data.date || '').getTime() - new Date(a.data.date || '').getTime());
 
-// Bento Grid Slicing
-const featuredPost = allReviews[0];
-const trendingPosts = allReviews.slice(1, 3);
-const feedPosts = allReviews;
+const featuredPost = koReviews[0];
+const trendingPosts = koReviews.slice(1, 3);
 
-// 대표 화제의 기기 비디오 6종 선정 (폴드8, 탭S10, 아이패드 M4, 샤오신패드, 뮤패드, iPlay 80)
-const featuredIds = ['galaxy-z-fold8', 'galaxy-tab-s10-ultra', 'ipad-pro-13-m4', 'lenovo-xiaoxin-pad-pro-12-7-2025', 'imuz-mupad-k11-plus', 'alldocube-iplay-80-mini-pro'];
-const featuredVideos = devices.filter((d: any) => featuredIds.includes(d.id) && d.videos && d.videos.length > 0);
+// 썸네일 및 비디오 정보를 포함한 피드 데이터 매핑
+const feedPosts = koReviews.map((post: CollectionEntry<'reviews'>) => {
+  const dev = devices.find((d: any) => d.id === post.slug);
+  const vId = dev?.videos?.[0]?.youtube_id || 'TigCEb283aU';
+  return {
+    ...post,
+    vId,
+    devName: dev?.name_kr || dev?.name || post.data.device
+  };
+});
 
 const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어러블'];
 ---
@@ -28,16 +33,23 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TECH SPEC BLOG | 글로벌 테크 리뷰 & 스펙 백과 매거진</title>
-  <meta name="description" content="글로벌 최신 IT 기기 심층 리뷰, 팩트 기반 평점(Verdict), 2022~2026 164종 스마트폰·태블릿·이북리더기 정밀 스펙 백과사전을 제공하는 전문 테크 매거진입니다." />
+  <meta name="description" content="글로벌 최신 IT 기기 심층 리뷰, 팩트 기반 평점(Verdict), 2020~2026 174종 스마트폰·태블릿·이북리더기 정밀 스펙 백과사전을 제공하는 전문 테크 매거진입니다." />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="TECH SPEC BLOG | 글로벌 테크 리뷰 & 스펙 백과 매거진" />
-  <meta property="og:description" content="글로벌 최신 IT 기기 심층 리뷰, 팩트 기반 평점(Verdict), 2022~2026 164종 스마트폰·태블릿·이북리더기 정밀 스펙 백과사전을 제공하는 전문 테크 매거진입니다." />
+  <meta property="og:description" content="글로벌 최신 IT 기기 심층 리뷰, 팩트 기반 평점(Verdict), 2020~2026 174종 스마트폰·태블릿·이북리더기 정밀 스펙 백과사전을 제공하는 전문 테크 매거진입니다." />
   <meta property="og:url" content="https://tech-review-blog.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TECH SPEC BLOG | 글로벌 테크 리뷰 & 스펙 백과 매거진" />
   <meta name="twitter:description" content="최신 IT 기기 심층 리뷰 & 스마트폰 스펙 백과사전" />
+
+  <!-- Global i18n SEO Hreflang Tags -->
+  <link rel="alternate" hreflang="ko" href="https://tech-review-blog.vercel.app/" />
+  <link rel="alternate" hreflang="en" href="https://tech-review-blog.vercel.app/en" />
+  <link rel="alternate" hreflang="ja" href="https://tech-review-blog.vercel.app/ja" />
+  <link rel="alternate" hreflang="x-default" href="https://tech-review-blog.vercel.app/" />
+
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="google7dc3c11a8bcb6b9d" />
   <meta name="robots" content="index, follow" />
@@ -47,285 +59,128 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
 <body>
   <Header />
 
-  <!-- Bento Grid Hero Section -->
-  <section class="bento-hero-section">
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
-        <div>
-          <span class="badge badge-gold">🔥 EDITORIAL PICKS</span>
-          <h1 style="font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 900; margin-top: 8px; color: #ffffff;">
-            최신 IT 기기 심층 리뷰 매거진
-          </h1>
-        </div>
-        <div style="font-size: 0.9rem; color: var(--text-muted); display: none; @media(min-width: 768px){display: block;}">
-          실사용 데이터 기반 정밀 분석
-        </div>
-      </div>
-
-      {featuredPost && (
-        <div class="bento-grid">
-          <!-- Main Featured Large Card -->
-          <a href={`/reviews/${featuredPost.slug}`} class="featured-bento-card">
-            <div>
-              <div class="badge-row">
-                <span class="badge">⭐ FEATURED COVER</span>
-                <span class="verdict-score-pill">
-                  VERDICT <strong>{featuredPost.data.score || '9.0'}</strong> / 10
-                </span>
-              </div>
-              <h2 style="font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 900; color: #ffffff; line-height: 1.35; margin: 12px 0 16px;">
-                {featuredPost.data.title}
-              </h2>
-              <div class="bottom-line-box">
-                <strong>💡 에디터 한줄 평 :</strong> {featuredPost.data.summary}
-              </div>
-            </div>
-
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1);">
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                {featuredPost.data.pros && featuredPost.data.pros.slice(0, 2).map((pro: string) => (
-                  <span style="font-size: 0.8rem; background: rgba(134, 239, 172, 0.1); color: #86efac; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(134, 239, 172, 0.2);">
-                    ✓ {pro}
-                  </span>
-                ))}
-              </div>
-              <span style="color: var(--accent-cyan); font-weight: 700; font-size: 0.95rem; white-space: nowrap; margin-left: 12px;">
-                전체 분석 읽기 ➔
-              </span>
-            </div>
-          </a>
-
-          <!-- Trending Sidebar Cards -->
-          <div class="trending-sidebar-grid">
-            {trendingPosts.map((post) => (
-              <a href={`/reviews/${post.slug}`} class="trending-bento-card">
-                <div>
-                  <div class="badge-row">
-                    <span class="badge" style="border-color: rgba(255,255,255,0.15); color: var(--text-muted);">
-                      {post.data.category || 'IT/테크'} • {post.data.date}
-                    </span>
-                    <span class="verdict-score-pill" style="font-size: 0.85rem; padding: 4px 10px;">
-                      <strong>{post.data.score || '8.8'}</strong>
-                    </span>
-                  </div>
-                  <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; line-height: 1.4; margin-bottom: 10px;">
-                    {post.data.title}
-                  </h3>
-                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                    {post.data.summary}
-                  </p>
-                </div>
-                <div style="margin-top: 16px; color: var(--accent-cyan); font-size: 0.88rem; font-weight: 600;">
-                  리뷰 보기 ➔
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  </section>
-
-  <!-- Category & Main Review Stream -->
-  <main class="container" id="reviews" style="padding: 20px 0 80px;">
-    <!-- Category Filter Bar -->
-    <div class="category-tab-bar" id="categoryTabs">
-      {categories.map((cat, idx) => (
-        <button class={`cat-btn ${idx === 0 ? 'active' : ''}`} data-category={cat}>
-          {cat === '전체' ? '전체 리뷰' : cat}
-        </button>
-      ))}
-    </div>
-
-    <!-- Section Header -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-      <div>
-        <h2 style="font-size: 1.5rem; font-weight: 800; color: #ffffff;">심층 기기 리뷰 피드</h2>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">
-          팩트 기반 스펙 시트와 핸즈온 장단점 분석이 수록된 리뷰 목록입니다.
-        </p>
-      </div>
-      <div style="color: var(--accent-cyan); font-weight: 700; font-size: 0.95rem;">
-        총 <span id="feedCount">{feedPosts.length}</span>개 기기
-      </div>
-    </div>
-
-    <!-- Review Grid -->
-    <div class="grid" id="reviewFeedGrid">
-      {feedPosts.map((post) => (
-        <article class="card" data-category={post.data.category || '기타'}>
-          <div class="badge-row">
-            <span class="badge">{post.data.category || 'IT 기기'}</span>
-            <span class="verdict-score-pill">
-              ⭐ <strong>{post.data.score || '9.0'}</strong>
-            </span>
-          </div>
-
-          <h3 style="font-size: 1.3rem; font-weight: 800; margin: 8px 0 12px; line-height: 1.4;">
-            <a href={`/reviews/${post.slug}`} style="color: #ffffff;">
-              {post.data.title}
-            </a>
-          </h3>
-
-          <div class="bottom-line-box">
-            {post.data.summary}
-          </div>
-
-          {post.data.pros && post.data.pros.length > 0 && (
-            <div style="margin-bottom: 16px;">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #86efac; margin-bottom: 6px;">
-                👍 핵심 장점
-              </div>
-              <ul style="list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: #cbd5e1;">
-                {post.data.pros.slice(0, 2).map((pro: string) => (
-                  <li style="display: flex; align-items: center; gap: 6px;">
-                    <span style="color: #86efac;">•</span> {pro}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.85rem; color: var(--text-muted);">
-            <span>📅 {post.data.date}</span>
-            <a href={`/reviews/${post.slug}`} style="color: var(--accent-cyan); font-weight: 700;">
-              스펙 & 리뷰 보기 ➔
-            </a>
-          </div>
-        </article>
-      ))}
-    </div>
-
-    <!-- Trending Hands-On Video Stream -->
-    <div style="margin-top: 60px; margin-bottom: 40px;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
-        <div>
-          <span class="badge" style="margin-bottom: 8px;">🎬 VIDEO POOL</span>
-          <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin: 0;">
-            🔥 화제의 기기 실사용 핸즈온 영상
-          </h2>
-        </div>
-        <a href="/specs" style="color: var(--accent-cyan); font-weight: 700; text-decoration: none; font-size: 0.95rem;">
-          전체 134종 비디오 풀 보기 ➔
+  <main class="container" style="padding-top: 24px; padding-bottom: 80px;">
+    <!-- Bento Grid Hero Section -->
+    <section class="hero-banner" style="margin-bottom: 40px; text-align: center; padding: 48px 20px; background: linear-gradient(135deg, rgba(0, 242, 254, 0.08), rgba(79, 172, 254, 0.03)); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+      <span class="hero-badge-pill" style="display: inline-block; padding: 6px 16px; background: rgba(0, 242, 254, 0.12); color: var(--accent-cyan); border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; border: 1px solid rgba(0, 242, 254, 0.3);">
+        ⚡ 팩트 기반 데이터 저널리즘 & 스펙 백과
+      </span>
+      <h1 class="hero-title" style="font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 16px; line-height: 1.2;">
+        객관적 데이터. <span style="background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">가식 없는 평점.</span>
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 680px; margin: 0 auto 28px;">
+        174종 스마트폰·태블릿·이북리더기 상세 스펙 비교와 실사용 벤치마크 기반 심층 리뷰.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a href="/specs" style="padding: 12px 28px; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #000; font-weight: 800; border-radius: var(--radius-sm); text-decoration: none;">
+          📱 174종 스펙 백과사전 탐색
+        </a>
+        <a href="#reviews" style="padding: 12px 24px; background: var(--bg-card); color: var(--text-main); font-weight: 700; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-decoration: none;">
+          최신 심층 리뷰 피드
         </a>
       </div>
+    </section>
 
-      <div class="video-pool-grid">
-        {featuredVideos.map((item: any) => {
-          const vid = item.videos[0];
-          return (
-            <div 
-              class="video-card home-video-card" 
-              data-vid={vid.youtube_id} 
-              data-title={vid.title}
-            >
-              <div class="video-thumb-container">
+    <!-- Bento Grid Section with High-Res Video Thumbnails -->
+    {featuredPost && (
+      <section style="margin-bottom: 50px;">
+        <div class="bento-grid">
+          <!-- Featured Large Card with Live Video Thumbnail -->
+          <a href={`/reviews/${featuredPost.slug}`} class="bento-card bento-featured" style="text-decoration: none; color: inherit;">
+            <div style="position: relative; height: 260px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 18px;">
+              <img 
+                src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === featuredPost.slug)?.videos?.[0]?.youtube_id || 'TigCEb283aU'}/hqdefault.jpg`}
+                alt={featuredPost.data.device}
+                style="width: 100%; height: 100%; object-fit: cover;"
+              />
+              <span class="score-badge" style="position: absolute; top: 14px; right: 14px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 6px 12px; border-radius: 8px; font-weight: 900; font-size: 1.1rem; border: 1px solid var(--accent-cyan);">
+                ★ {featuredPost.data.score || '9.0'}
+              </span>
+            </div>
+            <span style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 800; text-transform: uppercase;">⭐ FEATURED COVER</span>
+            <h2 class="bento-title" style="font-size: 1.6rem; font-weight: 800; margin: 8px 0 12px;">{featuredPost.data.title}</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">{featuredPost.data.summary}</p>
+          </a>
+
+          <!-- Trending Sidebar Cards with Live Video Thumbnails -->
+          {trendingPosts.map((post) => (
+            <a href={`/reviews/${post.slug}`} class="bento-card" style="text-decoration: none; color: inherit;">
+              <div style="position: relative; height: 160px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 14px;">
                 <img 
-                  src={vid.thumbnail} 
-                  alt={vid.title} 
-                  class="video-thumb-img" 
-                  onerror={`this.onerror=null; this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80';`}
-                  loading="lazy" 
+                  src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === post.slug)?.videos?.[0]?.youtube_id || 'Y9GIwUvWn3E'}/hqdefault.jpg`}
+                  alt={post.data.device}
+                  style="width: 100%; height: 100%; object-fit: cover;"
                 />
-                <div class="video-play-overlay">
-                  <div class="video-play-icon">▶</div>
-                </div>
-                <span class="video-duration-badge">{vid.duration || '12:00'}</span>
+                <span class="score-badge" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 4px 8px; border-radius: 6px; font-weight: 800; font-size: 0.95rem;">
+                  ★ {post.data.score || '8.8'}
+                </span>
               </div>
-              <div class="video-card-body">
-                <div class="video-device-tag">
-                  {item.device_type === '태블릿' ? '📟 태블릿' : '📱 스마트폰'} • {item.name}
-                </div>
-                <h4 class="video-card-title">{vid.title}</h4>
-                <div class="video-card-meta">
-                  <span>👤 {vid.channel}</span>
-                  <span>{item.release_date}</span>
-                </div>
+              <span style="color: var(--accent-indigo); font-size: 0.8rem; font-weight: 700;">🔥 TRENDING</span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin: 6px 0 8px;">{post.data.title}</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{post.data.summary}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Category & Review Feed Grid with Video Thumbnails -->
+    <section id="reviews" style="margin-bottom: 60px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <div>
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">전체 심층 기기 리뷰</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px;">
+            팩트 기반 스펙 시트와 핸즈온 장단점 분석이 수록된 공식 리뷰 목록입니다.
+          </p>
+        </div>
+        <div style="color: var(--accent-cyan); font-weight: 700; font-size: 0.95rem;">
+          총 {feedPosts.length}개 리뷰
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+        {feedPosts.map((post) => (
+          <a href={`/reviews/${post.slug}`} class="card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease;">
+            <!-- Live YouTube Video Thumbnail -->
+            <div style="position: relative; height: 200px; overflow: hidden;">
+              <img 
+                src={`https://img.youtube.com/vi/${post.vId}/hqdefault.jpg`} 
+                alt={post.data.device} 
+                style="width: 100%; height: 100%; object-fit: cover;" 
+              />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 0.9rem; border: 1px solid rgba(0, 242, 254, 0.3);">
+                ★ {post.data.score || '9.0'}
+              </span>
+              <span style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.75); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; backdrop-filter: blur(4px);">
+                🎬 핸즈온 영상 포함
+              </span>
+            </div>
+            
+            <div style="padding: 20px; flex: 1; display: flex; flex-direction: column;">
+              <span style="color: var(--accent-cyan); font-size: 0.8rem; font-weight: 700; margin-bottom: 6px;">
+                {post.data.category || 'IT 기기'}
+              </span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4;">
+                {post.data.title}
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 16px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                {post.data.summary}
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <span>{post.data.date}</span>
+                <span style="color: var(--accent-cyan); font-weight: 700;">전체 리뷰 보기 →</span>
               </div>
             </div>
-          );
-        })}
+          </a>
+        ))}
       </div>
-    </div>
-
-    <!-- Smartphone & Tablet Spec Encyclopedia Promo Banner -->
-    <div class="spec-promo-banner">
-      <div>
-        <span class="badge" style="margin-bottom: 10px;">📱 SMARTPHONE & TABLET DATABASE</span>
-        <h3 style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 8px;">
-          2023 ~ 2026 스마트폰 & 태블릿 정밀 스펙 백과사전
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px;">
-          Galaxy Z Fold8 / 탭 S10 Ultra, iPad Pro M4부터 오포 패드 3 프로, 레노버 샤오신패드 12.7, 뮤패드 K11, 올도큐브 iPlay 80까지 총 134종 기기의 정밀 사양을 실시간으로 검색하고 1:1로 비교해 보세요.
-        </p>
-      </div>
-      <a href="/specs" class="btn-launch-compare" style="padding: 14px 28px; font-size: 1rem; text-decoration: none; display: inline-block;">
-        스펙 & 비디오 풀 열기 ➔
-      </a>
-    </div>
+    </section>
   </main>
 
-  <!-- YouTube Video Player Modal -->
-  <div class="modal-overlay" id="homeVideoPlayerModal">
-    <div class="modal-content" style="max-width: 860px; padding: 20px;">
-      <button class="modal-close-btn" id="closeHomeVideoModal">✕</button>
-      <h3 id="homeVideoModalTitle" style="font-size: 1.25rem; color: #ffffff; margin: 6px 0 12px; padding-right: 36px; line-height: 1.4;"></h3>
-      <div class="video-player-frame-wrapper" id="homeVideoFrameContainer"></div>
-    </div>
-  </div>
-  </main>
-
-  <footer>
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
     <div class="container">
-      <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; font-size: 0.9rem;">
-        <a href="/about" style="color: var(--text-muted); text-decoration: none;">블로그 소개</a>
-        <a href="/privacy" style="color: var(--text-muted); text-decoration: none;">개인정보처리방침</a>
-        <a href="/contact" style="color: var(--text-muted); text-decoration: none;">문의하기</a>
-      </div>
-      <p>© 2026 Tech Review Blog. Professional Tech Editorial Magazine & Spec Database.</p>
+      <p>© 2026 TECH SPEC BLOG. 팩트 기반 테크 저널리즘 & 스펙 백과사전.</p>
     </div>
   </footer>
-
-  <Analytics />
-
-  <script is:inline>
-    const catButtons = document.querySelectorAll('#categoryTabs .cat-btn');
-    const cards = document.querySelectorAll('#reviewFeedGrid .card');
-    const feedCount = document.getElementById('feedCount');
-
-    catButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        catButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const selected = btn.getAttribute('data-category');
-
-        let count = 0;
-        cards.forEach(card => {
-          const cardCat = card.getAttribute('data-category');
-          if (selected === '전체' || cardCat.includes(selected.split('/')[0])) {
-            card.style.display = 'flex';
-            count++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        if (feedCount) feedCount.innerText = count;
-      });
-    });
-
-    // Home Video Player Logic (Direct YouTube Open in new tab)
-    document.querySelectorAll('.home-video-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const vid = card.getAttribute('data-vid');
-        const title = card.getAttribute('data-title');
-        if (vid) {
-          window.open(`https://www.youtube.com/watch?v=${vid}`, '_blank', 'noopener,noreferrer');
-        } else {
-          window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(title)}`, '_blank', 'noopener,noreferrer');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
