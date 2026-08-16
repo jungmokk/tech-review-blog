@@ -9,11 +9,11 @@
     "release_date": "2026-07",
     "category": "Foldable",
     "specs": {
-      "ap": "Snapdragon 8 Elite Gen 2 for Galaxy (2nm 공정, NPU 대폭 강화)",
-      "display": "메인 7.6인치 무주름 울트라 플렉서블 OLED (2,800nits) / 커버 6.3인치 와이드 풀비전",
-      "ram_storage": "16GB RAM + 256GB / 512GB / 1TB",
-      "camera": "2억 화소 메인 센서(OIS) + 5000만 초광각 + 5000만 5배 폴디드 망원",
-      "battery": "4,800mAh (45W 초고속 충전, 실리콘-탄소 음극재)",
+      "ap": "스냅드래곤 8 Elite 5세대 칩 (Snapdragon 8 Elite Gen 5 for Galaxy)",
+      "display": "메인 7.6인치 Dynamic AMOLED 2X (1~120Hz LTPO, 2,800nits) / 커버 6.3인치 Dynamic AMOLED 2X",
+      "ram_storage": "16GB LPDDR5X / 256GB, 512GB, 1TB UFS 4.0",
+      "camera": "5,000만 화소 메인(OIS) + 12MP 초광각 + 10MP 망원(3x 광학), 최대 30배 줌",
+      "battery": "4,800mAh (45W 초고속 충전 2.0, 15W 무선 충전)",
       "dimensions_weight": "접었을 때 9.9mm / 펼쳤을 때 4.9mm / 215g (초슬림 초경량 힌지)",
       "os_durability": "Android 16 (One UI 8.0 Fold Edition) / IP68 방수방진",
       "price_krw": "2,380,000원부터"
@@ -40,11 +40,11 @@
     "release_date": "2026-07",
     "category": "Foldable",
     "specs": {
-      "ap": "Snapdragon 8 Elite Gen 2 for Galaxy (2nm 공정)",
-      "display": "메인 6.7인치 FHD+ 120Hz LTPO / 커버 4.0인치 풀플렉스 윈도우 (베젤 0mm 엣지-투-엣지)",
-      "ram_storage": "12GB RAM + 256GB / 512GB",
-      "camera": "5000만 듀얼 카메라 (OIS, F1.6 대구경)",
-      "battery": "4,250mAh (30W 고속 충전)",
+      "ap": "갤럭시용 엑시노스 2600 (Exynos 2600) / Snapdragon 8 Elite Gen 5 for Galaxy",
+      "display": "메인 6.7인치 FHD+ Dynamic AMOLED 2X (1~120Hz LTPO) / 커버 4.0인치 Flex Window Super AMOLED",
+      "ram_storage": "12GB LPDDR5X / 256GB, 512GB UFS 4.0",
+      "camera": "5,000만 화소 메인(OIS) + 12MP 초광각",
+      "battery": "4,250mAh (30W 고속 충전, 15W 무선 충전)",
       "dimensions_weight": "접었을 때 13.5mm / 펼쳤을 때 6.5mm / 183g",
       "os_durability": "Android 16 (One UI 8.0) / IP58 방수방진",
       "price_krw": "1,540,000원부터"

@@ -65,6 +65,26 @@ GROUND_TRUTH = {
             "battery": "4,000mAh (25W 고속 충전)"
         }
     },
+    "galaxy-z-fold8": {
+        "name": "Galaxy Z Fold8",
+        "specs": {
+            "ap": "스냅드래곤 8 Elite 5세대 칩 (Snapdragon 8 Elite Gen 5 for Galaxy)",
+            "display": "메인 7.6인치 Dynamic AMOLED 2X (1~120Hz LTPO, 2,800nits) / 커버 6.3인치 Dynamic AMOLED 2X",
+            "ram_storage": "16GB LPDDR5X / 256GB, 512GB, 1TB UFS 4.0",
+            "camera": "5,000만 화소 메인(OIS) + 12MP 초광각 + 10MP 망원(3x 광학), 최대 30배 줌",
+            "battery": "4,800mAh (45W 초고속 충전 2.0, 15W 무선 충전)"
+        }
+    },
+    "galaxy-z-flip8": {
+        "name": "Galaxy Z Flip8",
+        "specs": {
+            "ap": "갤럭시용 엑시노스 2600 (Exynos 2600) / Snapdragon 8 Elite Gen 5 for Galaxy",
+            "display": "메인 6.7인치 FHD+ Dynamic AMOLED 2X (1~120Hz LTPO) / 커버 4.0인치 Flex Window Super AMOLED",
+            "ram_storage": "12GB LPDDR5X / 256GB, 512GB UFS 4.0",
+            "camera": "5,000만 화소 메인(OIS) + 12MP 초광각",
+            "battery": "4,250mAh (30W 고속 충전, 15W 무선 충전)"
+        }
+    },
     "galaxy-z-fold6": {
         "name": "Galaxy Z Fold6",
         "specs": {
