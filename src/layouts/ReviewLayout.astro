@@ -382,15 +382,15 @@ const jsonLd = {
 
       if (titleElem) titleElem.innerText = videoTitle || '기기 실사용 영상';
       const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(videoTitle || '테크 기기 실사용 리뷰')}`;
-      const directWatchUrl = searchUrl; // 100% 항상 작동하는 유튜브 공식 검색 스트림
+      const directWatchUrl = videoId ? `https://www.youtube.com/watch?v=${videoId}` : searchUrl;
 
       container.innerHTML = `
         <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.4); padding: 10px 14px; border-radius: 6px;">
           <span style="font-size: 0.85rem; color: #fca5a5;">
-            🎬 YouTube 앱 또는 웹에서 ${videoTitle} 전체 영상을 100% 시청하세요:
+            🎬 외부 임베드 제한 시 원클릭으로 YouTube에서 이 영상을 고화질로 바로 시청하세요:
           </span>
           <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: #ffffff; padding: 7px 16px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-decoration: none; box-shadow: 0 2px 8px rgba(220,38,38,0.4);">
-            ▶ YouTube에서 실시간 리뷰 바로보기 ➔
+            ▶ YouTube에서 원본 영상 바로보기 ➔
           </a>
         </div>
         <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden;">
@@ -411,7 +411,10 @@ const jsonLd = {
           </span>
           <div style="display: flex; gap: 8px;">
             <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="background: #dc2626; color: #ffffff; padding: 6px 14px; border-radius: 4px; font-size: 0.82rem; font-weight: 700; text-decoration: none;">
-              ▶ YouTube 전체 리뷰 보기
+              ▶ 원본 영상 직접 시청
+            </a>
+            <a href="${searchUrl}" target="_blank" rel="noopener noreferrer" style="background: rgba(255,255,255,0.1); color: #e2e8f0; padding: 6px 14px; border-radius: 4px; font-size: 0.82rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">
+              🔍 다른 리뷰 영상 더보기
             </a>
           </div>
         </div>

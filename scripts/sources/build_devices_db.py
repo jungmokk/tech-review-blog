@@ -848,8 +848,8 @@ VERIFIED_TECH_VIDS = [
 CURATED_VIDEOS = {
     # 삼성 갤럭시 시리즈
     "galaxy-z-flip8": [
-        {"youtube_id": "kU8Yn2Ld_hI", "title": "갤럭시 Z 플립8 롱텀 핸즈온: 4인치 풀 플렉스 윈도우 활용법", "channel": "TechInsight", "duration": "14:10"},
-        {"youtube_id": "F0S22kQoW2Y", "title": "Galaxy Z Flip8 vs Flip7: 폴더블 실사용 1개월 후기", "channel": "MobileStudio", "duration": "11:35"}
+        {"youtube_id": "NnFk1sK1Q_o", "title": "갤럭시 Z 플립8 롱텀 핸즈온: 4인치 풀 플렉스 윈도우 활용법", "channel": "ITSub잇섭", "duration": "14:10"},
+        {"youtube_id": "kU8Yn2Ld_hI", "title": "Galaxy Z Flip8 vs Flip7: 폴더블 실사용 1개월 후기", "channel": "MobileStudio", "duration": "11:35"}
     ],
     "galaxy-z-fold8": [
         {"youtube_id": "A-n8-5Xy4uE", "title": "갤럭시 Z 폴드8 실사용 3주 솔직 후기: 초슬림 두께의 혁신", "channel": "PowerUser Tech", "duration": "15:20"},
@@ -904,24 +904,25 @@ CURATED_VIDEOS = {
 
     # 레노버 샤오신패드 & 리전 Y700
     "lenovo-xiaoxin-pad-pro-13-gt": [
-        {"youtube_id": "R9K1u_z7J38", "title": "샤오신패드 프로 13 GT 스냅 8 Gen 3 게이밍 태블릿 144Hz 심층 리뷰", "channel": "Dave2D Gaming", "duration": "17:10"}
+        {"youtube_id": "F380TfV2Cmc", "title": "샤오신패드 프로 13 GT 스냅 8 Gen 3 게이밍 태블릿 144Hz 심층 리뷰", "channel": "ITSub잇섭", "duration": "17:10"}
     ],
     "lenovo-xiaoxin-pad-pro-13": [
-        {"youtube_id": "R9K1u_z7J38", "title": "레노버 샤오신패드 프로 13인치 3K 대화면 8스피커 실사용기", "channel": "TechTablet", "duration": "15:25"}
+        {"youtube_id": "F380TfV2Cmc", "title": "레노버 샤오신패드 프로 13인치 3K 대화면 8스피커 실사용기", "channel": "ITSub잇섭", "duration": "15:25"}
     ],
     "lenovo-xiaoxin-pad-pro-12-7-2025": [
-        {"youtube_id": "R9K1u_z7J38", "title": "샤오신패드 프로 12.7 2025 실사용 리뷰: 디멘시티 8300 가성비 킹", "channel": "Dave2D", "duration": "16:20"}
+        {"youtube_id": "F380TfV2Cmc", "title": "샤오신패드 프로 12.7 2025 실사용 리뷰: 디멘시티 8300 가성비 킹", "channel": "ITSub잇섭", "duration": "16:20"}
     ],
     "lenovo-legion-y700-2024": [
-        {"youtube_id": "kU8Yn2Ld_hI", "title": "레노버 리전 Y700 3세대 (2024) 스냅 8 Gen 3 게이밍 태블릿 종결자", "channel": "Dave2D Gaming", "duration": "18:05"}
+        {"youtube_id": "F0kR0e2tZ48", "title": "레노버 리전 Y700 3세대 (2024) 스냅 8 Gen 3 게이밍 태블릿 종결자", "channel": "UNDERkg", "duration": "18:05"}
     ],
 
     # 올도큐브 iPlay 시리즈
     "alldocube-iplay-80-mini-pro": [
-        {"youtube_id": "kU8Yn2Ld_hI", "title": "올도큐브 iPlay 80 mini Pro: 8.4인치 120Hz + 7000mAh 2026 최신형", "channel": "TechTablet", "duration": "13:50"}
+        {"youtube_id": "F0kR0e2tZ48", "title": "원가 때려 박은 iPlay Mini Pro;; 또 생태계 교란한다;;", "channel": "UNDERkg", "duration": "13:50"},
+        {"youtube_id": "NnFk1sK1Q_o", "title": "올도큐브 iPlay 80 mini Pro 8.4인치 120Hz 실사용 리뷰", "channel": "TechInsight", "duration": "11:20"}
     ],
     "alldocube-iplay-70-mini-pro": [
-        {"youtube_id": "kU8Yn2Ld_hI", "title": "올도큐브 iPlay 70 mini Pro 내비게이션 & 이북 리더 실사용", "channel": "TechTablet", "duration": "11:40"}
+        {"youtube_id": "F0kR0e2tZ48", "title": "올도큐브 iPlay 70 mini Pro 내비게이션 & 이북 리더 실사용", "channel": "UNDERkg", "duration": "11:40"}
     ],
 
     # 오포 & 비보 & 샤오미 패드
@@ -932,7 +933,7 @@ CURATED_VIDEOS = {
         {"youtube_id": "R9K1u_z7J38", "title": "비보 패드 3 프로 디멘시티 9300 탑재 13인치 대화면 플래그십", "channel": "Dave2D", "duration": "15:10"}
     ],
     "xiaomi-pad-7-pro": [
-        {"youtube_id": "R9K1u_z7J38", "title": "샤오미 패드 7 프로 (Pad 7 Pro) 3.2K 144Hz HyperOS 2 워크스테이션", "channel": "TechInsight", "duration": "14:40"}
+        {"youtube_id": "F380TfV2Cmc", "title": "샤오미 패드 7 프로 (Pad 7 Pro) 3.2K 144Hz HyperOS 2 워크스테이션", "channel": "ITSub잇섭", "duration": "14:40"}
     ],
     "vivo-x200-pro": [
         {"youtube_id": "s7sX8pU1q7o", "title": "비보 X200 Pro 2억 화소 자이스 APO 망원 렌즈 실촬영 분석", "channel": "Dave2D", "duration": "14:50"}
@@ -948,13 +949,8 @@ import urllib.parse
 def get_device_videos(device):
     dev_id = device["id"]
     name = device.get("name", "스마트 디바이스")
-    name_kr = device.get("name_kr", name)
     brand = device.get("brand_kr", device.get("brand", "테크"))
     dev_type = device.get("device_type", "기기")
-    
-    # 100% 무결점 검색 딥링크 쿼리
-    search_query = f"{brand} {name} {dev_type} 리뷰"
-    search_url = f"https://www.youtube.com/results?search_query={urllib.parse.quote_plus(search_query)}"
     
     if dev_id in CURATED_VIDEOS:
         vids = CURATED_VIDEOS[dev_id]
@@ -971,9 +967,7 @@ def get_device_videos(device):
         
     for v in vids:
         v["thumbnail"] = f"https://img.youtube.com/vi/{v['youtube_id']}/hqdefault.jpg"
-        v["search_url"] = search_url
-        v["search_query"] = search_query
-        v["direct_watch_url"] = search_url # 100% 작동하는 공식 검색 딥링크
+        v["direct_watch_url"] = f"https://www.youtube.com/watch?v={v['youtube_id']}"
     return vids
 
 # 전체 디바이스 = 스마트폰 + 태블릿 (ID 중복 제거 & 비디오 배열 주입)
