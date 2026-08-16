@@ -181,26 +181,33 @@ const jsonLd = {
               </span>
             </div>
 
-            <!-- Play Video Overlay Button -->
-            <button 
+            <!-- Play Video Overlay Button (Direct YouTube Link) -->
+            <a 
+              href={`https://www.youtube.com/watch?v=${primaryVideo.youtube_id}`}
+              target="_blank"
+              rel="noopener noreferrer"
               class="hero-video-play-btn" 
-              onclick={`playReviewVideo('${primaryVideo.youtube_id}', '${frontmatter.device} 실사용 핸즈온 영상')`}
-              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; border-radius: 50%; background: rgba(225, 29, 72, 0.9); border: 2px solid #ffffff; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 28px rgba(225,29,72,0.6); z-index: 3;"
-              aria-label="기기 실사용 영상 재생"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; border-radius: 50%; background: rgba(225, 29, 72, 0.9); border: 2px solid #ffffff; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 28px rgba(225,29,72,0.6); z-index: 3; text-decoration: none;"
+              aria-label="YouTube에서 기기 실사용 영상 직접 시청"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 3px;">
                 <path d="M8 5v14l11-7z"/>
               </svg>
-            </button>
+            </a>
 
             <div style="position: absolute; bottom: 14px; left: 16px; right: 16px; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end;">
               <div>
-                <div style="font-size: 0.8rem; color: var(--text-muted);">실물 디자인 및 구동 확인</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">실물 디자인 및 구동 확인 (YouTube 공식 재생)</div>
                 <div style="font-size: 1.05rem; font-weight: 700; color: #ffffff;">{primaryVideo.title}</div>
               </div>
-              <span style="background: rgba(0,0,0,0.8); color: #94a3b8; font-size: 0.78rem; padding: 2px 8px; border-radius: 4px;">
-                ⏱️ {primaryVideo.duration || '재생'}
-              </span>
+              <a 
+                href={`https://www.youtube.com/watch?v=${primaryVideo.youtube_id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style="background: #dc2626; color: #ffffff; font-size: 0.78rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;"
+              >
+                ▶ YouTube로 시청
+              </a>
             </div>
           </div>
         </div>
@@ -265,7 +272,7 @@ const jsonLd = {
                   🎬 {frontmatter.device} 실사용 핸즈온 영상 & 비주얼 풀
                 </h3>
                 <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
-                  국내외 테크 크리에이터들의 실물 외관, 카메라 실촬영 및 게이밍 구동 영상입니다.
+                  클릭 시 YouTube 앱/웹에서 고화질 공식 리뷰가 100% 바로 재생됩니다.
                 </p>
               </div>
               <a href="/specs" class="badge" style="text-decoration: none; padding: 6px 12px; cursor: pointer;">
@@ -275,10 +282,12 @@ const jsonLd = {
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
               {matchedDevice.videos.map((vid: any) => (
-                <div 
+                <a 
+                  href={`https://www.youtube.com/watch?v=${vid.youtube_id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="video-card" 
-                  onclick={`playReviewVideo('${vid.youtube_id}', '${vid.title.replace(/'/g, "\\'")}')`}
-                  style="cursor: pointer;"
+                  style="text-decoration: none; display: block;"
                 >
                   <div class="video-card-thumb-wrapper">
                     <img 
@@ -293,9 +302,9 @@ const jsonLd = {
                   </div>
                   <div class="video-card-body">
                     <div class="video-card-title">{vid.title}</div>
-                    <div class="video-card-channel">📺 {vid.channel}</div>
+                    <div class="video-card-channel">📺 {vid.channel} <span style="color: #ef4444; font-size: 0.75rem; margin-left: 4px; font-weight: 700;">▶ YouTube 시청</span></div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>

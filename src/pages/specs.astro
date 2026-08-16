@@ -322,11 +322,6 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     const compareModalBody = document.getElementById('compareModalBody');
     const closeCompareModal = document.getElementById('closeCompareModal');
 
-    const videoPlayerModal = document.getElementById('videoPlayerModal');
-    const videoModalTitle = document.getElementById('videoModalTitle');
-    const videoFrameContainer = document.getElementById('videoFrameContainer');
-    const closeVideoPlayerModal = document.getElementById('closeVideoPlayerModal');
-
     // Switch View Mode
     btnModeSpecs.addEventListener('click', () => {
       currentMode = 'specs';
@@ -433,67 +428,19 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
       }
     });
 
-    // Delegate Click for Video Cards (Direct Play)
+    // Delegate Click for Video Cards (Direct YouTube Open in new tab)
     videoCardsGrid.addEventListener('click', (e) => {
       const card = e.target.closest('.video-card');
       if (card) {
         const vid = card.getAttribute('data-vid');
         const title = card.getAttribute('data-title');
-        playYouTubeVideo(vid, title);
+        if (vid) {
+          window.open(`https://www.youtube.com/watch?v=${vid}`, '_blank', 'noopener,noreferrer');
+        } else {
+          window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(title)}`, '_blank', 'noopener,noreferrer');
+        }
       }
     });
-
-    // YouTube Facade Player Opener
-    function playYouTubeVideo(youtubeId, title) {
-      videoModalTitle.innerText = title;
-      const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(title)}`;
-      const directWatchUrl = youtubeId ? `https://www.youtube.com/watch?v=${youtubeId}` : searchUrl;
-
-      // Inject iframe with enhanced embed fallback
-      videoFrameContainer.innerHTML = `
-        <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.4); padding: 10px 14px; border-radius: 6px;">
-          <span style="font-size: 0.85rem; color: #fca5a5;">
-            🎬 외부 임베드 제한 시 원클릭으로 YouTube에서 이 영상을 고화질로 바로 시청하세요:
-          </span>
-          <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: #ffffff; padding: 7px 16px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-decoration: none; box-shadow: 0 2px 8px rgba(220,38,38,0.4);">
-            ▶ YouTube에서 원본 영상 바로보기 ➔
-          </a>
-        </div>
-        <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden;">
-          <iframe 
-            src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1" 
-            title="${title}"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-          ></iframe>
-        </div>
-        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <span style="font-size: 0.82rem; color: var(--text-muted);">
-            📺 기기별 핸즈온 & 벤치마크 영상 풀
-          </span>
-          <div style="display: flex; gap: 8px;">
-            <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="background: #dc2626; color: #ffffff; padding: 6px 14px; border-radius: 4px; font-size: 0.82rem; font-weight: 700; text-decoration: none;">
-              ▶ 원본 영상 직접 시청
-            </a>
-            <a href="${searchUrl}" target="_blank" rel="noopener noreferrer" style="background: rgba(255,255,255,0.1); color: #e2e8f0; padding: 6px 14px; border-radius: 4px; font-size: 0.82rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">
-              🔍 관련 리뷰 더보기
-            </a>
-          </div>
-        </div>
-      `;
-      videoPlayerModal.classList.add('open');
-    }
-
-    // Stop and cleanup video on close
-    function closeVideoPlayer() {
-      videoFrameContainer.innerHTML = '';
-      videoPlayerModal.classList.remove('open');
-    }
-
-    closeVideoPlayerModal.addEventListener('click', closeVideoPlayer);
 
     // Open Detail Spec Modal (With Video Thumbnails Section)
     function openDetail(id) {
@@ -576,12 +523,16 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         ${videosHtml}
       `;
 
-      // Attach click to detail video items
+      // Attach click to detail video items (Direct YouTube Open in new tab)
       detailModalBody.querySelectorAll('.detail-video-item').forEach(el => {
         el.addEventListener('click', () => {
           const vid = el.getAttribute('data-vid');
           const title = el.getAttribute('data-title');
-          playYouTubeVideo(vid, title);
+          if (vid) {
+            window.open(`https://www.youtube.com/watch?v=${vid}`, '_blank', 'noopener,noreferrer');
+          } else {
+            window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(title)}`, '_blank', 'noopener,noreferrer');
+          }
         });
       });
 
@@ -701,7 +652,6 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     window.addEventListener('click', (e) => {
       if (e.target === detailModal) detailModal.classList.remove('open');
       if (e.target === compareModal) compareModal.classList.remove('open');
-      if (e.target === videoPlayerModal) closeVideoPlayer();
     });
   </script>
 </body>
