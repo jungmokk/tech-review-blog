@@ -75,40 +75,57 @@ const feedPosts = enReviews.map((post: CollectionEntry<'reviews'>) => {
     <!-- Bento Grid Section -->
     {featuredPost && (
       <section style="margin-bottom: 50px;">
-        <div class="bento-grid">
-          <a href={`/en/reviews/${featuredPost.slug.replace('en/', '')}`} class="bento-card bento-featured" style="text-decoration: none; color: inherit;">
-            <div style="position: relative; height: 260px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 18px;">
+        <div class="bento-hero-grid">
+          <!-- Featured Large Card -->
+          <a href={`/en/reviews/${featuredPost.slug.replace('en/', '')}`} class="bento-featured-card">
+            <div class="bento-featured-media">
               <img 
                 src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === featuredPost.slug.replace('en/', ''))?.videos?.[0]?.youtube_id || 'TigCEb283aU'}/hqdefault.jpg`}
                 alt={featuredPost.data.device}
-                style="width: 100%; height: 100%; object-fit: cover;"
               />
-              <span class="score-badge" style="position: absolute; top: 14px; right: 14px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 6px 12px; border-radius: 8px; font-weight: 900; font-size: 1.1rem; border: 1px solid var(--accent-cyan);">
+              <span class="bento-score-pill">
                 ★ {featuredPost.data.score}
               </span>
+              <span class="bento-cover-tag">⭐ FEATURED COVER</span>
             </div>
-            <span style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 800; text-transform: uppercase;">FEATURED REVIEW</span>
-            <h2 class="bento-title" style="font-size: 1.6rem; font-weight: 800; margin: 8px 0 12px;">{featuredPost.data.title}</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">{featuredPost.data.summary}</p>
+            <div class="bento-featured-content">
+              <div class="bento-meta-row">
+                <span class="bento-cat-badge">{featuredPost.data.category || 'Tech'}</span>
+                <span class="bento-date">{featuredPost.data.date}</span>
+              </div>
+              <h2 class="bento-featured-title">{featuredPost.data.title}</h2>
+              <p class="bento-featured-summary">{featuredPost.data.summary}</p>
+              <div class="bento-featured-footer">
+                <span class="bento-read-more">Read Full In-Depth Review ➔</span>
+              </div>
+            </div>
           </a>
 
-          {trendingPosts.map((post: CollectionEntry<'reviews'>) => (
-            <a href={`/en/reviews/${post.slug.replace('en/', '')}`} class="bento-card" style="text-decoration: none; color: inherit;">
-              <div style="position: relative; height: 160px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 14px;">
-                <img 
-                  src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === post.slug.replace('en/', ''))?.videos?.[0]?.youtube_id || 'Y9GIwUvWn3E'}/hqdefault.jpg`}
-                  alt={post.data.device}
-                  style="width: 100%; height: 100%; object-fit: cover;"
-                />
-                <span class="score-badge" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 4px 8px; border-radius: 6px; font-weight: 800; font-size: 0.95rem;">
-                  ★ {post.data.score}
-                </span>
-              </div>
-              <span style="color: var(--accent-indigo); font-size: 0.8rem; font-weight: 700;">TRENDING</span>
-              <h3 style="font-size: 1.15rem; font-weight: 700; margin: 6px 0 8px;">{post.data.title}</h3>
-              <p style="color: var(--text-muted); font-size: 0.85rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{post.data.summary}</p>
-            </a>
-          ))}
+          <!-- Trending Sidebar Cards -->
+          <div class="bento-trending-sidebar">
+            {trendingPosts.map((post: CollectionEntry<'reviews'>) => (
+              <a href={`/en/reviews/${post.slug.replace('en/', '')}`} class="bento-trending-card">
+                <div class="bento-trending-media">
+                  <img 
+                    src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === post.slug.replace('en/', ''))?.videos?.[0]?.youtube_id || 'Y9GIwUvWn3E'}/hqdefault.jpg`}
+                    alt={post.data.device}
+                  />
+                  <span class="bento-trending-score">
+                    ★ {post.data.score}
+                  </span>
+                </div>
+                <div class="bento-trending-content">
+                  <div class="bento-trending-badge-row">
+                    <span class="bento-trending-tag">🔥 TRENDING</span>
+                    <span class="bento-trending-date">{post.data.date}</span>
+                  </div>
+                  <h3 class="bento-trending-title">{post.data.title}</h3>
+                  <p class="bento-trending-summary">{post.data.summary}</p>
+                  <span class="bento-trending-link">Read Review ➔</span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     )}

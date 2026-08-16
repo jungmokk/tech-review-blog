@@ -236,86 +236,255 @@ a:hover {
 }
 
 /* =========================================================================
-   Editorial Bento Grid (Magazine Hero)
+   Perfect Balanced Editorial Bento Grid (Magazine Hero)
    ========================================================================= */
-.bento-hero-section {
-  padding: 40px 0 32px;
-}
-
-.bento-grid {
+.bento-hero-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
+  align-items: stretch;
 }
 
 @media (min-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: 1.6fr 1fr;
+  .bento-hero-grid {
+    grid-template-columns: 1.4fr 1fr;
   }
 }
 
-/* 4-Column Responsive Feed Grid for Widescreen Desktop */
-.reviews-grid-feed {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-}
-
-@media (min-width: 640px) {
-  .reviews-grid-feed {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1080px) {
-  .reviews-grid-feed {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1480px) {
-  .reviews-grid-feed {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Featured Large Card */
-.featured-bento-card {
-  background: linear-gradient(145deg, rgba(20, 28, 45, 0.9), rgba(12, 16, 26, 0.95));
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  border-radius: var(--radius-lg);
-  padding: 36px;
+.bento-featured-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 242, 254, 0.1);
-  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-  min-height: 420px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  height: 100%;
 }
 
-.featured-bento-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
+.bento-featured-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 20px 40px -10px rgba(0, 242, 254, 0.2);
+}
+
+.bento-featured-media {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.bento-featured-media img {
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
-  pointer-events: none;
+  object-fit: cover;
 }
 
-.featured-bento-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 242, 254, 0.2);
+.bento-score-pill {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--accent-cyan);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 1.15rem;
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  backdrop-filter: blur(8px);
 }
 
-.trending-sidebar-grid {
+.bento-cover-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fbbf24;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  backdrop-filter: blur(8px);
+}
+
+.bento-featured-content {
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  flex: 1;
+}
+
+.bento-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bento-cat-badge {
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bento-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.bento-featured-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.bento-featured-summary {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bento-featured-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bento-read-more {
+  color: var(--accent-cyan);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Trending Sidebar */
+.bento-trending-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.bento-trending-card {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  flex: 1;
+}
+
+.bento-trending-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-indigo);
+  box-shadow: 0 16px 32px -8px rgba(79, 172, 254, 0.2);
+}
+
+.bento-trending-media {
+  position: relative;
+  width: 180px;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.bento-trending-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bento-trending-score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--accent-cyan);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  backdrop-filter: blur(4px);
+}
+
+.bento-trending-content {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bento-trending-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.bento-trending-tag {
+  color: #ff6b4a;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.bento-trending-date {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.bento-trending-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bento-trending-summary {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bento-trending-link {
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .bento-trending-card {
+    flex-direction: column;
+  }
+  .bento-trending-media {
+    width: 100%;
+    height: 180px;
+  }
 }
 
 .trending-bento-card {
