@@ -228,6 +228,33 @@ GROUND_TRUTH = {
             "battery": "3,950mAh (Li-Po)"
         }
     },
+    "lenovo-xiaoxin-pad-pro-13": {
+        "name": "Lenovo Xiaoxin Pad Pro 13",
+        "specs": {
+            "ap": "Qualcomm Snapdragon 8s Gen 4 (SM8735, 4nm 고성능 옥타코어)",
+            "display": "13인치 3.5K LCD (3504 x 2190, 144Hz, 800nits)",
+            "ram_storage": "8GB / 12GB LPDDR5X + 128GB / 256GB / 512GB UFS 4.0 (microSD 최대 2TB)",
+            "camera": "후면 1,300만 화소 / 전면 800만 화소",
+            "battery": "10,200mAh (45W 초고속 충전)"
+        }
+    },
+    "lenovo-xiaoxin-pad-pro-13-gt": {
+        "name": "Lenovo Xiaoxin Pad Pro 13 GT",
+        "specs": {
+            "ap": "Qualcomm Snapdragon 8 Elite (4nm 플래그십 코어)",
+            "display": "13인치 3.5K 초고해상도 (3504 x 2190, 144Hz)",
+            "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB",
+            "battery": "10,200mAh (68W 초고속 충전)"
+        }
+    },
+    "lenovo-xiaoxin-pad-pro-12-7-2025": {
+        "name": "Lenovo Xiaoxin Pad Pro 12.7 (2025)",
+        "specs": {
+            "ap": "MediaTek Dimensity 8300 (4nm 고성능 AP)",
+            "display": "12.7인치 2.9K LCD (2944 x 1840, 144Hz)",
+            "battery": "10,200mAh (45W 충전)"
+        }
+    },
     "kindle-colorsoft": {
         "name": "Kindle Colorsoft Signature Edition",
         "specs": {
