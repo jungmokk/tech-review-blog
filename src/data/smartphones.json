@@ -1,470 +1,5 @@
 [
   {
-    "id": "galaxy-z-fold8",
-    "name": "Galaxy Z Fold8",
-    "name_kr": "갤럭시 Z 폴드8",
-    "brand": "Samsung",
-    "brand_kr": "삼성",
-    "release_year": 2026,
-    "release_date": "2026-07",
-    "category": "Foldable",
-    "specs": {
-      "ap": "Snapdragon 8 Elite Gen 2 for Galaxy (2nm 공정, NPU 대폭 강화)",
-      "display": "메인 7.6인치 무주름 울트라 플렉서블 OLED (2,800nits) / 커버 6.3인치 와이드 풀비전",
-      "ram_storage": "16GB RAM + 256GB / 512GB / 1TB",
-      "camera": "2억 화소 메인 센서(OIS) + 5000만 초광각 + 5000만 5배 폴디드 망원",
-      "battery": "4,800mAh (45W 초고속 충전, 실리콘-탄소 음극재)",
-      "dimensions_weight": "접었을 때 9.9mm / 펼쳤을 때 4.9mm / 215g (초슬림 초경량 힌지)",
-      "os_durability": "Android 16 (One UI 8.0 Fold Edition) / IP68 방수방진",
-      "price_krw": "2,380,000원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "BVaN-k60pfc",
-        "title": "갤럭시Z폴드8 살까말까. 3분정리.",
-        "channel": "합리적 소비 3분테크",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/BVaN-k60pfc/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=BVaN-k60pfc"
-      }
-    ]
-  },
-  {
-    "id": "galaxy-z-flip8",
-    "name": "Galaxy Z Flip8",
-    "name_kr": "갤럭시 Z 플립8",
-    "brand": "Samsung",
-    "brand_kr": "삼성",
-    "release_year": 2026,
-    "release_date": "2026-07",
-    "category": "Foldable",
-    "specs": {
-      "ap": "Snapdragon 8 Elite Gen 2 for Galaxy (2nm 공정)",
-      "display": "메인 6.7인치 FHD+ 120Hz LTPO / 커버 4.0인치 풀플렉스 윈도우 (베젤 0mm 엣지-투-엣지)",
-      "ram_storage": "12GB RAM + 256GB / 512GB",
-      "camera": "5000만 듀얼 카메라 (OIS, F1.6 대구경)",
-      "battery": "4,250mAh (30W 고속 충전)",
-      "dimensions_weight": "접었을 때 13.5mm / 펼쳤을 때 6.5mm / 183g",
-      "os_durability": "Android 16 (One UI 8.0) / IP58 방수방진",
-      "price_krw": "1,540,000원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "UBQLi26JGnQ",
-        "title": "마지막 플립...? 갤럭시 Z플립8 1주 장단점 분석 리뷰",
-        "channel": "티노",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/UBQLi26JGnQ/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=UBQLi26JGnQ"
-      }
-    ]
-  },
-  {
-    "id": "galaxy-s26-ultra",
-    "name": "Galaxy S26 Ultra",
-    "name_kr": "갤럭시 S26 울트라",
-    "brand": "Samsung",
-    "brand_kr": "삼성",
-    "release_year": 2026,
-    "release_date": "2026-01",
-    "category": "Flagship",
-    "specs": {
-      "ap": "갤럭시용 스냅드래곤 8 Elite 5세대 (Snapdragon 8 Elite Gen 5 for Galaxy)",
-      "display": "3,120 x 1,440 QHD+ Dynamic AMOLED 2X (1~120Hz LTPO, Gorilla Armor 2세대)",
-      "ram_storage": "16GB RAM + 256GB / 512GB / 1TB",
-      "camera": "2억 화소 광각(OIS) / 광학 줌 수준의 2배 및 10배 줌, 최대 100배 디지털 줌",
-      "battery": "5,000mAh (비디오 재생 최대 31시간, 45W 초고속 충전 2.0)",
-      "dimensions_weight": "162.8 x 77.6 x 8.4mm / 228g (티타늄 프레임, 빌트인 S펜)",
-      "os_durability": "Android 16 (One UI 8.0, Galaxy AI) / IP68 방수방진",
-      "price_krw": "1,798,500원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "Y9GIwUvWn3E",
-        "title": "갤럭시 S26 울트라 번인 직접 테스트해봤습니다. 그런데..",
-        "channel": "테크몽 Techmong",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/Y9GIwUvWn3E/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=Y9GIwUvWn3E"
-      }
-    ]
-  },
-  {
-    "id": "galaxy-s26-plus",
-    "name": "Galaxy S26+",
-    "name_kr": "갤럭시 S26+",
-    "brand": "Samsung",
-    "brand_kr": "삼성",
-    "release_year": 2026,
-    "release_date": "2026-01",
-    "category": "Flagship",
-    "specs": {
-      "ap": "갤럭시용 엑시노스 2600 (Exynos 2600)",
-      "display": "3,120 x 1,440 QHD+ Dynamic AMOLED 2X (1~120Hz LTPO)",
-      "ram_storage": "12GB RAM + 256GB / 512GB",
-      "camera": "5000만 메인(OIS) / 광학 줌 수준의 2배 줌, 최대 30배 디지털 줌",
-      "battery": "4,900mAh (비디오 재생 최대 31시간, 45W 고속 충전)",
-      "dimensions_weight": "158.5 x 75.9 x 7.7mm / 196g (아머 알루미늄)",
-      "os_durability": "Android 16 (One UI 8.0, Galaxy AI) / IP68 방수방진",
-      "price_krw": "1,452,000원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "j3j8D7YqEt4",
-        "title": "갤럭시 S26 일반 VS 플러스 VS 울트라 비교 추천! 어떤 모델 사야할까?",
-        "channel": "아정당",
-        "duration": "11:40",
-        "thumbnail": "https://i.ytimg.com/vi/j3j8D7YqEt4/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=j3j8D7YqEt4"
-      }
-    ]
-  },
-  {
-    "id": "galaxy-s26",
-    "name": "Galaxy S26",
-    "name_kr": "갤럭시 S26",
-    "brand": "Samsung",
-    "brand_kr": "삼성",
-    "release_year": 2026,
-    "release_date": "2026-01",
-    "category": "Flagship",
-    "specs": {
-      "ap": "갤럭시용 엑시노스 2600 (Exynos 2600)",
-      "display": "2,340 x 1,080 FHD+ Dynamic AMOLED 2X (1~120Hz LTPO)",
-      "ram_storage": "12GB RAM + 256GB / 512GB",
-      "camera": "5000만 메인(OIS) / 광학 줌 수준의 2배 줌, 최대 30배 디지털 줌",
-      "battery": "4,300mAh (비디오 재생 최대 30시간, 25W 고속 충전)",
-      "dimensions_weight": "147.0 x 70.6 x 7.6mm / 167g",
-      "os_durability": "Android 16 (One UI 8.0, Galaxy AI) / IP68 방수방진",
-      "price_krw": "1,254,000원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "TigCEb283aU",
-        "title": "지금 난리난 갤럭시 S26 번인 이슈? 제발! 꼭 확인해보세요",
-        "channel": "ITSub잇섭",
-        "duration": "12:15",
-        "thumbnail": "https://i.ytimg.com/vi/TigCEb283aU/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=TigCEb283aU"
-      }
-    ]
-  },
-  {
-    "id": "pixel-10-pro-fold",
-    "name": "Pixel 10 Pro Fold",
-    "name_kr": "픽셀 10 프로 폴드",
-    "brand": "Google",
-    "brand_kr": "구글",
-    "release_year": 2026,
-    "release_date": "2026-08",
-    "category": "Foldable",
-    "specs": {
-      "ap": "Google Tensor G5 (TSMC 3nm 공정)",
-      "display": "메인 8.0인치 Super Actua Flex OLED (120Hz LTPO, 3000nits) / 커버 6.3인치 (120Hz)",
-      "ram_storage": "16GB RAM + 256GB / 512GB / 1TB",
-      "camera": "5000만 메인(OIS) + 4800만(5x 망원 OIS) + 4800만(초광각 매크로)",
-      "battery": "4,850mAh (45W 유선 급속, 무선 충전)",
-      "dimensions_weight": "접었을 때 10.1mm / 펼쳤을 때 4.9mm / 245g",
-      "os_durability": "Android 16 (Gemini Advanced 탑재) / IPX8 / 항공우주 알루미늄",
-      "price_krw": "약 245만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "isjiX59U4_Y",
-        "title": "Galaxy Z Fold 7 or Pixel 10 Pro Fold…? #shorts",
-        "channel": "BiG PhiL TV",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/isjiX59U4_Y/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=isjiX59U4_Y"
-      }
-    ]
-  },
-  {
-    "id": "pixel-10-pro",
-    "name": "Pixel 10 Pro",
-    "name_kr": "픽셀 10 프로",
-    "brand": "Google",
-    "brand_kr": "구글",
-    "release_year": 2026,
-    "release_date": "2026-08",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Google Tensor G5 (TSMC 3nm 공정)",
-      "display": "6.3인치 Super Actua OLED (1280x2856, 1~120Hz LTPO, 3000nits)",
-      "ram_storage": "16GB RAM + 128GB / 256GB / 512GB",
-      "camera": "5000만 메인 + 4800만(5x 잠망경 망원) + 4800만 초광각",
-      "battery": "4,800mAh (30W 유선, 23W 무선)",
-      "dimensions_weight": "152.8 x 72.0 x 8.4mm / 198g",
-      "os_durability": "Android 16 / IP68 / 폴리시드 알루미늄",
-      "price_krw": "약 135만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "6GIWapEhkCI",
-        "title": "구글 픽셀 10 Pro 살까 말까",
-        "channel": "JM",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/6GIWapEhkCI/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=6GIWapEhkCI"
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-mix-fold-4",
-    "name": "Xiaomi MIX Fold 4",
-    "name_kr": "샤오미 믹스 폴드 4",
-    "brand": "Xiaomi",
-    "brand_kr": "샤오미",
-    "release_year": 2026,
-    "release_date": "2026-07",
-    "category": "Foldable",
-    "specs": {
-      "ap": "Snapdragon 8 Gen 3 / Elite (3nm/4nm)",
-      "display": "메인 7.98인치 2K+ 120Hz LTPO / 커버 6.56인치 120Hz (3000nits 피크)",
-      "ram_storage": "12GB / 16GB RAM + 512GB / 1TB",
-      "camera": "라이카 쿼드 5000만 (메인 5000만 OIS + 5000만 2x 인물 + 1000만 5x 잠망경 + 1200만 초광각)",
-      "battery": "5,100mAh 대용량 실리콘 탄소 (67W 유선, 50W 무선)",
-      "dimensions_weight": "접었을 때 9.47mm / 펼쳤을 때 4.59mm / 226g",
-      "os_durability": "Xiaomi HyperOS 2 / IPX8 방수 / 카본 아키텍처",
-      "price_krw": "약 180만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "7Ws8-J81I9c",
-        "title": "폴드6 압살한 샤오미 믹스 폴드4. 샤오미 2024 레이준 발표 xiaomi mix fold 4, mix flip, k70 ultra, smart band 9",
-        "channel": "이스모",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/7Ws8-J81I9c/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=7Ws8-J81I9c"
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-mix-flip",
-    "name": "Xiaomi MIX Flip",
-    "name_kr": "샤오미 믹스 플립",
-    "brand": "Xiaomi",
-    "brand_kr": "샤오미",
-    "release_year": 2026,
-    "release_date": "2026-07",
-    "category": "Foldable",
-    "specs": {
-      "ap": "Snapdragon 8 Gen 3 (4nm)",
-      "display": "메인 6.86인치 1.5K 120Hz / 커버 4.01인치 풀스크린 120Hz (3000nits)",
-      "ram_storage": "12GB / 16GB RAM + 256GB / 512GB / 1TB",
-      "camera": "라이카 5000만 메인(Light Hunter 800 OIS) + 5000만(2x 플로팅 망원 매크로)",
-      "battery": "4,780mAh 실리콘 탄소 (67W 하이퍼차지)",
-      "dimensions_weight": "접었을 때 15.9mm / 펼쳤을 때 7.6mm / 190g",
-      "os_durability": "Xiaomi HyperOS 2 / 알루미늄 프레임",
-      "price_krw": "약 115만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "IvwvkeYpBKA",
-        "title": "진짜 아이폰 같은데? 커버 전체가 스크린인 샤오미의 새로운 믹스 플립",
-        "channel": "더신자 TheSINZA",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/IvwvkeYpBKA/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=IvwvkeYpBKA"
-      }
-    ]
-  },
-  {
-    "id": "vivo-x-fold4-pro",
-    "name": "Vivo X Fold4 Pro",
-    "name_kr": "비보 X 폴드4 프로",
-    "brand": "Vivo",
-    "brand_kr": "비보",
-    "release_year": 2026,
-    "release_date": "2026-04",
-    "category": "Foldable",
-    "specs": {
-      "ap": "Snapdragon 8 Elite (3nm)",
-      "display": "메인 8.03인치 2K+ E8 AMOLED (120Hz LTPO) / 커버 6.53인치 120Hz (듀얼 3D 초음파 지문)",
-      "ram_storage": "16GB RAM + 512GB / 1TB UFS 4.0",
-      "camera": "자이스 5000만 메인(LYT-900 OIS) + 6400만(3배 잠망경 망원 OIS) + 5000만 초광각",
-      "battery": "6,000mAh 3세대 실리콘 블루오션 배터리 (100W 유선, 50W 무선)",
-      "dimensions_weight": "접었을 때 9.6mm / 펼쳤을 때 4.65mm / 224g",
-      "os_durability": "OriginOS 5 / IPX8 & IP68 / 탄소 섬유 일체형 힌지",
-      "price_krw": "약 195만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "QY-9kUSY7Ok",
-        "title": "비보 X폴드 삼성디스플레이 패널·카메라 센서 채택. 폴더블 디스플레이 공급 구조",
-        "channel": "그 시절 이야기",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/QY-9kUSY7Ok/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=QY-9kUSY7Ok"
-      }
-    ]
-  },
-  {
-    "id": "vivo-x200-ultra",
-    "name": "Vivo X200 Ultra",
-    "name_kr": "비보 X200 울트라",
-    "brand": "Vivo",
-    "brand_kr": "비보",
-    "release_year": 2026,
-    "release_date": "2026-05",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Snapdragon 8 Elite (3nm)",
-      "display": "6.82인치 2K BOE Q10 AMOLED (3168x1440, 120Hz LTPO, 4500nits, 초음파 지문)",
-      "ram_storage": "16GB LPDDR5X + 512GB / 1TB UFS 4.0",
-      "camera": "자이스 5000만 1인치(Sony LYT-900 짐벌 OIS) + 2억 화소(HP9 3.7x 잠망경 망원 CIPA 4.5급 OIS) + 5000만 초광각",
-      "battery": "6,000mAh 3세대 실리콘 배터리 (90W 유선, 50W 무선)",
-      "dimensions_weight": "164.07 x 75.57 x 8.9mm / 225g",
-      "os_durability": "OriginOS 5 / IP68 & IP69 / V4 영상 이미징 칩",
-      "price_krw": "약 138만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "g30kikFE2iA",
-        "title": "드디어 아이폰 동영상을 뛰어넘은 vivo x200 ultra 카메라 사용후기",
-        "channel": "아론황테크튜브",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/g30kikFE2iA/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=g30kikFE2iA"
-      }
-    ]
-  },
-  {
-    "id": "oppo-find-x8-ultra",
-    "name": "Oppo Find X8 Ultra",
-    "name_kr": "오포 파인드 X8 울트라",
-    "brand": "Oppo",
-    "brand_kr": "오포",
-    "release_year": 2026,
-    "release_date": "2026-04",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Snapdragon 8 Elite (3nm)",
-      "display": "6.82인치 2K BOE X2 Oriental OLED (1~120Hz LTPO, 4500nits 피크)",
-      "ram_storage": "16GB RAM + 512GB / 1TB UFS 4.0",
-      "camera": "핫셀블라드 쿼드 5000만: 1인치 LYT-900 메인 + 3x 잠망경 망원 + 6x 잠망경 망원 + 초광각",
-      "battery": "6,100mAh 글레이셔 배터리 (100W 유선, 50W 무선)",
-      "dimensions_weight": "164.3 x 76.2 x 9.1mm / 220g",
-      "os_durability": "ColorOS 15 / IP68 & IP69 / 위성 통신 지원",
-      "price_krw": "약 128만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "I_yVh7KmVBk",
-        "title": "OPPO Find X8 Ultra Xingye Black hands-on experience, full of high-end feeling",
-        "channel": "Tech way",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/I_yVh7KmVBk/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=I_yVh7KmVBk"
-      }
-    ]
-  },
-  {
-    "id": "oneplus-13r",
-    "name": "OnePlus 13R",
-    "name_kr": "원플러스 13R",
-    "brand": "OnePlus",
-    "brand_kr": "원플러스",
-    "release_year": 2026,
-    "release_date": "2026-01",
-    "category": "High-End",
-    "specs": {
-      "ap": "Snapdragon 8 Gen 3 (4nm)",
-      "display": "6.78인치 1.5K LTPO 4.0 AMOLED (120Hz, 4500nits 피크)",
-      "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB UFS 4.0",
-      "camera": "5000만 메인(Sony IMX906 OIS) + 5000만(3x 망원) + 800만(초광각)",
-      "battery": "6,000mAh 실리콘 음극 배터리 (100W 초고속 유선)",
-      "dimensions_weight": "162.7 x 75.4 x 8.6mm / 206g",
-      "os_durability": "OxygenOS 15 (Android 15) / IP65",
-      "price_krw": "약 72만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "4-DkYZYLAoM",
-        "title": "OnePlus 13r black colour best colour #oneplus13series #oneplus #bgmitest #smartphone",
-        "channel": "super tech life",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/4-DkYZYLAoM/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=4-DkYZYLAoM"
-      }
-    ]
-  },
-  {
-    "id": "honor-magic-7-pro",
-    "name": "Honor Magic 7 Pro",
-    "name_kr": "아너 매직 7 프로",
-    "brand": "Honor",
-    "brand_kr": "아너",
-    "release_year": 2026,
-    "release_date": "2026-01",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Snapdragon 8 Elite (3nm)",
-      "display": "6.8인치 LTPO OLED (2800x1280, 1~120Hz, 5000nits HDR)",
-      "ram_storage": "12GB / 16GB RAM + 512GB / 1TB 스토리지",
-      "camera": "5000만 가변조리개 메인 + 2억 화소 잠망경 망원(OIS) + 5000만 초광각",
-      "battery": "5,850mAh 탄소 실리콘 배터리 (100W 유선, 80W 무선)",
-      "dimensions_weight": "162.7 x 77.1 x 8.8mm / 223g",
-      "os_durability": "MagicOS 9.0 (Android 15) / IP69 & IP68",
-      "price_krw": "약 115만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "JZ-yNjGVHbU",
-        "title": "Honor Magic 7 Pro Unboxing & First Look! #HonorMagic7Pro #Unboxing #TechReview #Smartphone",
-        "channel": "Custom Adventurist",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/JZ-yNjGVHbU/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=JZ-yNjGVHbU"
-      }
-    ]
-  },
-  {
-    "id": "redmi-k80-pro",
-    "name": "Redmi K80 Pro",
-    "name_kr": "레드미 K80 프로",
-    "brand": "Xiaomi",
-    "brand_kr": "샤오미",
-    "release_year": 2026,
-    "release_date": "2026-01",
-    "category": "High-End",
-    "specs": {
-      "ap": "Snapdragon 8 Elite (3nm)",
-      "display": "6.67인치 2K TCL M9 OLED (3200x1440, 120Hz, 3200nits)",
-      "ram_storage": "12GB / 16GB / 24GB LPDDR5X + 256GB / 512GB / 1TB",
-      "camera": "5000만 메인(Light Hunter 800 OIS) + 5000만(2.5x 망원) + 3200만(초광각)",
-      "battery": "6,000mAh (120W 유선, 50W 무선)",
-      "dimensions_weight": "160.3 x 75.0 x 8.4mm / 212g",
-      "os_durability": "Xiaomi HyperOS 2 / IP68",
-      "price_krw": "약 68만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "Ws3mBq3cnok",
-        "title": "아이폰보다 성능 좋은 샤오미 레드미 K80 프로",
-        "channel": "UNDERkg",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/Ws3mBq3cnok/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=Ws3mBq3cnok"
-      }
-    ]
-  },
-  {
     "id": "galaxy-s25-ultra",
     "name": "Galaxy S25 Ultra",
     "name_kr": "갤럭시 S25 울트라",
@@ -474,13 +9,13 @@
     "release_date": "2025-01",
     "category": "Flagship",
     "specs": {
-      "ap": "Snapdragon 8 Elite for Galaxy (3nm TSMC N3E, 전 세계 전량 100% 스냅드래곤 탑재)",
-      "display": "6.86인치 Dynamic AMOLED 2X (3120x1440 QHD+, 1~120Hz LTPO, 2,600nits, Corning Gorilla Armor 저반사 글래스, 평면 디스플레이 & 둥근 모서리)",
+      "ap": "Snapdragon 8 Elite for Galaxy (3nm TSMC N3E / 4.47GHz Oryon)",
+      "display": "6.86인치 Dynamic AMOLED 2X (3120x1440 QHD+, 1~120Hz LTPO, 2,600nits, Corning Gorilla Armor 저반사 글래스)",
       "ram_storage": "12GB / 16GB LPDDR5X RAM + 256GB / 512GB / 1TB UFS 4.0",
-      "camera": "2억 화소 광각(ISOCELL HP2, OIS) + 5000만 초광각(JN3) + 5000만 5배 폴디드 망원(IMX854, OIS) + 1000만 3배 망원(OIS)",
-      "battery": "5,000mAh (45W 유선 초고속 충전 2.0, 15W 무선 충전)",
-      "dimensions_weight": "162.8 x 77.6 x 8.2mm / 219g (역대 울트라 중 가장 가볍고 얇은 두께, 티타늄 프레임, 빌트인 S펜)",
-      "os_durability": "Android 15 (One UI 7.0 / Galaxy AI 2.0 / 7세대 OS 업그레이드 보장) / IP68 방수방진",
+      "camera": "2억 화소 광각(ISOCELL HP2, OIS) + 5000만 초광각 + 5000만 5배 폴디드 망원(OIS) + 1000만 3배 망원(OIS)",
+      "battery": "5,000mAh (45W 초고속 충전 2.0, 15W 무선 충전)",
+      "dimensions_weight": "162.8 x 77.6 x 8.2mm / 219g (티타늄 프레임, 빌트인 S펜)",
+      "os_durability": "Android 15 (One UI 7.0 / Galaxy AI / 7년 OS 지원) / IP68 방수방진",
       "price_krw": "1,698,400원부터"
     },
     "device_type": "스마트폰",
@@ -505,13 +40,13 @@
     "release_date": "2025-01",
     "category": "Flagship",
     "specs": {
-      "ap": "Snapdragon 8 Elite for Galaxy (3nm 공정, 전 모델 스냅드래곤 탑재)",
+      "ap": "Snapdragon 8 Elite for Galaxy (3nm TSMC N3E)",
       "display": "6.7인치 Dynamic AMOLED 2X (3120x1440 QHD+, 1~120Hz LTPO, 2,600nits)",
-      "ram_storage": "12GB RAM + 256GB / 512GB",
+      "ram_storage": "12GB LPDDR5X RAM + 256GB / 512GB",
       "camera": "5000만 메인(OIS) + 1200만 초광각 + 1000만 3배 망원(OIS)",
-      "battery": "4,900mAh (45W 유선, 15W 무선)",
-      "dimensions_weight": "158.4 x 75.7 x 7.3mm / 190g (초슬림 7.3mm)",
-      "os_durability": "Android 15 (One UI 7.0) / IP68 / 강화 아머 알루미늄",
+      "battery": "4,900mAh (45W 초고속 2.0)",
+      "dimensions_weight": "158.4 x 75.7 x 7.3mm / 190g (강화 아머 알루미늄)",
+      "os_durability": "Android 15 (One UI 7.0) / IP68 방수방진",
       "price_krw": "1,353,000원부터"
     },
     "device_type": "스마트폰",
@@ -536,13 +71,13 @@
     "release_date": "2025-01",
     "category": "Flagship",
     "specs": {
-      "ap": "Snapdragon 8 Elite for Galaxy (3nm 공정, 전 모델 스냅드래곤 탑재)",
+      "ap": "Snapdragon 8 Elite for Galaxy (3nm TSMC N3E)",
       "display": "6.2인치 Dynamic AMOLED 2X (2340x1080 FHD+, 1~120Hz LTPO, 2,600nits)",
-      "ram_storage": "12GB RAM (기본 12GB로 램 업그레이드) + 256GB / 512GB",
+      "ram_storage": "12GB LPDDR5X RAM (기본 12GB 탑재) + 256GB / 512GB",
       "camera": "5000만 메인(OIS) + 1200만 초광각 + 1000만 3배 망원(OIS)",
-      "battery": "4,000mAh (25W 유선, 15W 무선)",
-      "dimensions_weight": "146.9 x 70.4 x 7.2mm / 162g (162g 초경량 플래그십)",
-      "os_durability": "Android 15 (One UI 7.0) / IP68",
+      "battery": "4,000mAh (25W 고속 충전)",
+      "dimensions_weight": "146.9 x 70.4 x 7.2mm / 162g (초슬림 초경량 컴팩트)",
+      "os_durability": "Android 15 (One UI 7.0) / IP68 방수방진",
       "price_krw": "1,155,000원부터"
     },
     "device_type": "스마트폰",
@@ -616,130 +151,6 @@
         "duration": "14:20",
         "thumbnail": "https://i.ytimg.com/vi/4xM1QWo0LCg/hqdefault.jpg",
         "direct_watch_url": "https://www.youtube.com/watch?v=4xM1QWo0LCg"
-      }
-    ]
-  },
-  {
-    "id": "iphone-17-pro-max",
-    "name": "iPhone 17 Pro Max",
-    "name_kr": "아이폰 17 프로 맥스",
-    "brand": "Apple",
-    "brand_kr": "애플",
-    "release_year": 2025,
-    "release_date": "2025-09",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Apple A19 Pro (TSMC 2nm / N2P)",
-      "display": "6.9인치 Super Retina XDR OLED (1~120Hz ProMotion, 3000nits 피크)",
-      "ram_storage": "12GB RAM + 256GB / 512GB / 1TB / 2TB",
-      "camera": "4800만 메인(센서시프트 OIS) + 4800만(5x 테트라프리즘 망원) + 4800만(초광각)",
-      "battery": "4,750mAh (35W 고속 유선, 25W MagSafe)",
-      "dimensions_weight": "163.0 x 77.6 x 8.25mm / 221g",
-      "os_durability": "iOS 19 / IP68 / 5등급 티타늄",
-      "price_krw": "약 190만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "UoXSitfFyDc",
-        "title": "진짜 변색 되었나요?? 확실한 장단점을 가진 아이폰 17 프로 맥스 3달 사용기",
-        "channel": "ITSub잇섭",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/UoXSitfFyDc/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=UoXSitfFyDc"
-      }
-    ]
-  },
-  {
-    "id": "iphone-17-pro",
-    "name": "iPhone 17 Pro",
-    "name_kr": "아이폰 17 프로",
-    "brand": "Apple",
-    "brand_kr": "애플",
-    "release_year": 2025,
-    "release_date": "2025-09",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Apple A19 Pro (TSMC 2nm / N2P)",
-      "display": "6.3인치 Super Retina XDR OLED (1~120Hz ProMotion, 3000nits 피크)",
-      "ram_storage": "12GB RAM + 256GB / 512GB / 1TB",
-      "camera": "4800만 메인(센서시프트 OIS) + 4800만(5x 테트라프리즘 망원) + 4800만(초광각)",
-      "battery": "3,650mAh (30W 유선, 25W MagSafe)",
-      "dimensions_weight": "149.6 x 71.5 x 8.25mm / 195g",
-      "os_durability": "iOS 19 / IP68 / 5등급 티타늄",
-      "price_krw": "약 155만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "qvZ6km9hILg",
-        "title": "디자인을 포기하고 성능을 선택했다. 애플 아이폰 17 프로&프로맥스 아주 자세한 변화점",
-        "channel": "ITSub잇섭",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/qvZ6km9hILg/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=qvZ6km9hILg"
-      }
-    ]
-  },
-  {
-    "id": "iphone-17-air",
-    "name": "iPhone 17 Air (Slim)",
-    "name_kr": "아이폰 17 에어",
-    "brand": "Apple",
-    "brand_kr": "애플",
-    "release_year": 2025,
-    "release_date": "2025-09",
-    "category": "Flagship",
-    "specs": {
-      "ap": "Apple A19 (TSMC 3nm N3P)",
-      "display": "6.6인치 Super Retina XDR OLED (120Hz ProMotion 지원, 2500nits)",
-      "ram_storage": "8GB RAM + 128GB / 256GB / 512GB",
-      "camera": "4800만 싱글 퓨전 메인 카메라(센서시프트 OIS)",
-      "battery": "3,300mAh 초슬림 배터리 (25W 유선, MagSafe)",
-      "dimensions_weight": "157.0 x 74.8 x 5.6mm / 165g (극단적 초슬림)",
-      "os_durability": "iOS 19 / IP68 / 알루미늄-티타늄 하이브리드",
-      "price_krw": "약 150만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "aKwJnvRJqRw",
-        "title": "미친듯한 호불호 싸움 ㅋㅋㅋ 빠와 까가 공존하는 찐유저의 아이폰 에어 한달 사용기!",
-        "channel": "ITSub잇섭",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/aKwJnvRJqRw/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=aKwJnvRJqRw"
-      }
-    ]
-  },
-  {
-    "id": "iphone-17",
-    "name": "iPhone 17",
-    "name_kr": "아이폰 17",
-    "brand": "Apple",
-    "brand_kr": "애플",
-    "release_year": 2025,
-    "release_date": "2025-09",
-    "category": "Standard",
-    "specs": {
-      "ap": "Apple A19 (TSMC 3nm N3P)",
-      "display": "6.3인치 Super Retina XDR OLED (120Hz ProMotion 최초 탑재, 2500nits)",
-      "ram_storage": "8GB RAM + 128GB / 256GB / 512GB",
-      "camera": "4800만 메인(센서시프트 OIS) + 4800만 초광각",
-      "battery": "3,600mAh (25W 유선, 25W MagSafe)",
-      "dimensions_weight": "149.6 x 71.6 x 7.8mm / 172g",
-      "os_durability": "iOS 19 / IP68 / 항공우주 등급 알루미늄",
-      "price_krw": "약 125만 원부터"
-    },
-    "device_type": "스마트폰",
-    "videos": [
-      {
-        "youtube_id": "j_LEuKPm3wk",
-        "title": "아이폰 17 에어 사지마세요",
-        "channel": "테크쀼",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/j_LEuKPm3wk/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=j_LEuKPm3wk"
       }
     ]
   },
@@ -1218,13 +629,13 @@
     "release_date": "2024-01",
     "category": "Flagship",
     "specs": {
-      "ap": "Snapdragon 8 Gen 3 for Galaxy (4nm TSMC, 전 세계 100% 스냅드래곤 탑재)",
-      "display": "6.8인치 Dynamic AMOLED 2X (3120x1440 QHD+, 1~120Hz LTPO, 2,600nits, Corning Gorilla Armor 저반사 코팅)",
-      "ram_storage": "12GB LPDDR5X RAM + 256GB / 512GB / 1TB UFS 4.0",
-      "camera": "2억 화소 광각(OIS) + 5000만 5배 폴디드 망원(OIS) + 1000만 3배 망원(OIS) + 1200만 초광각",
-      "battery": "5,000mAh (45W 초고속 충전 2.0, 15W 무선 충전)",
+      "ap": "Snapdragon 8 Gen 3 for Galaxy (4nm TSMC)",
+      "display": "6.8인치 Dynamic AMOLED 2X (3120x1440 QHD+, 1~120Hz LTPO, 2,600nits, Corning Gorilla Armor)",
+      "ram_storage": "12GB LPDDR5X RAM + 256GB / 512GB / 1TB",
+      "camera": "2억 화소 광각(OIS) + 5000만 5배 망원(OIS) + 1000만 3배 망원(OIS) + 1200만 초광각",
+      "battery": "5,000mAh (45W 초고속 2.0)",
       "dimensions_weight": "162.3 x 79.0 x 8.6mm / 232g (티타늄 프레임, 빌트인 S펜)",
-      "os_durability": "Android 14 (One UI 6.1, Galaxy AI 온디바이스 최초 탑재 / 7회 OS 지원) / IP68 방수방진",
+      "os_durability": "Android 14 (One UI 6.1, Galaxy AI 온디바이스 지원) / IP68",
       "price_krw": "1,698,400원부터"
     },
     "device_type": "스마트폰",
@@ -1249,13 +660,13 @@
     "release_date": "2024-01",
     "category": "Flagship",
     "specs": {
-      "ap": "Exynos 2400 (4nm 삼성 파운드리, 10코어 Deca-Core) [국내 공식 탑재]",
-      "display": "6.7인치 Dynamic AMOLED 2X (3120x1440 QHD+ 해상도 복귀, 1~120Hz LTPO, 2,600nits)",
-      "ram_storage": "12GB LPDDR5X RAM (12GB로 램 상향) + 256GB / 512GB",
+      "ap": "Exynos 2400 (4nm 삼성 파운드리 10코어) [국내/유럽 공식]",
+      "display": "6.7인치 Dynamic AMOLED 2X (3120x1440 QHD+, 1~120Hz LTPO, 2,600nits)",
+      "ram_storage": "12GB LPDDR5X RAM + 256GB / 512GB",
       "camera": "5000만 메인(OIS) + 1000만 3배 망원(OIS) + 1200만 초광각",
       "battery": "4,900mAh (45W 유선 초고속 2.0)",
-      "dimensions_weight": "158.5 x 75.9 x 7.7mm / 196g (아머 알루미늄 2.0)",
-      "os_durability": "Android 14 (One UI 6.1 / 7년 업데이트) / IP68",
+      "dimensions_weight": "158.5 x 75.9 x 7.7mm / 196g",
+      "os_durability": "Android 14 (One UI 6.1) / IP68",
       "price_krw": "1,353,000원부터"
     },
     "device_type": "스마트폰",
@@ -1280,13 +691,13 @@
     "release_date": "2024-01",
     "category": "Flagship",
     "specs": {
-      "ap": "Exynos 2400 (4nm 삼성 파운드리, 10코어 Deca-Core) [국내 공식 탑재]",
-      "display": "6.2인치 Dynamic AMOLED 2X (2340x1080 FHD+, 1~120Hz LTPO 최초 탑재, 2,600nits)",
+      "ap": "Exynos 2400 (4nm 삼성 파운드리 10코어) [국내/유럽 공식]",
+      "display": "6.2인치 Dynamic AMOLED 2X (2340x1080 FHD+, 1~120Hz LTPO, 2,600nits)",
       "ram_storage": "8GB LPDDR5X RAM + 256GB / 512GB",
       "camera": "5000만 메인(OIS) + 1000만 3배 망원(OIS) + 1200만 초광각",
-      "battery": "4,000mAh (25W 유선, 15W 무선)",
-      "dimensions_weight": "147.0 x 70.6 x 7.6mm / 167g (초슬림 베젤 컴팩트)",
-      "os_durability": "Android 14 (Galaxy AI 실시간 통번역) / IP68",
+      "battery": "4,000mAh (25W 유선)",
+      "dimensions_weight": "147.0 x 70.6 x 7.6mm / 167g",
+      "os_durability": "Android 14 (One UI 6.1) / IP68",
       "price_krw": "1,155,000원부터"
     },
     "device_type": "스마트폰",
@@ -1311,13 +722,13 @@
     "release_date": "2024-07",
     "category": "Foldable",
     "specs": {
-      "ap": "Snapdragon 8 Gen 3 for Galaxy (4nm TSMC, 전량 100% 스냅드래곤 탑재)",
-      "display": "메인 7.6인치 Dynamic AMOLED 2X (2160x1856, 1~120Hz LTPO, 2,600nits) / 커버 6.3인치 (2376x968, 22.1:9 와이드 비율)",
+      "ap": "Snapdragon 8 Gen 3 for Galaxy (4nm TSMC)",
+      "display": "메인 7.6인치 (2160x1856, 1~120Hz LTPO, 2,600nits) / 커버 6.3인치 (2376x968, 22.1:9)",
       "ram_storage": "12GB LPDDR5X RAM + 256GB / 512GB / 1TB",
-      "camera": "5000만 메인(OIS, F1.8) + 1000만 3배 망원(OIS) + 1200만 초광각 / 400만 UDC(메인) / 1000만(커버)",
-      "battery": "4,400mAh (25W 유선, 15W 무선 충전)",
-      "dimensions_weight": "접었을 때 12.1mm / 펼쳤을 때 5.6mm / 239g (전작 대비 -14g 대폭 경량화)",
-      "os_durability": "Android 14 (One UI 6.1.1, S펜 드로잉 AI) / IP48 최초 방진방수 지원 / 강화 아머 알루미늄",
+      "camera": "5000만 메인(OIS) + 1000만 3배 망원(OIS) + 1200만 초광각",
+      "battery": "4,400mAh (25W 유선, 15W 무선)",
+      "dimensions_weight": "접었을 때 12.1mm / 펼쳤을 때 5.6mm / 239g (전작 대비 14g 경량화)",
+      "os_durability": "Android 14 (One UI 6.1.1) / IP48 방진방수 최초 지원",
       "price_krw": "2,229,700원부터"
     },
     "device_type": "스마트폰",
@@ -1342,11 +753,11 @@
     "release_date": "2024-07",
     "category": "Foldable",
     "specs": {
-      "ap": "Snapdragon 8 Gen 3 for Galaxy (4nm TSMC, 플립 최초 베이퍼 챔버 쿨링 탑재)",
-      "display": "메인 6.7인치 FHD+ (1~120Hz LTPO, 2,600nits) / 커버 3.4인치 플렉스 윈도우 (60Hz Super AMOLED)",
-      "ram_storage": "12GB LPDDR5X RAM (플립 최초 12GB 램 탑재) + 256GB / 512GB",
-      "camera": "5000만 광각 메인(OIS, 플래그십급 GN3 센서 최초 탑재) + 1200만 초광각",
-      "battery": "4,000mAh (배터리 300mAh 증가, 25W 고속 충전)",
+      "ap": "Snapdragon 8 Gen 3 for Galaxy (4nm TSMC, 베이퍼 챔버 최초 탑재)",
+      "display": "메인 6.7인치 FHD+ 120Hz LTPO / 커버 3.4인치 플렉스 윈도우 (60Hz AMOLED)",
+      "ram_storage": "12GB LPDDR5X RAM (플립 최초 12GB 램) + 256GB / 512GB",
+      "camera": "5000만 메인(OIS, GN3 센서) + 1200만 초광각",
+      "battery": "4,000mAh (25W 유선)",
       "dimensions_weight": "접었을 때 14.9mm / 펼쳤을 때 6.9mm / 187g",
       "os_durability": "Android 14 (One UI 6.1.1) / IP48 방진방수",
       "price_krw": "1,485,000원부터"
@@ -1435,13 +846,13 @@
     "release_date": "2024-09",
     "category": "Flagship",
     "specs": {
-      "ap": "Apple A18 Pro (2세대 3nm N3E)",
-      "display": "6.9인치 Super Retina XDR OLED (1~120Hz ProMotion, 2000nits, 초슬림 베젤)",
-      "ram_storage": "8GB RAM + 256GB / 512GB / 1TB",
-      "camera": "4800만 퓨전 메인 + 4800만 초광각 + 1200만(5x 테트라프리즘 망원) / 카메라 컨트롤 버튼 탑재",
-      "battery": "4,685mAh (역대 최장 배터리 수명, 25W MagSafe)",
-      "dimensions_weight": "163.0 x 77.6 x 8.25mm / 227g",
-      "os_durability": "iOS 18 (Apple Intelligence) / IP68 / 5등급 티타늄",
+      "ap": "Apple A18 Pro (2세대 3nm N3P, 6코어 CPU + 6코어 GPU + 16코어 Neural Engine)",
+      "display": "6.9인치 Super Retina XDR OLED (2868x1320, 1~120Hz ProMotion, 2,000nits, 초슬림 베젤)",
+      "ram_storage": "8GB LPDDR5X RAM + 256GB / 512GB / 1TB NVMe",
+      "camera": "4800만 Fusion 메인(2세대 센서 시프트 OIS) + 4800만 초광각 + 1200만 5배 테트라프리즘 망원 + 정전식 카메라 컨트롤 버튼",
+      "battery": "4,685mAh (최대 33시간 동영상 재생, 25W MagSafe 충전)",
+      "dimensions_weight": "163.0 x 77.6 x 8.25mm / 227g (5등급 티타늄 프레임)",
+      "os_durability": "iOS 18 (Apple Intelligence 탑재) / IP68 방수방진",
       "price_krw": "1,900,000원부터"
     },
     "device_type": "스마트폰",
@@ -1466,13 +877,13 @@
     "release_date": "2024-09",
     "category": "Flagship",
     "specs": {
-      "ap": "Apple A18 Pro (2세대 3nm N3E)",
-      "display": "6.3인치 Super Retina XDR OLED (1~120Hz ProMotion, 2000nits)",
+      "ap": "Apple A18 Pro (3nm N3P)",
+      "display": "6.3인치 Super Retina XDR OLED (2622x1206, 120Hz ProMotion, 2,000nits)",
       "ram_storage": "8GB RAM + 128GB / 256GB / 512GB / 1TB",
-      "camera": "4800만 퓨전 메인 + 4800만 초광각 + 1200만(5x 테트라프리즘 망원 탑재) / 카메라 컨트롤",
-      "battery": "3,582mAh (25W MagSafe)",
+      "camera": "4800만 메인 + 4800만 초광각 + 1200만 5배 테트라프리즘 망원",
+      "battery": "3,582mAh (최대 27시간 동영상 재생)",
       "dimensions_weight": "149.6 x 71.5 x 8.25mm / 199g",
-      "os_durability": "iOS 18 / IP68 / 5등급 티타늄",
+      "os_durability": "iOS 18 (Apple Intelligence) / IP68",
       "price_krw": "1,550,000원부터"
     },
     "device_type": "스마트폰",
@@ -3162,40 +2573,9 @@
     ]
   },
   {
-    "id": "airpods-pro-3",
-    "name": "Apple AirPods Pro 3",
-    "name_kr": "애플 에어팟 프로 3세대 (2026)",
-    "brand": "Apple",
-    "brand_kr": "애플",
-    "device_type": "오디오",
-    "release_year": 2026,
-    "release_date": "2026-09",
-    "category": "Audio",
-    "specs": {
-      "ap": "Apple H3 헤드폰 칩셋 + 온디바이스 심박수/체온 센서",
-      "display": "해당 없음 (케이스 터치 디스플레이 옵션)",
-      "ram_storage": "해당 없음",
-      "camera": "해당 없음",
-      "battery": "단독 7시간 / 케이스 포함 최대 34시간 (USB-C + MagSafe)",
-      "dimensions_weight": "유닛당 5.1g / 케이스 50.8g",
-      "os_durability": "IP57 방수방진 / 2세대 적응형 오디오 & 공간 음향",
-      "price_krw": "369,000원"
-    },
-    "videos": [
-      {
-        "youtube_id": "EMmKs8vMKhU",
-        "title": "Introducing AirPods Pro 3",
-        "channel": "Apple",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/EMmKs8vMKhU/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=EMmKs8vMKhU"
-      }
-    ]
-  },
-  {
     "id": "ipad-pro-13-m4",
     "name": "iPad Pro 13 (M4)",
-    "name_kr": "아이패드 프로 13인치 7세대 (M4)",
+    "name_kr": "아이패드 프로 13 (M4)",
     "brand": "Apple",
     "brand_kr": "애플",
     "device_type": "태블릿",
@@ -3203,13 +2583,13 @@
     "release_date": "2024-05",
     "category": "Pro Tablet",
     "specs": {
-      "ap": "Apple M4 칩셋 (TSMC 2세대 3nm / 38TOPS NPU)",
-      "display": "13.0인치 Ultra Retina XDR 탠덤 OLED (2752x2064, 10~120Hz ProMotion, 1600nits 피크, 나노텍스처 옵션)",
-      "ram_storage": "8GB / 16GB RAM + 256GB / 512GB / 1TB / 2TB",
-      "camera": "1200만 화소 메인 + LiDAR 스캐너 / 전면 가로형 1200만 센터스테이지",
-      "battery": "38.99Wh (약 10,290mAh 상당, 10시간 웹서핑)",
-      "dimensions_weight": "281.6 x 215.5 x 5.1mm / 579g (역대 애플 기기 중 최박형)",
-      "os_durability": "iPadOS 18 (Apple Intelligence) / 애플펜슬 프로 & 신형 매직키보드 지원",
+      "ap": "Apple M4 (2세대 3nm N3E, 9코어/10코어 CPU, 10코어 GPU, 하드웨어 레이트레이싱, 38TOPS NPU)",
+      "display": "13.0인치 Ultra Retina XDR (탠덤 OLED 2752x2064, 1,000nits 전면 / 1,600nits HDR 피크, ProMotion 10~120Hz)",
+      "ram_storage": "8GB / 16GB 통합 메모리 + 256GB / 512GB / 1TB / 2TB",
+      "camera": "1200만 후면 와이드(LiDAR 스캐너) + 가로형 1200만 전면 센터 스테이지",
+      "battery": "38.99Wh (최대 10시간 웹서핑/비디오 재생)",
+      "dimensions_weight": "281.6 x 215.5 x 5.1mm / 579g (역대 가장 얇은 5.1mm)",
+      "os_durability": "iPadOS 18 (Apple Pencil Pro 및 Magic Keyboard 햅틱 지원)",
       "price_krw": "1,999,000원부터"
     },
     "videos": [
@@ -3319,7 +2699,7 @@
   {
     "id": "ipad-mini-7",
     "name": "iPad mini 7",
-    "name_kr": "아이패드 미니 7세대 (A17 Pro)",
+    "name_kr": "아이패드 미니 7세대",
     "brand": "Apple",
     "brand_kr": "애플",
     "device_type": "태블릿",
@@ -3327,13 +2707,13 @@
     "release_date": "2024-10",
     "category": "Compact Tablet",
     "specs": {
-      "ap": "Apple A17 Pro (3nm / 하드웨어 가속 레이트레이싱)",
-      "display": "8.3인치 Liquid Retina IPS LCD (2266x1488, 60Hz, 500nits, 젤리스크롤 완화)",
-      "ram_storage": "8GB RAM + 128GB / 256GB / 512GB",
-      "camera": "1200만 후면 와이드(스마트 HDR 4) + 1200만 전면 초광각",
-      "battery": "19.3Wh (약 5,078mAh 상당, 20W 유선)",
-      "dimensions_weight": "195.4 x 134.8 x 6.3mm / 293g (궁극의 휴대용 태블릿)",
-      "os_durability": "iPadOS 18 (Apple Intelligence 지원) / 애플펜슬 프로 지원",
+      "ap": "Apple A17 Pro (3nm, 6코어 CPU + 5코어 GPU, Apple Intelligence 완벽 지원)",
+      "display": "8.3인치 Liquid Retina LCD (2266x1488, 500nits, P3 색영역, 젤리스크롤 완벽 해결)",
+      "ram_storage": "8GB 통합 메모리 (전작 대비 2배 증설) + 128GB / 256GB / 512GB",
+      "camera": "1200만 후면 와이드(스마트 HDR 4) + 1200만 전면 울트라 와이드(센터 스테이지)",
+      "battery": "19.3Wh (최대 10시간 사용)",
+      "dimensions_weight": "195.4 x 134.8 x 6.3mm / 293g (초경량 핸드헬드)",
+      "os_durability": "iPadOS 18 (Apple Pencil Pro 스퀴즈/배럴 롤 지원)",
       "price_krw": "749,000원부터"
     },
     "videos": [
@@ -3389,13 +2769,13 @@
     "release_date": "2024-10",
     "category": "Pro Tablet",
     "specs": {
-      "ap": "MediaTek Dimensity 9300+ (4nm / All-Big-Core 설계)",
+      "ap": "MediaTek Dimensity 9300+ (4nm All-Big-Core 설계)",
       "display": "14.6인치 Dynamic AMOLED 2X (2960x1848, 120Hz, 반사방지 AR 코팅 탑재, 930nits)",
-      "ram_storage": "12GB / 16GB RAM + 256GB / 512GB / 1TB + MicroSD 확장(최대 1.5TB)",
-      "camera": "1300만 메인 + 800만 초광각 / 전면 1200만 듀얼 와이드",
+      "ram_storage": "12GB / 16GB RAM + 256GB / 512GB / 1TB + MicroSD",
+      "camera": "1300만 메인 + 800만 초광각 / 전면 1200만 듀얼",
       "battery": "11,200mAh (45W 초고속 충전 2.0)",
-      "dimensions_weight": "326.4 x 208.6 x 5.4mm / 718g (초대화면 슬림)",
-      "os_durability": "Android 14 (Galaxy AI 태블릿 최적화) / IP68 방수방진 / 아머 알루미늄",
+      "dimensions_weight": "326.4 x 208.6 x 5.4mm / 718g (초슬림 5.4mm)",
+      "os_durability": "Android 14 (One UI 6.1.1, Galaxy AI 태블릿 최적화) / IP68 / 향상된 아머 알루미늄",
       "price_krw": "1,598,300원부터"
     },
     "videos": [
@@ -4088,68 +3468,6 @@
         "duration": "14:20",
         "thumbnail": "https://i.ytimg.com/vi/jVXn7iO4EzQ/hqdefault.jpg",
         "direct_watch_url": "https://www.youtube.com/watch?v=jVXn7iO4EzQ"
-      }
-    ]
-  },
-  {
-    "id": "alldocube-iplay-80-mini-pro",
-    "name": "ALLDOCUBE iPlay 80 mini Pro",
-    "name_kr": "올도큐브 iPlay 80 미니 프로 (2026)",
-    "brand": "ALLDOCUBE",
-    "brand_kr": "올도큐브",
-    "device_type": "태블릿",
-    "release_year": 2026,
-    "release_date": "2026-03",
-    "category": "Compact Tablet",
-    "specs": {
-      "ap": "MediaTek Dimensity 7050 / Helio G100 (6nm/8nm)",
-      "display": "8.4인치 2.5K IPS LCD (2560x1600, 120Hz 고주사율, 450nits, 인셀 터치)",
-      "ram_storage": "8GB / 12GB LPDDR4X + 256GB UFS 2.2 + MicroSD(최대 1TB)",
-      "camera": "1600만 후면(AF/LED) + 800만 전면",
-      "battery": "7,000mAh (33W 고속 충전, 바이패스 충전)",
-      "dimensions_weight": "202.5 x 125.8 x 7.4mm / 315g (CNC 알루미늄 일체형)",
-      "os_durability": "Android 15 / 5G & LTE 듀얼 SIM / GPS / 넷플릭스 와이드바인 L1",
-      "price_krw": "약 17만~21만 원 (2026 가성비 8인치 종결)"
-    },
-    "videos": [
-      {
-        "youtube_id": "eCOzLF4nZsM",
-        "title": "올도큐브 Iplay mini 80 pro 후기",
-        "channel": "루슈Lusyu",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/eCOzLF4nZsM/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=eCOzLF4nZsM"
-      }
-    ]
-  },
-  {
-    "id": "alldocube-iplay-80-pro",
-    "name": "ALLDOCUBE iPlay 80 Pro",
-    "name_kr": "올도큐브 iPlay 80 프로 11인치",
-    "brand": "ALLDOCUBE",
-    "brand_kr": "올도큐브",
-    "device_type": "태블릿",
-    "release_year": 2026,
-    "release_date": "2026-05",
-    "category": "Budget/Mid-Range Tablet",
-    "specs": {
-      "ap": "MediaTek Dimensity 7050 (6nm)",
-      "display": "11.0인치 2.5K IPS LCD (2560x1600, 120Hz, 400nits, DCI-P3)",
-      "ram_storage": "8GB / 12GB RAM + 128GB / 256GB + MicroSD",
-      "camera": "1300만 후면 + 800만 전면",
-      "battery": "8,500mAh (33W 고속 충전)",
-      "dimensions_weight": "256.5 x 168.0 x 7.3mm / 495g (쿼드 스피커)",
-      "os_durability": "Android 15 / LTE 듀얼 SIM & GPS 지원",
-      "price_krw": "약 19만~23만 원"
-    },
-    "videos": [
-      {
-        "youtube_id": "eCOzLF4nZsM",
-        "title": "올도큐브 Iplay mini 80 pro 후기",
-        "channel": "루슈Lusyu",
-        "duration": "14:20",
-        "thumbnail": "https://i.ytimg.com/vi/eCOzLF4nZsM/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=eCOzLF4nZsM"
       }
     ]
   },
