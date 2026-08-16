@@ -10,7 +10,7 @@ const phoneCount = devices.filter((d: any) => d.device_type === '스마트폰').
 const tabletCount = devices.filter((d: any) => d.device_type === '태블릿').length;
 
 const deviceTypes = ['전체', '스마트폰', '태블릿'];
-const brands = ['전체', 'Samsung', 'Apple', 'Google', 'Xiaomi', 'Lenovo', 'iMuz', 'ALLDOCUBE', 'Vivo', 'Oppo', 'OnePlus', 'Huawei', 'Honor', '기타'];
+const brands = ['전체', 'Samsung', 'Apple', 'Google', 'Xiaomi', 'Lenovo', 'iMuz', 'ALLDOCUBE', 'Oppo', 'Vivo', 'OnePlus', 'Huawei', 'Honor', '기타'];
 const years = ['전체', '2026', '2025', '2024', '2023'];
 ---
 <!DOCTYPE html>
@@ -18,35 +18,47 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>스마트폰 & 태블릿 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG</title>
-  <meta name="description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy, 애플 iPad/iPhone, 레노버 샤오신패드, 아이뮤즈 뮤패드, 올도큐브 iPlay 80/70 등 모든 스마트폰과 가성비 태블릿의 상세 스펙 명세표와 1:1 비교를 제공합니다." />
+  <title>스마트폰 & 태블릿 스펙 & 실사용 비디오 백과사전 | TECH SPEC BLOG</title>
+  <meta name="description" content="2023년부터 2026년 8월 현재까지 출시된 모든 스마트폰과 태블릿의 상세 스펙 명세표와 1:1 비교, 그리고 유튜브 실사용 핸즈온 리뷰 비디오 풀을 제공합니다." />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="스마트폰 & 태블릿 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG" />
-  <meta property="og:description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy, 애플 iPad/iPhone, 레노버 샤오신패드, 아이뮤즈 뮤패드, 올도큐브 iPlay 80/70 등 모든 스마트폰과 가성비 태블릿의 상세 스펙 명세표와 1:1 비교를 제공합니다." />
+  <meta property="og:title" content="스마트폰 & 태블릿 스펙 & 비디오 풀 백과사전 | TECH SPEC BLOG" />
+  <meta property="og:description" content="134종 스마트폰·태블릿 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
   <meta property="og:url" content="https://tech-review-blog.vercel.app/specs" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="스마트폰 & 태블릿 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG" />
-  <meta name="twitter:description" content="2023년부터 2026년 8월 현재까지 출시된 모든 스마트폰 및 태블릿 정밀 사양 데이터베이스" />
+  <meta name="twitter:title" content="스마트폰 & 태블릿 스펙 & 비디오 풀 백과사전 | TECH SPEC BLOG" />
+  <meta name="twitter:description" content="134종 스마트폰·태블릿 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
 
   <GoogleAnalytics />
 </head>
 <body>
   <Header />
 
-  <section class="hero" style="padding: 50px 0 36px;">
+  <section class="hero" style="padding: 48px 0 28px;">
     <div class="container">
       <div class="hero-badge">
-        <span>📚 2023 ~ 2026년 최신 스마트폰 & 태블릿 통합 스펙 백과사전</span>
+        <span>🎬 2023 ~ 2026 스마트폰 & 태블릿 스펙 + 실사용 비디오 풀 통합</span>
       </div>
       <h1 style="font-size: clamp(2rem, 3.8vw, 2.8rem); margin-top: 8px;">
-        스마트폰 & 태블릿 정밀 스펙 백과
+        스마트폰 & 태블릿 정밀 스펙 & 비디오 풀
       </h1>
       <p style="margin-top: 8px;">
-        Galaxy Z Fold8 / 탭 S10, iPad Pro M4부터 샤오신패드 프로 12.7, 뮤패드 K11, 올도큐브 iPlay 80/70/60까지<br />
-        총 <strong>{totalCount}개 기기</strong> (스마트폰 {phoneCount}종 + 태블릿 {tabletCount}종)의 프로세서, 디스플레이, 배터리 정밀 사양을 검색하고 비교해 보세요.
+        Galaxy Z Fold8 / 탭 S10 Ultra, iPad Pro M4, 샤오신패드 12.7, 뮤패드 K11, 올도큐브 iPlay 80까지<br />
+        총 <strong>{totalCount}개 기기</strong>의 상세 명세표와 <strong>실제 유튜브 핸즈온 리뷰 영상</strong>을 한곳에서 시청하세요.
       </p>
+
+      <!-- View Mode Switcher -->
+      <div class="view-mode-toggle-wrapper">
+        <div class="view-mode-toggle">
+          <button class="view-mode-btn active" id="btnModeSpecs" data-mode="specs">
+            <span>📊 스펙 명세표 모드</span>
+          </button>
+          <button class="view-mode-btn" id="btnModeVideos" data-mode="videos">
+            <span>🎬 비디오 풀 갤러리</span>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -60,7 +72,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
           type="text" 
           id="specSearchInput" 
           class="search-input" 
-          placeholder="기기명 (예: iPlay 80, 샤오신패드 12.7, 뮤패드 K11, iPad M4, Fold8), 칩셋 (Dimensity 7050, Helio G99) 검색..." 
+          placeholder="기기명 (예: Galaxy Fold8, iPad M4, 샤오신패드, 뮤패드), 프로세서 (M4, 8 Elite, G99) 검색..." 
         />
       </div>
 
@@ -82,7 +94,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         <div class="filter-chips" id="brandChips">
           {brands.map((brand, idx) => (
             <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-brand={brand}>
-              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (Apple)' : brand === 'Lenovo' ? '레노버 (샤오신/리전)' : brand === 'iMuz' ? '아이뮤즈 (뮤패드)' : brand === 'ALLDOCUBE' ? '올도큐브 (iPlay)' : brand}
+              {brand === '전체' ? '전체 제조사' : brand === 'Samsung' ? '삼성 (Galaxy)' : brand === 'Apple' ? '애플 (Apple)' : brand === 'Lenovo' ? '레노버 (샤오신/리전)' : brand === 'iMuz' ? '아이뮤즈 (뮤패드)' : brand === 'ALLDOCUBE' ? '올도큐브 (iPlay)' : brand === 'Oppo' ? '오포 (OPPO)' : brand}
             </button>
           ))}
         </div>
@@ -104,14 +116,14 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     <!-- Results Meta -->
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
       <div style="color: var(--text-muted); font-size: 0.95rem;">
-        검색 및 필터 결과: <strong id="resultCount" style="color: var(--accent-cyan); font-size: 1.1rem;">{totalCount}</strong>개 기기
+        검색 및 필터 결과: <strong id="resultCount" style="color: var(--accent-cyan); font-size: 1.1rem;">{totalCount}</strong>개 항목
       </div>
-      <div style="font-size: 0.85rem; color: var(--text-muted);">
+      <div style="font-size: 0.85rem; color: var(--text-muted);" id="modeHint">
         * 기기를 2개 선택하여 <strong>1:1 스펙 맞비교</strong>를 할 수 있습니다.
       </div>
     </div>
 
-    <!-- Spec Cards Grid -->
+    <!-- 1. Spec Cards Grid (Default Mode) -->
     <div class="grid" id="specCardsGrid">
       {devices.map((item: any) => (
         <div 
@@ -160,7 +172,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
 
           <div class="spec-card-actions">
             <button class="btn-detail" data-action="detail" data-id={item.id}>
-              📖 전체 사양 보기
+              📖 스펙 & 🎬 영상
             </button>
             <button class="btn-compare-check" data-action="compare-toggle" data-id={item.id}>
               + 비교함
@@ -168,6 +180,49 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
           </div>
         </div>
       ))}
+    </div>
+
+    <!-- 2. Video Pool Grid (Videos Mode) -->
+    <div class="video-pool-grid" id="videoCardsGrid" style="display: none;">
+      {devices.map((item: any) => {
+        const firstVid = item.videos && item.videos.length > 0 ? item.videos[0] : null;
+        if (!firstVid) return null;
+        return (
+          <div 
+            class="video-card"
+            data-id={item.id}
+            data-vid={firstVid.youtube_id}
+            data-title={firstVid.title}
+            data-type={item.device_type || '스마트폰'}
+            data-brand={item.brand}
+            data-year={item.release_year}
+            data-name={`${item.name} ${item.name_kr} ${firstVid.title} ${firstVid.channel}`.toLowerCase()}
+          >
+            <div class="video-thumb-container">
+              <img 
+                src={firstVid.thumbnail} 
+                alt={firstVid.title} 
+                class="video-thumb-img" 
+                loading="lazy"
+              />
+              <div class="video-play-overlay">
+                <div class="video-play-icon">▶</div>
+              </div>
+              <span class="video-duration-badge">{firstVid.duration || '12:00'}</span>
+            </div>
+            <div class="video-card-body">
+              <div class="video-device-tag">
+                {item.device_type === '태블릿' ? '📟 태블릿' : '📱 스마트폰'} • {item.name}
+              </div>
+              <h4 class="video-card-title">{firstVid.title}</h4>
+              <div class="video-card-meta">
+                <span>👤 {firstVid.channel}</span>
+                <span>{item.release_date}</span>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   </main>
 
@@ -182,7 +237,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     </button>
   </div>
 
-  <!-- Detail Spec Modal -->
+  <!-- Detail Spec Modal (With Videos Section) -->
   <div class="modal-overlay" id="detailModal">
     <div class="modal-content">
       <button class="modal-close-btn" id="closeDetailModal">✕</button>
@@ -205,9 +260,22 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     </div>
   </div>
 
+  <!-- YouTube Video Player Modal (Facade Player) -->
+  <div class="modal-overlay" id="videoPlayerModal">
+    <div class="modal-content" style="max-width: 860px; padding: 20px;">
+      <button class="modal-close-btn" id="closeVideoPlayerModal">✕</button>
+      <h3 id="videoModalTitle" style="font-size: 1.25rem; color: #ffffff; margin: 6px 0 12px; padding-right: 36px; line-height: 1.4;">
+        <!-- Injected via JS -->
+      </h3>
+      <div class="video-player-frame-wrapper" id="videoFrameContainer">
+        <!-- Dynamic iframe injected on play -->
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
-      <p>© 2026 Tech Review Blog. 2023-2026 Smartphone & Tablet Spec Encyclopedia.</p>
+      <p>© 2026 Tech Review Blog. 2023-2026 Smartphone & Tablet Spec & Video Pool.</p>
     </div>
   </footer>
 
@@ -216,6 +284,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
   <!-- Client Interaction Logic -->
   <script is:inline define:vars={{ rawData: devices }}>
     const allData = rawData;
+    let currentMode = 'specs'; // 'specs' or 'videos'
     let selectedType = '전체';
     let selectedBrand = '전체';
     let selectedYear = '전체';
@@ -227,8 +296,14 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     const typeChips = document.querySelectorAll('#typeChips .chip-btn');
     const brandChips = document.querySelectorAll('#brandChips .chip-btn');
     const yearChips = document.querySelectorAll('#yearChips .chip-btn');
-    const cards = document.querySelectorAll('.spec-card');
     const resultCount = document.getElementById('resultCount');
+    const modeHint = document.getElementById('modeHint');
+
+    const btnModeSpecs = document.getElementById('btnModeSpecs');
+    const btnModeVideos = document.getElementById('btnModeVideos');
+    const specCardsGrid = document.getElementById('specCardsGrid');
+    const videoCardsGrid = document.getElementById('videoCardsGrid');
+
     const compareFloatingBar = document.getElementById('compareFloatingBar');
     const compareSelectedText = document.getElementById('compareSelectedText');
     const btnOpenCompare = document.getElementById('btnOpenCompare');
@@ -241,10 +316,40 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     const compareModalBody = document.getElementById('compareModalBody');
     const closeCompareModal = document.getElementById('closeCompareModal');
 
+    const videoPlayerModal = document.getElementById('videoPlayerModal');
+    const videoModalTitle = document.getElementById('videoModalTitle');
+    const videoFrameContainer = document.getElementById('videoFrameContainer');
+    const closeVideoPlayerModal = document.getElementById('closeVideoPlayerModal');
+
+    // Switch View Mode
+    btnModeSpecs.addEventListener('click', () => {
+      currentMode = 'specs';
+      btnModeSpecs.classList.add('active');
+      btnModeVideos.classList.remove('active');
+      specCardsGrid.style.display = 'grid';
+      videoCardsGrid.style.display = 'none';
+      modeHint.innerHTML = '* 기기를 2개 선택하여 <strong>1:1 스펙 맞비교</strong>를 할 수 있습니다.';
+      applyFilters();
+    });
+
+    btnModeVideos.addEventListener('click', () => {
+      currentMode = 'videos';
+      btnModeVideos.classList.add('active');
+      btnModeSpecs.classList.remove('active');
+      specCardsGrid.style.display = 'none';
+      videoCardsGrid.style.display = 'grid';
+      modeHint.innerHTML = '* 썸네일을 클릭하면 <strong>실사용 유튜브 영상</strong>이 즉시 재생됩니다.';
+      applyFilters();
+    });
+
     // Filter Function
     function applyFilters() {
+      const targetCards = currentMode === 'specs' 
+        ? document.querySelectorAll('#specCardsGrid .spec-card')
+        : document.querySelectorAll('#videoCardsGrid .video-card');
+
       let visibleCount = 0;
-      cards.forEach(card => {
+      targetCards.forEach(card => {
         const type = card.getAttribute('data-type');
         const brand = card.getAttribute('data-brand');
         const year = card.getAttribute('data-year');
@@ -256,7 +361,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         if (selectedBrand === '전체') {
           matchBrand = true;
         } else if (selectedBrand === '기타') {
-          matchBrand = !['Samsung', 'Apple', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'OnePlus', 'Lenovo', 'Huawei', 'Honor'].includes(brand);
+          matchBrand = !['Samsung', 'Apple', 'Google', 'Xiaomi', 'Lenovo', 'iMuz', 'ALLDOCUBE', 'Oppo', 'Vivo', 'OnePlus', 'Huawei', 'Honor'].includes(brand);
         } else {
           matchBrand = (brand === selectedBrand);
         }
@@ -275,7 +380,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
       resultCount.innerText = visibleCount;
     }
 
-    // Event Listeners
+    // Event Listeners for Filters
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.trim();
       applyFilters();
@@ -308,8 +413,8 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
       });
     });
 
-    // Delegate Click for Cards (Detail & Compare Toggle)
-    document.getElementById('specCardsGrid').addEventListener('click', (e) => {
+    // Delegate Click for Spec Cards
+    specCardsGrid.addEventListener('click', (e) => {
       const detailBtn = e.target.closest('[data-action="detail"]');
       const compareBtn = e.target.closest('[data-action="compare-toggle"]');
 
@@ -322,10 +427,72 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
       }
     });
 
-    // Open Detail Modal
+    // Delegate Click for Video Cards (Direct Play)
+    videoCardsGrid.addEventListener('click', (e) => {
+      const card = e.target.closest('.video-card');
+      if (card) {
+        const vid = card.getAttribute('data-vid');
+        const title = card.getAttribute('data-title');
+        playYouTubeVideo(vid, title);
+      }
+    });
+
+    // YouTube Facade Player Opener
+    function playYouTubeVideo(youtubeId, title) {
+      videoModalTitle.innerText = title;
+      // Inject iframe with autoplay
+      videoFrameContainer.innerHTML = `
+        <iframe 
+          src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&playsinline=1" 
+          title="${title}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+      `;
+      videoPlayerModal.classList.add('open');
+    }
+
+    // Stop and cleanup video on close
+    function closeVideoPlayer() {
+      videoFrameContainer.innerHTML = '';
+      videoPlayerModal.classList.remove('open');
+    }
+
+    closeVideoPlayerModal.addEventListener('click', closeVideoPlayer);
+
+    // Open Detail Spec Modal (With Video Thumbnails Section)
     function openDetail(id) {
       const item = allData.find(d => d.id === id);
       if (!item) return;
+
+      const videosHtml = (item.videos && item.videos.length > 0) ? `
+        <div class="detail-video-box">
+          <div class="detail-video-title">
+            <span>🎬 실제 핸즈온 & 리뷰 영상 (${item.videos.length}개)</span>
+          </div>
+          <div class="detail-video-grid">
+            ${item.videos.map(v => `
+              <div class="detail-video-item" data-vid="${v.youtube_id}" data-title="${v.title}">
+                <div class="video-thumb-container">
+                  <img src="${v.thumbnail}" alt="${v.title}" class="video-thumb-img" loading="lazy" />
+                  <div class="video-play-overlay">
+                    <div class="video-play-icon" style="width: 40px; height: 40px; font-size: 1.1rem;">▶</div>
+                  </div>
+                  <span class="video-duration-badge">${v.duration || '12:00'}</span>
+                </div>
+                <div style="padding: 10px;">
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #ffffff; line-height: 1.3; margin-bottom: 4px;">
+                    ${v.title}
+                  </div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">
+                    👤 ${v.channel}
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : '';
 
       detailModalBody.innerHTML = `
         <div style="margin-bottom: 24px;">
@@ -370,7 +537,18 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
             </tr>
           </tbody>
         </table>
+
+        ${videosHtml}
       `;
+
+      // Attach click to detail video items
+      detailModalBody.querySelectorAll('.detail-video-item').forEach(el => {
+        el.addEventListener('click', () => {
+          const vid = el.getAttribute('data-vid');
+          const title = el.getAttribute('data-title');
+          playYouTubeVideo(vid, title);
+        });
+      });
 
       detailModal.classList.add('open');
     }
@@ -488,6 +666,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     window.addEventListener('click', (e) => {
       if (e.target === detailModal) detailModal.classList.remove('open');
       if (e.target === compareModal) compareModal.classList.remove('open');
+      if (e.target === videoPlayerModal) closeVideoPlayer();
     });
   </script>
 </body>

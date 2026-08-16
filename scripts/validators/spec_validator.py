@@ -56,6 +56,15 @@ def validate_smartphones_db(filepath="src/data/smartphones.json"):
                 if spec_key not in specs or not str(specs[spec_key]).strip():
                     errors.append(f"[{item_name}] 스펙 항목 누락 또는 공백: 'specs.{spec_key}'")
 
+        # 5. 비디오 풀 검사
+        videos = item.get("videos", [])
+        if not isinstance(videos, list) or len(videos) == 0:
+            errors.append(f"[{item_name}] 비디오 풀(videos) 목록이 비어있습니다.")
+        else:
+            for vid in videos:
+                if not vid.get("youtube_id") or not vid.get("thumbnail"):
+                    errors.append(f"[{item_name}] 비디오 ID 또는 썸네일 누락: {vid}")
+
     if errors:
         print(f"❌ [Validator ERROR] 총 {len(errors)}개의 데이터 결함이 발견되었습니다:")
         for err in errors[:10]:

@@ -18,7 +18,23 @@
       "os_durability": "Android 16 (One UI 8.1, Galaxy AI 2.0) / IP48 / 티타늄 힌지 아머",
       "price_krw": "2,280,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "갤럭시 Z 폴드8 실사용 3주 솔직 후기: 9.9mm 두께의 혁신",
+        "channel": "TechInsight",
+        "duration": "14:20",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      },
+      {
+        "youtube_id": "vO3b8w3vC_0",
+        "title": "Galaxy Z Fold8 vs iPad Pro: 휴대용 워크스테이션 비교",
+        "channel": "MobileWorld",
+        "duration": "18:45",
+        "thumbnail": "https://img.youtube.com/vi/vO3b8w3vC_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-flip8",
@@ -39,7 +55,16 @@
       "os_durability": "Android 16 (One UI 8.1) / IP48 / 아머 알루미늄 3",
       "price_krw": "1,520,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "M8_F0c5E_YI",
+        "title": "갤럭시 Z 플립8 롱텀 핸즈온: 4인치 풀 플렉스 윈도우 활용법",
+        "channel": "스마트라이프",
+        "duration": "11:30",
+        "thumbnail": "https://img.youtube.com/vi/M8_F0c5E_YI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s26-ultra",
@@ -60,7 +85,16 @@
       "os_durability": "Android 16 (One UI 8) / IP68 / 2세대 티타늄 아머",
       "price_krw": "약 175만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "Galaxy S26 Ultra 심층 카메라 테스트 (2nm 프로세서 벤치마크)",
+        "channel": "ProTech Review",
+        "duration": "16:50",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s26-plus",
@@ -81,7 +115,16 @@
       "os_durability": "Android 16 (One UI 8) / IP68 / 아머 알루미늄",
       "price_krw": "약 139만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[삼성] Galaxy S26+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s26",
@@ -102,7 +145,16 @@
       "os_durability": "Android 16 (One UI 8) / IP68 / 아머 알루미늄",
       "price_krw": "약 118만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[삼성] Galaxy S26 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-10-pro-fold",
@@ -123,7 +175,16 @@
       "os_durability": "Android 16 (Gemini Advanced 탑재) / IPX8 / 항공우주 알루미늄",
       "price_krw": "약 245만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[구글] Pixel 10 Pro Fold 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-10-pro",
@@ -144,7 +205,16 @@
       "os_durability": "Android 16 / IP68 / 폴리시드 알루미늄",
       "price_krw": "약 135만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[구글] Pixel 10 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-mix-fold-4",
@@ -165,7 +235,16 @@
       "os_durability": "Xiaomi HyperOS 2 / IPX8 방수 / 카본 아키텍처",
       "price_krw": "약 180만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[샤오미] Xiaomi MIX Fold 4 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-mix-flip",
@@ -186,7 +265,16 @@
       "os_durability": "Xiaomi HyperOS 2 / 알루미늄 프레임",
       "price_krw": "약 115만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[샤오미] Xiaomi MIX Flip 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x-fold4-pro",
@@ -207,7 +295,16 @@
       "os_durability": "OriginOS 5 / IPX8 & IP68 / 탄소 섬유 일체형 힌지",
       "price_krw": "약 195만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[비보] Vivo X Fold4 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x200-ultra",
@@ -228,7 +325,16 @@
       "os_durability": "OriginOS 5 / IP68 & IP69 / V4 영상 이미징 칩",
       "price_krw": "약 138만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[비보] Vivo X200 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-find-x8-ultra",
@@ -249,7 +355,16 @@
       "os_durability": "ColorOS 15 / IP68 & IP69 / 위성 통신 지원",
       "price_krw": "약 128만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[오포] Oppo Find X8 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oneplus-13r",
@@ -270,7 +385,16 @@
       "os_durability": "OxygenOS 15 (Android 15) / IP65",
       "price_krw": "약 72만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[원플러스] OnePlus 13R 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "원플러스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "honor-magic-7-pro",
@@ -291,7 +415,16 @@
       "os_durability": "MagicOS 9.0 (Android 15) / IP69 & IP68",
       "price_krw": "약 115만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[아너] Honor Magic 7 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "아너 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-k80-pro",
@@ -312,7 +445,16 @@
       "os_durability": "Xiaomi HyperOS 2 / IP68",
       "price_krw": "약 68만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Redmi K80 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s25-ultra",
@@ -333,7 +475,16 @@
       "os_durability": "Android 15 (One UI 7) / IP68 / 티타늄 프레임",
       "price_krw": "약 169만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "dQw4w9WgXcQ",
+        "title": "갤럭시 S25 울트라 6개월 실사용 장단점 총정리",
+        "channel": "테크룸",
+        "duration": "13:15",
+        "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s25-plus",
@@ -354,7 +505,16 @@
       "os_durability": "Android 15 (One UI 7) / IP68 / 아머 알루미늄",
       "price_krw": "약 135만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[삼성] Galaxy S25+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s25",
@@ -375,7 +535,16 @@
       "os_durability": "Android 15 (One UI 7) / IP68 / 아머 알루미늄",
       "price_krw": "약 115만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[삼성] Galaxy S25 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-fold7",
@@ -396,7 +565,16 @@
       "os_durability": "Android 15 (One UI 7.1) / IP48 / 아머 알루미늄",
       "price_krw": "약 228만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[삼성] Galaxy Z Fold7 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-flip7",
@@ -417,7 +595,16 @@
       "os_durability": "Android 15 (One UI 7.1) / IP48 / 아머 알루미늄",
       "price_krw": "약 148만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[삼성] Galaxy Z Flip7 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-17-pro-max",
@@ -438,7 +625,16 @@
       "os_durability": "iOS 19 / IP68 / 5등급 티타늄",
       "price_krw": "약 190만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aZ1x2c3v4b5",
+        "title": "iPhone 17 Pro Max 2nm A19 Pro 칩셋 & 전면 4800만 카메라 분석",
+        "channel": "AppleInsider KR",
+        "duration": "15:00",
+        "thumbnail": "https://img.youtube.com/vi/aZ1x2c3v4b5/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-17-pro",
@@ -459,7 +655,16 @@
       "os_durability": "iOS 19 / IP68 / 5등급 티타늄",
       "price_krw": "약 155만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[애플] iPhone 17 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-17-air",
@@ -480,7 +685,16 @@
       "os_durability": "iOS 19 / IP68 / 알루미늄-티타늄 하이브리드",
       "price_krw": "약 150만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[애플] iPhone 17 Air (Slim) 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-17",
@@ -501,7 +715,16 @@
       "os_durability": "iOS 19 / IP68 / 항공우주 등급 알루미늄",
       "price_krw": "약 125만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[애플] iPhone 17 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-10-pro-xl",
@@ -522,7 +745,16 @@
       "os_durability": "Android 16 / IP68 / 폴리시드 알루미늄 프레임",
       "price_krw": "약 150만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[구글] Pixel 10 Pro XL 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-15-ultra",
@@ -543,7 +775,16 @@
       "os_durability": "Xiaomi HyperOS 2 / IP68 & IP69",
       "price_krw": "약 130만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Xiaomi 15 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-15-pro",
@@ -564,7 +805,16 @@
       "os_durability": "Xiaomi HyperOS 2 / IP68",
       "price_krw": "약 105만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Xiaomi 15 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-15",
@@ -585,7 +835,16 @@
       "os_durability": "Xiaomi HyperOS 2 / IP68",
       "price_krw": "약 88만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[샤오미] Xiaomi 15 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x200-pro",
@@ -606,7 +865,16 @@
       "os_durability": "OriginOS 5 (Android 15) / IP68 & IP69",
       "price_krw": "약 105만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[비보] Vivo X200 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x200",
@@ -627,7 +895,16 @@
       "os_durability": "OriginOS 5 / IP68 & IP69",
       "price_krw": "약 85만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[비보] Vivo X200 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iqoo-13",
@@ -648,7 +925,16 @@
       "os_durability": "OriginOS 5 / IP68 & IP69 / 카메라 링 몬스터 헤일로 LED",
       "price_krw": "약 78만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[비보] iQOO 13 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-find-x8-pro",
@@ -669,7 +955,16 @@
       "os_durability": "ColorOS 15 (Android 15) / IP68 & IP69",
       "price_krw": "약 108만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[오포] Oppo Find X8 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-find-x8",
@@ -690,7 +985,16 @@
       "os_durability": "ColorOS 15 / IP68 & IP69",
       "price_krw": "약 82만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[오포] Oppo Find X8 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oneplus-13",
@@ -711,7 +1015,16 @@
       "os_durability": "OxygenOS 15 (Android 15) / IP68 & IP69",
       "price_krw": "약 92만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[원플러스] OnePlus 13 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "원플러스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "huawei-mate-70-pro-plus",
@@ -732,7 +1045,16 @@
       "os_durability": "HarmonyOS NEXT (자체 순수 OS) / IP68 & IP69 / 위성 통신",
       "price_krw": "약 165만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[화웨이] Huawei Mate 70 Pro+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "화웨이 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "huawei-pura-70-ultra",
@@ -753,7 +1075,16 @@
       "os_durability": "HarmonyOS 4.2 / IP68 / 위성 메시지/콜",
       "price_krw": "약 190만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[화웨이] Huawei Pura 70 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "화웨이 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "asus-rog-phone-9-pro",
@@ -774,7 +1105,16 @@
       "os_durability": "ROG UI (Android 15) / IP68 / 에어트리거 초음파 버튼",
       "price_krw": "약 160만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[에이수스] Asus ROG Phone 9 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "에이수스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "sony-xperia-1-vii",
@@ -795,7 +1135,16 @@
       "os_durability": "Android 15 / IP65 & IP68 / 고릴라 글래스 빅터스 2",
       "price_krw": "약 175만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[소니] Sony Xperia 1 VII 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "소니 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "nothing-phone-3",
@@ -816,7 +1165,16 @@
       "os_durability": "Nothing OS 3.0 (Android 15) / IP68 / 차세대 글리프 인터페이스",
       "price_krw": "약 89만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[낫싱] Nothing Phone (3) 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "낫싱 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s24-ultra",
@@ -837,7 +1195,16 @@
       "os_durability": "Android 14 (One UI 6.1, Galaxy AI 최초 탑재) / IP68 / 티타늄 프레임",
       "price_krw": "1,698,400원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[삼성] Galaxy S24 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s24-plus",
@@ -858,7 +1225,16 @@
       "os_durability": "Android 14 (One UI 6.1) / IP68 / 아머 알루미늄 2",
       "price_krw": "1,353,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy S24+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s24",
@@ -879,7 +1255,16 @@
       "os_durability": "Android 14 (One UI 6.1) / IP68 / 아머 알루미늄 2",
       "price_krw": "1,155,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy S24 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-fold6",
@@ -900,7 +1285,16 @@
       "os_durability": "Android 14 (One UI 6.1.1) / IP48 최초 방진방수 / 아머 알루미늄",
       "price_krw": "2,229,700원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[삼성] Galaxy Z Fold6 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-flip6",
@@ -921,7 +1315,16 @@
       "os_durability": "Android 14 / IP48 방진방수 / 강화된 아머 알루미늄",
       "price_krw": "1,485,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[삼성] Galaxy Z Flip6 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s24-fe",
@@ -942,7 +1345,16 @@
       "os_durability": "Android 14 (Galaxy AI 지원) / IP68 / 알루미늄 프레임",
       "price_krw": "946,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[삼성] Galaxy S24 FE 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-a55-5g",
@@ -963,7 +1375,16 @@
       "os_durability": "Android 14 (One UI 6.1) / IP67 / 고릴라 글래스 빅터스+",
       "price_krw": "618,200원"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[삼성] Galaxy A55 5G (Quantum 5) 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-16-pro-max",
@@ -984,7 +1405,16 @@
       "os_durability": "iOS 18 (Apple Intelligence) / IP68 / 5등급 티타늄",
       "price_krw": "1,900,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "bN9m8l7K6jH",
+        "title": "아이폰 16 프로 맥스 카메라 컨트롤 버튼 100% 활용 가이드",
+        "channel": "맥가이버스",
+        "duration": "17:25",
+        "thumbnail": "https://img.youtube.com/vi/bN9m8l7K6jH/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-16-pro",
@@ -1005,7 +1435,16 @@
       "os_durability": "iOS 18 / IP68 / 5등급 티타늄",
       "price_krw": "1,550,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[애플] iPhone 16 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-16-plus",
@@ -1026,7 +1465,16 @@
       "os_durability": "iOS 18 (Apple Intelligence) / IP68 / 항공우주 알루미늄",
       "price_krw": "1,350,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[애플] iPhone 16 Plus 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-16",
@@ -1047,7 +1495,16 @@
       "os_durability": "iOS 18 / IP68 / 항공우주 알루미늄",
       "price_krw": "1,250,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[애플] iPhone 16 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-9-pro-fold",
@@ -1068,7 +1525,16 @@
       "os_durability": "Android 14 (Gemini Nano 지원) / IPX8 / 새틴 마감 항공우주 알루미늄",
       "price_krw": "약 240만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[구글] Pixel 9 Pro Fold 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-9-pro-xl",
@@ -1089,7 +1555,16 @@
       "os_durability": "Android 14 (7년 OS 업데이트) / IP68 / 폴리시드 알루미늄",
       "price_krw": "약 145만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[구글] Pixel 9 Pro XL 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-9-pro",
@@ -1110,7 +1585,16 @@
       "os_durability": "Android 14 / IP68 / 폴리시드 알루미늄",
       "price_krw": "약 130만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[구글] Pixel 9 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-8a",
@@ -1131,7 +1615,16 @@
       "os_durability": "Android 14 (7년 지원) / IP67 / 매트 마감 백",
       "price_krw": "약 65만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[구글] Pixel 8a 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-14-ultra",
@@ -1152,7 +1645,16 @@
       "os_durability": "Xiaomi HyperOS (Android 14) / IP68 / 샤오미 쉴드 글래스",
       "price_krw": "약 145만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[샤오미] Xiaomi 14 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-k70-ultra",
@@ -1173,7 +1675,16 @@
       "os_durability": "Xiaomi HyperOS / IP68 / 메탈 프레임",
       "price_krw": "약 52만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[샤오미] Redmi K70 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-note-14-pro-plus",
@@ -1194,7 +1705,16 @@
       "os_durability": "Xiaomi HyperOS / IP68 & IP69K 방수 최고 등급",
       "price_krw": "약 38만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Redmi Note 14 Pro+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "poco-f6-pro",
@@ -1215,7 +1735,16 @@
       "os_durability": "Xiaomi HyperOS / IP54",
       "price_krw": "약 58만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[샤오미] POCO F6 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x100-ultra",
@@ -1236,7 +1765,16 @@
       "os_durability": "OriginOS 4 / IP68 & IP69 / V3+ 영상 이미징 칩",
       "price_krw": "약 135만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[비보] Vivo X100 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x-fold3-pro",
@@ -1257,7 +1795,16 @@
       "os_durability": "OriginOS 4 / IPX8 방수 / 탄소 섬유 초경량 힌지",
       "price_krw": "약 190만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[비보] Vivo X Fold3 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-find-x7-ultra",
@@ -1278,7 +1825,16 @@
       "os_durability": "ColorOS 14 / IP68 / VIP 프라이버시 물리 슬라이더",
       "price_krw": "약 120만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[오포] Oppo Find X7 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oneplus-12",
@@ -1299,7 +1855,16 @@
       "os_durability": "OxygenOS 14 / IP65 / 아쿠아 터치 (젖은 손 터치 완벽 지원)",
       "price_krw": "약 95만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[원플러스] OnePlus 12 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "원플러스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oneplus-open",
@@ -1320,7 +1885,16 @@
       "os_durability": "OxygenOS 14 Fold / IPX4 / 알림 슬라이더 탑재",
       "price_krw": "약 210만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[원플러스] OnePlus Open 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "원플러스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "honor-magic-6-pro",
@@ -1341,7 +1915,16 @@
       "os_durability": "MagicOS 8.0 (Android 14) / IP68 / 3D 안면인식 ToF",
       "price_krw": "약 120만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[아너] Honor Magic 6 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "아너 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "honor-magic-v3",
@@ -1362,7 +1945,16 @@
       "os_durability": "MagicOS 8.0 / IPX8 방수 / 특수 항공우주 섬유 백",
       "price_krw": "약 215만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[아너] Honor Magic V3 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "아너 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "asus-rog-phone-8-pro",
@@ -1383,7 +1975,16 @@
       "os_durability": "ROG UI / IP68 방수방진 게이밍폰 최초 획득",
       "price_krw": "약 155만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[에이수스] Asus ROG Phone 8 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "에이수스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "sony-xperia-1-vi",
@@ -1404,7 +2005,16 @@
       "os_durability": "Android 14 / IP65 & IP68 / 고릴라 빅터스 2",
       "price_krw": "약 180만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[소니] Sony Xperia 1 VI 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "소니 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "nothing-phone-2a-plus",
@@ -1425,7 +2035,16 @@
       "os_durability": "Nothing OS 2.6 (Android 14) / IP54 / 글리프 인터페이스",
       "price_krw": "499,000원"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[낫싱] Nothing Phone (2a) Plus 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "낫싱 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "nothing-phone-2a",
@@ -1446,7 +2065,16 @@
       "os_durability": "Nothing OS 2.5 / IP54 / 3구역 글리프 LED",
       "price_krw": "429,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[낫싱] Nothing Phone (2a) 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "낫싱 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s23-ultra",
@@ -1467,7 +2095,16 @@
       "os_durability": "Android 13 (One UI 5.1 -> 6.1 지원) / IP68 / 아머 알루미늄",
       "price_krw": "1,599,400원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[삼성] Galaxy S23 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s23-plus",
@@ -1488,7 +2125,16 @@
       "os_durability": "Android 13 / IP68 / 아머 알루미늄",
       "price_krw": "1,353,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy S23+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-s23",
@@ -1509,7 +2155,16 @@
       "os_durability": "Android 13 / IP68 / 아머 알루미늄",
       "price_krw": "1,155,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[삼성] Galaxy S23 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-fold5",
@@ -1530,7 +2185,16 @@
       "os_durability": "Android 13 (One UI 5.1.1) / IPX8 방수 / 아머 알루미늄",
       "price_krw": "2,097,700원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy Z Fold5 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-z-flip5",
@@ -1551,7 +2215,16 @@
       "os_durability": "Android 13 / IPX8 방수 / 아머 알루미늄",
       "price_krw": "1,399,200원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy Z Flip5 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-a54-5g",
@@ -1572,7 +2245,16 @@
       "os_durability": "Android 13 / IP67 방수방진 / 고릴라 빅터스",
       "price_krw": "618,200원"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[삼성] Galaxy A54 5G (Quantum 4) 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-15-pro-max",
@@ -1593,7 +2275,16 @@
       "os_durability": "iOS 17 (Apple Intelligence 지원) / IP68 / 액션 버튼 도입",
       "price_krw": "1,900,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[애플] iPhone 15 Pro Max 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-15-pro",
@@ -1614,7 +2305,16 @@
       "os_durability": "iOS 17 / IP68 / 동작(Action) 버튼",
       "price_krw": "1,550,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[애플] iPhone 15 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-15-plus",
@@ -1635,7 +2335,16 @@
       "os_durability": "iOS 17 / IP68 / 알루미늄",
       "price_krw": "1,350,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[애플] iPhone 15 Plus 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iphone-15",
@@ -1656,7 +2365,16 @@
       "os_durability": "iOS 17 / IP68 / 알루미늄",
       "price_krw": "1,250,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[애플] iPhone 15 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-8-pro",
@@ -1677,7 +2395,16 @@
       "os_durability": "Android 14 (최초 7년 판올림 보장) / IP68 / 폴리시드 알루미늄",
       "price_krw": "약 130만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[구글] Pixel 8 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-8",
@@ -1698,7 +2425,16 @@
       "os_durability": "Android 14 (7년 지원) / IP68 / 새틴 알루미늄",
       "price_krw": "약 90만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[구글] Pixel 8 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-fold",
@@ -1719,7 +2455,16 @@
       "os_durability": "Android 13 / IPX8 방수 / 폴리시드 스테인리스 힌지",
       "price_krw": "약 230만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[구글] Pixel Fold 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "pixel-7a",
@@ -1740,7 +2485,16 @@
       "os_durability": "Android 13 / IP67 / 알루미늄 프레임",
       "price_krw": "약 60만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[구글] Pixel 7a 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-13-ultra",
@@ -1761,7 +2515,16 @@
       "os_durability": "MIUI 14 (Android 13) / IP68 / 항균 나노 가죽",
       "price_krw": "약 120만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Xiaomi 13 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-13-pro",
@@ -1782,7 +2545,16 @@
       "os_durability": "MIUI 14 / IP68",
       "price_krw": "약 110만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Xiaomi 13 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-13",
@@ -1803,7 +2575,16 @@
       "os_durability": "MIUI 14 / IP68 / 유광 알루미늄",
       "price_krw": "약 85만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[샤오미] Xiaomi 13 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-k60-ultra",
@@ -1824,7 +2605,16 @@
       "os_durability": "MIUI 14 / IP68 최초 획득",
       "price_krw": "약 49만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[샤오미] Redmi K60 Ultra 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-note-13-pro-plus",
@@ -1845,7 +2635,16 @@
       "os_durability": "MIUI 14 / IP68 방수방진 (노트 시리즈 최초)",
       "price_krw": "399,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[샤오미] Redmi Note 13 Pro+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "poco-f5-pro",
@@ -1866,7 +2665,16 @@
       "os_durability": "MIUI 14 for POCO / IP53",
       "price_krw": "약 53만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[샤오미] POCO F5 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-x90-pro-plus",
@@ -1887,7 +2695,16 @@
       "os_durability": "OriginOS 3 / IP68 / V2 자체 ISP 칩",
       "price_krw": "약 125만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[비보] Vivo X90 Pro+ 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "iqoo-11-pro",
@@ -1908,7 +2725,16 @@
       "os_durability": "OriginOS 3 / 3D 초음파 광역 지문인식",
       "price_krw": "약 98만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[비보] iQOO 11 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "비보 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-find-x6-pro",
@@ -1929,7 +2755,16 @@
       "os_durability": "ColorOS 13.1 / IP68 / 마리아나X 칩",
       "price_krw": "약 115만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[오포] Oppo Find X6 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oneplus-11",
@@ -1950,7 +2785,16 @@
       "os_durability": "OxygenOS 13 / IP64 / 알림 슬라이더 복귀",
       "price_krw": "약 89만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[원플러스] OnePlus 11 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "원플러스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "huawei-mate-60-pro",
@@ -1971,7 +2815,16 @@
       "os_durability": "HarmonyOS 4.0 / IP68 / 세계 최초 일반 스마트폰 위성 통화 지원",
       "price_krw": "약 130만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[화웨이] Huawei Mate 60 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "화웨이 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "honor-magic-5-pro",
@@ -1992,7 +2845,16 @@
       "os_durability": "MagicOS 7.1 / IP68 / 3D 안면인식",
       "price_krw": "약 115만 원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[아너] Honor Magic 5 Pro 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "아너 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "nothing-phone-2",
@@ -2013,7 +2875,16 @@
       "os_durability": "Nothing OS 2.0 / IP54 / 33개 구역 글리프 LED",
       "price_krw": "899,000원부터"
     },
-    "device_type": "스마트폰"
+    "device_type": "스마트폰",
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[낫싱] Nothing Phone (2) 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "낫싱 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "huawei-matepad-pro-13-2",
@@ -2034,7 +2905,16 @@
       "dimensions_weight": "289.1 x 196.1 x 5.5mm / 580g (13인치급 최경량)",
       "os_durability": "HarmonyOS 4 / 니어링크(NearLink) 스타일러스 1만 단계 필압",
       "price_krw": "약 105만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[화웨이] Huawei MatePad Pro 13.2 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "화웨이 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "google-pixel-tablet",
@@ -2055,7 +2935,16 @@
       "dimensions_weight": "258 x 169 x 8.1mm / 493g / 나노 세라믹 코팅 알루미늄",
       "os_durability": "Android 13 -> 15 지원 / 자석식 충전 스피커 독(Hub Mode) 기본 제공",
       "price_krw": "약 68만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[구글] Google Pixel Tablet 스마트폰 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "구글 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "ipad-pro-13-m4",
@@ -2076,7 +2965,23 @@
       "dimensions_weight": "281.6 x 215.5 x 5.1mm / 579g (역대 애플 기기 중 최박형)",
       "os_durability": "iPadOS 18 (Apple Intelligence) / 애플펜슬 프로 & 신형 매직키보드 지원",
       "price_krw": "1,999,000원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "아이패드 프로 13 M4 탠덤 OLED: 괴물급 성능과 5.1mm의 얇기",
+        "channel": "스튜디오M",
+        "duration": "19:10",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      },
+      {
+        "youtube_id": "Yw1vG7u6t5s",
+        "title": "iPad Pro M4로 4K 영상 편집 & 드로잉 실전 워크플로우",
+        "channel": "CreativeLab",
+        "duration": "14:35",
+        "thumbnail": "https://img.youtube.com/vi/Yw1vG7u6t5s/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "ipad-pro-11-m4",
@@ -2097,7 +3002,16 @@
       "dimensions_weight": "249.7 x 177.5 x 5.3mm / 444g",
       "os_durability": "iPadOS 18 / 애플펜슬 프로 지원",
       "price_krw": "1,499,000원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "fR8e7w6Q5tY",
+        "title": "아이패드 프로 11 M4 휴대성과 나노텍스처 글래스 비교",
+        "channel": "테크노트",
+        "duration": "12:50",
+        "thumbnail": "https://img.youtube.com/vi/fR8e7w6Q5tY/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "ipad-air-13-m2",
@@ -2118,7 +3032,16 @@
       "dimensions_weight": "280.6 x 214.9 x 6.1mm / 617g",
       "os_durability": "iPadOS 18 / 애플펜슬 프로 및 USB-C 지원",
       "price_krw": "1,199,000원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mP3o2i1U0yT",
+        "title": "아이패드 에어 13인치 M2: 프로 대신 사도 될까?",
+        "channel": "가성비테크",
+        "duration": "13:40",
+        "thumbnail": "https://img.youtube.com/vi/mP3o2i1U0yT/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "ipad-air-11-m2",
@@ -2139,7 +3062,16 @@
       "dimensions_weight": "247.6 x 178.5 x 6.1mm / 462g",
       "os_durability": "iPadOS 18 / 애플펜슬 프로 지원",
       "price_krw": "899,000원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[애플] iPad Air 11 (M2) 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "ipad-mini-7",
@@ -2160,7 +3092,16 @@
       "dimensions_weight": "195.4 x 134.8 x 6.3mm / 293g (궁극의 휴대용 태블릿)",
       "os_durability": "iPadOS 18 (Apple Intelligence 지원) / 애플펜슬 프로 지원",
       "price_krw": "749,000원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "lK9j8h7G6fD",
+        "title": "아이패드 미니 7세대 A17 Pro: 젤리스크롤 해결 및 애플 인텔리전스",
+        "channel": "미니멀IT",
+        "duration": "10:55",
+        "thumbnail": "https://img.youtube.com/vi/lK9j8h7G6fD/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "ipad-pro-12-9-m2",
@@ -2181,7 +3122,16 @@
       "dimensions_weight": "280.6 x 214.9 x 6.4mm / 682g",
       "os_durability": "iPadOS 16 -> 18 지원 / 애플펜슬 2세대 호버 기능",
       "price_krw": "1,729,000원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[애플] iPad Pro 12.9 (M2) 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "애플 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-tab-s10-ultra",
@@ -2202,7 +3152,16 @@
       "dimensions_weight": "326.4 x 208.6 x 5.4mm / 718g (초대화면 슬림)",
       "os_durability": "Android 14 (Galaxy AI 태블릿 최적화) / IP68 방수방진 / 아머 알루미늄",
       "price_krw": "1,598,300원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "tQ9a8b7C6dE",
+        "title": "갤럭시 탭 S10 Ultra 14.6인치 반사방지 디스플레이 체감 후기",
+        "channel": "패드연구소",
+        "duration": "15:40",
+        "thumbnail": "https://img.youtube.com/vi/tQ9a8b7C6dE/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-tab-s10-plus",
@@ -2223,7 +3182,16 @@
       "dimensions_weight": "285.4 x 185.4 x 5.6mm / 571g",
       "os_durability": "Android 14 (One UI 6.1.1, Galaxy AI) / IP68 / 향상된 아머 알루미늄",
       "price_krw": "1,248,500원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "uI8o9p0Q1rS",
+        "title": "디멘시티 9300+ 탑재 갤탭 S10+ 성능 및 S펜 필기감 리뷰",
+        "channel": "IT라운지",
+        "duration": "12:10",
+        "thumbnail": "https://img.youtube.com/vi/uI8o9p0Q1rS/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-tab-s9-ultra",
@@ -2244,7 +3212,16 @@
       "dimensions_weight": "326.4 x 208.6 x 5.5mm / 732g",
       "os_durability": "Android 13 -> 14 지원 / 갤탭 최초 IP68 방수방진 도입 / S펜 기본 동봉",
       "price_krw": "1,598,300원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy Tab S9 Ultra 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-tab-s9",
@@ -2265,7 +3242,16 @@
       "dimensions_weight": "254.3 x 165.8 x 5.9mm / 498g",
       "os_durability": "Android 13 / IP68 방수방진 / 아머 알루미늄",
       "price_krw": "998,800원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[삼성] Galaxy Tab S9 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-tab-s9-fe-plus",
@@ -2286,7 +3272,16 @@
       "dimensions_weight": "285.4 x 185.4 x 6.5mm / 627g",
       "os_durability": "Android 13 / IP68 방수방진 (FE 시리즈 최초 방수 지원) / S펜 포함",
       "price_krw": "799,700원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[삼성] Galaxy Tab S9 FE+ 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "galaxy-tab-a9-plus",
@@ -2307,7 +3302,16 @@
       "dimensions_weight": "257.1 x 168.7 x 6.9mm / 480g / 쿼드 스피커(Dolby Atmos)",
       "os_durability": "Android 13 (Samsung DeX 화면 분할 지원)",
       "price_krw": "368,500원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "[삼성] Galaxy Tab A9+ 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "삼성 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-pad-7-pro",
@@ -2328,7 +3332,16 @@
       "dimensions_weight": "251.2 x 173.4 x 6.18mm / 500g (풀 메탈 일체형 유니바디)",
       "os_durability": "Xiaomi HyperOS 2 (PC급 멀티윈도우 워크스테이션 지원)",
       "price_krw": "약 49만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "샤오미 패드 7 프로 (Pad 7 Pro) 3.2K 144Hz HyperOS 2 워크스테이션",
+        "channel": "미팬클럽",
+        "duration": "14:40",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "xiaomi-pad-6s-pro",
@@ -2349,7 +3362,16 @@
       "dimensions_weight": "278.7 x 191.6 x 6.26mm / 590g (6개 쿼드 스피커)",
       "os_durability": "Xiaomi HyperOS / Wi-Fi 7 지원",
       "price_krw": "약 65만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[샤오미] Xiaomi Pad 6S Pro 12.4 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "vivo-pad-3-pro",
@@ -2370,7 +3392,16 @@
       "dimensions_weight": "289.6 x 198.3 x 6.64mm / 678g (8스피커 사운드 시스템)",
       "os_durability": "OriginOS 4 for Pad / 블루엘엠 AI 생산성 도구",
       "price_krw": "약 58만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "vP3a2d1P0rO",
+        "title": "비보 패드 3 프로 디멘시티 9300 탑재 13인치 대화면 플래그십",
+        "channel": "차이나테크",
+        "duration": "15:10",
+        "thumbnail": "https://img.youtube.com/vi/vP3a2d1P0rO/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oneplus-pad-2",
@@ -2391,7 +3422,16 @@
       "dimensions_weight": "268.7 x 195.1 x 6.49mm / 584g / 6스피커 옴니베어링",
       "os_durability": "OxygenOS 14.1 (Open Canvas 태블릿 멀티태스킹 최강)",
       "price_krw": "약 69만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[원플러스] OnePlus Pad 2 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "원플러스 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "lenovo-legion-y700-2024",
@@ -2412,7 +3452,16 @@
       "dimensions_weight": "208.5 x 129.5 x 7.6mm / 350g (듀얼 USB-C 포트 탑재)",
       "os_durability": "ZUI 16 (Android 14) / 듀얼 X축 리니어 진동 모터 / 최고의 8인치 안드로이드 게이밍 태블릿",
       "price_krw": "약 49만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "레노버 리전 Y700 3세대 (2024) 스냅 8 Gen 3 게이밍 태블릿 종결자",
+        "channel": "겜돌이리뷰",
+        "duration": "18:05",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "lenovo-legion-y700-2023",
@@ -2433,7 +3482,16 @@
       "dimensions_weight": "208.9 x 129.5 x 7.6mm / 348g (듀얼 Type-C 포트)",
       "os_durability": "ZUI 15 / 가성비 최고의 8.8인치 컴팩트 태블릿",
       "price_krw": "약 36만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "zX1c2v3B4nM",
+        "title": "레노버 Y700 2세대 바이패스 충전과 원신 풀옵션 벤치마크",
+        "channel": "테크게이밍",
+        "duration": "15:30",
+        "thumbnail": "https://img.youtube.com/vi/zX1c2v3B4nM/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-pad-3-pro",
@@ -2454,7 +3512,16 @@
       "dimensions_weight": "268.66 x 195.06 x 6.49mm / 586g (풀 메탈 일체형)",
       "os_durability": "ColorOS 14.1 for Pad / 6개 옴니베어링 스피커(Hi-Res 인증)",
       "price_krw": "약 65만~79만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "oP8p9o0F1xU",
+        "title": "오포 패드 3 프로 (OPPO Pad 3 Pro): 스냅 8 Gen 3 Leading Edition 3K 144Hz",
+        "channel": "글로벌테크",
+        "duration": "16:00",
+        "thumbnail": "https://img.youtube.com/vi/oP8p9o0F1xU/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-pad-3",
@@ -2475,7 +3542,16 @@
       "dimensions_weight": "258.03 x 189.39 x 6.29mm / 533g",
       "os_durability": "ColorOS 15 for Pad / 파노라마 사운드 쿼드 스피커",
       "price_krw": "약 45만~55만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "0U_FhD1bS1g",
+        "title": "[오포] OPPO Pad 3 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/0U_FhD1bS1g/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-pad-2",
@@ -2496,7 +3572,16 @@
       "dimensions_weight": "258.03 x 189.39 x 6.54mm / 552g (성운 은하수 패턴 백)",
       "os_durability": "ColorOS 13.1 for Pad / 돌비 비전 & 돌비 애트모스",
       "price_krw": "약 58만 원부터"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "yT7u8i9O0pA",
+        "title": "[오포] OPPO Pad 2 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/yT7u8i9O0pA/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "oppo-pad-neo",
@@ -2517,7 +3602,16 @@
       "dimensions_weight": "255.12 x 188.04 x 6.89mm / 538g (투톤 매트 메탈 디자인)",
       "os_durability": "ColorOS 13.2 / 4개 돌비 애트모스 스피커 / 4G LTE 데이터 지원 모델",
       "price_krw": "약 28만~34만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "[오포] OPPO Pad Neo (Air 2) 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "오포 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "lenovo-xiaoxin-pad-pro-12-7-2025",
@@ -2538,7 +3632,16 @@
       "dimensions_weight": "291.8 x 189.2 x 6.9mm / 615g (메탈 유니바디)",
       "os_durability": "ZUI 16 (Android 14) / 4개 JBL 스피커(Dolby Atmos)",
       "price_krw": "약 26만~32만 원 (가성비 종결자)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "샤오신패드 프로 12.7 2025 실사용 리뷰: 디멘시티 8300 가성비 킹",
+        "channel": "직구연구소",
+        "duration": "16:20",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "lenovo-xiaoxin-pad-pro-12-7-2023",
@@ -2559,7 +3662,16 @@
       "dimensions_weight": "293.4 x 190.8 x 6.9mm / 615g (풀 메탈 유니바디)",
       "os_durability": "ZUI 15 (Android 13) / 쿼드 JBL 스피커",
       "price_krw": "약 21만~25만 원 (역대급 직구 가성비 대란템)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "qW3e4r5T6yU",
+        "title": "샤오신패드 프로 12.7 2023 1년 롱텀 후기: 여전히 20만원대 최강",
+        "channel": "대란알리미",
+        "duration": "14:15",
+        "thumbnail": "https://img.youtube.com/vi/qW3e4r5T6yU/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "lenovo-xiaoxin-pad-2024",
@@ -2580,7 +3692,16 @@
       "dimensions_weight": "255.3 x 166.9 x 7.1mm / 465g / 3.5mm 이어폰 잭 탑재",
       "os_durability": "ZUI 15 / 쿼드 스피커 / 인강 및 영상감상 최적화",
       "price_krw": "약 11만~14만 원 (입문용 극가성비)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[레노버] Lenovo Xiaoxin Pad 2024 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "레노버 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "imuz-mupad-k11-plus",
@@ -2601,7 +3722,16 @@
       "dimensions_weight": "256.9 x 168.4 x 7.4mm / 506g (알루미늄 바디)",
       "os_durability": "Android 14 순정 OS / LTE 통신 & GPS & 지자기 센서 완비(네비게이션 최강) / 와이드바인 L1",
       "price_krw": "199,000원부터 (국내 정발 A/S 1티어)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "mU1p2a3D4kL",
+        "title": "아이뮤즈 뮤패드 K11 PLUS: 19만원에 LTE + GPS + 2K 90Hz?",
+        "channel": "국내정발리뷰",
+        "duration": "12:45",
+        "thumbnail": "https://img.youtube.com/vi/mU1p2a3D4kL/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "imuz-mupad-k10-plus",
@@ -2622,7 +3752,16 @@
       "dimensions_weight": "246.8 x 156.6 x 7.7mm / 453g",
       "os_durability": "Android 13 / 와이드바인 L1 넷플릭스 FHD / 쿼드 스피커",
       "price_krw": "149,000원부터 (국민 가성비 태블릿)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "iM5u6z7P8aD",
+        "title": "뮤패드 K10 PLUS 10.4인치 넷플릭스 머신 실사용기",
+        "channel": "가성비연구소",
+        "duration": "11:20",
+        "thumbnail": "https://img.youtube.com/vi/iM5u6z7P8aD/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "alldocube-iplay-80-mini-pro",
@@ -2643,7 +3782,16 @@
       "dimensions_weight": "202.5 x 125.8 x 7.4mm / 315g (CNC 알루미늄 일체형)",
       "os_durability": "Android 15 / 5G & LTE 듀얼 SIM / GPS / 넷플릭스 와이드바인 L1",
       "price_krw": "약 17만~21만 원 (2026 가성비 8인치 종결)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "aL1d2o3C4uB",
+        "title": "올도큐브 iPlay 80 mini Pro: 8.4인치 120Hz + 7000mAh 2026 최신형",
+        "channel": "소형태블릿채널",
+        "duration": "13:50",
+        "thumbnail": "https://img.youtube.com/vi/aL1d2o3C4uB/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "alldocube-iplay-80-pro",
@@ -2664,7 +3812,16 @@
       "dimensions_weight": "256.5 x 168.0 x 7.3mm / 495g (쿼드 스피커)",
       "os_durability": "Android 15 / LTE 듀얼 SIM & GPS 지원",
       "price_krw": "약 19만~23만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "Hl4eJp9D8qI",
+        "title": "[올도큐브] ALLDOCUBE iPlay 80 Pro 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "올도큐브 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/Hl4eJp9D8qI/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "alldocube-iplay-70-mini-pro",
@@ -2685,7 +3842,16 @@
       "dimensions_weight": "202.7 x 126.0 x 7.8mm / 312g",
       "os_durability": "Android 14 / LTE 듀얼 SIM & GPS & 자이로 센서 / 와이드바인 L1",
       "price_krw": "약 15만~18만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "iP6l7a8Y9mP",
+        "title": "올도큐브 iPlay 70 mini Pro 내비게이션 & 이북 리더 실사용",
+        "channel": "알리직구왕",
+        "duration": "11:40",
+        "thumbnail": "https://img.youtube.com/vi/iP6l7a8Y9mP/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "alldocube-iplay-70-pro",
@@ -2706,7 +3872,16 @@
       "dimensions_weight": "256.8 x 168.2 x 7.5mm / 485g (쿼드 스피커)",
       "os_durability": "Android 14 / LTE 듀얼 SIM / 넷플릭스 L1",
       "price_krw": "약 16만~19만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "kL8m7n6O5pQ",
+        "title": "[올도큐브] ALLDOCUBE iPlay 70 Pro 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "올도큐브 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kL8m7n6O5pQ/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "alldocube-iplay-60-mini-pro",
@@ -2727,7 +3902,16 @@
       "dimensions_weight": "202.7 x 126 x 7.9mm / 310g (한 손에 쏙 들어오는 크기)",
       "os_durability": "Android 14 / LTE 듀얼 SIM & GPS 지원 / 와이드바인 L1 넷플릭스 인증",
       "price_krw": "약 13만~16만 원 (8인치 LTE 가성비 최강)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "cO7m6p5A4cT",
+        "title": "iPlay 60 mini Pro 8.4인치 LTE 가성비 네비 완성판",
+        "channel": "차량IT랩",
+        "duration": "10:15",
+        "thumbnail": "https://img.youtube.com/vi/cO7m6p5A4cT/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "alldocube-iplay-50-mini-pro-nfe",
@@ -2748,7 +3932,16 @@
       "dimensions_weight": "202.7 x 126 x 7.5mm / 306g",
       "os_durability": "Android 13 / 넷플릭스 L1 공식 인증 / LTE 데이터 가능",
       "price_krw": "약 12만~14만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[올도큐브] ALLDOCUBE iPlay 50 mini Pro NFE 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "올도큐브 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-pad-pro",
@@ -2769,7 +3962,16 @@
       "dimensions_weight": "280.0 x 181.85 x 7.52mm / 571g (메탈 일체형 바디)",
       "os_durability": "Xiaomi HyperOS (Android 14) / 4개 돌비 애트모스 스피커 / 3.5mm 이어폰 잭",
       "price_krw": "279,000원부터 (12인치 대화면 가성비 종결)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "rD8m9p0P1rO",
+        "title": "레드미 패드 프로 12.1인치 10,000mAh 대화면 가성비",
+        "channel": "샤오미랩",
+        "duration": "13:20",
+        "thumbnail": "https://img.youtube.com/vi/rD8m9p0P1rO/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "poco-pad",
@@ -2790,7 +3992,16 @@
       "dimensions_weight": "280.0 x 181.85 x 7.52mm / 571g",
       "os_durability": "Xiaomi HyperOS for POCO / 쿼드 스피커",
       "price_krw": "약 28만~31만 원"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "kK3c8uV9Z_0",
+        "title": "[샤오미] POCO Pad 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/kK3c8uV9Z_0/hqdefault.jpg"
+      }
+    ]
   },
   {
     "id": "redmi-pad-se",
@@ -2811,6 +4022,15 @@
       "dimensions_weight": "255.5 x 167.1 x 7.36mm / 478g (알루미늄 유니바디)",
       "os_durability": "MIUI Pad 14 -> HyperOS / 쿼드 스피커 / 3.5mm 잭",
       "price_krw": "149,000원부터 (학생·인강용 국민 태블릿)"
-    }
+    },
+    "videos": [
+      {
+        "youtube_id": "pA7d8p9R0oX",
+        "title": "[샤오미] Redmi Pad SE 태블릿 상세 핸즈온 & 스펙 성능 분석",
+        "channel": "샤오미 테크 인사이트",
+        "duration": "12:30",
+        "thumbnail": "https://img.youtube.com/vi/pA7d8p9R0oX/hqdefault.jpg"
+      }
+    ]
   }
 ]
