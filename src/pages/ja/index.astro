@@ -1,0 +1,149 @@
+---
+import Header from '../../components/Header.astro';
+import '../../styles/global.css';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
+import GoogleAdSense from '../../components/GoogleAdSense.astro';
+import devices from '../../data/smartphones.json';
+
+const allReviews = await getCollection('reviews');
+const jaReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => r.slug.startsWith('ja/'));
+jaReviews.sort((a, b) => new Date(b.data.date || '').getTime() - new Date(a.data.date || '').getTime());
+
+const featuredPost = jaReviews[0];
+const trendingPosts = jaReviews.slice(1, 3);
+
+// Helper for feed posts with video thumbnail
+const feedPosts = jaReviews.map((post: CollectionEntry<'reviews'>) => {
+  const pureSlug = post.slug.replace('ja/', '');
+  const dev = devices.find((d: any) => d.id === pureSlug);
+  const vId = dev?.videos?.[0]?.youtube_id || 'F0kR0e2tZ48';
+  return {
+    ...post,
+    pureSlug,
+    vId
+  };
+});
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECH SPEC BLOG | グローバルテックレビュー＆スペック百科</title>
+  <meta name="description" content="最新IT機器の詳細実機レビュー、客観的ベンチマーク、141機種のスマートフォン・タブレットスペックデータベースを提供する専門メディアです。" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TECH SPEC BLOG | グローバルテックレビュー＆スペック百科" />
+  <meta property="og:description" content="実機ベンチマーク、客観的評価、141機種のスペック完全比較" />
+  <meta property="og:url" content="https://tech-review-blog.vercel.app/ja" />
+
+  <link rel="alternate" hreflang="ko" href="https://tech-review-blog.vercel.app/" />
+  <link rel="alternate" hreflang="en" href="https://tech-review-blog.vercel.app/en" />
+  <link rel="alternate" hreflang="ja" href="https://tech-review-blog.vercel.app/ja" />
+  <link rel="alternate" hreflang="x-default" href="https://tech-review-blog.vercel.app/" />
+
+  <meta name="robots" content="index, follow" />
+  <GoogleAnalytics />
+  <GoogleAdSense />
+</head>
+<body>
+  <Header />
+
+  <main class="container" style="padding-top: 24px; padding-bottom: 80px;">
+    <!-- Hero Banner -->
+    <section class="hero-banner" style="margin-bottom: 40px; text-align: center; padding: 48px 20px; background: linear-gradient(135deg, rgba(0, 242, 254, 0.08), rgba(79, 172, 254, 0.03)); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+      <span class="hero-badge-pill" style="display: inline-block; padding: 6px 16px; background: rgba(0, 242, 254, 0.12); color: var(--accent-cyan); border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; border: 1px solid rgba(0, 242, 254, 0.3);">
+        ⚡ 最新テックレビュー＆スペック百科
+      </span>
+      <h1 class="hero-title" style="font-size: 2.6rem; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 16px; line-height: 1.2;">
+        客観的データ。 <span style="background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">真実のレビュー。</span>
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 680px; margin: 0 auto 28px;">
+        141機種のスマートフォン・タブレット詳細スペックと実機ベンチマークに基づく徹底レビュー。
+      </p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a href="/specs" style="padding: 12px 28px; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #000; font-weight: 800; border-radius: var(--radius-sm); text-decoration: none;">
+          📱 141機種スペック百科を見る
+        </a>
+        <a href="#reviews" style="padding: 12px 24px; background: var(--bg-card); color: var(--text-main); font-weight: 700; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-decoration: none;">
+          最新レビュー一覧
+        </a>
+      </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    {featuredPost && (
+      <section style="margin-bottom: 50px;">
+        <div class="bento-grid">
+          <a href={`/ja/reviews/${featuredPost.slug.replace('ja/', '')}`} class="bento-card bento-featured" style="text-decoration: none; color: inherit;">
+            <div style="position: relative; height: 260px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 18px;">
+              <img 
+                src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === featuredPost.slug.replace('ja/', ''))?.videos?.[0]?.youtube_id || 'TigCEb283aU'}/hqdefault.jpg`}
+                alt={featuredPost.data.device}
+                style="width: 100%; height: 100%; object-fit: cover;"
+              />
+              <span class="score-badge" style="position: absolute; top: 14px; right: 14px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 6px 12px; border-radius: 8px; font-weight: 900; font-size: 1.1rem; border: 1px solid var(--accent-cyan);">
+                ★ {featuredPost.data.score}
+              </span>
+            </div>
+            <span style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 800; text-transform: uppercase;">注目のレビュー</span>
+            <h2 class="bento-title" style="font-size: 1.6rem; font-weight: 800; margin: 8px 0 12px;">{featuredPost.data.title}</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">{featuredPost.data.summary}</p>
+          </a>
+
+          {trendingPosts.map((post: CollectionEntry<'reviews'>) => (
+            <a href={`/ja/reviews/${post.slug.replace('ja/', '')}`} class="bento-card" style="text-decoration: none; color: inherit;">
+              <div style="position: relative; height: 160px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 14px;">
+                <img 
+                  src={`https://img.youtube.com/vi/${devices.find((d: any) => d.id === post.slug.replace('ja/', ''))?.videos?.[0]?.youtube_id || 'Y9GIwUvWn3E'}/hqdefault.jpg`}
+                  alt={post.data.device}
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                />
+                <span class="score-badge" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 4px 8px; border-radius: 6px; font-weight: 800; font-size: 0.95rem;">
+                  ★ {post.data.score}
+                </span>
+              </div>
+              <span style="color: var(--accent-indigo); font-size: 0.8rem; font-weight: 700;">トレンド</span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin: 6px 0 8px;">{post.data.title}</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{post.data.summary}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Reviews Grid -->
+    <section id="reviews" style="margin-bottom: 60px;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 24px;">すべての実機レビュー</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+        {feedPosts.map((post) => (
+          <a href={`/ja/reviews/${post.pureSlug}`} class="card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease;">
+            <div style="position: relative; height: 200px;">
+              <img src={`https://img.youtube.com/vi/${post.vId}/hqdefault.jpg`} alt={post.data.device} style="width: 100%; height: 100%; object-fit: cover;" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.8); color: var(--accent-cyan); padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 0.9rem;">
+                ★ {post.data.score}
+              </span>
+            </div>
+            <div style="padding: 20px; flex: 1; display: flex; flex-direction: column;">
+              <span style="color: var(--accent-cyan); font-size: 0.8rem; font-weight: 700; margin-bottom: 6px;">{post.data.category}</span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4;">{post.data.title}</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 16px; flex: 1;">{post.data.summary}</p>
+              <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <span>{post.data.date}</span>
+                <span style="color: var(--accent-cyan); font-weight: 700;">レビューを読む →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+    <div class="container">
+      <p>© 2026 TECH SPEC BLOG. 独立系テックジャーナリズム＆ハードウェアデータベース.</p>
+    </div>
+  </footer>
+</body>
+</html>

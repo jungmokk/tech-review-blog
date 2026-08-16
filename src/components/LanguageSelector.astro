@@ -1,5 +1,5 @@
 ---
-// Multi-Language Translator Component (Google Translate Integration)
+// Multi-Language Switcher (Native Static Route + Google Translate Fallback)
 ---
 
 <div class="lang-selector-wrapper">
@@ -73,29 +73,52 @@
 
     const select = document.getElementById('customLanguageSelect');
     if (select) {
-      // Check cookie for current language
-      const match = document.cookie.match(/googtrans=\/ko\/([a-zA-Z-]+)/);
-      if (match && match[1]) {
-        select.value = match[1];
+      const path = window.location.pathname;
+      
+      // Detect active language from static URL
+      if (path.startsWith('/en')) {
+        select.value = 'en';
+      } else if (path.startsWith('/ja')) {
+        select.value = 'ja';
+      } else {
+        const match = document.cookie.match(/googtrans=\/ko\/([a-zA-Z-]+)/);
+        if (match && match[1]) {
+          select.value = match[1];
+        } else {
+          select.value = 'ko';
+        }
       }
 
       select.addEventListener('change', function() {
-        const lang = this.value;
-        if (lang === 'ko') {
-          // Reset to original Korean
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname;
-          window.location.reload();
+        const targetLang = this.value;
+        const currentPath = window.location.pathname;
+
+        // Clear previous translate cookies when switching to native routes
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname;
+
+        // Strip current language prefix
+        let rawPath = currentPath;
+        if (rawPath.startsWith('/en')) rawPath = rawPath.replace(/^\/en/, '') || '/';
+        if (rawPath.startsWith('/ja')) rawPath = rawPath.replace(/^\/ja/, '') || '/';
+
+        if (targetLang === 'ko') {
+          window.location.href = rawPath;
+        } else if (targetLang === 'en') {
+          const targetUrl = rawPath === '/' ? '/en' : '/en' + rawPath;
+          window.location.href = targetUrl;
+        } else if (targetLang === 'ja') {
+          const targetUrl = rawPath === '/' ? '/ja' : '/ja' + rawPath;
+          window.location.href = targetUrl;
         } else {
-          // Set Google Translate Cookie
-          const cookieVal = '/ko/' + lang;
+          // Google Translate Fallback
+          const cookieVal = '/ko/' + targetLang;
           document.cookie = 'googtrans=' + cookieVal + '; path=/;';
           document.cookie = 'googtrans=' + cookieVal + '; path=/; domain=.' + window.location.hostname;
-          
-          // Trigger combo change if available
+
           const combo = document.querySelector('.goog-te-combo');
           if (combo) {
-            combo.value = lang;
+            combo.value = targetLang;
             combo.dispatchEvent(new Event('change'));
           } else {
             window.location.reload();

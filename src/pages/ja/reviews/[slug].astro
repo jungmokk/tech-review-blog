@@ -1,0 +1,25 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+
+export async function getStaticPaths() {
+  const reviews = await getCollection('reviews');
+  const jaReviews = reviews.filter((entry: CollectionEntry<'reviews'>) => entry.slug.startsWith('ja/'));
+  return jaReviews.map((entry: CollectionEntry<'reviews'>) => ({
+    params: { slug: entry.slug.replace('ja/', '') },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'reviews'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const pureSlug = entry.slug.replace('ja/', '');
+---
+
+<ReviewLayout frontmatter={entry.data} slug={pureSlug} lang="ja">
+  <Content />
+</ReviewLayout>

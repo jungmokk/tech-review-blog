@@ -7,7 +7,12 @@ import GoogleAdSense from '../components/GoogleAdSense.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import devicesData from '../data/devices.json';
 
-const { frontmatter, slug } = Astro.props;
+const { frontmatter, slug, lang = 'ko' } = Astro.props;
+
+const siteUrl = 'https://tech-review-blog.vercel.app';
+const koUrl = `${siteUrl}/reviews/${slug}`;
+const enUrl = `${siteUrl}/en/reviews/${slug}`;
+const jaUrl = `${siteUrl}/ja/reviews/${slug}`;
 
 const allReviews = await getCollection('reviews');
 const recentReviews = allReviews
@@ -116,7 +121,7 @@ const jsonLd = {
 };
 ---
 <!DOCTYPE html>
-<html lang="ko">
+<html lang={lang || 'ko'}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -135,8 +140,10 @@ const jsonLd = {
   <meta name="twitter:image" content={heroThumbnail} />
 
   <!-- Global i18n SEO Hreflang Tags -->
-  <link rel="alternate" hreflang="ko" href={Astro.url.href} />
-  <link rel="alternate" hreflang="x-default" href={Astro.url.href} />
+  <link rel="alternate" hreflang="ko" href={koUrl} />
+  <link rel="alternate" hreflang="en" href={enUrl} />
+  <link rel="alternate" hreflang="ja" href={jaUrl} />
+  <link rel="alternate" hreflang="x-default" href={koUrl} />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
   <GoogleAnalytics />

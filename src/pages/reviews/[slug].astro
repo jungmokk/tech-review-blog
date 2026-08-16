@@ -4,7 +4,8 @@ import ReviewLayout from '../../layouts/ReviewLayout.astro';
 
 export async function getStaticPaths() {
   const reviews = await getCollection('reviews');
-  return reviews.map((entry: CollectionEntry<'reviews'>) => ({
+  const koReviews = reviews.filter((entry: CollectionEntry<'reviews'>) => !entry.slug.includes('/'));
+  return koReviews.map((entry: CollectionEntry<'reviews'>) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
