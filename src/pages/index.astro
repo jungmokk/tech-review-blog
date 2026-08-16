@@ -218,7 +218,13 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
               data-title={vid.title}
             >
               <div class="video-thumb-container">
-                <img src={vid.thumbnail} alt={vid.title} class="video-thumb-img" loading="lazy" />
+                <img 
+                  src={vid.thumbnail} 
+                  alt={vid.title} 
+                  class="video-thumb-img" 
+                  onerror={`this.onerror=null; this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80';`}
+                  loading="lazy" 
+                />
                 <div class="video-play-overlay">
                   <div class="video-play-icon">▶</div>
                 </div>

@@ -31,8 +31,26 @@ const primaryVideo = (matchedDevice?.videos && matchedDevice.videos.length > 0)
       thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
     };
 
-const heroThumbnail = `https://img.youtube.com/vi/${primaryVideo.youtube_id}/maxresdefault.jpg`;
-const fallbackThumbnail = primaryVideo.thumbnail || `https://img.youtube.com/vi/${primaryVideo.youtube_id}/hqdefault.jpg`;
+// Category-aware 4K tech visual fallback images
+const getFallbackImage = (category?: string, devType?: string) => {
+  if (category === 'Foldable' || (devType && devType.includes('폴더블'))) {
+    return 'https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80';
+  }
+  if (category === '태블릿' || (devType && devType.includes('태블릿'))) {
+    return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80';
+  }
+  if (category === '오디오' || (devType && devType.includes('오디오'))) {
+    return 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80';
+  }
+  if (category === 'PC/노트북' || (devType && devType.includes('PC'))) {
+    return 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80';
+  }
+  return 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80';
+};
+
+const defaultTechImage = getFallbackImage(matchedDevice?.category, matchedDevice?.device_type);
+const heroThumbnail = `https://img.youtube.com/vi/${primaryVideo.youtube_id}/hqdefault.jpg`;
+const fallbackThumbnail = defaultTechImage;
 
 const jsonLd = {
   "@context": "https://schema.org/",
@@ -224,6 +242,7 @@ const jsonLd = {
                       src={`https://img.youtube.com/vi/${vid.youtube_id}/hqdefault.jpg`} 
                       alt={vid.title} 
                       class="video-card-thumb" 
+                      onerror={`this.onerror=null; this.src='${defaultTechImage}';`}
                       loading="lazy"
                     />
                     <div class="video-play-badge">▶</div>
@@ -252,6 +271,7 @@ const jsonLd = {
             <img 
               src={`https://img.youtube.com/vi/${primaryVideo.youtube_id}/hqdefault.jpg`} 
               alt={frontmatter.device}
+              onerror={`this.onerror=null; this.src='${defaultTechImage}';`}
               style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;"
             />
           </div>

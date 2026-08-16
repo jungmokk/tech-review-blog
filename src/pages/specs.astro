@@ -203,6 +203,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
                 src={firstVid.thumbnail} 
                 alt={firstVid.title} 
                 class="video-thumb-img" 
+                onerror={`this.onerror=null; this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80';`}
                 loading="lazy"
               />
               <div class="video-play-overlay">
@@ -505,7 +506,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
             ${item.videos.map(v => `
               <div class="detail-video-item" data-vid="${v.youtube_id}" data-title="${v.title}">
                 <div class="video-thumb-container">
-                  <img src="${v.thumbnail}" alt="${v.title}" class="video-thumb-img" loading="lazy" />
+                  <img src="${v.thumbnail}" alt="${v.title}" class="video-thumb-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80';" loading="lazy" />
                   <div class="video-play-overlay">
                     <div class="video-play-icon" style="width: 40px; height: 40px; font-size: 1.1rem;">▶</div>
                   </div>
