@@ -3,8 +3,48 @@ import os
 
 smartphones = [
     # ==========================================
-    # 2026년 1월 (최신 플래그십 & 상반기 라인업)
+    # 2026년 (2026.01 ~ 2026.08 현재 최신 플래그십 & 폴더블)
     # ==========================================
+    {
+        "id": "galaxy-z-fold8",
+        "name": "Galaxy Z Fold8",
+        "name_kr": "갤럭시 Z 폴드8",
+        "brand": "Samsung",
+        "brand_kr": "삼성",
+        "release_year": 2026,
+        "release_date": "2026-07",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Snapdragon 8 Elite Gen 2 for Galaxy (2nm)",
+            "display": "메인 7.6인치 (2184x1968, 1~120Hz LTPO, 3000nits, 무주름 UFG) / 커버 6.3인치 와이드 (120Hz)",
+            "ram_storage": "16GB LPDDR5X + 256GB / 512GB / 1TB",
+            "camera": "2억 화소 메인(OIS) + 5000만(5x 잠망경 망원) + 1200만(3x 망원) + 1200만(초광각)",
+            "battery": "4,600mAh (45W 유선, 15W 무선)",
+            "dimensions_weight": "접었을 때 9.9mm / 펼쳤을 때 4.7mm / 222g (역대 갤럭시 폴드 중 최경량·최박형)",
+            "os_durability": "Android 16 (One UI 8.1, Galaxy AI 2.0) / IP48 / 티타늄 힌지 아머",
+            "price_krw": "2,280,000원부터"
+        }
+    },
+    {
+        "id": "galaxy-z-flip8",
+        "name": "Galaxy Z Flip8",
+        "name_kr": "갤럭시 Z 플립8",
+        "brand": "Samsung",
+        "brand_kr": "삼성",
+        "release_year": 2026,
+        "release_date": "2026-07",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Snapdragon 8 Elite Gen 2 for Galaxy (2nm)",
+            "display": "메인 6.7인치 FHD+ 120Hz LTPO (3000nits) / 커버 4.0인치 베젤리스 풀플렉스 윈도우 (120Hz)",
+            "ram_storage": "12GB RAM + 256GB / 512GB",
+            "camera": "5000만 듀얼 픽셀 메인(OIS) + 5000만 초광각",
+            "battery": "4,250mAh (30W 유선, 15W 무선 충전)",
+            "dimensions_weight": "접었을 때 13.8mm / 펼쳤을 때 6.5mm / 182g",
+            "os_durability": "Android 16 (One UI 8.1) / IP48 / 아머 알루미늄 3",
+            "price_krw": "1,520,000원부터"
+        }
+    },
     {
         "id": "galaxy-s26-ultra",
         "name": "Galaxy S26 Ultra",
@@ -63,6 +103,146 @@ smartphones = [
             "dimensions_weight": "147.0 x 70.6 x 7.5mm / 166g",
             "os_durability": "Android 16 (One UI 8) / IP68 / 아머 알루미늄",
             "price_krw": "약 118만 원부터"
+        }
+    },
+    {
+        "id": "pixel-10-pro-fold",
+        "name": "Pixel 10 Pro Fold",
+        "name_kr": "픽셀 10 프로 폴드",
+        "brand": "Google",
+        "brand_kr": "구글",
+        "release_year": 2026,
+        "release_date": "2026-08",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Google Tensor G5 (TSMC 3nm 공정)",
+            "display": "메인 8.0인치 Super Actua Flex OLED (120Hz LTPO, 3000nits) / 커버 6.3인치 (120Hz)",
+            "ram_storage": "16GB RAM + 256GB / 512GB / 1TB",
+            "camera": "5000만 메인(OIS) + 4800만(5x 망원 OIS) + 4800만(초광각 매크로)",
+            "battery": "4,850mAh (45W 유선 급속, 무선 충전)",
+            "dimensions_weight": "접었을 때 10.1mm / 펼쳤을 때 4.9mm / 245g",
+            "os_durability": "Android 16 (Gemini Advanced 탑재) / IPX8 / 항공우주 알루미늄",
+            "price_krw": "약 245만 원부터"
+        }
+    },
+    {
+        "id": "pixel-10-pro",
+        "name": "Pixel 10 Pro",
+        "name_kr": "픽셀 10 프로",
+        "brand": "Google",
+        "brand_kr": "구글",
+        "release_year": 2026,
+        "release_date": "2026-08",
+        "category": "Flagship",
+        "specs": {
+            "ap": "Google Tensor G5 (TSMC 3nm 공정)",
+            "display": "6.3인치 Super Actua OLED (1280x2856, 1~120Hz LTPO, 3000nits)",
+            "ram_storage": "16GB RAM + 128GB / 256GB / 512GB",
+            "camera": "5000만 메인 + 4800만(5x 잠망경 망원) + 4800만 초광각",
+            "battery": "4,800mAh (30W 유선, 23W 무선)",
+            "dimensions_weight": "152.8 x 72.0 x 8.4mm / 198g",
+            "os_durability": "Android 16 / IP68 / 폴리시드 알루미늄",
+            "price_krw": "약 135만 원부터"
+        }
+    },
+    {
+        "id": "xiaomi-mix-fold-4",
+        "name": "Xiaomi MIX Fold 4",
+        "name_kr": "샤오미 믹스 폴드 4",
+        "brand": "Xiaomi",
+        "brand_kr": "샤오미",
+        "release_year": 2026,
+        "release_date": "2026-07",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Snapdragon 8 Gen 3 / Elite (3nm/4nm)",
+            "display": "메인 7.98인치 2K+ 120Hz LTPO / 커버 6.56인치 120Hz (3000nits 피크)",
+            "ram_storage": "12GB / 16GB RAM + 512GB / 1TB",
+            "camera": "라이카 쿼드 5000만 (메인 5000만 OIS + 5000만 2x 인물 + 1000만 5x 잠망경 + 1200만 초광각)",
+            "battery": "5,100mAh 대용량 실리콘 탄소 (67W 유선, 50W 무선)",
+            "dimensions_weight": "접었을 때 9.47mm / 펼쳤을 때 4.59mm / 226g",
+            "os_durability": "Xiaomi HyperOS 2 / IPX8 방수 / 카본 아키텍처",
+            "price_krw": "약 180만 원부터"
+        }
+    },
+    {
+        "id": "xiaomi-mix-flip",
+        "name": "Xiaomi MIX Flip",
+        "name_kr": "샤오미 믹스 플립",
+        "brand": "Xiaomi",
+        "brand_kr": "샤오미",
+        "release_year": 2026,
+        "release_date": "2026-07",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Snapdragon 8 Gen 3 (4nm)",
+            "display": "메인 6.86인치 1.5K 120Hz / 커버 4.01인치 풀스크린 120Hz (3000nits)",
+            "ram_storage": "12GB / 16GB RAM + 256GB / 512GB / 1TB",
+            "camera": "라이카 5000만 메인(Light Hunter 800 OIS) + 5000만(2x 플로팅 망원 매크로)",
+            "battery": "4,780mAh 실리콘 탄소 (67W 하이퍼차지)",
+            "dimensions_weight": "접었을 때 15.9mm / 펼쳤을 때 7.6mm / 190g",
+            "os_durability": "Xiaomi HyperOS 2 / 알루미늄 프레임",
+            "price_krw": "약 115만 원부터"
+        }
+    },
+    {
+        "id": "vivo-x-fold4-pro",
+        "name": "Vivo X Fold4 Pro",
+        "name_kr": "비보 X 폴드4 프로",
+        "brand": "Vivo",
+        "brand_kr": "비보",
+        "release_year": 2026,
+        "release_date": "2026-04",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Snapdragon 8 Elite (3nm)",
+            "display": "메인 8.03인치 2K+ E8 AMOLED (120Hz LTPO) / 커버 6.53인치 120Hz (듀얼 3D 초음파 지문)",
+            "ram_storage": "16GB RAM + 512GB / 1TB UFS 4.0",
+            "camera": "자이스 5000만 메인(LYT-900 OIS) + 6400만(3배 잠망경 망원 OIS) + 5000만 초광각",
+            "battery": "6,000mAh 3세대 실리콘 블루오션 배터리 (100W 유선, 50W 무선)",
+            "dimensions_weight": "접었을 때 9.6mm / 펼쳤을 때 4.65mm / 224g",
+            "os_durability": "OriginOS 5 / IPX8 & IP68 / 탄소 섬유 일체형 힌지",
+            "price_krw": "약 195만 원부터"
+        }
+    },
+    {
+        "id": "vivo-x200-ultra",
+        "name": "Vivo X200 Ultra",
+        "name_kr": "비보 X200 울트라",
+        "brand": "Vivo",
+        "brand_kr": "비보",
+        "release_year": 2026,
+        "release_date": "2026-05",
+        "category": "Flagship",
+        "specs": {
+            "ap": "Snapdragon 8 Elite (3nm)",
+            "display": "6.82인치 2K BOE Q10 AMOLED (3168x1440, 120Hz LTPO, 4500nits, 초음파 지문)",
+            "ram_storage": "16GB LPDDR5X + 512GB / 1TB UFS 4.0",
+            "camera": "자이스 5000만 1인치(Sony LYT-900 짐벌 OIS) + 2억 화소(HP9 3.7x 잠망경 망원 CIPA 4.5급 OIS) + 5000만 초광각",
+            "battery": "6,000mAh 3세대 실리콘 배터리 (90W 유선, 50W 무선)",
+            "dimensions_weight": "164.07 x 75.57 x 8.9mm / 225g",
+            "os_durability": "OriginOS 5 / IP68 & IP69 / V4 영상 이미징 칩",
+            "price_krw": "약 138만 원부터"
+        }
+    },
+    {
+        "id": "oppo-find-x8-ultra",
+        "name": "Oppo Find X8 Ultra",
+        "name_kr": "오포 파인드 X8 울트라",
+        "brand": "Oppo",
+        "brand_kr": "오포",
+        "release_year": 2026,
+        "release_date": "2026-04",
+        "category": "Flagship",
+        "specs": {
+            "ap": "Snapdragon 8 Elite (3nm)",
+            "display": "6.82인치 2K BOE X2 Oriental OLED (1~120Hz LTPO, 4500nits 피크)",
+            "ram_storage": "16GB RAM + 512GB / 1TB UFS 4.0",
+            "camera": "핫셀블라드 쿼드 5000만: 1인치 LYT-900 메인 + 3x 잠망경 망원 + 6x 잠망경 망원 + 초광각",
+            "battery": "6,100mAh 글레이셔 배터리 (100W 유선, 50W 무선)",
+            "dimensions_weight": "164.3 x 76.2 x 9.1mm / 220g",
+            "os_durability": "ColorOS 15 / IP68 & IP69 / 위성 통신 지원",
+            "price_krw": "약 128만 원부터"
         }
     },
     {

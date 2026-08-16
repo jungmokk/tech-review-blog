@@ -14,17 +14,17 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>스마트폰 스펙 백과사전 (2023~2026.01) | TECH SPEC BLOG</title>
-  <meta name="description" content="2023년부터 2026년 1월까지 출시된 삼성, 애플, 구글, 샤오미, 비보, 오포, 화웨이 등 모든 스마트폰의 상세 스펙 명세표와 1:1 비교를 제공하는 스펙 백과사전입니다." />
+  <title>스마트폰 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG</title>
+  <meta name="description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy Z Fold8/S26, 애플 iPhone, 구글 Pixel 10, 샤오미, 비보, 오포 등 모든 스마트폰의 정밀 스펙 명세표와 1:1 비교를 제공하는 스펙 백과사전입니다." />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="스마트폰 스펙 백과사전 (2023~2026.01) | TECH SPEC BLOG" />
-  <meta property="og:description" content="2023년부터 2026년 1월까지 출시된 삼성, 애플, 구글, 샤오미, 비보, 오포, 화웨이 등 모든 스마트폰의 상세 스펙 명세표와 1:1 비교를 제공하는 스펙 백과사전입니다." />
+  <meta property="og:title" content="스마트폰 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG" />
+  <meta property="og:description" content="2023년부터 2026년 8월 현재까지 출시된 삼성 Galaxy Z Fold8/S26, 애플 iPhone, 구글 Pixel 10, 샤오미, 비보, 오포 등 모든 스마트폰의 정밀 스펙 명세표와 1:1 비교를 제공하는 스펙 백과사전입니다." />
   <meta property="og:url" content="https://tech-review-blog.vercel.app/specs" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="스마트폰 스펙 백과사전 (2023~2026.01) | TECH SPEC BLOG" />
-  <meta name="twitter:description" content="2023년부터 2026년 1월까지 출시된 모든 스마트폰 상세 스펙 데이터베이스" />
+  <meta name="twitter:title" content="스마트폰 스펙 백과사전 (2023~2026 최신) | TECH SPEC BLOG" />
+  <meta name="twitter:description" content="2023년부터 2026년 8월 현재까지 출시된 모든 스마트폰 상세 사양 데이터베이스" />
 
   <GoogleAnalytics />
 </head>
@@ -34,11 +34,11 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
   <section class="hero" style="padding: 60px 0 40px;">
     <div class="container">
       <div class="hero-badge">
-        <span>📚 2023 ~ 2026.01 글로벌 & 중국 스마트폰 스펙 백과사전</span>
+        <span>📚 2023 ~ 2026년 현재 최신 글로벌 & 중국 스마트폰 스펙 백과사전</span>
       </div>
       <h1 style="font-size: clamp(2.2rem, 4vw, 3rem);">스마트폰 정밀 스펙 백과</h1>
       <p>
-        삼성, 애플, 구글부터 샤오미, 비보, 오포, 화웨이까지<br />
+        삼성 Galaxy Z Fold8/S26, 애플 iPhone 17/16, 구글 Pixel 10 Pro Fold부터 샤오미, 비보, 오포, 화웨이까지<br />
         총 <strong>{totalCount}개 기기</strong>의 프로세서, 디스플레이, 카메라, 배터리 정밀 스펙을 검색하고 비교해 보세요.
       </p>
     </div>
@@ -54,7 +54,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
           type="text" 
           id="specSearchInput" 
           class="search-input" 
-          placeholder="기기명 (예: Galaxy S24, iPhone 16, 샤오미 15), 프로세서 (Snapdragon 8 Elite, A18) 검색..." 
+          placeholder="기기명 (예: Galaxy Z Fold8, iPhone 16 Pro, Pixel 10), 프로세서 (Snapdragon 8 Elite, A19) 검색..." 
         />
       </div>
 
@@ -76,7 +76,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
         <div class="filter-chips" id="yearChips">
           {years.map((year, idx) => (
             <button class={`chip-btn ${idx === 0 ? 'active' : ''}`} data-year={year}>
-              {year === '전체' ? '전체 연도' : year === '2026' ? '2026년 (1월)' : `${year}년`}
+              {year === '전체' ? '전체 연도' : year === '2026' ? '2026년 (최신)' : `${year}년`}
             </button>
           ))}
         </div>
