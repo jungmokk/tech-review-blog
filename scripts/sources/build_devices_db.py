@@ -1048,32 +1048,11 @@ CURATED_VIDEOS = {
     ]
 }
 
-import urllib.parse
+from fetch_youtube_videos import get_verified_device_videos
 
-# 기본 공통 테크 비디오 풀 템플릿 생성기
+# 기본 공통 테크 비디오 풀 템플릿 생성기 (YouTube Data API v3 + 큐레이션 통합)
 def get_device_videos(device):
-    dev_id = device["id"]
-    name = device.get("name", "스마트 디바이스")
-    brand = device.get("brand_kr", device.get("brand", "테크"))
-    dev_type = device.get("device_type", "기기")
-    
-    if dev_id in CURATED_VIDEOS:
-        vids = CURATED_VIDEOS[dev_id]
-    else:
-        vid_id = VERIFIED_TECH_VIDS[hash(dev_id) % len(VERIFIED_TECH_VIDS)]
-        vids = [
-            {
-                "youtube_id": vid_id,
-                "title": f"[{brand}] {name} 실사용 핸즈온 & 스펙 벤치마크",
-                "channel": f"{brand} 테크 인사이트",
-                "duration": "12:30"
-            }
-        ]
-        
-    for v in vids:
-        v["thumbnail"] = f"https://img.youtube.com/vi/{v['youtube_id']}/hqdefault.jpg"
-        v["direct_watch_url"] = f"https://www.youtube.com/watch?v={v['youtube_id']}"
-    return vids
+    return get_verified_device_videos(device, CURATED_VIDEOS)
 
 # 전체 디바이스 = 스마트폰 + 태블릿 (ID 중복 제거 & 비디오 배열 주입)
 unique_devices_map = {}
