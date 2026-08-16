@@ -512,6 +512,90 @@ tablets = [
         }
     },
     {
+        "id": "alldocube-iplay-80-mini-pro",
+        "name": "ALLDOCUBE iPlay 80 mini Pro",
+        "name_kr": "올도큐브 iPlay 80 미니 프로 (2026)",
+        "brand": "ALLDOCUBE",
+        "brand_kr": "올도큐브",
+        "device_type": "태블릿",
+        "release_year": 2026,
+        "release_date": "2026-03",
+        "category": "Compact Tablet",
+        "specs": {
+            "ap": "MediaTek Dimensity 7050 / Helio G100 (6nm/8nm)",
+            "display": "8.4인치 2.5K IPS LCD (2560x1600, 120Hz 고주사율, 450nits, 인셀 터치)",
+            "ram_storage": "8GB / 12GB LPDDR4X + 256GB UFS 2.2 + MicroSD(최대 1TB)",
+            "camera": "1600만 후면(AF/LED) + 800만 전면",
+            "battery": "7,000mAh (33W 고속 충전, 바이패스 충전)",
+            "dimensions_weight": "202.5 x 125.8 x 7.4mm / 315g (CNC 알루미늄 일체형)",
+            "os_durability": "Android 15 / 5G & LTE 듀얼 SIM / GPS / 넷플릭스 와이드바인 L1",
+            "price_krw": "약 17만~21만 원 (2026 가성비 8인치 종결)"
+        }
+    },
+    {
+        "id": "alldocube-iplay-80-pro",
+        "name": "ALLDOCUBE iPlay 80 Pro",
+        "name_kr": "올도큐브 iPlay 80 프로 11인치",
+        "brand": "ALLDOCUBE",
+        "brand_kr": "올도큐브",
+        "device_type": "태블릿",
+        "release_year": 2026,
+        "release_date": "2026-05",
+        "category": "Budget/Mid-Range Tablet",
+        "specs": {
+            "ap": "MediaTek Dimensity 7050 (6nm)",
+            "display": "11.0인치 2.5K IPS LCD (2560x1600, 120Hz, 400nits, DCI-P3)",
+            "ram_storage": "8GB / 12GB RAM + 128GB / 256GB + MicroSD",
+            "camera": "1300만 후면 + 800만 전면",
+            "battery": "8,500mAh (33W 고속 충전)",
+            "dimensions_weight": "256.5 x 168.0 x 7.3mm / 495g (쿼드 스피커)",
+            "os_durability": "Android 15 / LTE 듀얼 SIM & GPS 지원",
+            "price_krw": "약 19만~23만 원"
+        }
+    },
+    {
+        "id": "alldocube-iplay-70-mini-pro",
+        "name": "ALLDOCUBE iPlay 70 mini Pro",
+        "name_kr": "올도큐브 iPlay 70 미니 프로 (2025)",
+        "brand": "ALLDOCUBE",
+        "brand_kr": "올도큐브",
+        "device_type": "태블릿",
+        "release_year": 2025,
+        "release_date": "2025-02",
+        "category": "Compact Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 Ultimate (6nm)",
+            "display": "8.4인치 2K IPS LCD (2000x1200, 90Hz, 400nits, 인셀 풀라미네이션)",
+            "ram_storage": "8GB RAM + 128GB / 256GB UFS 2.2 + MicroSD",
+            "camera": "1300만 후면(플래시) + 500만 전면",
+            "battery": "6,500mAh (20W 고속 충전)",
+            "dimensions_weight": "202.7 x 126.0 x 7.8mm / 312g",
+            "os_durability": "Android 14 / LTE 듀얼 SIM & GPS & 자이로 센서 / 와이드바인 L1",
+            "price_krw": "약 15만~18만 원"
+        }
+    },
+    {
+        "id": "alldocube-iplay-70-pro",
+        "name": "ALLDOCUBE iPlay 70 Pro",
+        "name_kr": "올도큐브 iPlay 70 프로 11인치",
+        "brand": "ALLDOCUBE",
+        "brand_kr": "올도큐브",
+        "device_type": "태블릿",
+        "release_year": 2025,
+        "release_date": "2025-04",
+        "category": "Budget Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 Ultimate (6nm)",
+            "display": "11.0인치 2K IPS LCD (2000x1200, 90Hz, 400nits)",
+            "ram_storage": "8GB RAM + 128GB / 256GB + MicroSD",
+            "camera": "1300만 후면 / 800만 전면",
+            "battery": "7,500mAh (20W 충전)",
+            "dimensions_weight": "256.8 x 168.2 x 7.5mm / 485g (쿼드 스피커)",
+            "os_durability": "Android 14 / LTE 듀얼 SIM / 넷플릭스 L1",
+            "price_krw": "약 16만~19만 원"
+        }
+    },
+    {
         "id": "alldocube-iplay-60-mini-pro",
         "name": "ALLDOCUBE iPlay 60 mini Pro",
         "name_kr": "올도큐브 iPlay 60 미니 프로",
