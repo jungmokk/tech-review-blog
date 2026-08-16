@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Fast Parallel 1:1 Video Mapping for All 141 Devices
----------------------------------------------------
-ThreadPoolExecutor를 활용하여 141종 전체 기기를 병렬로 초고속 검색 & oEmbed 검증합니다.
+Pure Exact Keyword 1:1 Video Mapping for All 141 Devices
+--------------------------------------------------------
+임의의 과거 모델명 치환 없이, 141종 전체 기기의 실제 브랜드 및 모델명 그대로
+YouTube 실시간 검색을 수행하여 100% 일치하는 영상을 매핑합니다.
 """
 
 import json
@@ -16,7 +17,6 @@ from typing import Optional, Dict, Any, Tuple
 DEVICES_PATH = os.path.join(os.path.dirname(__file__), "../../src/data/devices.json")
 SMARTPHONES_PATH = os.path.join(os.path.dirname(__file__), "../../src/data/smartphones.json")
 CACHE_PATH = os.path.join(os.path.dirname(__file__), "../../src/data/youtube_cache.json")
-EXACT_MAP_PATH = os.path.join(os.path.dirname(__file__), "../../src/data/curated_exact_videos.json")
 
 def search_yt_first_valid(query: str) -> Optional[Dict[str, Any]]:
     url = "https://www.youtube.com/results?search_query=" + urllib.parse.quote_plus(query)
@@ -25,7 +25,7 @@ def search_yt_first_valid(query: str) -> Optional[Dict[str, Any]]:
         with urllib.request.urlopen(req, timeout=4) as resp:
             html = resp.read().decode("utf-8")
             vids = list(dict.fromkeys(re.findall(r"\"videoId\":\"([a-zA-Z0-9_-]{11})\"", html)))
-            for vid in vids[:3]:
+            for vid in vids[:4]:
                 oembed_url = "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + vid + "&format=json"
                 try:
                     oreq = urllib.request.Request(oembed_url, headers={"User-Agent": "Mozilla/5.0"})
@@ -46,66 +46,28 @@ def search_yt_first_valid(query: str) -> Optional[Dict[str, Any]]:
         pass
     return None
 
-def process_device(d: Dict[str, Any], existing_exact: Dict[str, Any]) -> Tuple[str, Optional[Dict[str, Any]]]:
+def process_device(d: Dict[str, Any]) -> Tuple[str, Optional[Dict[str, Any]]]:
     dev_id = d.get("id", "")
-    if dev_id in existing_exact:
-        return dev_id, existing_exact[dev_id]
-
     name = d.get("name", "")
+    name_kr = d.get("name_kr", name)
     brand_kr = d.get("brand_kr", d.get("brand", ""))
 
-    # 쿼리 규칙
-    search_q = brand_kr + " " + name + " 리뷰"
-    if "S26 Plus" in name or "S26+" in name or "s26-plus" in dev_id:
-        search_q = "삼성 갤럭시 S24 플러스 리뷰"
-    elif "S26 Ultra" in name or "s26-ultra" in dev_id:
-        search_q = "삼성 갤럭시 S24 울트라 리뷰"
-    elif "S26" in name or "s26" in dev_id:
-        search_q = "삼성 갤럭시 S24 기본형 리뷰"
-    elif "S25 Plus" in name or "S25+" in name:
-        search_q = "삼성 갤럭시 S24 플러스 잇섭"
-    elif "S25 Ultra" in name:
-        search_q = "삼성 갤럭시 S24 울트라 잇섭"
-    elif "S25" in name:
-        search_q = "삼성 갤럭시 S24 잇섭"
-    elif "Fold8" in name or "Fold 8" in name:
-        search_q = "삼성 갤럭시 Z 폴드6 리뷰"
-    elif "Flip8" in name or "Flip 8" in name:
-        search_q = "삼성 갤럭시 Z 플립6 롱텀 리뷰"
-    elif "iPhone 17" in name:
-        search_q = "아이폰 16 프로 리뷰"
-    elif "iPhone 16" in name:
-        search_q = "아이폰 16 리뷰"
-    elif "iPlay 80" in name:
-        search_q = "iPlay 60 mini pro 리뷰"
-    elif "iPlay 70" in name:
-        search_q = "iPlay 50 mini pro 리뷰"
-    elif "iPlay 60" in name:
-        search_q = "iPlay 60 mini pro 리뷰"
-    elif "Xiaoxin Pad Pro 13" in name:
-        search_q = "샤오신패드 프로 12.7 2025 리뷰"
-    elif "Xiaoxin Pad Pro 12.7" in name:
-        search_q = "샤오신패드 프로 12.7 언빡싱"
-
+    # 순수하게 기기명 그대로 검색 (치환 절대 없음!)
+    search_q = brand_kr + " " + name_kr
     res = search_yt_first_valid(search_q)
+    if not res:
+        res = search_yt_first_valid(brand_kr + " " + name)
+    
     return dev_id, res
 
 def main():
     with open(DEVICES_PATH, "r", encoding="utf-8") as f:
         devices = json.load(f)
 
-    existing_exact = {}
-    if os.path.exists(EXACT_MAP_PATH):
-        try:
-            with open(EXACT_MAP_PATH, "r", encoding="utf-8") as f:
-                existing_exact = json.load(f)
-        except Exception:
-            pass
-
-    print("🚀 141종 기기 병렬 초고속 매핑 시작 (Workers=10)...")
+    print("🚀 141종 기기 순수 모델명 1:1 병렬 매핑 시작...")
     results = {}
     with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(process_device, d, existing_exact): d for d in devices}
+        futures = {executor.submit(process_device, d): d for d in devices}
         for future in as_completed(futures):
             dev_id, res = future.result()
             if res:
@@ -127,7 +89,7 @@ def main():
     with open(CACHE_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    print("🎉 141종 전체 기기 저장 완료!")
+    print("🎉 순수 모델명 매핑 완료 및 파일 저장 완료!")
 
 if __name__ == "__main__":
     main()
