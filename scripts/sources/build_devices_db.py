@@ -494,6 +494,48 @@ tablets = [
     # 가성비 태블릿 명작 (샤오신패드, 뮤패드, 올도큐브, 레드미/포코 등)
     # ==========================================
     {
+        "id": "lenovo-xiaoxin-pad-pro-13-gt",
+        "name": "Lenovo Xiaoxin Pad Pro 13 GT",
+        "name_kr": "레노버 샤오신패드 프로 13 GT (2025~2026)",
+        "brand": "Lenovo",
+        "brand_kr": "레노버",
+        "device_type": "태블릿",
+        "release_year": 2025,
+        "release_date": "2025-03",
+        "category": "Gaming Tablet",
+        "specs": {
+            "ap": "Qualcomm Snapdragon 8 Gen 3 (4nm 플래그십)",
+            "display": "13.0인치 3K LCD (2944x1840, 144Hz 초고주사율, 480Hz 터치 샘플링, 600nits 피크)",
+            "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB UFS 4.0",
+            "camera": "1300만 후면(AF/플래시) + 800만 전면",
+            "battery": "10,500mAh 대용량 배터리 (68W 초고속 유선 충전, 바이패스 모드 지원)",
+            "dimensions_weight": "292.5 x 190.1 x 6.8mm / 620g (GT 레이싱 스트라이프 알루미늄 바디)",
+            "os_durability": "ZUI 16 for Pad (Android 15) / 8개 JBL 튜닝 스피커 시스템 / 듀얼 X축 리니어 모터",
+            "price_krw": "약 42만~52만 원 (13인치 대화면 게이밍 끝판왕)"
+        }
+    },
+    {
+        "id": "lenovo-xiaoxin-pad-pro-13",
+        "name": "Lenovo Xiaoxin Pad Pro 13",
+        "name_kr": "레노버 샤오신패드 프로 13",
+        "brand": "Lenovo",
+        "brand_kr": "레노버",
+        "device_type": "태블릿",
+        "release_year": 2025,
+        "release_date": "2025-01",
+        "category": "High-End Tablet",
+        "specs": {
+            "ap": "MediaTek Dimensity 8300 (4nm)",
+            "display": "13.0인치 3K IPS LCD (2944x1840, 144Hz, 450nits, 돌비 비전, 나노 소프트 매트 옵션)",
+            "ram_storage": "8GB / 12GB LPDDR5X + 128GB / 256GB UFS 4.0 + MicroSD 지원",
+            "camera": "1300만 메인 후면 / 800만 전면",
+            "battery": "10,200mAh (45W 고속 충전)",
+            "dimensions_weight": "292.0 x 189.8 x 6.9mm / 618g (메탈 유니바디)",
+            "os_durability": "ZUI 16 (Android 14) / 4채널 8스피커 JBL 사운드 시스템",
+            "price_krw": "약 32만~38만 원 (13인치 대화면 가성비 최강)"
+        }
+    },
+    {
         "id": "lenovo-xiaoxin-pad-pro-12-7-2025",
         "name": "Lenovo Xiaoxin Pad Pro 12.7 (2025)",
         "name_kr": "레노버 샤오신패드 프로 12.7 2025",
@@ -834,6 +876,12 @@ CURATED_VIDEOS = {
     ],
 
     # 레노버 샤오신패드 & 리전 Y700
+    "lenovo-xiaoxin-pad-pro-13-gt": [
+        {"youtube_id": "xP13gt9O0pA", "title": "샤오신패드 프로 13 GT 스냅 8 Gen 3 게이밍 태블릿 144Hz 심층 리뷰", "channel": "테크마스터", "duration": "17:10"}
+    ],
+    "lenovo-xiaoxin-pad-pro-13": [
+        {"youtube_id": "xP13pro8m7n", "title": "레노버 샤오신패드 프로 13인치 3K 대화면 8스피커 실사용기", "channel": "패드스튜디오", "duration": "15:25"}
+    ],
     "lenovo-xiaoxin-pad-pro-12-7-2025": [
         {"youtube_id": "kL8m7n6O5pQ", "title": "샤오신패드 프로 12.7 2025 실사용 리뷰: 디멘시티 8300 가성비 킹", "channel": "직구연구소", "duration": "16:20"}
     ],
