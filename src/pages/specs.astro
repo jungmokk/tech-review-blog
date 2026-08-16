@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import GoogleAdSense from '../components/GoogleAdSense.astro';
 import devices from '../data/smartphones.json';
 
 const totalCount = devices.length;
@@ -31,6 +32,7 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
   <meta name="twitter:description" content="134종 스마트폰·태블릿 정밀 사양표와 실제 유튜브 핸즈온 리뷰 영상 갤러리" />
 
   <GoogleAnalytics />
+  <GoogleAdSense />
 </head>
 <body>
   <Header />

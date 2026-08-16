@@ -4,6 +4,7 @@ import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import Analytics from '@vercel/analytics/astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import GoogleAdSense from '../components/GoogleAdSense.astro';
 import devices from '../data/smartphones.json';
 
 const allReviews = await getCollection('reviews');
@@ -39,8 +40,9 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
   <meta name="twitter:description" content="최신 IT 기기 심층 리뷰 & 스마트폰 스펙 백과사전" />
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="google7dc3c11a8bcb6b9d" />
-
+  <meta name="robots" content="index, follow" />
   <GoogleAnalytics />
+  <GoogleAdSense />
 </head>
 <body>
   <Header />
