@@ -15,9 +15,9 @@ from typing import List, Dict, Any, Optional
 
 CACHE_PATH = os.path.join(os.path.dirname(__file__), "../../src/data/youtube_cache.json")
 
-# .env 파일에서 YOUTUBE_API_KEY 로드 시도
+# .env 파일 또는 시스템 환경변수에서 YOUTUBE_API / YOUTUBE_API_KEY 로드
 def load_env_key():
-    api_key = os.environ.get("YOUTUBE_API_KEY")
+    api_key = os.environ.get("YOUTUBE_API_KEY") or os.environ.get("YOUTUBE_API")
     if api_key:
         return api_key
     env_path = os.path.join(os.path.dirname(__file__), "../../.env")
@@ -25,7 +25,9 @@ def load_env_key():
         with open(env_path, "r", encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
-                if line.startswith("YOUTUBE_API_KEY=") or line.startswith("PUBLIC_YOUTUBE_API_KEY="):
+                if (line.startswith("YOUTUBE_API_KEY=") or 
+                    line.startswith("YOUTUBE_API=") or 
+                    line.startswith("PUBLIC_YOUTUBE_API_KEY=")):
                     return line.split("=", 1)[1].strip().strip('"').strip("'")
     return None
 
