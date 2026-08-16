@@ -1,0 +1,83 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>블로그 소개 (About Us) | TECH SPEC BLOG</title>
+  <meta name="description" content="글로벌 최신 IT 기기 심층 리뷰와 134종 스마트폰·태블릿 정밀 스펙 백과사전을 운영하는 TECH SPEC BLOG 소개입니다." />
+  <meta name="robots" content="index, follow" />
+  <GoogleAnalytics />
+</head>
+<body>
+  <Header />
+
+  <main class="container" style="padding: 60px 0 100px; max-width: 860px;">
+    <span class="badge" style="margin-bottom: 12px;">ABOUT US</span>
+    <h1 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 24px;">
+      TECH SPEC BLOG 소개
+    </h1>
+
+    <div style="line-height: 1.8; color: #cbd5e1; font-size: 1.05rem; display: flex; flex-direction: column; gap: 28px;">
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">🎯 운영 철학과 미션</h2>
+        <p>
+          <strong>TECH SPEC BLOG</strong>는 하루가 다르게 쏟아지는 글로벌 IT/테크 기기들의 홍수 속에서, 과장된 마케팅 문구를 걷어내고 <strong>'실제 팩트와 정밀한 하드웨어 스펙 데이터'</strong>를 바탕으로 객관적인 소비자 선택 가이드를 제공하는 독립 테크 리뷰 & 스펙 미디어입니다.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">🔍 3대 리뷰 원칙 (Editorial Principles)</h2>
+        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <strong style="color: var(--accent-cyan); font-size: 1.1rem;">1. 팩트 기반 데이터 벤치마크 (Data-Driven)</strong>
+            <p style="margin-top: 6px; font-size: 0.95rem; color: #94a3b8;">
+              제조사 공시 스펙, AP 벤치마크(Geekbench, 3DMark), 디스플레이 밝기/반사율, 배터리 실사용 효율을 표준화된 수치로 측정하고 기록합니다.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <strong style="color: var(--accent-cyan); font-size: 1.1rem;">2. The Verdict 평점 시스템</strong>
+            <p style="margin-top: 6px; font-size: 0.95rem; color: #94a3b8;">
+              The Verge, Wirecutter 등 글로벌 탑티어 매거진의 표준을 채택하여, 핵심 요약(The Bottom Line)과 장점(Good) vs 단점(Bad)을 명확하게 짚어내는 10점 만점 평점 제도를 운영합니다.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <strong style="color: var(--accent-cyan); font-size: 1.1rem;">3. 통합 스펙 & 멀티미디어 비디오 풀</strong>
+            <p style="margin-top: 6px; font-size: 0.95rem; color: #94a3b8;">
+              2023년부터 2026년 최신 기기까지 134종 스마트폰·태블릿의 정밀 사양 1:1 맞비교와 실사용 유튜브 핸즈온 영상을 제공하여 소비자의 탐색 시간을 획기적으로 줄입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">📊 다루는 카테고리</h2>
+        <ul style="margin-left: 20px; margin-top: 8px;">
+          <li><strong>스마트폰 (Smartphones):</strong> 플래그십, 폴더블, 가성비 보급형 기기</li>
+          <li><strong>태블릿 (Tablets):</strong> iPad Pro/Air/mini, Galaxy Tab S10, 샤오신패드, 뮤패드, iPlay 80 등</li>
+          <li><strong>PC & 노트북 (Laptops/PC):</strong> MacBook, Mac mini, 고성능 랩탑</li>
+          <li><strong>음향 & 웨어러블 (Audio/Wearables):</strong> 노이즈 캔슬링 헤드폰, 무선 이어폰, 스마트워치</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; font-size: 0.9rem;">
+        <a href="/about" style="color: var(--accent-cyan); text-decoration: none; font-weight: 700;">블로그 소개</a>
+        <a href="/privacy" style="color: var(--text-muted); text-decoration: none;">개인정보처리방침</a>
+        <a href="/contact" style="color: var(--text-muted); text-decoration: none;">문의하기</a>
+      </div>
+      <p>© 2026 Tech Review Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <Analytics />
+</body>
+</html>

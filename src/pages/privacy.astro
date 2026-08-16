@@ -1,0 +1,102 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 (Privacy Policy) | TECH SPEC BLOG</title>
+  <meta name="description" content="TECH SPEC BLOG의 개인정보처리방침, 쿠키 정책 및 Google AdSense, Google Analytics 데이터 처리에 관한 안내입니다." />
+  <meta name="robots" content="index, follow" />
+  <GoogleAnalytics />
+</head>
+<body>
+  <Header />
+
+  <main class="container" style="padding: 60px 0 100px; max-width: 860px;">
+    <span class="badge" style="margin-bottom: 12px;">LEGAL & PRIVACY</span>
+    <h1 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 24px;">
+      개인정보처리방침 (Privacy Policy)
+    </h1>
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px;">
+      최종 수정일: 2026년 8월 16일
+    </p>
+
+    <div style="line-height: 1.8; color: #cbd5e1; font-size: 1.05rem; display: flex; flex-direction: column; gap: 28px;">
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">1. 개요</h2>
+        <p>
+          TECH SPEC BLOG(이하 "본 사이트")는 이용자의 개인정보를 매우 소중하게 생각하며, 대한민국의 「개인정보 보호법」 및 글로벌 개인정보 보호 규정을 준수합니다. 본 방침은 이용자가 본 사이트를 이용할 때 어떤 정보가 수집되고, 어떻게 사용되며, 이용자가 권리를 어떻게 행사할 수 있는지 안내합니다.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">2. 수집하는 정보 및 수집 방법</h2>
+        <p>
+          본 사이트는 회원가입이나 로그인을 요구하지 않으며, 이용자의 주민등록번호, 결제 정보 등 민감한 개인식별정보를 직접 수집하지 않습니다. 다만, 서비스 통계 및 맞춤형 콘텐츠 제공을 위해 다음 기술 정보가 자동으로 수집될 수 있습니다:
+        </p>
+        <ul style="margin-left: 20px; margin-top: 8px;">
+          <li>방문 일시, 접속 IP 주소, 브라우저 유형, 운영체제(OS) 정보, 방문 페이지 URL</li>
+          <li>기기 유형(모바일, 태블릿, PC), 화면 해상도, 유입 경로(검색 엔진 등)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">3. 쿠키(Cookie) 및 웹 비콘 사용 안내</h2>
+        <p>
+          본 사이트는 이용자에게 최적화된 웹 환경을 제공하기 위해 쿠키(Cookie)를 사용합니다. 쿠키는 웹사이트를 방문할 때 이용자의 브라우저에 저장되는 작은 텍스트 파일입니다.
+        </p>
+        <p style="margin-top: 8px;">
+          <strong>쿠키 차단 설정 방법:</strong> 이용자는 웹 브라우저 설정을 통해 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다. (설정 경로: 브라우저 메뉴 > 도구/설정 > 개인정보 및 보안 > 쿠키 및 사이트 데이터)
+        </p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">4. 구글 애드센스(Google AdSense) 및 제3자 광고 사업자 규정</h2>
+        <p>
+          본 사이트는 사이트 운영 및 양질의 콘텐츠 유지를 위해 <strong>Google AdSense</strong>를 포함한 제3자 광고 서비스를 이용할 수 있습니다.
+        </p>
+        <ul style="margin-left: 20px; margin-top: 8px;">
+          <li>구글(Google)을 포함한 제3자 광고 공급업체는 이용자가 본 사이트 및 다른 웹사이트를 방문한 기록을 바탕으로 맞춤형 광고를 게재하기 위해 쿠키(DART 쿠키 등)를 사용합니다.</li>
+          <li>이용자는 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">Google 광고 설정</a> 페이지를 방문하여 맞춤형 광고 게재에 사용되는 쿠키를 언제든지 사용 중지할 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">5. 구글 애널리틱스(Google Analytics 4) 통계 분석</h2>
+        <p>
+          본 사이트는 방문자 통계 분석 및 사이트 성능 개선을 위해 구글(Google LLC)이 제공하는 웹 로그 분석 도구인 <strong>Google Analytics 4 (GA4)</strong>를 사용합니다. GA4는 이용자의 개인을 직접 식별할 수 없는 익명화된 트래픽 데이터만을 수집합니다.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 12px;">6. 개인정보 보호책임자 및 문의처</h2>
+        <p>
+          본 사이트의 개인정보처리방침에 대해 문의사항이나 정정 요청이 있으신 경우 아래 연락처로 문의해 주시기 바랍니다:
+        </p>
+        <div style="background: rgba(15, 23, 42, 0.6); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px;">
+          <p><strong>운영자:</strong> TECH SPEC BLOG 운영팀</p>
+          <p><strong>이메일:</strong> techreviewblog.official@gmail.com</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; font-size: 0.9rem;">
+        <a href="/about" style="color: var(--text-muted); text-decoration: none;">블로그 소개</a>
+        <a href="/privacy" style="color: var(--accent-cyan); text-decoration: none; font-weight: 700;">개인정보처리방침</a>
+        <a href="/contact" style="color: var(--text-muted); text-decoration: none;">문의하기</a>
+      </div>
+      <p>© 2026 Tech Review Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <Analytics />
+</body>
+</html>

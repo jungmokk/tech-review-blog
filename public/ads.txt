@@ -1,0 +1,3 @@
+# Google AdSense ads.txt template
+# 애드센스 승인 후 본인의 pub-XXXXXXXXXXXXXXXX ID로 교체해 주세요.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
