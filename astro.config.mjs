@@ -3,6 +3,6 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://techreview-blog.vercel.app',
+  site: 'https://tech-review-blog.vercel.app',
   integrations: [mdx()],
 });
