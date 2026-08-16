@@ -6,29 +6,72 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import devicesData from '../data/devices.json';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, slug } = Astro.props;
 
 const allReviews = await getCollection('reviews');
 const recentReviews = allReviews
-  .filter((r: CollectionEntry<'reviews'>) => r.data.device !== frontmatter.device)
+  .filter((r: CollectionEntry<'reviews'>) => r.slug !== slug && r.data.device !== frontmatter.device)
   .slice(0, 4);
 
-// Find matching device from devices.json
-const matchedDevice = devicesData.find(d => {
-  const target = (frontmatter.device || '').toLowerCase();
-  const dName = d.name.toLowerCase();
-  const dKr = d.name_kr.toLowerCase();
-  return dName.includes(target) || dKr.includes(target) || target.includes(dName) || target.includes(dKr);
-}) || devicesData[0];
+// 1. Direct 100% exact match by slug
+let matchedDevice = slug ? devicesData.find(d => d.id === slug) : null;
 
-const primaryVideo = (matchedDevice?.videos && matchedDevice.videos.length > 0) 
+// 2. Robust normalized name matching fallback
+if (!matchedDevice) {
+  const normalize = (str?: string) => (str || '').toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
+  const target = normalize(frontmatter.device || '');
+  
+  matchedDevice = devicesData.find(d => {
+    const dId = normalize(d.id);
+    const dName = normalize(d.name);
+    const dKr = normalize(d.name_kr);
+    return dId === target || dName.includes(target) || dKr.includes(target) || target.includes(dName) || target.includes(dKr);
+  });
+}
+
+// 3. Fallback device object if not found (never fallback to wrong flagship device)
+if (!matchedDevice) {
+  matchedDevice = {
+    id: slug || 'device',
+    name: frontmatter.device || '스마트 디바이스',
+    name_kr: frontmatter.device || '스마트 디바이스',
+    brand: 'Tech',
+    brand_kr: '테크',
+    device_type: '스마트 디바이스',
+    release_year: 2026,
+    release_date: '2026',
+    category: frontmatter.category || 'IT/테크',
+    specs: {
+      ap: '최신 고성능 프로세서',
+      display: '고해상도 디스플레이',
+      ram_storage: '대용량 RAM & 저장공간',
+      camera: '고화질 카메라',
+      battery: '대용량 배터리',
+      dimensions_weight: '슬림 & 경량 디자인',
+      os_durability: '최신 OS',
+      price_krw: '출시가 기준'
+    },
+    videos: [
+      {
+        youtube_id: "F0kR0e2tZ48",
+        title: `${frontmatter.device} 실사용 핸즈온 및 상세 리뷰`,
+        channel: "Tech Insight",
+        duration: "13:50",
+        thumbnail: "https://img.youtube.com/vi/F0kR0e2tZ48/hqdefault.jpg",
+        direct_watch_url: "https://www.youtube.com/watch?v=F0kR0e2tZ48"
+      }
+    ]
+  };
+}
+
+const primaryVideo = (matchedDevice.videos && matchedDevice.videos.length > 0) 
   ? matchedDevice.videos[0] 
   : {
-      youtube_id: "dQw4w9WgXcQ",
+      youtube_id: "F0kR0e2tZ48",
       title: `${frontmatter.device} 실사용 핸즈온 및 디자인 분석`,
       channel: "Tech Review Studio",
       duration: "12:30",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+      thumbnail: "https://img.youtube.com/vi/F0kR0e2tZ48/hqdefault.jpg"
     };
 
 // Category-aware 4K tech visual fallback images

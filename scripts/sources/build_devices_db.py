@@ -828,6 +828,111 @@ tablets = [
             "os_durability": "MIUI Pad 14 -> HyperOS / 쿼드 스피커 / 3.5mm 잭",
             "price_krw": "149,000원부터 (학생·인강용 국민 태블릿)"
         }
+    },
+    {
+        "id": "huawei-mate-xt",
+        "name": "Huawei Mate XT Ultimate Design",
+        "name_kr": "화웨이 메이트 XT 얼티밋 디자인 (트리폴드)",
+        "brand": "Huawei",
+        "brand_kr": "화웨이",
+        "device_type": "스마트폰",
+        "release_year": 2024,
+        "release_date": "2024-09",
+        "category": "Foldable",
+        "specs": {
+            "ap": "Kirin 9010 (7nm)",
+            "display": "10.2인치 3K OLED (3단 접이식, 120Hz LTPO)",
+            "ram_storage": "16GB RAM + 512GB / 1TB UFS 4.0",
+            "camera": "5000만 가변조리개 + 1200만 초광각 + 1200만 잠망경 망원(5.5x)",
+            "battery": "5,600mAh 실리콘-탄소 (66W 유선, 50W 무선)",
+            "dimensions_weight": "펼침 3.6mm / 접힘 12.8mm / 298g",
+            "os_durability": "HarmonyOS 4.2 / 티타늄 힌지",
+            "price_krw": "약 380만~450만 원"
+        }
+    },
+    {
+        "id": "m4-mac-mini",
+        "name": "Apple M4 Mac mini",
+        "name_kr": "애플 M4 맥 미니 (2024)",
+        "brand": "Apple",
+        "brand_kr": "애플",
+        "device_type": "PC/노트북",
+        "release_year": 2024,
+        "release_date": "2024-11",
+        "category": "Compact PC",
+        "specs": {
+            "ap": "Apple M4 (10코어 CPU + 10코어 GPU) / M4 Pro",
+            "display": "최대 3대 디스플레이 (6K 60Hz x 2 + 5K 60Hz x 1)",
+            "ram_storage": "기본 16GB 통합 메모리 (최대 64GB) + 256GB~2TB SSD",
+            "camera": "해당 없음 (외장 카메라 지원)",
+            "battery": "AC 전원 직결 (최대 150W 내장 파워)",
+            "dimensions_weight": "12.7 x 12.7 x 5.0cm / 670g (초소형 폼팩터)",
+            "os_durability": "macOS Sequoia / Thunderbolt 4/5 포트 3개",
+            "price_krw": "890,000원부터"
+        }
+    },
+    {
+        "id": "macbook-air-m3",
+        "name": "Apple MacBook Air 13/15 (M3)",
+        "name_kr": "애플 맥북 에어 13/15 M3 (2024)",
+        "brand": "Apple",
+        "brand_kr": "애플",
+        "device_type": "PC/노트북",
+        "release_year": 2024,
+        "release_date": "2024-03",
+        "category": "Laptop",
+        "specs": {
+            "ap": "Apple M3 (8코어 CPU + 8/10코어 GPU, 하드웨어 레이트레이싱)",
+            "display": "13.6인치 / 15.3인치 Liquid Retina (500nits, P3)",
+            "ram_storage": "8GB/16GB/24GB 통합 메모리 + 256GB~2TB SSD",
+            "camera": "1080p FaceTime HD 카메라",
+            "battery": "최대 18시간 (52.6Wh / 66.5Wh, MagSafe 3 충전)",
+            "dimensions_weight": "11.3mm 두께 / 1.24kg (13형), 1.51kg (15형)",
+            "os_durability": "macOS Sonoma -> Sequoia / 팬리스 무소음 설계",
+            "price_krw": "1,590,000원부터"
+        }
+    },
+    {
+        "id": "sony-wh-1000xm5",
+        "name": "Sony WH-1000XM5",
+        "name_kr": "소니 WH-1000XM5 무선 노이즈 캔슬링 헤드폰",
+        "brand": "Sony",
+        "brand_kr": "소니",
+        "device_type": "오디오",
+        "release_year": 2022,
+        "release_date": "2022-05",
+        "category": "Audio",
+        "specs": {
+            "ap": "HD 노이즈 캔슬링 프로세서 QN1 + 통합 프로세서 V1 (8개 마이크)",
+            "display": "해당 없음 (터치 센서 컨트롤)",
+            "ram_storage": "해당 없음",
+            "camera": "해당 없음",
+            "battery": "최대 30시간 (NC ON) / 40시간 (NC OFF), 3분 충전 3시간 재생",
+            "dimensions_weight": "250g (소프트 핏 레더 이어패드)",
+            "os_durability": "LDAC / DSEE Extreme / 멀티포인트 지원",
+            "price_krw": "479,000원"
+        }
+    },
+    {
+        "id": "airpods-pro-3",
+        "name": "Apple AirPods Pro 3",
+        "name_kr": "애플 에어팟 프로 3세대 (2026)",
+        "brand": "Apple",
+        "brand_kr": "애플",
+        "device_type": "오디오",
+        "release_year": 2026,
+        "release_date": "2026-09",
+        "category": "Audio",
+        "specs": {
+            "ap": "Apple H3 헤드폰 칩셋 + 온디바이스 심박수/체온 센서",
+            "display": "해당 없음 (케이스 터치 디스플레이 옵션)",
+            "ram_storage": "해당 없음",
+            "camera": "해당 없음",
+            "battery": "단독 7시간 / 케이스 포함 최대 34시간 (USB-C + MagSafe)",
+            "dimensions_weight": "유닛당 5.1g / 케이스 50.8g",
+            "os_durability": "IP57 방수방진 / 2세대 적응형 오디오 & 공간 음향",
+            "price_krw": "369,000원"
+        }
     }
 ]
 
