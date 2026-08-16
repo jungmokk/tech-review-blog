@@ -404,6 +404,93 @@ tablets = [
         }
     },
     # ==========================================
+    # OPPO Pad 라인업 (2023~2026)
+    # ==========================================
+    {
+        "id": "oppo-pad-3-pro",
+        "name": "OPPO Pad 3 Pro",
+        "name_kr": "오포 패드 3 프로",
+        "brand": "Oppo",
+        "brand_kr": "오포",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-10",
+        "category": "Pro Tablet",
+        "specs": {
+            "ap": "Snapdragon 8 Gen 3 Leading Edition (3.4GHz)",
+            "display": "12.1인치 3K ReadFit LCD (3000x2120, 144Hz, 7:5 황금비율, 900nits 피크)",
+            "ram_storage": "8GB / 12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB UFS 4.0",
+            "camera": "1300만 메인 후면 / 800만 전면",
+            "battery": "9,510mAh (67W SUPERVOOC 유선 고속 충전)",
+            "dimensions_weight": "268.66 x 195.06 x 6.49mm / 586g (풀 메탈 일체형)",
+            "os_durability": "ColorOS 14.1 for Pad / 6개 옴니베어링 스피커(Hi-Res 인증)",
+            "price_krw": "약 65만~79만 원"
+        }
+    },
+    {
+        "id": "oppo-pad-3",
+        "name": "OPPO Pad 3",
+        "name_kr": "오포 패드 3",
+        "brand": "Oppo",
+        "brand_kr": "오포",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-11",
+        "category": "High-End Tablet",
+        "specs": {
+            "ap": "MediaTek Dimensity 8350 (4nm)",
+            "display": "11.6인치 2.8K LCD (2800x2000, 144Hz, 7:5 비율, 700nits, 저반사 매트 옵션)",
+            "ram_storage": "8GB / 12GB LPDDR5X + 128GB / 256GB / 512GB UFS 3.1",
+            "camera": "800만 후면 / 800만 전면",
+            "battery": "9,510mAh (67W 고속 충전)",
+            "dimensions_weight": "258.03 x 189.39 x 6.29mm / 533g",
+            "os_durability": "ColorOS 15 for Pad / 파노라마 사운드 쿼드 스피커",
+            "price_krw": "약 45만~55만 원"
+        }
+    },
+    {
+        "id": "oppo-pad-2",
+        "name": "OPPO Pad 2",
+        "name_kr": "오포 패드 2",
+        "brand": "Oppo",
+        "brand_kr": "오포",
+        "device_type": "태블릿",
+        "release_year": 2023,
+        "release_date": "2023-03",
+        "category": "High-End Tablet",
+        "specs": {
+            "ap": "MediaTek Dimensity 9000 (4nm)",
+            "display": "11.61인치 2.8K IPS LCD (2800x2000, 144Hz, 7:5 황금비율, 500nits)",
+            "ram_storage": "8GB / 12GB LPDDR5 + 256GB / 512GB UFS 3.1",
+            "camera": "1300만 후면(중앙 원형 모듈) + 800만 전면",
+            "battery": "9,510mAh (67W SUPERVOOC 충전)",
+            "dimensions_weight": "258.03 x 189.39 x 6.54mm / 552g (성운 은하수 패턴 백)",
+            "os_durability": "ColorOS 13.1 for Pad / 돌비 비전 & 돌비 애트모스",
+            "price_krw": "약 58만 원부터"
+        }
+    },
+    {
+        "id": "oppo-pad-neo",
+        "name": "OPPO Pad Neo (Air 2)",
+        "name_kr": "오포 패드 네오 / 에어2 (LTE)",
+        "brand": "Oppo",
+        "brand_kr": "오포",
+        "device_type": "태블릿",
+        "release_year": 2024,
+        "release_date": "2024-01",
+        "category": "Budget/Mid-Range Tablet",
+        "specs": {
+            "ap": "MediaTek Helio G99 (6nm)",
+            "display": "11.4인치 2.4K ReadFit LCD (2408x1720, 90Hz, 7:5 비율, 400nits, 저블루라이트)",
+            "ram_storage": "6GB / 8GB LPDDR4X + 128GB UFS 2.2 + MicroSD",
+            "camera": "800만 후면 / 800만 전면",
+            "battery": "8,000mAh (33W 고속 충전)",
+            "dimensions_weight": "255.12 x 188.04 x 6.89mm / 538g (투톤 매트 메탈 디자인)",
+            "os_durability": "ColorOS 13.2 / 4개 돌비 애트모스 스피커 / 4G LTE 데이터 지원 모델",
+            "price_krw": "약 28만~34만 원"
+        }
+    },
+    # ==========================================
     # 가성비 태블릿 명작 (샤오신패드, 뮤패드, 올도큐브, 레드미/포코 등)
     # ==========================================
     {
