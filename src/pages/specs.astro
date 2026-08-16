@@ -445,14 +445,31 @@ const years = ['전체', '2026', '2025', '2024', '2023'];
     // YouTube Facade Player Opener
     function playYouTubeVideo(youtubeId, title) {
       videoModalTitle.innerText = title;
-      // Inject iframe with autoplay
+      const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(title)}`;
+      const directWatchUrl = `https://www.youtube.com/watch?v=${youtubeId}`;
+
+      // Inject iframe with enhanced embed fallback
       videoFrameContainer.innerHTML = `
         <iframe 
-          src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&playsinline=1" 
+          src="https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0&playsinline=1" 
           title="${title}"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           allowfullscreen
+          style="width: 100%; height: 100%; border: none; border-radius: 8px;"
         ></iframe>
+        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            💡 동영상 임베드가 제한된 경우 아래 버튼으로 YouTube에서 바로 시청하세요.
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <a href="${directWatchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: #ffffff; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: background 0.2s;">
+              ▶ YouTube에서 직접 보기
+            </a>
+            <a href="${searchUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); color: #e2e8f0; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">
+              🔍 관련 영상 검색
+            </a>
+          </div>
+        </div>
       `;
       videoPlayerModal.classList.add('open');
     }
