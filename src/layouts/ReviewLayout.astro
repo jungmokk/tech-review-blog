@@ -1,6 +1,8 @@
 ---
 import Header from '../components/Header.astro';
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 const { frontmatter } = Astro.props;
 
@@ -30,6 +32,7 @@ const jsonLd = {
   <title>{frontmatter.title} | TECH REVIEW</title>
   <meta name="description" content={frontmatter.summary} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+  <GoogleAnalytics />
 </head>
 <body>
   <Header />
@@ -46,5 +49,6 @@ const jsonLd = {
       <p>© 2026 Tech Review Blog. Automated AI Data Synthesis Pipeline.</p>
     </div>
   </footer>
+  <Analytics />
 </body>
 </html>
