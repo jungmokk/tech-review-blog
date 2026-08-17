@@ -18,7 +18,7 @@ const trendingPosts = koReviews.slice(1, 3);
 const feedPosts = koReviews.map((post: CollectionEntry<'reviews'>) => {
   const dev = devices.find((d: any) => d.id === post.slug);
   const vId = dev?.videos?.[0]?.youtube_id || 'TigCEb283aU';
-  const devImage = (dev as any)?.image || `/images/devices/${post.slug}.jpg`;
+  const devImage = (dev as any)?.image || `/images/devices/${post.slug}.webp`;
   return {
     ...post,
     vId,
@@ -28,7 +28,7 @@ const feedPosts = koReviews.map((post: CollectionEntry<'reviews'>) => {
 });
 
 const featuredDev = devices.find((d: any) => d.id === featuredPost.slug);
-const featuredImage = (featuredDev as any)?.image || `/images/devices/${featuredPost.slug}.jpg`;
+const featuredImage = (featuredDev as any)?.image || `/images/devices/${featuredPost.slug}.webp`;
 
 const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어러블'];
 ---

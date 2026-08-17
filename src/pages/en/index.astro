@@ -18,7 +18,7 @@ const feedPosts = enReviews.map((post: CollectionEntry<'reviews'>) => {
   const pureSlug = post.slug.replace('en/', '');
   const dev = devices.find((d: any) => d.id === pureSlug);
   const vId = dev?.videos?.[0]?.youtube_id || 'TigCEb283aU';
-  const devImage = (dev as any)?.image || `/images/devices/${pureSlug}.jpg`;
+  const devImage = (dev as any)?.image || `/images/devices/${pureSlug}.webp`;
   return {
     ...post,
     pureSlug,
@@ -31,7 +31,7 @@ const feedPosts = enReviews.map((post: CollectionEntry<'reviews'>) => {
 const trendingPostsMapped = trendingPosts.map((post: CollectionEntry<'reviews'>) => {
   const pureSlug = post.slug.replace('en/', '');
   const dev = devices.find((d: any) => d.id === pureSlug);
-  const img = (dev as any)?.image || `/images/devices/${pureSlug}.jpg`;
+  const img = (dev as any)?.image || `/images/devices/${pureSlug}.webp`;
   return {
     ...post,
     pureSlug,
@@ -40,7 +40,7 @@ const trendingPostsMapped = trendingPosts.map((post: CollectionEntry<'reviews'>)
 });
 
 const featuredDev = devices.find((d: any) => d.id === featuredPost.slug.replace('en/', ''));
-const featuredImage = (featuredDev as any)?.image || `/images/devices/${featuredPost.slug.replace('en/', '')}.jpg`;
+const featuredImage = (featuredDev as any)?.image || `/images/devices/${featuredPost.slug.replace('en/', '')}.webp`;
 ---
 <!DOCTYPE html>
 <html lang="en">
