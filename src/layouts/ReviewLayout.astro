@@ -20,7 +20,7 @@ const recentReviews = allReviews
   .slice(0, 4);
 
 // 1. Direct 100% exact match by slug
-let matchedDevice = slug ? devicesData.find(d => d.id === slug) : null;
+let matchedDevice: any = slug ? devicesData.find(d => d.id === slug) : null;
 
 // 2. Robust normalized name matching fallback
 if (!matchedDevice) {
@@ -70,7 +70,7 @@ if (!matchedDevice) {
   };
 }
 
-const primaryVideo = (matchedDevice.videos && matchedDevice.videos.length > 0) 
+const primaryVideo = (matchedDevice?.videos && matchedDevice.videos.length > 0) 
   ? matchedDevice.videos[0] 
   : {
       youtube_id: "F0kR0e2tZ48",
@@ -98,7 +98,8 @@ const getFallbackImage = (category?: string, devType?: string) => {
 };
 
 const defaultTechImage = getFallbackImage(matchedDevice?.category, matchedDevice?.device_type);
-const heroThumbnail = `https://img.youtube.com/vi/${primaryVideo.youtube_id}/hqdefault.jpg`;
+const officialPhoto = matchedDevice?.image || defaultTechImage;
+const heroThumbnail = officialPhoto;
 const fallbackThumbnail = defaultTechImage;
 
 const jsonLd = {
@@ -173,54 +174,32 @@ const jsonLd = {
           <span>⏱️ 약 4분 심층 분석</span>
         </div>
 
-        <!-- High-Resolution Device Hero Visual Banner -->
-        <div class="device-hero-visual-card" style="margin-bottom: 24px; position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-surface); box-shadow: 0 12px 32px rgba(0,0,0,0.5);">
-          <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden;">
+        <!-- Official High-Resolution Factory Product Visual Banner -->
+        <div class="device-hero-visual-card" style="margin-bottom: 28px; position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-surface); box-shadow: 0 12px 32px rgba(0,0,0,0.35);">
+          <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #080c14; overflow: hidden; display: flex; align-items: center; justify-content: center;">
             <img 
-              src={heroThumbnail} 
-              alt={`${frontmatter.device} 실물 핸즈온 및 디자인`} 
+              src={officialPhoto} 
+              alt={`${frontmatter.device} 공식 팩트 사진`} 
               style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;"
               onerror={`this.onerror=null; this.src='${fallbackThumbnail}';`}
               loading="eager"
             />
-            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,14,22,0.1) 0%, rgba(10,14,22,0.85) 100%); pointer-events: none;"></div>
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,14,22,0.05) 0%, rgba(10,14,22,0.7) 100%); pointer-events: none;"></div>
             
             <div style="position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; z-index: 2;">
               <span style="background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); color: var(--accent-cyan); font-size: 0.78rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(56,189,248,0.3);">
-                📸 4K 실물 핸즈온 포토
+                📱 100% 공식 팩트 제품 샷
               </span>
               <span style="background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); color: #cbd5e1; font-size: 0.78rem; padding: 4px 10px; border-radius: 4px;">
-                {primaryVideo.channel || 'Tech Editorial'}
+                {matchedDevice?.brand_kr || matchedDevice?.brand || 'Tech'} Official
               </span>
             </div>
 
-            <!-- Play Video Overlay Button (Direct YouTube Link) -->
-            <a 
-              href={`https://www.youtube.com/watch?v=${primaryVideo.youtube_id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-video-play-btn" 
-              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; border-radius: 50%; background: rgba(225, 29, 72, 0.9); border: 2px solid #ffffff; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 28px rgba(225,29,72,0.6); z-index: 3; text-decoration: none;"
-              aria-label="YouTube에서 기기 실사용 영상 직접 시청"
-            >
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 3px;">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </a>
-
             <div style="position: absolute; bottom: 14px; left: 16px; right: 16px; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end;">
               <div>
-                <div style="font-size: 0.8rem; color: var(--text-muted);">실물 디자인 및 구동 확인 (YouTube 공식 재생)</div>
-                <div style="font-size: 1.05rem; font-weight: 700; color: #ffffff;">{primaryVideo.title}</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">정밀 하드웨어 스펙 & 실사용 평가</div>
+                <div style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">{frontmatter.device}</div>
               </div>
-              <a 
-                href={`https://www.youtube.com/watch?v=${primaryVideo.youtube_id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style="background: #dc2626; color: #ffffff; font-size: 0.78rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;"
-              >
-                ▶ YouTube로 시청
-              </a>
             </div>
           </div>
         </div>
@@ -332,9 +311,9 @@ const jsonLd = {
             <span>📊 기기 프로필 & 평점</span>
           </div>
           
-          <div style="margin-bottom: 14px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+          <div style="margin-bottom: 14px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-surface);">
             <img 
-              src={`https://img.youtube.com/vi/${primaryVideo.youtube_id}/hqdefault.jpg`} 
+              src={officialPhoto} 
               alt={frontmatter.device}
               onerror={`this.onerror=null; this.src='${defaultTechImage}';`}
               style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;"
