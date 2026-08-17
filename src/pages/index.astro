@@ -18,7 +18,7 @@ const trendingPosts = koReviews.slice(1, 3);
 const feedPosts = koReviews.map((post: CollectionEntry<'reviews'>) => {
   const dev = devices.find((d: any) => d.id === post.slug);
   const vId = dev?.videos?.[0]?.youtube_id || 'TigCEb283aU';
-  const devImage = (dev as any)?.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80';
+  const devImage = (dev as any)?.image || `/images/devices/${post.slug}.jpg`;
   return {
     ...post,
     vId,
@@ -28,7 +28,7 @@ const feedPosts = koReviews.map((post: CollectionEntry<'reviews'>) => {
 });
 
 const featuredDev = devices.find((d: any) => d.id === featuredPost.slug);
-const featuredImage = (featuredDev as any)?.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80';
+const featuredImage = (featuredDev as any)?.image || `/images/devices/${featuredPost.slug}.jpg`;
 
 const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어러블'];
 ---
@@ -97,6 +97,7 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
                 src={featuredImage}
                 alt={featuredPost.data.device}
                 style="width: 100%; height: 100%; object-fit: cover;"
+                onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                 loading="eager"
               />
               <span class="bento-score-pill">
@@ -121,7 +122,7 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
           <div class="bento-trending-sidebar">
             {trendingPosts.map((post) => {
               const dev = devices.find((d: any) => d.id === post.slug);
-              const img = (dev as any)?.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80';
+              const img = (dev as any)?.image || `/images/devices/${post.slug}.jpg`;
               return (
                 <a href={`/reviews/${post.slug}`} class="bento-trending-card">
                   <div class="bento-trending-media" style="background: var(--bg-surface);">
@@ -129,6 +130,7 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
                       src={img}
                       alt={post.data.device}
                       style="width: 100%; height: 100%; object-fit: cover;"
+                      onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                       loading="lazy"
                     />
                     <span class="bento-trending-score">
@@ -175,6 +177,7 @@ const categories = ['전체', '스마트폰/IT', '노트북/PC', '음향/웨어�
                 src={post.devImage} 
                 alt={post.data.device}
                 style="width: 100%; height: 100%; object-fit: cover;"
+                onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                 loading="lazy" 
               />
               <span style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 0.9rem; border: 1px solid rgba(0, 242, 254, 0.3);">

@@ -18,7 +18,7 @@ const feedPosts = jaReviews.map((post: CollectionEntry<'reviews'>) => {
   const pureSlug = post.slug.replace('ja/', '');
   const dev = devices.find((d: any) => d.id === pureSlug);
   const vId = dev?.videos?.[0]?.youtube_id || 'TigCEb283aU';
-  const devImage = (dev as any)?.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80';
+  const devImage = (dev as any)?.image || `/images/devices/${pureSlug}.jpg`;
   return {
     ...post,
     pureSlug,
@@ -31,7 +31,7 @@ const feedPosts = jaReviews.map((post: CollectionEntry<'reviews'>) => {
 const trendingPostsMapped = trendingPosts.map((post: CollectionEntry<'reviews'>) => {
   const pureSlug = post.slug.replace('ja/', '');
   const dev = devices.find((d: any) => d.id === pureSlug);
-  const img = (dev as any)?.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80';
+  const img = (dev as any)?.image || `/images/devices/${pureSlug}.jpg`;
   return {
     ...post,
     pureSlug,
@@ -40,7 +40,7 @@ const trendingPostsMapped = trendingPosts.map((post: CollectionEntry<'reviews'>)
 });
 
 const featuredDev = devices.find((d: any) => d.id === featuredPost.slug.replace('ja/', ''));
-const featuredImage = (featuredDev as any)?.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80';
+const featuredImage = (featuredDev as any)?.image || `/images/devices/${featuredPost.slug.replace('ja/', '')}.jpg`;
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -100,6 +100,7 @@ const featuredImage = (featuredDev as any)?.image || 'https://images.unsplash.co
                 src={featuredImage}
                 alt={featuredPost.data.device}
                 style="width: 100%; height: 100%; object-fit: cover;"
+                onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                 loading="eager"
               />
               <span class="bento-score-pill">
@@ -129,6 +130,7 @@ const featuredImage = (featuredDev as any)?.image || 'https://images.unsplash.co
                     src={post.img}
                     alt={post.data.device}
                     style="width: 100%; height: 100%; object-fit: cover;"
+                    onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                     loading="lazy"
                   />
                   <span class="bento-trending-score">
@@ -158,7 +160,13 @@ const featuredImage = (featuredDev as any)?.image || 'https://images.unsplash.co
         {feedPosts.map((post: any) => (
           <a href={`/ja/reviews/${post.pureSlug}`} class="feed-card">
             <div class="feed-card-media" style="background: var(--bg-surface);">
-              <img src={post.devImage} alt={post.data.device} style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+              <img 
+                src={post.devImage} 
+                alt={post.data.device} 
+                style="width: 100%; height: 100%; object-fit: cover;" 
+                onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';" 
+                loading="lazy" 
+              />
               <span style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.85); color: var(--accent-cyan); padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 0.9rem;">
                 ★ {post.data.score}
               </span>

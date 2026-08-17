@@ -29,7 +29,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=BVaN-k60pfc"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-z-fold8/gallery/sec-galaxy-z-fold8-f966-sm-f966nzkakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-z-fold8.jpg"
   },
   {
     "id": "galaxy-z-flip8",
@@ -61,7 +61,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=UBQLi26JGnQ"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-z-flip8/gallery/sec-galaxy-z-flip8-f751-sm-f751nzkakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-z-flip8.jpg"
   },
   {
     "id": "galaxy-s26-ultra",
@@ -93,7 +93,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Y9GIwUvWn3E"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-s26-ultra/gallery/sec-galaxy-s26-ultra-s948-sm-s948nzkakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-s26-ultra.jpg"
   },
   {
     "id": "galaxy-s26-plus",
@@ -125,7 +125,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=j3j8D7YqEt4"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-s26-plus/gallery/sec-galaxy-s26-plus-s946-sm-s946nzkakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-s26-plus.jpg"
   },
   {
     "id": "galaxy-s26",
@@ -157,7 +157,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=TigCEb283aU"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-s26/gallery/sec-galaxy-s26-s941-sm-s941nzkakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-s26.jpg"
   },
   {
     "id": "pixel-10-pro-fold",
@@ -189,7 +189,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=isjiX59U4_Y"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-10-pro-fold.jpg"
   },
   {
     "id": "pixel-10-pro",
@@ -221,7 +221,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=6GIWapEhkCI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-10-pro.jpg"
   },
   {
     "id": "xiaomi-mix-fold-4",
@@ -253,7 +253,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=7Ws8-J81I9c"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-mix-fold-4.jpg"
   },
   {
     "id": "xiaomi-mix-flip",
@@ -285,7 +285,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=IvwvkeYpBKA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-mix-flip.jpg"
   },
   {
     "id": "vivo-x-fold4-pro",
@@ -317,7 +317,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=QY-9kUSY7Ok"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-x-fold4-pro.jpg"
   },
   {
     "id": "vivo-x200-ultra",
@@ -349,7 +349,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=g30kikFE2iA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-x200-ultra.jpg"
   },
   {
     "id": "oppo-find-x8-ultra",
@@ -381,7 +381,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=I_yVh7KmVBk"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-find-x8-ultra.jpg"
   },
   {
     "id": "oneplus-13r",
@@ -413,7 +413,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=4-DkYZYLAoM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-13r.jpg"
   },
   {
     "id": "honor-magic-7-pro",
@@ -445,7 +445,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=JZ-yNjGVHbU"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/honor-magic-7-pro.jpg"
   },
   {
     "id": "redmi-k80-pro",
@@ -477,7 +477,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Ws3mBq3cnok"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-k80-pro.jpg"
   },
   {
     "id": "galaxy-s25-ultra",
@@ -509,7 +509,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=aP93bntjRJg"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-s25-ultra/gallery/sec-galaxy-s25-ultra-s938-sm-s938nzkakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-s25-ultra.jpg"
   },
   {
     "id": "galaxy-s25-plus",
@@ -541,7 +541,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=4s_Aq_YXWEE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s25-plus.jpg"
   },
   {
     "id": "galaxy-s25",
@@ -573,7 +573,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=JEnFUkGHN5E"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s25.jpg"
   },
   {
     "id": "galaxy-z-fold7",
@@ -605,7 +605,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=vOy6kqVCgCg"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-z-fold7.jpg"
   },
   {
     "id": "galaxy-z-flip7",
@@ -637,7 +637,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=4xM1QWo0LCg"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-z-flip7.jpg"
   },
   {
     "id": "iphone-17-pro-max",
@@ -669,7 +669,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=UoXSitfFyDc"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-max-finish-select-2025?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/iphone-17-pro-max.jpg"
   },
   {
     "id": "iphone-17-pro",
@@ -701,7 +701,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=qvZ6km9hILg"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-17-pro.jpg"
   },
   {
     "id": "iphone-17-air",
@@ -733,7 +733,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=aKwJnvRJqRw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-17-air.jpg"
   },
   {
     "id": "iphone-17",
@@ -765,7 +765,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=j_LEuKPm3wk"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-2025?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/iphone-17.jpg"
   },
   {
     "id": "pixel-10-pro-xl",
@@ -797,7 +797,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=kYXvXrrwUfk"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-10-pro-xl.jpg"
   },
   {
     "id": "xiaomi-15-ultra",
@@ -829,7 +829,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=vCVO7oB6T1Y"
       }
     ],
-    "image": "https://i02.appmifile.com/522_operator_sg/27/02/2025/xiaomi-15-ultra-black.png"
+    "image": "/images/devices/xiaomi-15-ultra.jpg"
   },
   {
     "id": "xiaomi-15-pro",
@@ -861,7 +861,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=OgbscP56hBs"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-15-pro.jpg"
   },
   {
     "id": "xiaomi-15",
@@ -893,7 +893,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=OgbscP56hBs"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-15.jpg"
   },
   {
     "id": "vivo-x200-pro",
@@ -925,7 +925,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=JmB-lInADvg"
       }
     ],
-    "image": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1728987654321/x200-pro-titanium.png"
+    "image": "/images/devices/vivo-x200-pro.jpg"
   },
   {
     "id": "vivo-x200",
@@ -957,7 +957,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=g30kikFE2iA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-x200.jpg"
   },
   {
     "id": "iqoo-13",
@@ -989,7 +989,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=gVd8NAdPBlY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iqoo-13.jpg"
   },
   {
     "id": "oppo-find-x8-pro",
@@ -1021,7 +1021,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=8Z7tJFV2iqw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-find-x8-pro.jpg"
   },
   {
     "id": "oppo-find-x8",
@@ -1053,7 +1053,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=k3-dEgPkD8U"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-find-x8.jpg"
   },
   {
     "id": "oneplus-13",
@@ -1085,7 +1085,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=-kuG6RgL32c"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-13.jpg"
   },
   {
     "id": "huawei-mate-70-pro-plus",
@@ -1117,7 +1117,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=loc8pK6BsYM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/huawei-mate-70-pro-plus.jpg"
   },
   {
     "id": "huawei-pura-70-ultra",
@@ -1149,7 +1149,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=MAhBZp9YFoM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/huawei-pura-70-ultra.jpg"
   },
   {
     "id": "asus-rog-phone-9-pro",
@@ -1181,7 +1181,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=oU8__xfesPI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/asus-rog-phone-9-pro.jpg"
   },
   {
     "id": "sony-xperia-1-vii",
@@ -1213,7 +1213,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=p7th7hWFvGs"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/sony-xperia-1-vii.jpg"
   },
   {
     "id": "nothing-phone-3",
@@ -1245,7 +1245,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=VbzNkRxAFNI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/nothing-phone-3.jpg"
   },
   {
     "id": "galaxy-s24-ultra",
@@ -1277,7 +1277,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zaGM9YjHvSQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s24-ultra.jpg"
   },
   {
     "id": "galaxy-s24-plus",
@@ -1309,7 +1309,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=WLjYn3dTXwM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s24-plus.jpg"
   },
   {
     "id": "galaxy-s24",
@@ -1341,7 +1341,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=sDWeyVdXQwY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s24.jpg"
   },
   {
     "id": "galaxy-z-fold6",
@@ -1373,7 +1373,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=lIsASb_GL10"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-z-fold6/gallery/sec-galaxy-z-fold6-f956-sm-f956nzkakoo-thumb-541940989?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-z-fold6.jpg"
   },
   {
     "id": "galaxy-z-flip6",
@@ -1405,7 +1405,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=GNbgvG5ffvc"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-z-flip6/gallery/sec-galaxy-z-flip6-f741-sm-f741nzkakoo-thumb-541940989?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-z-flip6.jpg"
   },
   {
     "id": "galaxy-s24-fe",
@@ -1437,7 +1437,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=HotmiXh9euU"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s24-fe.jpg"
   },
   {
     "id": "galaxy-a55-5g",
@@ -1469,7 +1469,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ui1s9qhohe4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-a55-5g.jpg"
   },
   {
     "id": "iphone-16-pro-max",
@@ -1501,7 +1501,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=RavgTAaWzf0"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-deserttitanium?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/iphone-16-pro-max.jpg"
   },
   {
     "id": "iphone-16-pro",
@@ -1533,7 +1533,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=RavgTAaWzf0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-16-pro.jpg"
   },
   {
     "id": "iphone-16-plus",
@@ -1565,7 +1565,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=0JBqfj517io"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-16-plus.jpg"
   },
   {
     "id": "iphone-16",
@@ -1597,7 +1597,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Zol0pjuRccY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-16.jpg"
   },
   {
     "id": "pixel-9-pro-fold",
@@ -1629,7 +1629,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=8ktbiMdaCD0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-9-pro-fold.jpg"
   },
   {
     "id": "pixel-9-pro-xl",
@@ -1661,7 +1661,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=qEO8d-7z7X8"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-9-pro-xl.jpg"
   },
   {
     "id": "pixel-9-pro",
@@ -1693,7 +1693,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=qEO8d-7z7X8"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-9-pro.jpg"
   },
   {
     "id": "pixel-8a",
@@ -1725,7 +1725,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Lm-7sNrpv6g"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-8a.jpg"
   },
   {
     "id": "xiaomi-14-ultra",
@@ -1757,7 +1757,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=O7xSWkCiduk"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-14-ultra.jpg"
   },
   {
     "id": "redmi-k70-ultra",
@@ -1789,7 +1789,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=p6_gRjSEQbY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-k70-ultra.jpg"
   },
   {
     "id": "redmi-note-14-pro-plus",
@@ -1821,7 +1821,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=U-b4c1OSta0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-note-14-pro-plus.jpg"
   },
   {
     "id": "poco-f6-pro",
@@ -1853,7 +1853,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=gwfs4bKSFWk"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/poco-f6-pro.jpg"
   },
   {
     "id": "vivo-x100-ultra",
@@ -1885,7 +1885,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=l6vbFleHtv8"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-x100-ultra.jpg"
   },
   {
     "id": "vivo-x-fold3-pro",
@@ -1917,7 +1917,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pde91x06F0g"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-x-fold3-pro.jpg"
   },
   {
     "id": "oppo-find-x7-ultra",
@@ -1949,7 +1949,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=7W0OcU5sgmc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-find-x7-ultra.jpg"
   },
   {
     "id": "oneplus-12",
@@ -1981,7 +1981,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=TQnZBpDTm24"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-12.jpg"
   },
   {
     "id": "oneplus-open",
@@ -2013,7 +2013,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=MxsDNQccbnI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-open.jpg"
   },
   {
     "id": "honor-magic-6-pro",
@@ -2045,7 +2045,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=8aWEMKlzBs4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/honor-magic-6-pro.jpg"
   },
   {
     "id": "honor-magic-v3",
@@ -2077,7 +2077,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=0Vf60iElLIE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/honor-magic-v3.jpg"
   },
   {
     "id": "asus-rog-phone-8-pro",
@@ -2109,7 +2109,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=PZf2eeHPoMI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/asus-rog-phone-8-pro.jpg"
   },
   {
     "id": "sony-xperia-1-vi",
@@ -2141,7 +2141,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=9pas-b-kQUU"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/sony-xperia-1-vi.jpg"
   },
   {
     "id": "nothing-phone-2a-plus",
@@ -2173,7 +2173,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=n-Xyu_uxQ_o"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/nothing-phone-2a-plus.jpg"
   },
   {
     "id": "nothing-phone-2a",
@@ -2205,7 +2205,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=n-Xyu_uxQ_o"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/nothing-phone-2a.jpg"
   },
   {
     "id": "galaxy-s23-ultra",
@@ -2237,7 +2237,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=kZsa_6u9xiE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s23-ultra.jpg"
   },
   {
     "id": "galaxy-s23-plus",
@@ -2269,7 +2269,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=8WSY5duz2Lw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s23-plus.jpg"
   },
   {
     "id": "galaxy-s23",
@@ -2301,7 +2301,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=8WSY5duz2Lw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-s23.jpg"
   },
   {
     "id": "galaxy-z-fold5",
@@ -2333,7 +2333,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=etlhDkrSodY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-z-fold5.jpg"
   },
   {
     "id": "galaxy-z-flip5",
@@ -2365,7 +2365,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=SFT2BA5kQNw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-z-flip5.jpg"
   },
   {
     "id": "galaxy-a54-5g",
@@ -2397,7 +2397,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=9HITLVajIXw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-a54-5g.jpg"
   },
   {
     "id": "iphone-15-pro-max",
@@ -2429,7 +2429,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=rCqPL63APuc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-15-pro-max.jpg"
   },
   {
     "id": "iphone-15-pro",
@@ -2461,7 +2461,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=jKC_9pspbm0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-15-pro.jpg"
   },
   {
     "id": "iphone-15-plus",
@@ -2493,7 +2493,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=iVt71Y4QEaI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-15-plus.jpg"
   },
   {
     "id": "iphone-15",
@@ -2525,7 +2525,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=GtWhC-ITUsI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iphone-15.jpg"
   },
   {
     "id": "pixel-8-pro",
@@ -2557,7 +2557,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=mcG0YRcQIHs"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-8-pro.jpg"
   },
   {
     "id": "pixel-8",
@@ -2589,7 +2589,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Lm-7sNrpv6g"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-8.jpg"
   },
   {
     "id": "pixel-fold",
@@ -2621,7 +2621,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pfg6NVUp4ao"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-fold.jpg"
   },
   {
     "id": "pixel-7a",
@@ -2653,7 +2653,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=P5IntkUJ91g"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-7a.jpg"
   },
   {
     "id": "xiaomi-13-ultra",
@@ -2685,7 +2685,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=o6lIy5N1wiM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-13-ultra.jpg"
   },
   {
     "id": "xiaomi-13-pro",
@@ -2717,7 +2717,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=vpgQF0-nS68"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-13-pro.jpg"
   },
   {
     "id": "xiaomi-13",
@@ -2749,7 +2749,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=vpgQF0-nS68"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-13.jpg"
   },
   {
     "id": "redmi-k60-ultra",
@@ -2781,7 +2781,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pEFL-JQ5mgw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-k60-ultra.jpg"
   },
   {
     "id": "redmi-note-13-pro-plus",
@@ -2813,7 +2813,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=0T0u5VVlty4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-note-13-pro-plus.jpg"
   },
   {
     "id": "poco-f5-pro",
@@ -2845,7 +2845,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=iwqy4IVrsGo"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/poco-f5-pro.jpg"
   },
   {
     "id": "vivo-x90-pro-plus",
@@ -2877,7 +2877,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zyu545VOtMc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-x90-pro-plus.jpg"
   },
   {
     "id": "iqoo-11-pro",
@@ -2909,7 +2909,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=OiZqtv46KjU"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iqoo-11-pro.jpg"
   },
   {
     "id": "oppo-find-x6-pro",
@@ -2941,7 +2941,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zIqc-lW5RuM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-find-x6-pro.jpg"
   },
   {
     "id": "oneplus-11",
@@ -2973,7 +2973,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=uwUVieNLeL0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-11.jpg"
   },
   {
     "id": "huawei-mate-60-pro",
@@ -3005,7 +3005,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=9ui4Rbh1uog"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/huawei-mate-60-pro.jpg"
   },
   {
     "id": "honor-magic-5-pro",
@@ -3037,7 +3037,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=NSseEscwlwY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/honor-magic-5-pro.jpg"
   },
   {
     "id": "nothing-phone-2",
@@ -3069,7 +3069,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=btvTH4tM_Vg"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/nothing-phone-2.jpg"
   },
   {
     "id": "huawei-matepad-pro-13-2",
@@ -3101,7 +3101,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=bAGdZi0oNdQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/huawei-matepad-pro-13-2.jpg"
   },
   {
     "id": "google-pixel-tablet",
@@ -3133,7 +3133,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=-gWSDhkceLM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/google-pixel-tablet.jpg"
   },
   {
     "id": "huawei-mate-xt",
@@ -3165,7 +3165,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Vhy2IQbYrSo"
       }
     ],
-    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/gdm/products/phones/mate-xt-ultimate-design/images/kv/huawei-mate-xt-ultimate-design-kv.png"
+    "image": "/images/devices/huawei-mate-xt.jpg"
   },
   {
     "id": "m4-mac-mini",
@@ -3197,7 +3197,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Fweq1nf3Iec"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-202410-gallery-1?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/m4-mac-mini.jpg"
   },
   {
     "id": "macbook-air-m3",
@@ -3229,7 +3229,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=uQcrLIg71xQ"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20240216?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/macbook-air-m3.jpg"
   },
   {
     "id": "sony-wh-1000xm5",
@@ -3261,7 +3261,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=B2Plw3YuTHI"
       }
     ],
-    "image": "https://www.sony.co.kr/image/5d02da5df552836db894cead8a68f5f3?fmt=png-alpha&wid=1200"
+    "image": "/images/devices/sony-wh-1000xm5.jpg"
   },
   {
     "id": "airpods-pro-3",
@@ -3293,7 +3293,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=EMmKs8vMKhU"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-2-hero-select-202409?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/airpods-pro-3.jpg"
   },
   {
     "id": "ipad-pro-13-m4",
@@ -3325,7 +3325,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=PhlcRBo9qIQ"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-spaceblack?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/ipad-pro-13-m4.jpg"
   },
   {
     "id": "ipad-pro-11-m4",
@@ -3357,7 +3357,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pfpbZvE7gCI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/ipad-pro-11-m4.jpg"
   },
   {
     "id": "ipad-air-13-m2",
@@ -3389,7 +3389,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=E7XQjPOm-8E"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/ipad-air-13-m2.jpg"
   },
   {
     "id": "ipad-air-11-m2",
@@ -3421,7 +3421,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=QYjQJatmvuE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/ipad-air-11-m2.jpg"
   },
   {
     "id": "ipad-mini-7",
@@ -3453,7 +3453,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=sL2QolplV6U"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-mini-finish-select-gallery-202410-space-gray?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/ipad-mini-7.jpg"
   },
   {
     "id": "ipad-pro-12-9-m2",
@@ -3485,7 +3485,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=79bVIWyMRYQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/ipad-pro-12-9-m2.jpg"
   },
   {
     "id": "galaxy-tab-s10-ultra",
@@ -3517,7 +3517,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=nwoey2Yiwys"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-tab-s10-ultra/gallery/sec-galaxy-tab-s10-ultra-x920-sm-x920nzaakoo-thumb-543789012?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-tab-s10-ultra.jpg"
   },
   {
     "id": "galaxy-tab-s10-plus",
@@ -3549,7 +3549,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=xm0vSjeM-eM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-tab-s10-plus.jpg"
   },
   {
     "id": "galaxy-tab-s9-ultra",
@@ -3581,7 +3581,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=MhDYiwelu_I"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-tab-s9-ultra.jpg"
   },
   {
     "id": "galaxy-tab-s9",
@@ -3613,7 +3613,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=FULcNGXFi3I"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-tab-s9.jpg"
   },
   {
     "id": "galaxy-tab-s9-fe-plus",
@@ -3645,7 +3645,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=rmcWhPdqQFk"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-tab-s9-fe-plus.jpg"
   },
   {
     "id": "galaxy-tab-a9-plus",
@@ -3677,7 +3677,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=w5fUg2mSYvM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-tab-a9-plus.jpg"
   },
   {
     "id": "xiaomi-pad-7-pro",
@@ -3709,7 +3709,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=J300HbGvlDc"
       }
     ],
-    "image": "https://i02.appmifile.com/522_operator_sg/25/10/2024/xiaomi-pad-7-pro-gray.png"
+    "image": "/images/devices/xiaomi-pad-7-pro.jpg"
   },
   {
     "id": "xiaomi-pad-6s-pro",
@@ -3741,7 +3741,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=vUGNAqRwFKo"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-pad-6s-pro.jpg"
   },
   {
     "id": "vivo-pad-3-pro",
@@ -3773,7 +3773,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ybeBu17aLOM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/vivo-pad-3-pro.jpg"
   },
   {
     "id": "oneplus-pad-2",
@@ -3805,7 +3805,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Lpg9ljQSYnY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-pad-2.jpg"
   },
   {
     "id": "lenovo-legion-y700-2024",
@@ -3837,7 +3837,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pYVq79NEki4"
       }
     ],
-    "image": "https://p3-ofp.static.pub/fes/cms/2024/09/27/7z2n8n5lq4x5l9m9a5o2t9v7z3k4x8123456.png"
+    "image": "/images/devices/lenovo-legion-y700-2024.jpg"
   },
   {
     "id": "lenovo-legion-y700-2023",
@@ -3869,7 +3869,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=p-nKW66pNAw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/lenovo-legion-y700-2023.jpg"
   },
   {
     "id": "oppo-pad-3-pro",
@@ -3901,7 +3901,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=0mz-7L8AXLQ"
       }
     ],
-    "image": "https://image.oppo.com/content/dam/oppo/product-asset-library/pad/pad-3-pro/v1/assets/pad-3-pro-blue.png"
+    "image": "/images/devices/oppo-pad-3-pro.jpg"
   },
   {
     "id": "oppo-pad-3",
@@ -3933,7 +3933,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=IbJyzzQn0Xk"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-pad-3.jpg"
   },
   {
     "id": "oppo-pad-2",
@@ -3965,7 +3965,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=1KWDUDKlxb4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-pad-2.jpg"
   },
   {
     "id": "oppo-pad-neo",
@@ -3997,7 +3997,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zeJ69y7gFlI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oppo-pad-neo.jpg"
   },
   {
     "id": "lenovo-xiaoxin-pad-pro-13-gt",
@@ -4029,7 +4029,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=biJY1Y_Pumw"
       }
     ],
-    "image": "https://p4-ofp.static.pub/fes/cms/2024/07/15/4x5l9m9a5o2t9v7z3k4x87z2n8n5lq123456.png"
+    "image": "/images/devices/lenovo-xiaoxin-pad-pro-13-gt.jpg"
   },
   {
     "id": "lenovo-xiaoxin-pad-pro-13",
@@ -4061,7 +4061,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=0Hqyw-rKc1k"
       }
     ],
-    "image": "https://p2-ofp.static.pub/fes/cms/2024/06/18/v7z3k4x87z2n8n5lq4x5l9m9a5o2t9123456.png"
+    "image": "/images/devices/lenovo-xiaoxin-pad-pro-13.jpg"
   },
   {
     "id": "lenovo-xiaoxin-pad-pro-12-7-2025",
@@ -4093,7 +4093,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ttvsF6mJrUI"
       }
     ],
-    "image": "https://p1-ofp.static.pub/fes/cms/2024/07/22/3k4x87z2n8n5lq4x5l9m9a5o2t9v7z123456.png"
+    "image": "/images/devices/lenovo-xiaoxin-pad-pro-12-7-2025.jpg"
   },
   {
     "id": "lenovo-xiaoxin-pad-pro-12-7-2023",
@@ -4125,7 +4125,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Y2FfotFSuwc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/lenovo-xiaoxin-pad-pro-12-7-2023.jpg"
   },
   {
     "id": "lenovo-xiaoxin-pad-2024",
@@ -4157,7 +4157,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=xhyFF9uG-yY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/lenovo-xiaoxin-pad-2024.jpg"
   },
   {
     "id": "imuz-mupad-k11-plus",
@@ -4189,7 +4189,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=QpyGYnCHNx0"
       }
     ],
-    "image": "https://shop-phinf.pstatic.net/20240401_123/imuz_k11_plus.jpg"
+    "image": "/images/devices/imuz-mupad-k11-plus.jpg"
   },
   {
     "id": "imuz-mupad-k10-plus",
@@ -4221,7 +4221,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=jVXn7iO4EzQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/imuz-mupad-k10-plus.jpg"
   },
   {
     "id": "alldocube-iplay-80-mini-pro",
@@ -4253,7 +4253,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=eCOzLF4nZsM"
       }
     ],
-    "image": "https://www.alldocube.com/wp-content/uploads/2024/10/iplay60minipro_hero.png"
+    "image": "/images/devices/alldocube-iplay-80-mini-pro.jpg"
   },
   {
     "id": "alldocube-iplay-80-pro",
@@ -4285,7 +4285,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=eCOzLF4nZsM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/alldocube-iplay-80-pro.jpg"
   },
   {
     "id": "alldocube-iplay-70-mini-pro",
@@ -4317,7 +4317,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=VVt3LuQ4aho"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/alldocube-iplay-70-mini-pro.jpg"
   },
   {
     "id": "alldocube-iplay-70-pro",
@@ -4349,7 +4349,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=3233SX5rRr0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/alldocube-iplay-70-pro.jpg"
   },
   {
     "id": "alldocube-iplay-60-mini-pro",
@@ -4381,7 +4381,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=1PFV_pFsOqM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/alldocube-iplay-60-mini-pro.jpg"
   },
   {
     "id": "alldocube-iplay-50-mini-pro-nfe",
@@ -4413,7 +4413,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=L-3itJWZxMY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/alldocube-iplay-50-mini-pro-nfe.jpg"
   },
   {
     "id": "redmi-pad-pro",
@@ -4445,7 +4445,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=r3TISddJ0-M"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-pad-pro.jpg"
   },
   {
     "id": "poco-pad",
@@ -4477,7 +4477,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=JdLkiXrTagA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/poco-pad.jpg"
   },
   {
     "id": "redmi-pad-se",
@@ -4509,7 +4509,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=hfwrbPQ9Joo"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/redmi-pad-se.jpg"
   },
   {
     "id": "boox-palma-2",
@@ -4541,7 +4541,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=iTozxW3F7NU"
       }
     ],
-    "image": "https://shop.boox.com/cdn/shop/files/BOOX-Palma-2-White-Black.png?v=1730198765"
+    "image": "/images/devices/boox-palma-2.jpg"
   },
   {
     "id": "boox-palma",
@@ -4573,7 +4573,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=gRP_SIExgho"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/boox-palma.jpg"
   },
   {
     "id": "boox-note-air4-c",
@@ -4605,7 +4605,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=wIXFkMr8UeE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/boox-note-air4-c.jpg"
   },
   {
     "id": "boox-go-color-7",
@@ -4637,7 +4637,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=GgIXoExDq4I"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/boox-go-color-7.jpg"
   },
   {
     "id": "boox-go-10-3",
@@ -4669,7 +4669,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Cy6xmvrmFu0"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/boox-go-10-3.jpg"
   },
   {
     "id": "boox-go-6",
@@ -4701,7 +4701,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ll6kXfpjoQI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/boox-go-6.jpg"
   },
   {
     "id": "boox-page",
@@ -4733,7 +4733,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pE1_24KlzQE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/boox-page.jpg"
   },
   {
     "id": "moaan-inkpalm-plus",
@@ -4765,7 +4765,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Rm7PJa5SpQA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/moaan-inkpalm-plus.jpg"
   },
   {
     "id": "moaan-inkpalm-5",
@@ -4797,7 +4797,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=oe8bcWuOmcQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/moaan-inkpalm-5.jpg"
   },
   {
     "id": "moaan-mix-7",
@@ -4829,7 +4829,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=6aRZiciDnuc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/moaan-mix-7.jpg"
   },
   {
     "id": "hisense-a9",
@@ -4861,7 +4861,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=wOemFgiWQaM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/hisense-a9.jpg"
   },
   {
     "id": "hisense-touch",
@@ -4893,7 +4893,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=97XHxagO4vY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/hisense-touch.jpg"
   },
   {
     "id": "bigme-b751c",
@@ -4925,7 +4925,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=e4Qh_JvtVaY"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/bigme-b751c.jpg"
   },
   {
     "id": "bigme-hibreak",
@@ -4957,7 +4957,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Un5cNJlOyPQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/bigme-hibreak.jpg"
   },
   {
     "id": "kindle-colorsoft",
@@ -4989,7 +4989,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=79U96TGFVIQ"
       }
     ],
-    "image": "https://m.media-amazon.com/images/I/71WkK+bW-UL._AC_SL1500_.jpg"
+    "image": "/images/devices/kindle-colorsoft.jpg"
   },
   {
     "id": "kindle-paperwhite-12th",
@@ -5021,7 +5021,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=XZ0pMbshy3o"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/kindle-paperwhite-12th.jpg"
   },
   {
     "id": "kindle-scribe",
@@ -5053,7 +5053,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=62JMxm81XUA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/kindle-scribe.jpg"
   },
   {
     "id": "kobo-libra-colour",
@@ -5085,7 +5085,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=CszBeon1qlA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/kobo-libra-colour.jpg"
   },
   {
     "id": "kobo-clara-colour",
@@ -5117,7 +5117,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pPLKTRQmNPo"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/kobo-clara-colour.jpg"
   },
   {
     "id": "crema-motif",
@@ -5149,7 +5149,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zOD3NDSQWPc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/crema-motif.jpg"
   },
   {
     "id": "ridipaper-4",
@@ -5181,7 +5181,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=fVvrMIt0yKc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/ridipaper-4.jpg"
   },
   {
     "id": "meebook-m6",
@@ -5213,7 +5213,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Mfkwgl_shtM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/meebook-m6.jpg"
   },
   {
     "id": "meebook-m7",
@@ -5245,7 +5245,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=lSK3OjMgML8"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/meebook-m7.jpg"
   },
   {
     "id": "iflytek-air-2",
@@ -5277,7 +5277,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ZSVcJb7WRGw"
       }
     ],
-    "image": "https://img14.360buyimg.com/n0/jfs/t1/198765/23/4567/89123/iflytek-air2.jpg"
+    "image": "/images/devices/iflytek-air-2.jpg"
   },
   {
     "id": "iflytek-x3-pro",
@@ -5309,7 +5309,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=w8_3VrYfLO4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/iflytek-x3-pro.jpg"
   },
   {
     "id": "hanvon-clear-7",
@@ -5341,7 +5341,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=i5LDgew2h7M"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/hanvon-clear-7.jpg"
   },
   {
     "id": "hanvon-clear-6",
@@ -5373,7 +5373,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=8dSJYeCfSYo"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/hanvon-clear-6.jpg"
   },
   {
     "id": "hanvon-n10-pro",
@@ -5405,7 +5405,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=VobqiPc12kM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/hanvon-n10-pro.jpg"
   },
   {
     "id": "supernote-nomad-a6x2",
@@ -5437,7 +5437,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=hV-6dR7V6Iw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/supernote-nomad-a6x2.jpg"
   },
   {
     "id": "remarkable-paper-pro",
@@ -5469,7 +5469,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=f5mND1I7Bf8"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/remarkable-paper-pro.jpg"
   },
   {
     "id": "remarkable-2",
@@ -5501,7 +5501,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=YlF-TEQgt3Y"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/remarkable-2.jpg"
   },
   {
     "id": "pocketbook-era-color",
@@ -5533,7 +5533,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Y8G9L9LUewI"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pocketbook-era-color.jpg"
   },
   {
     "id": "mooink-plus-2c",
@@ -5565,7 +5565,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=VC2T6rQFZZA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/mooink-plus-2c.jpg"
   },
   {
     "id": "apple-watch-ultra-2",
@@ -5598,7 +5598,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=WLFhTyyPhKc"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-ultra2-black-titanium-202409?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/apple-watch-ultra-2.jpg"
   },
   {
     "id": "apple-watch-series-10",
@@ -5631,7 +5631,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=4r_X2khXyXU"
       }
     ],
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-s10-jetblack-202409?wid=1200&hei=630&fmt=jpeg&qlt=95"
+    "image": "/images/devices/apple-watch-series-10.jpg"
   },
   {
     "id": "galaxy-watch-ultra",
@@ -5664,7 +5664,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zsw-aAUP7U8"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-watch-ultra/gallery/sec-galaxy-watch-ultra-l705-sm-l705fzkakoo-thumb-541940989?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-watch-ultra.jpg"
   },
   {
     "id": "galaxy-watch-7",
@@ -5697,7 +5697,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=a7F5xXu1aKM"
       }
     ],
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/sec/galaxy-watch-7/gallery/sec-galaxy-watch7-l310-sm-l310nzkakoo-thumb-541940989?$PNG-ORIGIN$"
+    "image": "/images/devices/galaxy-watch-7.jpg"
   },
   {
     "id": "galaxy-fit-3",
@@ -5730,7 +5730,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ODzgTIZmth4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/galaxy-fit-3.jpg"
   },
   {
     "id": "garmin-fenix-8",
@@ -5763,7 +5763,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=4dpreJ9wUs8"
       }
     ],
-    "image": "https://res.garmin.com/en/products/010-02904-00/v/cf-lg.jpg"
+    "image": "/images/devices/garmin-fenix-8.jpg"
   },
   {
     "id": "garmin-forerunner-965",
@@ -5796,7 +5796,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=vlu-mnorEVc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/garmin-forerunner-965.jpg"
   },
   {
     "id": "garmin-forerunner-265",
@@ -5829,7 +5829,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Y7pt0qeBwIg"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/garmin-forerunner-265.jpg"
   },
   {
     "id": "xiaomi-watch-s4-sport",
@@ -5862,7 +5862,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=B8iYcQVh3MM"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-watch-s4-sport.jpg"
   },
   {
     "id": "xiaomi-smart-band-9-pro",
@@ -5895,7 +5895,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=Eah8Qu0RE6U"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/xiaomi-smart-band-9-pro.jpg"
   },
   {
     "id": "amazfit-t-rex-3",
@@ -5928,7 +5928,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=thCwR6AQw7c"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-t-rex-3.jpg"
   },
   {
     "id": "amazfit-balance",
@@ -5961,7 +5961,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=422JnUiRw-k"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-balance.jpg"
   },
   {
     "id": "huawei-watch-gt-5-pro",
@@ -5994,7 +5994,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=cJlO9c5BAXo"
       }
     ],
-    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/gdm/products/wearables/watch-gt5-pro/images/kv/huawei-watch-gt5-pro-kv.png"
+    "image": "/images/devices/huawei-watch-gt-5-pro.jpg"
   },
   {
     "id": "huawei-watch-d2",
@@ -6027,7 +6027,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=81hJVnVtS8Y"
       }
     ],
-    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/gdm/products/wearables/watch-d2/images/kv/huawei-watch-d2-kv.png"
+    "image": "/images/devices/huawei-watch-d2.jpg"
   },
   {
     "id": "pixel-watch-3",
@@ -6060,7 +6060,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=DhwC4V3ryO4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/pixel-watch-3.jpg"
   },
   {
     "id": "oneplus-watch-2",
@@ -6093,7 +6093,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=7DfXKkvjW-E"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/oneplus-watch-2.jpg"
   },
   {
     "id": "amazfit-cheetah-pro",
@@ -6126,7 +6126,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=up8go6zeADw"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-cheetah-pro.jpg"
   },
   {
     "id": "amazfit-cheetah-round",
@@ -6159,7 +6159,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=zmAL4X0VOrU"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-cheetah-round.jpg"
   },
   {
     "id": "amazfit-t-rex-ultra",
@@ -6192,7 +6192,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=ruyEcih_cSA"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-t-rex-ultra.jpg"
   },
   {
     "id": "amazfit-t-rex-2",
@@ -6225,7 +6225,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=yKgzr73djf4"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-t-rex-2.jpg"
   },
   {
     "id": "amazfit-gtr-4",
@@ -6258,7 +6258,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=J2_L8KnfI30"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-gtr-4.jpg"
   },
   {
     "id": "amazfit-gts-4",
@@ -6291,7 +6291,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=pHBbev9w8wE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-gts-4.jpg"
   },
   {
     "id": "amazfit-gts-4-mini",
@@ -6324,7 +6324,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=-nBjdp4EYc8"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-gts-4-mini.jpg"
   },
   {
     "id": "amazfit-active",
@@ -6357,7 +6357,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=6gnWz_mWYWE"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-active.jpg"
   },
   {
     "id": "amazfit-active-edge",
@@ -6390,7 +6390,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=K123eTf5LcQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-active-edge.jpg"
   },
   {
     "id": "amazfit-bip-5",
@@ -6423,7 +6423,7 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=B8Z9W6htIQQ"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-bip-5.jpg"
   },
   {
     "id": "amazfit-band-7",
@@ -6456,6 +6456,6 @@
         "direct_watch_url": "https://www.youtube.com/watch?v=-7K_ePjVWjc"
       }
     ],
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
+    "image": "/images/devices/amazfit-band-7.jpg"
   }
 ]
