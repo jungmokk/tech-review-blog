@@ -95,11 +95,10 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
         <div class="bento-hero-grid">
           <!-- Featured Large Card -->
           <a href={`/ja/reviews/${featuredPost.slug.replace('ja/', '')}`} class="bento-featured-card">
-            <div class="bento-featured-media" style="background: var(--bg-surface);">
+            <div class="bento-featured-media">
               <img 
                 src={featuredImage}
                 alt={featuredPost.data.device}
-                style="width: 100%; height: 100%; object-fit: cover;"
                 onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                 loading="eager"
               />
@@ -125,11 +124,10 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
           <div class="bento-trending-sidebar">
             {trendingPostsMapped.map((post: any) => (
               <a href={`/ja/reviews/${post.pureSlug}`} class="bento-trending-card">
-                <div class="bento-trending-media" style="background: var(--bg-surface);">
+                <div class="bento-trending-media">
                   <img 
                     src={post.img}
                     alt={post.data.device}
-                    style="width: 100%; height: 100%; object-fit: cover;"
                     onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';"
                     loading="lazy"
                   />
@@ -159,11 +157,10 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
       <div class="reviews-grid-feed">
         {feedPosts.map((post: any) => (
           <a href={`/ja/reviews/${post.pureSlug}`} class="feed-card">
-            <div class="feed-card-media" style="background: var(--bg-surface);">
+            <div class="feed-card-media">
               <img 
                 src={post.devImage} 
                 alt={post.data.device} 
-                style="width: 100%; height: 100%; object-fit: cover;" 
                 onerror="this.onerror=null; this.src='/images/devices/category-default.jpg';" 
                 loading="lazy" 
               />

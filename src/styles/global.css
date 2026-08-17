@@ -487,14 +487,29 @@ a:hover {
 
 .bento-featured-media {
   position: relative;
-  height: 300px;
+  height: 320px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);
+  padding: 20px;
+}
+
+[data-theme="light"] .bento-featured-media {
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%) !important;
 }
 
 .bento-featured-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 280px;
+  object-fit: contain !important;
+  transition: transform 0.3s ease;
+}
+
+.bento-featured-card:hover .bento-featured-media img {
+  transform: scale(1.04);
 }
 
 .bento-score-pill {
@@ -615,12 +630,27 @@ a:hover {
   width: 180px;
   min-width: 180px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);
+  padding: 12px;
+}
+
+[data-theme="light"] .bento-trending-media {
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%) !important;
 }
 
 .bento-trending-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 140px;
+  object-fit: contain !important;
+  transition: transform 0.3s ease;
+}
+
+.bento-trending-card:hover .bento-trending-media img {
+  transform: scale(1.06);
 }
 
 .bento-trending-score {
@@ -740,14 +770,29 @@ a:hover {
 .feed-card-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);
+  padding: 16px;
+}
+
+[data-theme="light"] .feed-card-media {
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%) !important;
 }
 
 .feed-card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 180px;
+  object-fit: contain !important;
+  transition: transform 0.3s ease;
+}
+
+.feed-card:hover .feed-card-media img {
+  transform: scale(1.05);
 }
 
 .feed-card-content {
