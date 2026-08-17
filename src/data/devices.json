@@ -4010,7 +4010,7 @@
     "release_date": "2025-03",
     "category": "Gaming Tablet",
     "specs": {
-      "ap": "Qualcomm Snapdragon 8 Elite (4nm 플래그십 코어)",
+      "ap": "Qualcomm Snapdragon 8 Elite (3nm TSMC 플래그십 코어)",
       "display": "13인치 3.5K 초고해상도 (3504 x 2190, 144Hz)",
       "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB",
       "camera": "1300만 후면(AF/플래시) + 800만 전면",
