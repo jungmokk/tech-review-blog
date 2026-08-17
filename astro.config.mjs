@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tech-review-blog.vercel.app',
+  site: 'https://tech.thesinoreport.com',
   integrations: [mdx()],
   i18n: {
     defaultLocale: 'ko',
