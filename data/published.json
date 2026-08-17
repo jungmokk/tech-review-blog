@@ -1,13 +1,23 @@
 {
   "published_devices": [
-    "M4 Mac Mini",
-    "Galaxy S25 Ultra",
-    "AirPods Pro 3",
-    "M4 Mac Mini",
-    "Galaxy S25 Ultra",
-    "AirPods Pro 3",
-    "갤럭시 Z 폴드8",
-    "갤럭시 Z 폴드8",
-    "OpenAI reportedly disbanded its"
+    "galaxy-s26-ultra",
+    "galaxy-s25-ultra",
+    "galaxy-z-fold8",
+    "galaxy-z-flip8",
+    "iphone-17-pro-max",
+    "iphone-16-pro-max",
+    "m4-mac-mini",
+    "macbook-air-m3",
+    "airpods-pro-3",
+    "ipad-pro-13-m4",
+    "ipad-mini-7",
+    "galaxy-tab-s10-ultra",
+    "lenovo-legion-y700-2024",
+    "lenovo-xiaoxin-pad-pro-13",
+    "huawei-mate-xt",
+    "vivo-x200-pro",
+    "xiaomi-15-ultra",
+    "boox-palma-2",
+    "kindle-colorsoft"
   ]
 }
