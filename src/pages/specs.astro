@@ -483,43 +483,43 @@ const years = ['전체', '2026', '2025', '2024', '2023', '2022', '2020'];
       detailModalBody.innerHTML = `
         <div style="margin-bottom: 24px;">
           <span class="badge">${item.device_type === '태블릿' ? '📟 태블릿' : '📱 스마트폰'} • ${item.brand_kr} • ${item.release_date}</span>
-          <h2 style="font-size: 1.8rem; color: #ffffff; margin: 8px 0;">${item.name} (${item.name_kr})</h2>
+          <h2 style="font-size: 1.8rem; color: var(--text-main); margin: 8px 0;">${item.name} (${item.name_kr})</h2>
           <p style="color: var(--text-muted); font-size: 0.95rem;">분류: ${item.category} • 공식 출시 가격: <strong style="color: var(--accent-cyan);">${item.specs.price_krw}</strong></p>
         </div>
 
         <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
           <tbody>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan); width: 25%;">⚡ 프로세서 (AP/칩셋)</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.ap}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.ap}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🖥️ 디스플레이</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.display}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.display}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💾 메모리 & 스토리지</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.ram_storage}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.ram_storage}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📷 카메라 시스템</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.camera}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.camera}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🔋 배터리 & 충전</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.battery}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.battery}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📐 규격 & 무게</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.dimensions_weight}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.dimensions_weight}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🛡️ OS & 특징</td>
-              <td style="padding: 12px; color: #f1f5f9;">${item.specs.os_durability}</td>
+              <td style="padding: 12px; color: var(--text-main);">${item.specs.os_durability}</td>
             </tr>
             <tr>
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💰 출시 가격</td>
-              <td style="padding: 12px; color: #f1f5f9; font-weight: 700;">${item.specs.price_krw}</td>
+              <td style="padding: 12px; color: var(--text-main); font-weight: 700;">${item.specs.price_krw}</td>
             </tr>
           </tbody>
         </table>
@@ -591,51 +591,51 @@ const years = ['전체', '2026', '2025', '2024', '2023', '2022', '2020'];
           <thead>
             <tr style="background: rgba(0, 242, 254, 0.15); border-bottom: 2px solid var(--accent-cyan);">
               <th style="padding: 14px; text-align: left; color: var(--accent-cyan); width: 22%;">스펙 비교 항목</th>
-              <th style="padding: 14px; text-align: left; color: #ffffff; width: 39%; font-size: 1.1rem;">
+              <th style="padding: 14px; text-align: left; color: var(--text-main); width: 39%; font-size: 1.1rem;">
                 <div>${itemA.name}</div>
                 <div style="font-size: 0.8rem; color: var(--text-muted);">${itemA.device_type || ''} • ${itemA.brand_kr} • ${itemA.release_date}</div>
               </th>
-              <th style="padding: 14px; text-align: left; color: #ffffff; width: 39%; font-size: 1.1rem;">
+              <th style="padding: 14px; text-align: left; color: var(--text-main); width: 39%; font-size: 1.1rem;">
                 <div>${itemB.name}</div>
                 <div style="font-size: 0.8rem; color: var(--text-muted);">${itemB.device_type || ''} • ${itemB.brand_kr} • ${itemB.release_date}</div>
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">⚡ 프로세서 (AP/칩셋)</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.ap}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.ap}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.ap}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.ap}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🖥️ 디스플레이</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.display}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.display}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.display}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.display}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💾 메모리 & 용량</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.ram_storage}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.ram_storage}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.ram_storage}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.ram_storage}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📷 카메라 시스템</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.camera}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.camera}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.camera}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.camera}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🔋 배터리 & 충전</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.battery}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.battery}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.battery}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.battery}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">📐 규격 & 무게</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.dimensions_weight}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.dimensions_weight}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.dimensions_weight}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.dimensions_weight}</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">🛡️ OS & 특징</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemA.specs.os_durability}</td>
-              <td style="padding: 12px; color: #f1f5f9;">${itemB.specs.os_durability}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemA.specs.os_durability}</td>
+              <td style="padding: 12px; color: var(--text-main);">${itemB.specs.os_durability}</td>
             </tr>
             <tr>
               <td style="padding: 12px; font-weight: 700; color: var(--accent-cyan);">💰 출시 가격</td>

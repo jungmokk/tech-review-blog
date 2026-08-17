@@ -168,7 +168,7 @@ const jsonLd = {
         <div class="review-meta">
           <span>📅 {frontmatter.date}</span>
           <span>•</span>
-          <span>기기명: <strong style="color: #ffffff;">{frontmatter.device}</strong></span>
+          <span>기기명: <strong style="color: var(--text-main); font-weight: 800;">{frontmatter.device}</strong></span>
           <span>•</span>
           <span>⏱️ 약 4분 심층 분석</span>
         </div>
@@ -344,12 +344,12 @@ const jsonLd = {
           <div class="score-badge-large">
             <div>
               <div style="font-size: 0.82rem; color: var(--text-muted);">에디터스 평점</div>
-              <div style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">{frontmatter.device}</div>
+              <div style="font-size: 1.1rem; font-weight: 800; color: var(--text-main);">{frontmatter.device}</div>
             </div>
             <div class="score-num">{frontmatter.score}</div>
           </div>
 
-          <div style="font-size: 0.85rem; color: #94a3b8; margin: 12px 0; line-height: 1.5; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+          <div style="font-size: 0.85rem; color: var(--text-main); margin: 12px 0; line-height: 1.6; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
             <div>⚡ <strong>AP:</strong> {matchedDevice?.specs?.ap || '플래그십 프로세서'}</div>
             <div style="margin-top: 4px;">🖥️ <strong>화면:</strong> {matchedDevice?.specs?.display?.slice(0, 30) || '고해상도 패널'}...</div>
             <div style="margin-top: 4px;">💰 <strong>가격:</strong> {matchedDevice?.specs?.price_krw || '시세 기준'}</div>
