@@ -28,14 +28,24 @@
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     color: var(--text-main);
-    padding: 8px 16px;
+    padding: 7px 12px;
     border-radius: var(--radius-sm);
-    font-size: 1rem;
+    font-size: 0.88rem;
     font-weight: 700;
     cursor: pointer;
     outline: none;
     transition: all 0.2s ease;
     font-family: inherit;
+    white-space: nowrap;
+    max-width: 140px;
+  }
+
+  @media (max-width: 768px) {
+    .lang-select {
+      padding: 5px 8px;
+      font-size: 0.82rem;
+      max-width: 110px;
+    }
   }
 
   .lang-select:hover,
