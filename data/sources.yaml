@@ -1,3 +1,4 @@
+# Targeted Global & Korean Tech Media RSS Sources
 rss_sources:
   - name: "The Verge Tech"
     url: "https://www.theverge.com/rss/index.xml"
@@ -7,11 +8,37 @@ rss_sources:
     url: "https://9to5mac.com/feed/"
   - name: "Wccftech"
     url: "https://wccftech.com/feed/"
+  - name: "Android Authority"
+    url: "https://www.androidauthority.com/feed/"
+  - name: "Engadget"
+    url: "https://www.engadget.com/rss.xml"
 
+# Targeted Top Tech Creators (YouTube Feeds)
 youtube_channels:
+  # Korean Tech Creators
+  - name: "ITSub잇섭"
+    channel_id: "UCdUcjkyZtf-1WJyPPiETF1g"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCdUcjkyZtf-1WJyPPiETF1g"
+  - name: "뻘짓연구소"
+    channel_id: "UCq3w1Jue_xLp974E6e1e_g"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCq3w1Jue_xLp974E6e1e_g"
+  - name: "주연 ZUYONI"
+    channel_id: "UC5p_VvLzLpWpL0c6v0v8vbw"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC5p_VvLzLpWpL0c6v0v8vbw"
+  - name: "UNDERkg"
+    channel_id: "UCgAkyFqE8jDqH3x_r36oMew"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCgAkyFqE8jDqH3x_r36oMew"
+  - name: "테크몽"
+    channel_id: "UCVdG_i6aL3mB_FvP8g9o6qA"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCVdG_i6aL3mB_FvP8g9o6qA"
+
+  # Global Top Tech Creators
   - name: "MKBHD"
     channel_id: "UCBJycsmduvYEL83R_U4JriQ"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ"
   - name: "Dave2D"
     channel_id: "UCVYamHliCI9rw1tHR1xbkfw"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCVYamHliCI9rw1tHR1xbkfw"
   - name: "Linus Tech Tips"
     channel_id: "UCXuqSBlHAE6Xw-yeJA0Tunw"
+    rss_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw"
