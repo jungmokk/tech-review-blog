@@ -3,17 +3,18 @@ name: Automated Tech Review Generation & Deploy
 on:
   schedule:
     - cron: '0 0 * * *' # 매일 한국 시간 오전 9시 (UTC 00:00)
+    - cron: '0 9 * * *' # 매일 한국 시간 오후 6시 (UTC 09:00)
   workflow_dispatch: # 수동 실행 버튼 지원
     inputs:
       device:
-        description: '리뷰를 생성할 특정 기기명 (예: 갤럭시 Z 폴드8, M4 Mac Mini / 비워둘 경우 RSS 자동 감지)'
+        description: '리뷰를 생성할 특정 기기명 (예: Galaxy S26 Ultra / 비워둘 경우 RSS 및 미발행 DB 큐 자동 순차 발행)'
         required: false
-        default: '갤럭시 Z 폴드8'
+        default: ''
         type: string
       force:
         description: '이미 발행된 기기라도 강제 재생성 여부'
         required: false
-        default: true
+        default: false
         type: boolean
 
 jobs:

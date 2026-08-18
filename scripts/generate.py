@@ -103,16 +103,29 @@ def main():
                     break
         
         if not target_matched_dev:
-            print("\nℹ️ [Pipeline] 수집된 RSS 피드 중 아직 발행되지 않은 공인 하드웨어 기기가 없습니다. 생성을 안전하게 종료합니다.")
-            return
-
-    dev_id = target_matched_dev.get("id")
-    dev_name = target_matched_dev.get("name_kr") or target_matched_dev.get("name")
-    
-    # 중복 체크
-    if dev_id in published_data.get("published_devices", []) and not args.force:
-        print(f"[Pipeline] '{dev_name}' ({dev_id})는 이미 발행된 기기입니다. (--force 옵션으로 재발행 가능)")
-        return
+            print("\nℹ️ [Pipeline] RSS 피드에서 오늘 날짜의 미발행 공인 기기를 찾지 못했습니다.")
+            print("🔄 [Pipeline Fallback Queue] 201종 공인 하드웨어 DB에서 최신 미발행 기기를 자동으로 선정합니다...")
+            
+            # published_devices에 없는 기기 필터링
+            unpublished = [
+                d for d in devices_db 
+                if d.get("id") not in published_data.get("published_devices", [])
+            ]
+            
+            if unpublished:
+                # 최신 출시 연도(2026 -> 2025) 및 주요 카테고리 우선 정렬
+                def sort_priority(d):
+                    yr = d.get("release_year") or 2020
+                    # 스마트폰/폴더블/태블릿 우선순위 가중치
+                    cat_weight = 3 if d.get("category") in ["Foldable", "Flagship", "Smartphone"] else 2
+                    return (yr, cat_weight)
+                
+                unpublished.sort(key=sort_priority, reverse=True)
+                target_matched_dev = unpublished[0]
+                print(f"🎯 [Fallback Queue SELECTED] '{target_matched_dev['name']}' ({target_matched_dev['id']}, {target_matched_dev.get('release_year')}년) 자동 선정 완료!")
+            else:
+                print("🎉 [Pipeline Complete] 201종 모든 공인 하드웨어 기기의 리뷰가 이미 발행 완료되었습니다!")
+                return
 
     print(f"\n🚀 [Pipeline START] 공인 기기 '{dev_name}' ({dev_id}) 정밀 스펙 기반 리뷰 생성 시작...")
     
@@ -149,6 +162,14 @@ def main():
         published_data.setdefault("published_devices", []).append(dev_id)
     with open(published_file, "w", encoding="utf-8") as f:
         json.dump(published_data, f, ensure_ascii=False, indent=2)
+
+    # 다국어(en, ja) 리뷰 자동 동기화 생성
+    try:
+        print("\n🌐 [Multilingual Sync] 영어 및 일본어 글로벌 에디션 리뷰 동시 생성 중...")
+        import subprocess
+        subprocess.run([sys.executable, "scripts/generate_multilingual_reviews.py"], check=True)
+    except Exception as e:
+        print(f"⚠️ [Multilingual Sync Warning] 다국어 생성 중 경고: {e}")
 
     print(f"\n🎉 [Pipeline SUCCESS] 100% 팩트 검증 완료된 공인 리뷰가 생성되었습니다: {file_path}")
 
