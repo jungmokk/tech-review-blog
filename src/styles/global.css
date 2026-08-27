@@ -1515,6 +1515,19 @@ h1, h2, h3, h4, h5, h6,
   backdrop-filter: blur(12px);
 }
 
+.sidebar-ad-card {
+  padding: 12px !important;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.adsense-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
 .sidebar-title {
   font-size: 1.15rem;
   font-weight: 700;

@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import GoogleAdSense from '../components/GoogleAdSense.astro';
+import AdUnit from '../components/AdUnit.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import devicesData from '../data/devices.json';
 import curatedVideosData from '../data/curated_exact_videos.json';
@@ -357,6 +358,9 @@ const readingTime = frontmatter.readingTime || 4;
             </div>
           </section>
         )}
+
+        <!-- In-Article Bottom AdUnit -->
+        <AdUnit format="horizontal" minHeight="120px" label="SPONSORED RECOMMENDATION" />
       </article>
 
       <!-- Sticky Sidebar (Right Column for Desktop) -->
@@ -403,6 +407,11 @@ const readingTime = frontmatter.readingTime || 4;
           </a>
         </div>
 
+        <!-- Google AdSense Primary Sidebar Banner Card -->
+        <div class="sidebar-card sidebar-ad-card" style="padding: 12px 8px; text-align: center;">
+          <AdUnit format="rectangle" minHeight="250px" label="SPONSORED" />
+        </div>
+
         <!-- Share Widget -->
         <div class="sidebar-card">
           <div class="sidebar-title">
@@ -437,6 +446,11 @@ const readingTime = frontmatter.readingTime || 4;
             </div>
           </div>
         )}
+
+        <!-- Google AdSense Secondary Sticky Sidebar Banner -->
+        <div class="sidebar-card sidebar-ad-card" style="padding: 12px 8px; text-align: center; position: sticky; top: 80px; z-index: 10;">
+          <AdUnit format="vertical" minHeight="300px" label="ADVERTISEMENT" />
+        </div>
       </aside>
     </div>
   </main>
