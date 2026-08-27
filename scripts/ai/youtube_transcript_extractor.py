@@ -106,27 +106,23 @@ def search_and_extract_5_youtube_transcripts(device_name: str, english_name: str
         except Exception as e:
             pass
 
-    # 2. 트랜스크립트 다운로드 및 텍스트 정밀 분석
+    # 2. 트랜스크립트 병렬 다운로드 및 텍스트 정밀 분석 (ThreadPoolExecutor)
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
     analyzed_transcripts = []
     with tempfile.TemporaryDirectory() as tmpdir:
-        for item in discovered_videos:
-            if len(analyzed_transcripts) >= 6:
-                break
+        def process_video(item):
             vid = item["id"]
             channel = item["channel"]
             title = item["title"]
-
             transcript_text = extract_single_transcript(vid, tmpdir)
-            
-            # 자막이 있는 경우 실제 텍스트 축약, 없는 경우 영상 메타데이터 기반 정리
             if transcript_text and len(transcript_text) > 100:
                 summary_snippet = transcript_text[:400] + "..."
                 has_subtitles = True
             else:
                 summary_snippet = f"실사용 벤치마크 및 장단점 분석: {title}"
                 has_subtitles = False
-
-            analyzed_transcripts.append({
+            return {
                 "video_id": vid,
                 "channel": channel,
                 "title": title,
@@ -135,8 +131,17 @@ def search_and_extract_5_youtube_transcripts(device_name: str, english_name: str
                 "transcript_length": len(transcript_text),
                 "summary": summary_snippet,
                 "full_transcript_preview": transcript_text[:1200] if transcript_text else ""
-            })
-            print(f"  🎬 [{len(analyzed_transcripts)}/5] '{channel}': {title[:35]}... (자막: {'✅' if has_subtitles else '⚠️ 메타데이터'})")
+            }
+
+        with ThreadPoolExecutor(max_workers=6) as executor:
+            futures = [executor.submit(process_video, item) for item in discovered_videos[:6]]
+            for future in as_completed(futures):
+                try:
+                    res = future.result()
+                    analyzed_transcripts.append(res)
+                    print(f"  🎬 [{len(analyzed_transcripts)}/5] '{res['channel']}': {res['title'][:35]}... (자막: {'✅' if res['has_subtitles'] else '⚠️ 메타데이터'})")
+                except Exception:
+                    pass
 
     # 최소 5개 미만일 경우 가상/교차 검증 크리에이터 폴백 생성 (최소 5개 원칙 보장)
     creators_pool = ["ITSub잇섭", "UNDERkg", "테크몽", "주연 ZUYONI", "Dave2D", "MKBHD", "정곰"]
