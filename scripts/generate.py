@@ -55,14 +55,26 @@ def main():
         candidates = detect_new_devices_from_feeds(sources_file="data/sources.yaml", published_file=published_file)
         
         if not candidates:
-            print("\n☕ [Pipeline Idle] 타겟 RSS 피드 및 유튜버 채널에 새로운 미발행 하드웨어 기기가 감지되지 않았습니다.")
-            print("   (매일 무의미하게 글을 쓰지 않고, 새로운 기기 소식이 감지될 때만 10개 이상 출처를 심층 분석하여 발행합니다.)")
-            return
-
-        target_candidate = candidates[0]
-        print(f"\n🎯 [Target Detected] {target_candidate['trigger_type']} [{target_candidate['trigger_source']}]에서 신규 기기 감지!")
-        print(f"   기기명: {target_candidate['device']['name']} (ID: {target_candidate['device']['id']})")
-        print(f"   트리거 제목: {target_candidate['trigger_title']}")
+            print("\n📡 [Pipeline Step 1-B] RSS/유튜브 피드 미감지 -> 미발행 우선순위 큐(2026/2025 플래그십 & ZOL 핵심) 자동 스캔...")
+            from sources.queue_manager import get_next_priority_device
+            next_dev = get_next_priority_device(devices_db, published_data.get("published_devices", []))
+            if not next_dev:
+                print("\n🎉 [Pipeline Complete] 등록된 모든 공인 기기의 리뷰가 이미 완벽하게 발행되었습니다!")
+                return
+            target_candidate = {
+                "device": next_dev,
+                "trigger_type": "Auto Priority Queue",
+                "trigger_source": "2026 Flagship & ZOL Strategic Queue",
+                "trigger_title": f"미발행 자동 우선순위 큐: {next_dev.get('name_kr') or next_dev.get('name')}"
+            }
+            print(f"\n🎯 [Target Selected from Queue] 미발행 우선순위 큐에서 다음 발행 대상 기기 자동 선택!")
+            print(f"   기기명: {target_candidate['device']['name']} (ID: {target_candidate['device']['id']})")
+            print(f"   출시정보: {target_candidate['device'].get('release_date')} / 분류: {target_candidate['device'].get('category')}")
+        else:
+            target_candidate = candidates[0]
+            print(f"\n🎯 [Target Detected] {target_candidate['trigger_type']} [{target_candidate['trigger_source']}]에서 신규 기기 감지!")
+            print(f"   기기명: {target_candidate['device']['name']} (ID: {target_candidate['device']['id']})")
+            print(f"   트리거 제목: {target_candidate['trigger_title']}")
 
     dev_obj = target_candidate["device"]
     dev_id = dev_obj.get("id")

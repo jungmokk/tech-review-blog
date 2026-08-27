@@ -2,8 +2,10 @@ name: Automated Tech Review Generation & Deploy
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 매일 한국 시간 오전 9시 (UTC 00:00)
-    - cron: '0 9 * * *' # 매일 한국 시간 오후 6시 (UTC 09:00)
+    - cron: '0 0 * * *'  # 1회차: 매일 한국 시간 오전 09:00 (UTC 00:00)
+    - cron: '0 4 * * *'  # 2회차: 매일 한국 시간 오후 01:00 (UTC 04:00)
+    - cron: '0 8 * * *'  # 3회차: 매일 한국 시간 오후 05:00 (UTC 08:00)
+    - cron: '0 12 * * *' # 4회차: 매일 한국 시간 오후 09:00 (UTC 12:00)
   workflow_dispatch: # 수동 실행 버튼 지원
     inputs:
       device:
