@@ -3171,6 +3171,38 @@
     "image": "/images/devices/huawei-mate-xt.webp"
   },
   {
+    "id": "m6-mac-mini",
+    "name": "Apple M6 Mac mini (M6 / M5 Pro)",
+    "name_kr": "애플 M6 맥 미니 (M6 / M5 Pro)",
+    "brand": "Apple",
+    "brand_kr": "애플",
+    "device_type": "PC/노트북",
+    "release_year": 2026,
+    "release_date": "2026-08",
+    "category": "Compact PC",
+    "specs": {
+      "ap": "Apple M6 (2nm 공정, GPU 전 코어 뉴럴 엑셀레이터 내장) / M5 Pro (최대 18코어 CPU + 20코어 GPU)",
+      "display": "최대 3대 8K/6K 디스플레이 (Thunderbolt 5 클러스터링 병렬 연산 지원)",
+      "ram_storage": "16GB~32GB LPDDR5X (170GB/s) / M5 Pro 최대 64GB (307GB/s) + 512GB~2TB SSD",
+      "camera": "해당 없음 (외장 Continuity Camera 지원)",
+      "battery": "AC 전원 직결 (초고효율 저발열 무소음 설계)",
+      "dimensions_weight": "12.7 x 12.7 x 5.0cm / 670g (전면 듀얼 USB-C + 3.5mm 단자)",
+      "os_durability": "macOS / 듀얼 16코어 Neural Engine (총 32코어 NPU, AI 4배 가속)",
+      "price_krw": "1,499,000원부터 (M5 Pro 구성 시 최대 700만원대)"
+    },
+    "videos": [
+      {
+        "youtube_id": "ppnuVTt9L44",
+        "title": "150만원 내면 천원 거슬러주는 맥미니, 이 사람만 사세요 (feat. 뉴럴 코어)",
+        "channel": "정곰",
+        "duration": "14:07",
+        "thumbnail": "https://i.ytimg.com/vi/ppnuVTt9L44/hqdefault.jpg",
+        "direct_watch_url": "https://www.youtube.com/watch?v=ppnuVTt9L44"
+      }
+    ],
+    "image": "/images/devices/m6-mac-mini.webp"
+  },
+  {
     "id": "m4-mac-mini",
     "name": "Apple M4 Mac mini",
     "name_kr": "애플 M4 맥 미니 (2024)",
@@ -3192,12 +3224,12 @@
     },
     "videos": [
       {
-        "youtube_id": "ppnuVTt9L44",
-        "title": "150만원 내면 천원 거슬러주는 맥미니, 이 사람만 사세요 (feat. 뉴럴 코어)",
-        "channel": "정곰",
-        "duration": "14:07",
-        "thumbnail": "https://i.ytimg.com/vi/ppnuVTt9L44/hqdefault.jpg",
-        "direct_watch_url": "https://www.youtube.com/watch?v=ppnuVTt9L44"
+        "youtube_id": "Fweq1nf3Iec",
+        "title": "이 옵션은 사지마세요 제발.. 신형 맥미니 2024 언빡싱&성능 테스트!",
+        "channel": "ITSub잇섭",
+        "duration": "14:20",
+        "thumbnail": "https://i.ytimg.com/vi/Fweq1nf3Iec/hqdefault.jpg",
+        "direct_watch_url": "https://www.youtube.com/watch?v=Fweq1nf3Iec"
       }
     ],
     "image": "/images/devices/m4-mac-mini.webp"
