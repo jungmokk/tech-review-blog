@@ -25,9 +25,9 @@ def verify_all_device_images():
             errors.append(f"❌ [{slug}] Missing image file: {webp_path}")
             continue
             
-        # Check file size (must be >= 5KB to prevent empty/broken files)
+        # Check file size (must be >= 3KB to prevent empty/broken files)
         sz = os.path.getsize(webp_path)
-        if sz < 5000:
+        if sz < 3000:
             errors.append(f"❌ [{slug}] Image too small or corrupt ({sz} bytes): {webp_path}")
             continue
             

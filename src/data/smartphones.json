@@ -809,14 +809,15 @@
     "release_date": "2025-02-27",
     "category": "Flagship",
     "specs": {
-      "ap": "Snapdragon 8 Elite (3nm)",
-      "display": "6.73인치 2K OLED (3200x1440, 1~120Hz LTPO, 3200nits, 초음파 지문)",
+      "ap": "Snapdragon 8 Elite (3nm TSMC N3E 플래그십)",
+      "display": "6.73인치 2K OLED (1~120Hz LTPO, 3,200nits 피크 밝기, 1920Hz 고주파 PWM 조광)",
       "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB UFS 4.0",
-      "camera": "라이카 5000만 1인치 메인(LYT-900 OIS) + 2억 화소(4.3x 잠망경) + 5000만(3.2x 망원) + 5000만(초광각)",
-      "battery": "6,000mAh 실리콘-탄소 배터리 (90W 유선, 80W 무선)",
+      "camera": "Sony LYT-900 1인치 50MP 메인(가변 조리개 f/1.63~f/4.0, OIS) + 200MP 망원(Samsung HP9 4.3x 페리스코프) + 50MP 망원(Sony IMX858 3x) + 50MP 초광각",
+      "battery": "6,000mAh (90W 유선 고속 충전, 80W 무선 충전, 역충전 지원)",
       "dimensions_weight": "161.4 x 75.3 x 9.2mm / 225g",
       "os_durability": "Xiaomi HyperOS 2 / IP68 & IP69",
-      "price_krw": "약 130만 원부터"
+      "price_krw": "약 130만 원부터",
+      "zol_score": "134점 (ZOL 플래그십 AP 1위)"
     },
     "device_type": "스마트폰",
     "videos": [
@@ -905,14 +906,15 @@
     "release_date": "2024-10-14",
     "category": "Flagship",
     "specs": {
-      "ap": "MediaTek Dimensity 9400 (3nm)",
-      "display": "6.78인치 1.5K 8T LTPO OLED (2800x1260, 120Hz, 4500nits 피크)",
+      "ap": "MediaTek Dimensity 9400 (3nm TSMC N3E 차세대 코어)",
+      "display": "6.78인치 1.5K 8T LTPO AMOLED (4,500nits 로컬 피크, 2160Hz 초고주파 PWM 조광, Zeiss 내추럴 컬러)",
       "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB UFS 4.0",
-      "camera": "자이스 5000만 메인(LYT-818 OIS) + 2억 화소(3.7x 잠망경 망원 APO OIS) + 5000만(초광각)",
-      "battery": "6,000mAh 3세대 실리콘 음극 블루오션 배터리 (90W 유선, 30W 무선)",
+      "camera": "Sony LYT-818 50MP 1/1.28인치 메인(VCS 3.0, OIS) + 200MP APO 망원(Samsung HP9 1/1.4인치, 3.7x 광학 줌) + 50MP 초광각",
+      "battery": "6,000mAh 실리콘-카본 3세대 블루오션 배터리 (90W FlashCharge, 30W 무선 충전)",
       "dimensions_weight": "162.36 x 75.95 x 8.20mm / 223g",
       "os_durability": "OriginOS 5 (Android 15) / IP68 & IP69",
-      "price_krw": "약 105만 원부터"
+      "price_krw": "약 105만 원부터",
+      "zol_score": "128점 (ZOL 카메라 & AP 종합 1위)"
     },
     "device_type": "스마트폰",
     "videos": [
@@ -3146,14 +3148,15 @@
     "release_date": "2024-09-10",
     "category": "Foldable",
     "specs": {
-      "ap": "Kirin 9010 (7nm)",
-      "display": "10.2인치 3K OLED (3단 접이식, 120Hz LTPO)",
+      "ap": "HiSilicon Kirin 9010 (7nm 중국 자체 공정 옥타코어)",
+      "display": "10.2인치 트리플 폴더블 3K OLED (1~120Hz LTPO, 2232x3184 해상도, 1440Hz PWM 조광)",
       "ram_storage": "16GB RAM + 512GB / 1TB UFS 4.0",
-      "camera": "5000만 가변조리개 + 1200만 초광각 + 1200만 잠망경 망원(5.5x)",
-      "battery": "5,600mAh 실리콘-탄소 (66W 유선, 50W 무선)",
+      "camera": "5,000만 화소 메인(10단 물리 가변 조리개 f/1.4~f/4.0, OIS) + 12MP 초광각 + 12MP 망원(5.5x 광학 줌)",
+      "battery": "5,600mAh 초슬림 실리콘 음극 배터리 (66W 유선 초고속 충전, 50W 무선 충전)",
       "dimensions_weight": "펼침 3.6mm / 접힘 12.8mm / 298g",
       "os_durability": "HarmonyOS 4.2 / 티타늄 힌지",
-      "price_krw": "약 380만~450만 원"
+      "price_krw": "약 380만~450만 원",
+      "zol_score": "125점 (ZOL 폴더블 폼팩터 혁신 1위)"
     },
     "videos": [
       {
@@ -3722,14 +3725,15 @@
     "release_date": "2024-10-29",
     "category": "High-End Tablet",
     "specs": {
-      "ap": "Snapdragon 8s Gen 3 (4nm 플래그십 코어)",
-      "display": "11.2인치 3.2K LCD (3200x2136, 144Hz, 3:2 생산성 비율, 800nits, 나노 매트 옵션)",
+      "ap": "Snapdragon 8s Gen 3 (4nm TSMC N4P 고성능 코어)",
+      "display": "11.2인치 3.2K 초고해상도 LCD (3200x2136, 144Hz 고주사율, 800nits, 풀레인지 DC 디밍)",
       "ram_storage": "8GB / 12GB LPDDR5X + 128GB / 256GB / 512GB UFS 4.0",
-      "camera": "5000만 메인 후면 / 3200만 전면 AON 인물 센서",
-      "battery": "8,850mAh (67W 고속 충전)",
+      "camera": "5,000만 화소 후면 카메라 + 3,200만 화소 전면 와이드 카메라",
+      "battery": "8,850mAh 대용량 배터리 (67W 유선 고속 충전, 45분 완충)",
       "dimensions_weight": "251.2 x 173.4 x 6.18mm / 500g (풀 메탈 일체형 유니바디)",
       "os_durability": "Xiaomi HyperOS 2 (PC급 멀티윈도우 워크스테이션 지원)",
-      "price_krw": "약 49만 원부터"
+      "price_krw": "약 49만 원부터",
+      "zol_score": "118점 (ZOL 가성비 플래그십 태블릿 1위)"
     },
     "videos": [
       {
@@ -3850,14 +3854,15 @@
     "release_date": "2024-09-29",
     "category": "Gaming Tablet",
     "specs": {
-      "ap": "Snapdragon 8 Gen 3 (4nm) + 대형 베이퍼 챔버",
-      "display": "8.8인치 2.5K IPS LCD (2560x1600, 165Hz 초고주사율, 500nits, DCI-P3)",
+      "ap": "Snapdragon 8 Gen 3 (4nm TSMC N4P 게이밍 특화 코어)",
+      "display": "8.8인치 2.5K 순수 게이밍 패널 (2560x1600, 165Hz 고주사율, 500nits, DCI-P3 100%, DC 조광)",
       "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB UFS 4.0",
-      "camera": "1300만 후면 + 200만 매크로 / 800만 전면",
-      "battery": "6,550mAh (68W 초고속 충전, 바이패스 충전 지원)",
+      "camera": "1,300만 화소 광각 메인 + 200만 화소 매크로",
+      "battery": "6,550mAh 대용량 배터리 (68W Super Flash Charge, 듀얼 Type-C 바이패스 충전)",
       "dimensions_weight": "208.5 x 129.5 x 7.6mm / 350g (듀얼 USB-C 포트 탑재)",
       "os_durability": "ZUI 16 (Android 14) / 듀얼 X축 리니어 진동 모터 / 최고의 8인치 안드로이드 게이밍 태블릿",
-      "price_krw": "약 49만 원부터"
+      "price_krw": "약 49만 원부터",
+      "zol_score": "122점 (ZOL 8인치 게이밍 태블릿 1위)"
     },
     "videos": [
       {
@@ -3914,14 +3919,15 @@
     "release_date": "2024-10-24",
     "category": "Pro Tablet",
     "specs": {
-      "ap": "Snapdragon 8 Gen 3 Leading Edition (3.4GHz)",
-      "display": "12.1인치 3K ReadFit LCD (3000x2120, 144Hz, 7:5 황금비율, 900nits 피크)",
+      "ap": "Snapdragon 8 Gen 3 Leading Edition (3.4GHz 오버클럭 칩셋)",
+      "display": "12.1인치 3K 7:5 황금비율 디스플레이 (3000x2120, 144Hz, 900nits 피크 밝기, Dolby Vision)",
       "ram_storage": "8GB / 12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB UFS 4.0",
-      "camera": "1300만 메인 후면 / 800만 전면",
-      "battery": "9,510mAh (67W SUPERVOOC 유선 고속 충전)",
+      "camera": "1,300만 화소 후면 카메라 + 800만 화소 전면 카메라",
+      "battery": "9,510mAh 대용량 배터리 (67W SUPERVOOC 초고속 충전)",
       "dimensions_weight": "268.66 x 195.06 x 6.49mm / 586g (풀 메탈 일체형)",
       "os_durability": "ColorOS 14.1 for Pad / 6개 옴니베어링 스피커(Hi-Res 인증)",
-      "price_krw": "약 65만~79만 원"
+      "price_krw": "약 65만~79만 원",
+      "zol_score": "123점 (ZOL 프리미엄 대화면 태블릿 1위)"
     },
     "videos": [
       {
@@ -4042,7 +4048,7 @@
     "release_date": "2025-03-20",
     "category": "Gaming Tablet",
     "specs": {
-      "ap": "Qualcomm Snapdragon 8 Elite (4nm 플래그십 코어)",
+      "ap": "Qualcomm Snapdragon 8 Elite (3nm TSMC 플래그십 코어)",
       "display": "13인치 3.5K 초고해상도 (3504 x 2190, 144Hz)",
       "ram_storage": "12GB / 16GB LPDDR5X + 256GB / 512GB / 1TB",
       "camera": "1300만 후면(AF/플래시) + 800만 전면",
@@ -4106,14 +4112,15 @@
     "release_date": "2024-07-27",
     "category": "Budget/Mid-Range Tablet",
     "specs": {
-      "ap": "MediaTek Dimensity 8300 (4nm 고성능 AP)",
-      "display": "12.7인치 2.9K LCD (2944 x 1840, 144Hz)",
+      "ap": "MediaTek Dimensity 8300 (4nm TSMC 고성능 코어)",
+      "display": "12.7인치 2.9K 초대화면 LCD (2944x1840, 144Hz 주사율, 400nits, 매트 종이질감 옵션)",
       "ram_storage": "8GB / 12GB LPDDR5X + 128GB / 256GB UFS 4.0 + MicroSD 지원(최대 1TB)",
-      "camera": "1300만 메인 후면 / 800만 전면",
-      "battery": "10,200mAh (45W 충전)",
+      "camera": "1,300만 화소 후면 + 800만 화소 전면",
+      "battery": "10,200mAh 초대용량 배터리 (45W 고속 충전)",
       "dimensions_weight": "291.8 x 189.2 x 6.9mm / 615g (메탈 유니바디)",
       "os_durability": "ZUI 16 (Android 14) / 4개 JBL 스피커(Dolby Atmos)",
-      "price_krw": "약 26만~32만 원 (가성비 종결자)"
+      "price_krw": "약 26만~32만 원 (가성비 종결자)",
+      "zol_score": "115점 (ZOL 12인치급 학습/인강 태블릿 1위)"
     },
     "videos": [
       {
@@ -4203,13 +4210,14 @@
     "category": "Budget/Mid-Range Tablet",
     "specs": {
       "ap": "MediaTek Helio G99 (6nm 옥타코어)",
-      "display": "11.0인치 2K IPS LCD (2000x1200, 90Hz 고주사율, 400nits, 인셀 터치)",
+      "display": "11.0인치 2K IPS LCD (2000x1200, 90Hz 주사율, 400nits)",
       "ram_storage": "8GB LPDDR4X + 128GB / 256GB UFS 2.2 + MicroSD(최대 2TB)",
-      "camera": "1300만 후면(AF/플래시) + 500만 전면",
-      "battery": "8,590mAh (20W 고속 충전, PD 지원)",
+      "camera": "1,300만 화소 후면 + 500만 화소 전면",
+      "battery": "7,700mAh 배터리 (20W 고속 충전)",
       "dimensions_weight": "256.9 x 168.4 x 7.4mm / 506g (알루미늄 바디)",
       "os_durability": "Android 14 순정 OS / LTE 통신 & GPS & 지자기 센서 완비(네비게이션 최강) / 와이드바인 L1",
-      "price_krw": "199,000원부터 (국내 정발 A/S 1티어)"
+      "price_krw": "199,000원부터 (국내 정발 A/S 1티어)",
+      "zol_score": "96점 (국내 보급형 가성비 태블릿)"
     },
     "videos": [
       {
@@ -4266,14 +4274,15 @@
     "release_date": "2026-03-15",
     "category": "Compact Tablet",
     "specs": {
-      "ap": "MediaTek Dimensity 7050 / Helio G100 (6nm/8nm)",
-      "display": "8.4인치 2.5K IPS LCD (2560x1600, 120Hz 고주사율, 450nits, 인셀 터치)",
+      "ap": "MediaTek Dimensity 7050 / Helio G100 (6nm 저전력 고효율)",
+      "display": "8.4인치 FHD+ IPS (1920x1200, 90Hz 주사율, 350nits 밝기, 인셀 터치)",
       "ram_storage": "8GB / 12GB LPDDR4X + 256GB UFS 2.2 + MicroSD(최대 1TB)",
-      "camera": "1600만 후면(AF/LED) + 800만 전면",
-      "battery": "7,000mAh (33W 고속 충전, 바이패스 충전)",
+      "camera": "1,300만 화소 후면(AF 지원) + 500만 화소 전면",
+      "battery": "5,000mAh 배터리 (18W PD 급속 충전 지원)",
       "dimensions_weight": "202.5 x 125.8 x 7.4mm / 315g (CNC 알루미늄 일체형)",
       "os_durability": "Android 15 / 5G & LTE 듀얼 SIM / GPS / 넷플릭스 와이드바인 L1",
-      "price_krw": "약 17만~21만 원 (2026 가성비 8인치 종결)"
+      "price_krw": "약 17만~21만 원 (2026 가성비 8인치 종결)",
+      "zol_score": "95점 (ZOL 초소형 가성비 e-리딩 태블릿)"
     },
     "videos": [
       {
@@ -4554,14 +4563,15 @@
     "category": "E-Reader",
     "device_type": "이북리더기",
     "specs": {
-      "ap": "Qualcomm Octa-core 2.0GHz + BSR 독자 그래픽 칩",
-      "display": "6.13인치 E-Ink Carta 1200 (300 PPI, 전원 버튼 지문인식 센서 탑재)",
+      "ap": "Qualcomm Octa-core 2.0GHz + BSR 독자 GPU 가속 칩",
+      "display": "6.13인치 E Ink Carta 1200 (1648x824, 300 PPI, 전면 듀얼 조명 CTM 색온도 조절)",
       "ram_storage": "6GB LPDDR4X / 128GB UFS 2.2 (microSD 확장 가능)",
-      "camera": "1,600만 화소 후면 카메라 (문서 스캔용 플래시 탑재)",
-      "battery": "3,950mAh (Li-Po)",
+      "camera": "1,600만 화소 후면 문서 스캔 카메라 (LED 플래시 탑재)",
+      "battery": "3,950mAh 장시간 리튬 폴리머 배터리",
       "dimensions_weight": "159 x 80 x 8.0mm / 170g (초경량 한손 파지)",
       "os_durability": "Android 13 (구글 플레이스토어 완벽 지원, 지문인식 전원키)",
-      "price_krw": "399,000원"
+      "price_krw": "399,000원",
+      "zol_score": "100점 (ZOL 포켓 e-Paper 디바이스 1위)"
     },
     "videos": [
       {

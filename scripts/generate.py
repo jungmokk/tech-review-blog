@@ -89,6 +89,14 @@ def main():
     print(f"\n🔬 [Pipeline Step 2] '{dev_name}'에 대한 10개 이상 출처 심층 종합 리서치 수행 중...")
     deep_research_data = conduct_10_source_deep_research(dev_obj)
 
+    # STEP 2.5: 정확한 기기 사진 자동 수집 (GSMArena / 유튜브 실물 캡처 / Wikimedia)
+    try:
+        from auto_image_fetcher import fetch_device_image
+        yt_id = target_candidate.get("trigger_youtube_id") if target_candidate else None
+        fetch_device_image(dev_id, youtube_id=yt_id)
+    except Exception as e:
+        print(f"⚠️ [Image Fetch Warning] 기기 이미지 수집 중 경고: {e}")
+
     # STEP 3: 100% 팩트 스펙 + 10+ 출처 종합 고품질 리뷰 MDX 생성
     print(f"\n✍️ [Pipeline Step 3] 10+ 출처 리포트 기반 심층 테크 리뷰 MDX 합성 중...")
     raw_facts = {

@@ -41,10 +41,15 @@ def update_all_reviews():
             continue
 
         dev_name = matched_dev.get("name_kr") or matched_dev.get("name")
-        print(f"📱 기기명: {dev_name} ({matched_dev.get('name')})")
-
         # 1. 5+ 유튜브 트랜스크립트 및 10+ 출처 심층 리서치
         deep_data = conduct_10_source_deep_research(matched_dev)
+
+        # 1.5 기기 정품 이미지 자동 수집 & 검증
+        try:
+            from auto_image_fetcher import fetch_device_image
+            fetch_device_image(slug)
+        except Exception as e:
+            print(f"⚠️ [Image Warning] {e}")
 
         # 2. 5대 유튜버 자막 교차 분석 및 정밀 MDX 재합성
         res = generate_review_mdx(
