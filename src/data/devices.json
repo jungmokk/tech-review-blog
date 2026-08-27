@@ -6,7 +6,7 @@
     "brand": "Samsung",
     "brand_kr": "삼성",
     "release_year": 2026,
-    "release_date": "2026-07",
+    "release_date": "2026-07-22",
     "category": "Foldable",
     "specs": {
       "ap": "스냅드래곤 8 Elite 5세대 칩 (Snapdragon 8 Elite Gen 5 for Galaxy)",
@@ -38,7 +38,7 @@
     "brand": "Samsung",
     "brand_kr": "삼성",
     "release_year": 2026,
-    "release_date": "2026-07",
+    "release_date": "2026-07-22",
     "category": "Foldable",
     "specs": {
       "ap": "갤럭시용 엑시노스 2600 (Exynos 2600) / Snapdragon 8 Elite Gen 5 for Galaxy",
@@ -70,7 +70,7 @@
     "brand": "Samsung",
     "brand_kr": "삼성",
     "release_year": 2026,
-    "release_date": "2026-01",
+    "release_date": "2026-02-25",
     "category": "Flagship",
     "specs": {
       "ap": "스냅드래곤 8 Elite 5세대 칩 (Snapdragon 8 Elite Gen 5 for Galaxy)",
@@ -102,7 +102,7 @@
     "brand": "Samsung",
     "brand_kr": "삼성",
     "release_year": 2026,
-    "release_date": "2026-01",
+    "release_date": "2026-02-25",
     "category": "Flagship",
     "specs": {
       "ap": "갤럭시용 엑시노스 2600 (Exynos 2600)",
@@ -486,7 +486,7 @@
     "brand": "Samsung",
     "brand_kr": "삼성",
     "release_year": 2025,
-    "release_date": "2025-01",
+    "release_date": "2025-01-22",
     "category": "Flagship",
     "specs": {
       "ap": "Snapdragon 8 Elite for Galaxy (3nm TSMC N3E)",
@@ -646,7 +646,7 @@
     "brand": "Apple",
     "brand_kr": "애플",
     "release_year": 2025,
-    "release_date": "2025-09",
+    "release_date": "2025-09-09",
     "category": "Flagship",
     "specs": {
       "ap": "Apple A19 Pro (2nm N2 공정)",
@@ -806,7 +806,7 @@
     "brand": "Xiaomi",
     "brand_kr": "샤오미",
     "release_year": 2025,
-    "release_date": "2025-02",
+    "release_date": "2025-02-27",
     "category": "Flagship",
     "specs": {
       "ap": "Snapdragon 8 Elite (3nm TSMC N3E 플래그십)",
@@ -902,8 +902,8 @@
     "name_kr": "비보 X200 프로",
     "brand": "Vivo",
     "brand_kr": "비보",
-    "release_year": 2025,
-    "release_date": "2025-01",
+    "release_year": 2024,
+    "release_date": "2024-10-14",
     "category": "Flagship",
     "specs": {
       "ap": "MediaTek Dimensity 9400 (3nm TSMC N3E 차세대 코어)",
@@ -1063,8 +1063,8 @@
     "name_kr": "원플러스 13",
     "brand": "OnePlus",
     "brand_kr": "원플러스",
-    "release_year": 2025,
-    "release_date": "2025-01",
+    "release_year": 2024,
+    "release_date": "2024-10-31",
     "category": "Flagship",
     "specs": {
       "ap": "Snapdragon 8 Elite (3nm)",
@@ -1480,7 +1480,7 @@
     "brand": "Apple",
     "brand_kr": "애플",
     "release_year": 2024,
-    "release_date": "2024-09",
+    "release_date": "2024-09-09",
     "category": "Flagship",
     "specs": {
       "ap": "Apple A18 Pro (3nm N3P)",
@@ -1576,7 +1576,7 @@
     "brand": "Apple",
     "brand_kr": "애플",
     "release_year": 2024,
-    "release_date": "2024-09",
+    "release_date": "2024-09-09",
     "category": "Standard",
     "specs": {
       "ap": "Apple A18 (3nm N3E)",
@@ -3145,7 +3145,7 @@
     "brand_kr": "화웨이",
     "device_type": "스마트폰",
     "release_year": 2024,
-    "release_date": "2024-09",
+    "release_date": "2024-09-10",
     "category": "Foldable",
     "specs": {
       "ap": "HiSilicon Kirin 9010 (7nm 중국 자체 공정 옥타코어)",
@@ -3178,7 +3178,7 @@
     "brand_kr": "애플",
     "device_type": "PC/노트북",
     "release_year": 2024,
-    "release_date": "2024-11",
+    "release_date": "2024-10-29",
     "category": "Compact PC",
     "specs": {
       "ap": "Apple M4 (10코어 CPU + 10코어 GPU) / M4 Pro",
@@ -3210,7 +3210,7 @@
     "brand_kr": "애플",
     "device_type": "PC/노트북",
     "release_year": 2024,
-    "release_date": "2024-03",
+    "release_date": "2024-03-04",
     "category": "Laptop",
     "specs": {
       "ap": "Apple M3 (8코어 CPU + 8/10코어 GPU, 하드웨어 레이트레이싱)",
@@ -3242,7 +3242,7 @@
     "brand_kr": "소니",
     "device_type": "오디오",
     "release_year": 2022,
-    "release_date": "2022-05",
+    "release_date": "2022-05-12",
     "category": "Audio",
     "specs": {
       "ap": "HD 노이즈 캔슬링 프로세서 QN1 + 통합 프로세서 V1 (8개 마이크)",
@@ -3273,8 +3273,8 @@
     "brand": "Apple",
     "brand_kr": "애플",
     "device_type": "오디오",
-    "release_year": 2026,
-    "release_date": "2026-09",
+    "release_year": 2025,
+    "release_date": "2025-09-09",
     "category": "Audio",
     "specs": {
       "ap": "Apple H3 헤드폰 칩셋 + 온디바이스 심박수/체온 센서",
@@ -3306,7 +3306,7 @@
     "brand_kr": "애플",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-05",
+    "release_date": "2024-05-07",
     "category": "Pro Tablet",
     "specs": {
       "ap": "Apple M4 (2세대 3nm N3E, 9코어/10코어 CPU, 10코어 GPU, 38TOPS NPU)",
@@ -3434,7 +3434,7 @@
     "brand_kr": "애플",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-10",
+    "release_date": "2024-10-15",
     "category": "Compact Tablet",
     "specs": {
       "ap": "Apple A17 Pro (3nm, 6코어 CPU + 5코어 GPU, Apple Intelligence 지원)",
@@ -3498,7 +3498,7 @@
     "brand_kr": "삼성",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-10",
+    "release_date": "2024-09-26",
     "category": "Pro Tablet",
     "specs": {
       "ap": "MediaTek Dimensity 9300+ (4nm All-Big-Core 설계)",
@@ -3689,8 +3689,8 @@
     "brand": "Xiaomi",
     "brand_kr": "샤오미",
     "device_type": "태블릿",
-    "release_year": 2025,
-    "release_date": "2025-01",
+    "release_year": 2024,
+    "release_date": "2024-10-29",
     "category": "High-End Tablet",
     "specs": {
       "ap": "Snapdragon 8s Gen 3 (4nm TSMC N4P 고성능 코어)",
@@ -3819,7 +3819,7 @@
     "brand_kr": "레노버",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-09",
+    "release_date": "2024-09-29",
     "category": "Gaming Tablet",
     "specs": {
       "ap": "Snapdragon 8 Gen 3 (4nm TSMC N4P 게이밍 특화 코어)",
@@ -3884,7 +3884,7 @@
     "brand_kr": "오포",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-10",
+    "release_date": "2024-10-24",
     "category": "Pro Tablet",
     "specs": {
       "ap": "Snapdragon 8 Gen 3 Leading Edition (3.4GHz 오버클럭 칩셋)",
@@ -4013,7 +4013,7 @@
     "brand_kr": "레노버",
     "device_type": "태블릿",
     "release_year": 2025,
-    "release_date": "2025-03",
+    "release_date": "2025-03-20",
     "category": "Gaming Tablet",
     "specs": {
       "ap": "Qualcomm Snapdragon 8 Elite (3nm TSMC 플래그십 코어)",
@@ -4045,7 +4045,7 @@
     "brand_kr": "레노버",
     "device_type": "태블릿",
     "release_year": 2025,
-    "release_date": "2025-01",
+    "release_date": "2025-01-15",
     "category": "High-End Tablet",
     "specs": {
       "ap": "Qualcomm Snapdragon 8s Gen 4 (SM8735, 4nm 고성능 옥타코어)",
@@ -4077,7 +4077,7 @@
     "brand_kr": "레노버",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-07",
+    "release_date": "2024-07-27",
     "category": "Budget/Mid-Range Tablet",
     "specs": {
       "ap": "MediaTek Dimensity 8300 (4nm TSMC 고성능 코어)",
@@ -4174,7 +4174,7 @@
     "brand_kr": "아이뮤즈",
     "device_type": "태블릿",
     "release_year": 2024,
-    "release_date": "2024-03",
+    "release_date": "2024-03-15",
     "category": "Budget/Mid-Range Tablet",
     "specs": {
       "ap": "MediaTek Helio G99 (6nm 옥타코어)",
@@ -4239,7 +4239,7 @@
     "brand_kr": "올도큐브",
     "device_type": "태블릿",
     "release_year": 2026,
-    "release_date": "2026-03",
+    "release_date": "2026-03-15",
     "category": "Compact Tablet",
     "specs": {
       "ap": "MediaTek Dimensity 7050 / Helio G100 (6nm 저전력 고효율)",
@@ -4527,7 +4527,7 @@
     "brand": "Onyx BOOX",
     "brand_kr": "오닉스",
     "release_year": 2024,
-    "release_date": "2024-10",
+    "release_date": "2024-10-23",
     "category": "E-Reader",
     "device_type": "이북리더기",
     "specs": {
@@ -4976,7 +4976,7 @@
     "brand": "Amazon",
     "brand_kr": "아마존",
     "release_year": 2024,
-    "release_date": "2024-10",
+    "release_date": "2024-10-16",
     "category": "E-Reader",
     "device_type": "이북리더기",
     "specs": {
@@ -5264,7 +5264,7 @@
     "brand": "iFlytek",
     "brand_kr": "아이플라이텍",
     "release_year": 2024,
-    "release_date": "2024-05",
+    "release_date": "2024-05-20",
     "category": "E-Reader",
     "device_type": "이북리더기",
     "specs": {

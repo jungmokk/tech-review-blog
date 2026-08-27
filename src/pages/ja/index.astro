@@ -5,10 +5,11 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import GoogleAdSense from '../../components/GoogleAdSense.astro';
 import devices from '../../data/smartphones.json';
+import { sortReviewsByDeviceRelease } from '../../utils/sorting';
 
 const allReviews = await getCollection('reviews');
-const jaReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => r.slug.startsWith('ja/'));
-jaReviews.sort((a, b) => new Date(b.data.date || '').getTime() - new Date(a.data.date || '').getTime());
+const rawJaReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => r.slug.startsWith('ja/'));
+const jaReviews = sortReviewsByDeviceRelease(rawJaReviews);
 
 const featuredPost = jaReviews[0];
 const trendingPosts = jaReviews.slice(1, 3);
@@ -48,11 +49,11 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TECH SPEC BLOG | グローバルテックレビュー＆スペック百科</title>
-  <meta name="description" content="最新IT機器の詳細実機レビュー、客観的ベンチマーク、201機種のスマートフォン・タブレットスペックデータベースを提供する専門メディアです。" />
+  <meta name="description" content="最新IT機器の詳細実機レビュー、客観的ベンチマーク、スマートフォン・タブレット・ウェアラブルのスペックデータベースを提供する専門メディアです。" />
   
   <meta property="og:type" content="website" />
   <meta property="og:title" content="TECH SPEC BLOG | グローバルテックレビュー＆スペック百科" />
-  <meta property="og:description" content="実機ベンチマーク、客観적評価、201機種のスペック完全比較" />
+  <meta property="og:description" content="実機ベンチマーク、客観的評価、最新スマートデバイスのスペック完全比較" />
   <meta property="og:url" content="https://tech.thesinoreport.com/ja" />
 
   <link rel="alternate" hreflang="ko" href="https://tech.thesinoreport.com/" />
@@ -71,17 +72,17 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
     <!-- Hero Banner -->
     <section class="hero-banner" style="margin-bottom: 40px; text-align: center; padding: 48px 20px;">
       <span class="hero-badge-pill">
-        ⚡ 201機種 100% ファクト準拠スペックデータベース
+        ⚡ 最新デバイス 100% ファクト準拠スペックデータベース
       </span>
       <h1 class="hero-title" style="font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 900; margin-bottom: 16px;">
         客観적データ。 <span style="background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">真実のレビュー。</span>
       </h1>
       <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 680px; margin: 0 auto 28px;">
-        201機種のスマートフォン・タブレット詳細スペックと実機ベンチマークに基づく徹底レビュー。
+        公式スマートフォン・タブレット・ウェアラブル詳細スペックと実機ベンチマークに基づく徹底レビュー。
       </p>
       <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
         <a href="/specs" style="padding: 12px 28px; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #000; font-weight: 800; border-radius: var(--radius-sm); text-decoration: none;">
-          📱 201機種スペック百科を見る
+          📱 公式スペック百科を見る
         </a>
         <a href="#reviews" style="padding: 12px 24px; background: var(--bg-card); color: var(--text-main); font-weight: 700; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-decoration: none;">
           最新レビュー一覧

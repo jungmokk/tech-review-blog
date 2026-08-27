@@ -4,10 +4,15 @@ const adsenseId = import.meta.env.PUBLIC_ADSENSE_ID || 'ca-pub-5136549253813943'
 ---
 
 {adsenseId && (
-  <script
-    is:inline
-    async
-    src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-    crossorigin="anonymous"
-  ></script>
+  <script is:inline define:vars={{ adsenseId }}>
+    const host = window.location.hostname;
+    // vercel.app 프리뷰나 localhost에서는 애드센스 실행 차단
+    if (!host.includes('vercel.app') && !host.includes('localhost') && !host.includes('127.0.0.1')) {
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`;
+      s.crossOrigin = "anonymous";
+      document.head.appendChild(s);
+    }
+  </script>
 )}

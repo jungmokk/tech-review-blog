@@ -6,18 +6,39 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import GoogleAdSense from '../components/GoogleAdSense.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import devicesData from '../data/devices.json';
+import { sortReviewsByDeviceRelease } from '../utils/sorting';
 
 const { frontmatter, slug, lang = 'ko' } = Astro.props;
 
 const siteUrl = 'https://tech.thesinoreport.com';
-const koUrl = `${siteUrl}/reviews/${slug}`;
-const enUrl = `${siteUrl}/en/reviews/${slug}`;
-const jaUrl = `${siteUrl}/ja/reviews/${slug}`;
+const pureSlug = (slug || '').replace(/^(en|ja)\//, '');
+const koUrl = `${siteUrl}/reviews/${pureSlug}`;
+const enUrl = `${siteUrl}/en/reviews/${pureSlug}`;
+const jaUrl = `${siteUrl}/ja/reviews/${pureSlug}`;
 
 const allReviews = await getCollection('reviews');
-const recentReviews = allReviews
-  .filter((r: CollectionEntry<'reviews'>) => r.slug !== slug && r.data.device !== frontmatter.device)
-  .slice(0, 4);
+// Filter reviews for current language
+const langReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => {
+  if (lang === 'en') return r.slug.startsWith('en/');
+  if (lang === 'ja') return r.slug.startsWith('ja/');
+  return !r.slug.includes('/');
+});
+
+const sortedLangReviews = sortReviewsByDeviceRelease(langReviews);
+const recentReviews = sortedLangReviews
+  .filter((r: CollectionEntry<'reviews'>) => {
+    const postPureSlug = r.slug.replace(/^(en|ja)\//, '');
+    return postPureSlug !== pureSlug && r.data.device !== frontmatter.device;
+  })
+  .slice(0, 4)
+  .map((post: CollectionEntry<'reviews'>) => {
+    const postPureSlug = post.slug.replace(/^(en|ja)\//, '');
+    const reviewLink = lang === 'en' ? `/en/reviews/${postPureSlug}` : lang === 'ja' ? `/ja/reviews/${postPureSlug}` : `/reviews/${postPureSlug}`;
+    return {
+      ...post,
+      reviewLink,
+    };
+  });
 
 // 1. Direct 100% exact match by slug
 let matchedDevice: any = slug ? devicesData.find(d => d.id === slug) : null;
@@ -120,6 +141,22 @@ const jsonLd = {
     "name": "Tech Review Blog"
   }
 };
+
+const faqList = Array.isArray(frontmatter.faq) ? frontmatter.faq : [];
+const faqSchema = faqList.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map((item: any) => ({
+    "@type": "Question",
+    "name": item.question || item.q || "Q",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer || item.a || ""
+    }
+  }))
+} : null;
+
+const readingTime = frontmatter.readingTime || 4;
 ---
 <!DOCTYPE html>
 <html lang={lang || 'ko'}>
@@ -147,6 +184,9 @@ const jsonLd = {
   <link rel="alternate" hreflang="x-default" href={koUrl} />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+  {faqSchema && (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  )}
   <GoogleAnalytics />
   <GoogleAdSense />
 </head>
@@ -171,7 +211,7 @@ const jsonLd = {
           <span>•</span>
           <span>기기명: <strong style="color: var(--text-main); font-weight: 800;">{frontmatter.device}</strong></span>
           <span>•</span>
-          <span>⏱️ 약 4분 심층 분석</span>
+          <span>⏱️ 약 {readingTime}분 심층 분석</span>
         </div>
 
         <!-- Official High-Resolution Factory Product Visual Banner -->
@@ -343,7 +383,7 @@ const jsonLd = {
           </div>
 
           <a href="/specs" class="btn-detail" style="display: block; text-align: center; text-decoration: none; margin-bottom: 12px; padding: 10px;">
-            📚 201종 전체 스펙 백과에서 비교 ➔
+            {lang === 'en' ? '📚 Compare in Full Specs Database ➔' : lang === 'ja' ? '📚 全機種スペック百科で比較 ➔' : '📚 전체 기기 스펙 백과에서 비교 ➔'}
           </a>
         </div>
 
@@ -364,12 +404,12 @@ const jsonLd = {
         {recentReviews.length > 0 && (
           <div class="sidebar-card">
             <div class="sidebar-title">
-              <span>🔥 다른 최신 리뷰</span>
+              <span>{lang === 'en' ? '🔥 Latest Reviews' : lang === 'ja' ? '🔥 最新レビュー' : '🔥 다른 최신 출시 리뷰'}</span>
             </div>
             <div>
-              {recentReviews.map((post: CollectionEntry<'reviews'>) => (
+              {recentReviews.map((post) => (
                 <div class="recent-review-item">
-                  <a href={`/reviews/${post.slug}`}>
+                  <a href={post.reviewLink}>
                     {post.data.title}
                   </a>
                   <div class="recent-review-meta">

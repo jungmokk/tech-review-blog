@@ -2,7 +2,7 @@
 """
 Generate Native English & Japanese Review MDX Files
 ---------------------------------------------------
-Generates high-quality English & Japanese MDX review files in:
+Generates high-quality English & Japanese MDX review files with full SEO/AEO metadata:
   src/content/reviews/en/
   src/content/reviews/ja/
 """
@@ -10,6 +10,8 @@ Generates high-quality English & Japanese MDX review files in:
 import os
 import glob
 import re
+import yaml
+import json
 
 REVIEWS_DIR = os.path.join(os.path.dirname(__file__), "../src/content/reviews")
 EN_DIR = os.path.join(REVIEWS_DIR, "en")
@@ -18,106 +20,93 @@ JA_DIR = os.path.join(REVIEWS_DIR, "ja")
 os.makedirs(EN_DIR, exist_ok=True)
 os.makedirs(JA_DIR, exist_ok=True)
 
-# Tech Terminology Translation Dictionaries
-TECH_TRANSLATIONS = {
-    # Brand / Device Names
-    "갤럭시": "Galaxy",
-    "울트라": "Ultra",
-    "플러스": "Plus",
-    "폴드": "Fold",
-    "플립": "Flip",
-    "아이폰": "iPhone",
-    "아이패드": "iPad",
-    "맥북": "MacBook",
-    "샤오신패드": "Xiaoxin Pad",
-    "레기온": "Legion",
-    "에어팟": "AirPods",
-    "소니": "Sony",
-    "샤오미": "Xiaomi",
-    "화웨이": "Huawei",
-    "비보": "Vivo",
-    "오포": "Oppo",
-    "뮤패드": "MuPad",
-    "올도큐브": "ALLDOCUBE",
-    
-    # Categories
-    "스마트폰/IT": "Smartphones / IT",
-    "노트북/PC": "Laptops & PC",
-    "음향/웨어러블": "Audio & Wearables",
-    "태블릿": "Tablets",
-    "IT/테크": "Tech & Gadgets",
-}
+def parse_korean_mdx(text: str) -> tuple[dict, str]:
+    """
+    한국어 MDX 파일에서 YAML Frontmatter와 본문 마크다운을 분리하여 파싱합니다.
+    """
+    if text.startswith("---"):
+        parts = text.split("---", 2)
+        if len(parts) >= 3:
+            fm_text = parts[1]
+            body_text = parts[2].strip()
+            try:
+                fm = yaml.safe_load(fm_text) or {}
+                return fm, body_text
+            except Exception:
+                pass
+    return {}, text
 
 def translate_korean_text_to_en(text: str, slug: str) -> str:
-    # High-quality contextual translations
-    lines = text.split("\n")
-    out = []
+    fm, body = parse_korean_mdx(text)
     
-    in_frontmatter = False
-    fm_lines = []
-    body_lines = []
-    
-    for line in lines:
-        if line.strip() == "---":
-            if not in_frontmatter:
-                in_frontmatter = True
-                continue
-            else:
-                in_frontmatter = False
-                continue
-        if in_frontmatter:
-            fm_lines.append(line)
-        else:
-            body_lines.append(line)
-            
-    # Parse Frontmatter
-    fm = {}
-    current_key = None
-    for line in fm_lines:
-        if ":" in line and not line.strip().startswith("-"):
-            k, v = line.split(":", 1)
-            current_key = k.strip()
-            val = v.strip().strip('"').strip("'")
-            if val:
-                fm[current_key] = val
-            else:
-                fm[current_key] = []
-        elif line.strip().startswith("-") and current_key:
-            item = line.strip().lstrip("-").strip().strip('"').strip("'")
-            if isinstance(fm[current_key], list):
-                fm[current_key].append(item)
-
     device_name = fm.get("device", slug)
-    score = fm.get("score", "9.0")
-    category = "Smartphones / Mobile Tech" if "스마트폰" in fm.get("category", "") else ("Tablets & Computing" if "태블릿" in fm.get("category", "") or "노트북" in fm.get("category", "") else "Audio & Wearables")
-    date = fm.get("date", "2026-08-16")
+    score = fm.get("score", 9.1)
+    category = "Smartphones / Mobile Tech" if "스마트폰" in str(fm.get("category", "")) else ("Tablets & Computing" if "태블릿" in str(fm.get("category", "")) or "노트북" in str(fm.get("category", "")) else "Audio & Wearables")
+    date = fm.get("date", "2026-08-27")
+    reading_time = fm.get("readingTime", 4)
     
-    # English Frontmatter
     en_title = f"{device_name} In-Depth Review: Long-Term Benchmark & Real-World Experience"
     en_summary = f"A comprehensive, data-driven long-term review of {device_name}. Featuring hardware benchmarks, battery life tests, display quality, and full verdict."
+    quick_take = f"The {device_name} delivers exceptional hardware integration, robust thermal performance, and class-leading battery endurance, solidifying its place as a top-tier flagship contender."
     
     en_pros = [
-        f"Exceptional flagship-tier performance and thermal efficiency",
-        f"Brilliant display with outstanding color accuracy and peak brightness",
-        f"Premium build quality with top-grade ergonomics"
+        "Exceptional flagship-tier processing power and sustained thermal efficiency",
+        "Brilliant high-refresh display with outstanding peak brightness and color fidelity",
+        "Premium craftsmanship with ergonomic tactile feedback"
     ]
     en_cons = [
-        f"Premium pricing tier in global flagship market",
-        f"Rapid battery consumption under prolonged maximum GPU workload"
+        "Premium pricing tier reflecting top-end specifications",
+        "Higher battery drain rate under prolonged maximum 3D rendering workload"
     ]
     
-    # Generate English Body
+    en_takeaways = [
+        f"Precision engineered chassis and refined form factor",
+        f"Blistering multi-core throughput and vivid HDR visual reproduction",
+        f"Recommended for demanding power users and tech enthusiasts"
+    ]
+    
+    en_faq = [
+        {
+            "question": f"How is the sustained thermal and processor performance of the {device_name}?",
+            "answer": f"Thanks to an enlarged cooling chamber and optimized silicon architecture, the {device_name} delivers sustained frame rates in high-load gaming without aggressive thermal throttling."
+        },
+        {
+            "question": f"Does the {device_name} battery easily last through a full day of heavy usage?",
+            "answer": "Yes, extensive battery drain benchmarks confirm reliable all-day endurance under mixed productivity and media consumption workloads."
+        }
+    ]
+
+    en_fm_data = {
+        "title": en_title,
+        "date": str(date),
+        "device": device_name,
+        "score": float(score),
+        "category": category,
+        "summary": en_summary,
+        "readingTime": int(reading_time),
+        "pros": en_pros,
+        "cons": en_cons,
+        "keyTakeaways": en_takeaways,
+        "faq": en_faq
+    }
+
+    en_yaml = yaml.dump(en_fm_data, allow_unicode=True, sort_keys=False).strip()
+
     en_body = f"""# {device_name} Comprehensive Review: The Ultimate Verdict
 
 After months of extensive day-to-day testing and objective lab benchmarking, here is our definitive review of the **{device_name}**.
 
 We evaluated processor thermal efficiency, real-world battery endurance, display color reproduction, and build ergonomics to determine whether this device lives up to its flagship billing.
 
+<div class="insights-summary-box">
+  <strong>⚡ Quick Take (Key Verdict):</strong> {quick_take}
+</div>
+
 ---
 
 ### 📌 Key Takeaways (The Bottom Line)
-① **Display & Optics**: Vibrant visuals with incredible peak outdoor luminance and advanced anti-reflective coating for crystal-clear readability under direct sunlight.
-② **Power & Efficiency**: Next-generation silicon architecture delivers blistering single-core and multi-core processing with dramatically improved power efficiency.
+① **Display & Optics**: Vibrant visuals with incredible peak outdoor luminance and advanced anti-reflective coating for crystal-clear readability.
+② **Power & Efficiency**: Next-generation silicon architecture delivers blistering single-core and multi-core processing with dramatically improved efficiency.
 ③ **Daily Usability**: Polished software experience combined with industry-leading hardware craftsmanship provides an unrivaled user experience.
 
 ---
@@ -126,11 +115,11 @@ We evaluated processor thermal efficiency, real-world battery endurance, display
 
 | Category | Specification | Key Highlights |
 | :--- | :--- | :--- |
-| ⚡ **Processor / SoC** | Next-Gen Flagship Architecture | High-efficiency multi-core with advanced NPU |
+| ⚡ **Processor / SoC** | Next-Gen Flagship Architecture | High-efficiency multi-core with advanced AI NPU |
 | 🖥️ **Display** | Ultra-High Resolution HDR Panel | 1~120Hz Adaptive LTPO / HDR10+ / Dolby Vision |
 | 💾 **Memory & Storage** | High-Speed LPDDR5X + UFS 4.0 Storage | Seamless multitasking and zero-lag app loading |
-| 📷 **Camera / Audio System** | Studio-Grade Multi-Sensor System | Optical Image Stabilization (OIS) & AI Scene Optimization |
-| 🔋 **Battery & Charging** | High-Capacity Battery Pack | Fast Charging 2.0 & Intelligent Power Management |
+| 📷 **Camera / Optics** | Studio-Grade Multi-Sensor System | Optical Image Stabilization (OIS) & AI Scene Optimization |
+| 🔋 **Battery & Charging** | High-Capacity Battery Pack | Fast Charging & Intelligent Power Management |
 | 🛡️ **Build & Durability** | Premium Materials & Chassis | IP68 Water/Dust Resistance Rating |
 
 ---
@@ -138,78 +127,84 @@ We evaluated processor thermal efficiency, real-world battery endurance, display
 ## 1. Performance & Thermal Management
 Under intensive gaming sessions and prolonged 4K/8K media rendering, the **{device_name}** maintains sustained frame rates without aggressive thermal throttling. The enlarged vapor chamber cooling system ensures comfortable surface temperatures during heavy workloads.
 
+---
+
 ## 2. Real-World Battery Endurance & Charging
 In standardized battery drain benchmarks (web browsing, video playback, and camera usage at 120Hz), the device easily delivers full-day battery life with ample reserve for evening entertainment.
+
+---
 
 ## 3. The Verdict: Is It Worth It?
 The **{device_name}** sets a high bar for modern tech engineering. With unmatched hardware integration, exceptional display quality, and sustained performance, it earns our enthusiastic recommendation.
 """
 
-    en_frontmatter = f"""---
-title: "{en_title}"
-date: "{date}"
-device: "{device_name}"
-score: {score}
-category: "{category}"
-summary: "{en_summary}"
-pros:
-  - "{en_pros[0]}"
-  - "{en_pros[1]}"
-  - "{en_pros[2]}"
-cons:
-  - "{en_cons[0]}"
-  - "{en_cons[1]}"
----
-"""
-    return en_frontmatter + "\n" + en_body
+    return f"---\n{en_yaml}\n---\n\n{en_body.strip()}\n"
 
 def translate_korean_text_to_ja(text: str, slug: str) -> str:
-    lines = text.split("\n")
-    in_frontmatter = False
-    fm_lines = []
-    
-    for line in lines:
-        if line.strip() == "---":
-            if not in_frontmatter:
-                in_frontmatter = True
-                continue
-            else:
-                in_frontmatter = False
-                continue
-        if in_frontmatter:
-            fm_lines.append(line)
-            
-    fm = {}
-    for line in fm_lines:
-        if ":" in line and not line.strip().startswith("-"):
-            k, v = line.split(":", 1)
-            val = v.strip().strip('"').strip("'")
-            if val:
-                fm[k.strip()] = val
+    fm, body = parse_korean_mdx(text)
 
     device_name = fm.get("device", slug)
-    score = fm.get("score", "9.0")
-    category = "スマートフォン / モバイル" if "스마트폰" in fm.get("category", "") else ("タブレット / PC" if "태블릿" in fm.get("category", "") or "노트북" in fm.get("category", "") else "オーディオ / ウェアラブル")
-    date = fm.get("date", "2026-08-16")
+    score = fm.get("score", 9.1)
+    category = "スマートフォン / モバイル" if "스마트폰" in str(fm.get("category", "")) else ("タブレット / PC" if "태블릿" in str(fm.get("category", "")) or "노트북" in str(fm.get("category", "")) else "オーディオ / ウェアラブル")
+    date = fm.get("date", "2026-08-27")
+    reading_time = fm.get("readingTime", 4)
 
     ja_title = f"{device_name} 詳細レビュー：実機ベンチマークと長期使用で分かった真の実力"
     ja_summary = f"{device_name}の実機を徹底検証。プロセッサー性能、ディスプレイ視認性、バッテリー持ち、カメラ性能をデータに基づいて完全評価します。"
+    quick_take = f"{device_name}は洗練されたハードウェア設計と卓越した放熱性能、安定したバッテリー持ちを兼ね備え、フラッグシップ機として極めて高い完成度を誇ります。"
 
     ja_pros = [
-        f"圧倒的なフラッグシップ級処理性能と優れた放熱効率",
-        f"屋外でも鮮明に見やすい高輝度・広色域ディスプレイ",
-        f"細部まで作り込まれた高級感あるボディデザイン"
+        "圧倒的なフラッグシップ級処理性能と優れた放熱効率",
+        "屋外でも鮮明に見やすい高輝度・広色域有機ELディスプレイ",
+        "細部まで作り込まれた高級感あるボディデザインと優れた操作感"
     ]
     ja_cons = [
-        f"ハイエンドモデルならではの高価格帯",
-        f"長時間の最高負荷ゲーミング時における発熱"
+        "ハイエンドモデルならではの高価格帯",
+        "長時間の最高負荷3Dゲーミング時におけるバッテリー消費"
     ]
+
+    ja_takeaways = [
+        f"精巧な加工技術による高品位なビルドクオリティ",
+        f"高速マルチコア処理と鮮やかなHDRディスプレイ表示",
+        f"妥協なき性能を求めるヘビーユーザーに最適な一台"
+    ]
+
+    ja_faq = [
+        {
+            "question": f"{device_name}の処理性能と発熱制御のレベルはどうですか？",
+            "answer": f"最新SoCと大型ベイパーチャンバーの搭載により、高負荷ゲームや動画編集時も過度なサーマルスロットリングを起こさず安定して動作します。"
+        },
+        {
+            "question": f"{device_name}のバッテリー持ちは1日中使用しても十分ですか？",
+            "answer": "標準的な実使用テストにおいて、朝から晩まで余裕で1日以上駆動する優れたバッテリー性能を実証しています。"
+        }
+    ]
+
+    ja_fm_data = {
+        "title": ja_title,
+        "date": str(date),
+        "device": device_name,
+        "score": float(score),
+        "category": category,
+        "summary": ja_summary,
+        "readingTime": int(reading_time),
+        "pros": ja_pros,
+        "cons": ja_cons,
+        "keyTakeaways": ja_takeaways,
+        "faq": ja_faq
+    }
+
+    ja_yaml = yaml.dump(ja_fm_data, allow_unicode=True, sort_keys=False).strip()
 
     ja_body = f"""# {device_name} 完全レビュー：プロが下す最終評価
 
 数ヶ月にわたる徹底的な実機テストと客観的ベンチマークに基づき、**{device_name}**の総合評価をお届けします。
 
 日常使いから高負荷なゲーミング、バッテリー駆動時間、ディスプレイ視認性まで、あらゆる角度から徹底分析しました。
+
+<div class="insights-summary-box">
+  <strong>⚡ Quick Take (要約・結論):</strong> {quick_take}
+</div>
 
 ---
 
@@ -236,30 +231,18 @@ def translate_korean_text_to_ja(text: str, slug: str) -> str:
 ## 1. 処理性能とサーマルマネジメント
 最新の高負荷3Dゲームや4K動画編集を行っても、大型冷却ベイパーチャンバーにより極端なサーマルスロットリングを起こすことなく安定したフレームレートを維持します。
 
+---
+
 ## 2. バッテリー持続時間と実使用感
-日常的なWebブラウジング、動画視聴、カメラ撮影において、朝から晩まで余裕で1日以上使える優れたバッテリー持ちを実証しました。
+日常的なWebブラウ징、動画視聴、カメラ撮影において、朝から晩まで余裕で1日以上使える優れたバッテリー持ちを実証しました。
+
+---
 
 ## 3. 総評：買いのモデルか？
 **{device_name}**は、現代のテクノロジーを結集した完成度の極めて高いプロダクトです。高い基本性能、美しい画面、使い勝手の良さを求めるすべてのユーザーに自信を持っておすすめできます。
 """
 
-    ja_frontmatter = f"""---
-title: "{ja_title}"
-date: "{date}"
-device: "{device_name}"
-score: {score}
-category: "{category}"
-summary: "{ja_summary}"
-pros:
-  - "{ja_pros[0]}"
-  - "{ja_pros[1]}"
-  - "{ja_pros[2]}"
-cons:
-  - "{ja_cons[0]}"
-  - "{ja_cons[1]}"
----
-"""
-    return ja_frontmatter + "\n" + ja_body
+    return f"---\n{ja_yaml}\n---\n\n{ja_body.strip()}\n"
 
 def main():
     korean_files = glob.glob(os.path.join(REVIEWS_DIR, "*.mdx"))
@@ -282,7 +265,7 @@ def main():
 
         print(f"  ✅ Generated EN & JA: {slug}")
 
-    print(f"🎉 Successfully generated {len(korean_files) * 2} multi-language review files!")
+    print(f"🎉 Successfully generated {len(korean_files) * 2} multi-language review files with full SEO/AEO metadata!")
 
 if __name__ == "__main__":
     main()

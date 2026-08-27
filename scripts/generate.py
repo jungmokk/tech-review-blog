@@ -126,6 +126,17 @@ def main():
     except Exception as e:
         print(f"⚠️ [Image Verify Warning] 이미지 검증 중 경고: {e}")
 
+    # STEP 7: Google Indexing API 실시간 색인 요청
+    try:
+        from integrations.google_indexing import request_google_indexing
+        base_url = "https://tech.thesinoreport.com"
+        print("\n📡 [Pipeline Step 7] Google Indexing API 실시간 색인 요청 중...")
+        request_google_indexing(f"{base_url}/reviews/{slug}")
+        request_google_indexing(f"{base_url}/en/reviews/{slug}")
+        request_google_indexing(f"{base_url}/ja/reviews/{slug}")
+    except Exception as e:
+        print(f"⚠️ [Google Indexing Warning] 색인 요청 중 알림: {e}")
+
     print(f"\n🎉 [Pipeline SUCCESS] 10+ 출처가 완벽히 반영된 최고 품질의 심층 리뷰가 발행되었습니다: {file_path}")
 
 if __name__ == "__main__":

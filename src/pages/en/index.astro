@@ -5,10 +5,11 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import GoogleAdSense from '../../components/GoogleAdSense.astro';
 import devices from '../../data/smartphones.json';
+import { sortReviewsByDeviceRelease } from '../../utils/sorting';
 
 const allReviews = await getCollection('reviews');
-const enReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => r.slug.startsWith('en/'));
-enReviews.sort((a, b) => new Date(b.data.date || '').getTime() - new Date(a.data.date || '').getTime());
+const rawEnReviews = allReviews.filter((r: CollectionEntry<'reviews'>) => r.slug.startsWith('en/'));
+const enReviews = sortReviewsByDeviceRelease(rawEnReviews);
 
 const featuredPost = enReviews[0];
 const trendingPosts = enReviews.slice(1, 3);
@@ -48,12 +49,12 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TECH SPEC BLOG | Global Tech In-Depth Reviews & Spec Encyclopedia</title>
-  <meta name="description" content="Global tech reviews, fact-driven Verge-style verdicts, and comprehensive specifications database for 201 flagship devices." />
+  <meta name="description" content="Global tech reviews, fact-driven Verge-style verdicts, and comprehensive specifications database for latest flagship devices." />
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="TECH SPEC BLOG | Global Tech Reviews & Spec Encyclopedia" />
-  <meta property="og:description" content="Global tech reviews, fact-driven Verge-style verdicts, and comprehensive specifications database for 201 flagship devices." />
+  <meta property="og:description" content="Global tech reviews, fact-driven Verge-style verdicts, and comprehensive specifications database for latest flagship devices." />
   <meta property="og:url" content="https://tech.thesinoreport.com/en" />
 
   <!-- Global i18n SEO Hreflang Tags -->
@@ -72,13 +73,13 @@ const featuredImage = (featuredDev as any)?.image || `/images/devices/${featured
     <!-- Hero Banner -->
     <section class="hero-banner" style="margin-bottom: 40px; text-align: center; padding: 48px 20px;">
       <span class="hero-badge-pill">
-        ⚡ 201 Flagship Devices Fact-Checked Database
+        ⚡ Latest Flagship Devices Fact-Checked Database
       </span>
       <h1 class="hero-title" style="font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 900; margin-bottom: 16px;">
         Objective Data. <span style="background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Unbiased Verdicts.</span>
       </h1>
       <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 680px; margin: 0 auto 28px;">
-        Explore 201 verified smartphone & tablet specifications and real-world benchmark reviews.
+        Explore verified smartphone, tablet & wearable specifications and real-world benchmark reviews.
       </p>
       <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
         <a href="/specs" style="padding: 12px 28px; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #000; font-weight: 800; border-radius: var(--radius-sm); text-decoration: none;">
