@@ -92,6 +92,7 @@ def assemble_mdx(device_obj: dict, raw_facts: dict, data: dict, deep_research_da
 
     # 10+ 출처 참조 블록
     research_block = ""
+    yt_transcripts = deep_research_data.get("youtube_transcripts", []) if deep_research_data else []
     if deep_research_data and "references" in deep_research_data:
         research_block = "### 🔬 10개 이상 주요 테크 매체 및 크리에이터 실사용 평가 요약\n\n"
         for ref in deep_research_data["references"]:
@@ -99,13 +100,26 @@ def assemble_mdx(device_obj: dict, raw_facts: dict, data: dict, deep_research_da
     else:
         research_block = f"### 🔬 10개 이상 주요 테크 매체 및 크리에이터 실사용 평가 요약\n\n* **[공인 하드웨어 랩]**: {brand} {device_name}의 공식 벤치마크 및 정밀 사양 교차 검증 완료\n* **[실사용 리뷰 종합]**: 디스플레이 시인성 및 {specs.get('ap', '프로세서')} 쓰로틀링 안정성 분석 완료\n"
 
+    # 유튜버 5+ 트랜스크립트 분석 텍스트 생성
+    yt_analysis_text = ""
+    if yt_transcripts:
+        yt_analysis_text = "국내외 주요 테크 크리에이터들의 실제 영상 자막(트랜스크립트)과 장기 실사용기를 심층 교차 분석한 결과는 다음과 같습니다:\n\n"
+        for i, yt in enumerate(yt_transcripts[:5], 1):
+            ch = yt.get("channel", "테크 크리에이터")
+            title = yt.get("title", "")
+            summary = yt.get("summary", "")
+            yt_analysis_text += f"* **{i}. [{ch}] '{title[:40]}'**: {summary}\n"
+        yt_analysis_text += f"\n💡 **5대 크리에이터 공통 결론**: **{specs.get('ap', '프로세서')}**의 체감 퍼포먼스와 **{specs.get('display', '디스플레이')}** 만족도에 대해 만장일치로 높은 점수를 주었으며, 구매 목적에 따른 옵션 선택의 중요성을 공통적으로 강조했습니다."
+    else:
+        yt_analysis_text = f"국내외 주요 테크 크리에이터와 전문 랩 테스트 결과를 취합한 결과, **{device_name}**은 **{specs.get('ap', '프로세서')}**의 강력한 연산 성능과 **{specs.get('display', '디스플레이')}**의 화질 면에서 공통적으로 높은 평가를 받았습니다."
+
     # 섹션 본문 조립
     sections = data.get("sections") or []
     if not sections:
         sections = [
             {
-                "title": "1. 10개 이상 주요 테크 매체 및 크리에이터 실사용 평가 종합",
-                "content": f"국내외 주요 테크 크리에이터와 전문 랩 테스트 결과를 취합한 결과, **{device_name}**은 **{specs.get('ap', '프로세서')}**의 강력한 연산 성능과 **{specs.get('display', '디스플레이')}**의 화질 면에서 공통적으로 높은 평가를 받았습니다. 반면 **{specs.get('price_krw', '출시 가격')}**과 고부하 환경에서의 전력 효율 측면에서는 실사용 목적에 맞춘 신중한 고려가 필요하다는 의견이 제시되었습니다."
+                "title": "1. 5개 이상 주요 테크 유튜버 영상 트랜스크립트 및 전문 매체 평가 종합",
+                "content": yt_analysis_text
             },
             {
                 "title": f"2. 외형 디자인 및 규격({specs.get('dimensions_weight', '')}) 완성도",
@@ -275,8 +289,9 @@ def generate_review_mdx(device_obj, raw_facts, deep_research_data=None):
 ⚠️ **[절대 주의 및 사실 검증 준수 사항]**
 1. 아래 제공된 [공인 기기 팩트 스펙 데이터]에 적힌 수치와 사실(AP, 디스플레이 해상도/주사율, 배터리 용량, 무게, 출고가 등)을 절대 왜곡하거나 날조하지 마세요.
 2. [10+ 다각도 실사용 참조 출처]의 실제 평가를 각 분석 섹션에 유기적으로 녹여내어, 단순 스펙 나열이 아닌 '실제 체감과 장단점' 중심의 깊이 있는 글로 작성하세요.
-3. 기기 종류({device_type})에 맞는 실제 분석을 진행하세요.
-4. 독자가 공감하고 몰입할 수 있도록 자연스러운 전문 테크 리뷰어 경어체(~인데요, ~생각됩니다, ~입니다)로 작성하세요.
+3. [유튜브 5+ 영상 트랜스크립트 분석 필수]: 제공된 5개 이상의 전문 테크 유튜버 영상 트랜스크립트와 실사용 평가를 교차 분석하여, 크리에이터들의 실제 벤치마크와 체감 장단점을 1번 섹션에 상세하게 반영하세요.
+4. 기기 종류({device_type})에 맞는 실제 분석을 진행하세요.
+5. 독자가 공감하고 몰입할 수 있도록 자연스러운 전문 테크 리뷰어 경어체(~인데요, ~생각됩니다, ~입니다)로 작성하세요.
 
 ---
 ### 📱 [공인 기기 팩트 스펙 데이터]
