@@ -374,29 +374,16 @@ html, body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 1.5rem;
   width: 100%;
   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 16px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1560px;
-    padding: 0 36px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container {
-    max-width: 1680px;
+    padding: 0 1rem;
   }
 }
 
@@ -1317,23 +1304,27 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* =========================================================================
-   Desktop Two-Column Review Layout
+   Desktop Two-Column Layout (Matching thesinoreport.com 2.7fr : 1.3fr)
    ========================================================================= */
 .review-layout-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+  grid-template-columns: 2.7fr 1.3fr;
+  gap: 4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   align-items: start;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .review-layout-grid {
-    grid-template-columns: minmax(0, 1fr) 360px;
-    gap: 48px;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
   }
 }
 
 .review-article {
+  max-width: 800px;
   width: 100%;
   font-size: 1.18rem;
   line-height: 1.95;
@@ -1526,6 +1517,90 @@ h1, h2, h3, h4, h5, h6,
 .adsense-wrapper {
   width: 100%;
   max-width: 100%;
+}
+
+/* =========================================================================
+   AdSense Display Framework (Matching thesinoreport.com)
+   ========================================================================= */
+.ad-box {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  padding: 1.25rem;
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  position: relative;
+  border-radius: var(--radius-sm, 6px);
+}
+
+.ad-box::before, .ad-box::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  height: 1px;
+  background-color: var(--border-color);
+  opacity: 0.35;
+}
+.ad-box::before { top: 4px; }
+.ad-box::after { bottom: 4px; }
+
+.ad-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  color: var(--accent-cyan, #38bdf8);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+}
+
+.sidebar-ad-section {
+  margin-top: 1rem;
+}
+
+.sidebar-sec-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-ad-box {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.01);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-sm, 6px);
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-ad-box .ad-box {
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  min-height: auto;
+}
+
+.sidebar-ad-box .ad-box::before, .sidebar-ad-box .ad-box::after {
+  display: none;
+}
+
+.article-ad-box {
+  margin: 3rem 0;
 }
 
 .sidebar-title {

@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import GoogleAdSense from '../components/GoogleAdSense.astro';
+import GoogleAd from '../components/GoogleAd.astro';
 import AdUnit from '../components/AdUnit.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import devicesData from '../data/devices.json';
@@ -359,8 +360,10 @@ const readingTime = frontmatter.readingTime || 4;
           </section>
         )}
 
-        <!-- In-Article Bottom AdUnit -->
-        <AdUnit format="horizontal" minHeight="120px" label="SPONSORED RECOMMENDATION" />
+        <!-- 기사 본문 완료 후 구글 수동 광고 주입 (thesinoreport.com 동일 구조) -->
+        <div class="article-ad-box">
+          <GoogleAd slotId="3717371427" />
+        </div>
       </article>
 
       <!-- Sticky Sidebar (Right Column for Desktop) -->
@@ -407,9 +410,12 @@ const readingTime = frontmatter.readingTime || 4;
           </a>
         </div>
 
-        <!-- Google AdSense Primary Sidebar Banner Card -->
-        <div class="sidebar-card sidebar-ad-card" style="padding: 12px 8px; text-align: center;">
-          <AdUnit format="rectangle" minHeight="250px" label="SPONSORED" />
+        <!-- 사이드바 스폰서 광고 (Google Ad) (thesinoreport.com 동일 구조) -->
+        <div class="sidebar-ad-section">
+          <h4 class="sidebar-sec-title">Sponsorship</h4>
+          <div class="sidebar-ad-box">
+            <GoogleAd slotId="3717371427" format="rectangle" />
+          </div>
         </div>
 
         <!-- Share Widget -->
@@ -447,9 +453,12 @@ const readingTime = frontmatter.readingTime || 4;
           </div>
         )}
 
-        <!-- Google AdSense Secondary Sticky Sidebar Banner -->
-        <div class="sidebar-card sidebar-ad-card" style="padding: 12px 8px; text-align: center; position: sticky; top: 80px; z-index: 10;">
-          <AdUnit format="vertical" minHeight="300px" label="ADVERTISEMENT" />
+        <!-- 사이드바 하단 스티키 광고 (Google Ad) -->
+        <div class="sidebar-ad-section" style="position: sticky; top: 96px; z-index: 10;">
+          <h4 class="sidebar-sec-title">Advertisement</h4>
+          <div class="sidebar-ad-box">
+            <GoogleAd slotId="3717371427" format="rectangle" />
+          </div>
         </div>
       </aside>
     </div>
