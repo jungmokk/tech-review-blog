@@ -151,26 +151,50 @@ def get_device_metadata(device_id: str) -> dict:
 
 
 def convert_to_webp(input_path: str, output_path: str) -> bool:
-    """Convert any image to WebP using cwebp or sips (macOS)."""
-    try:
-        if os.path.exists("/opt/homebrew/bin/cwebp"):
+    """Convert any image to WebP using cwebp, Pillow (cross-platform Linux/macOS), or sips."""
+    import shutil
+    cwebp_bin = shutil.which("cwebp") or ("/opt/homebrew/bin/cwebp" if os.path.exists("/opt/homebrew/bin/cwebp") else None)
+    if cwebp_bin:
+        try:
             subprocess.run(
-                ["/opt/homebrew/bin/cwebp", "-q", "90", "-resize", "800", "0", input_path, "-o", output_path],
+                [cwebp_bin, "-q", "90", "-resize", "800", "0", input_path, "-o", output_path],
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
                 check=True
             )
-            return os.path.exists(output_path) and os.path.getsize(output_path) > 2500
-        else:
+            if os.path.exists(output_path) and os.path.getsize(output_path) > 2000:
+                return True
+        except Exception:
+            pass
+
+    # Cross-platform Pillow fallback (works on GitHub Actions ubuntu-latest)
+    try:
+        from PIL import Image
+        with Image.open(input_path) as im:
+            if im.mode not in ("RGB", "RGBA"):
+                im = im.convert("RGB")
+            if im.width > 800:
+                new_h = int(im.height * (800 / im.width))
+                im = im.resize((800, new_h), Image.Resampling.LANCZOS)
+            im.save(output_path, "WEBP", quality=90)
+        if os.path.exists(output_path) and os.path.getsize(output_path) > 2000:
+            return True
+    except Exception:
+        pass
+
+    # macOS native sips fallback
+    if shutil.which("sips"):
+        try:
             subprocess.run(
                 ["sips", "-s", "format", "webp", input_path, "--out", output_path],
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
                 check=True
             )
-            return os.path.exists(output_path) and os.path.getsize(output_path) > 2500
-    except Exception:
-        return False
+            return os.path.exists(output_path) and os.path.getsize(output_path) > 2000
+        except Exception:
+            pass
+    return False
 
 
 def _save_and_verify_unique(raw_bytes: bytes, temp_raw: str, out_webp: str, other_hashes: set[str]) -> bool:
@@ -379,6 +403,28 @@ def fetch_from_youtube(device_id: str, meta: dict, youtube_id: str | None, temp_
     for v in (meta.get("videos") or []):
         if isinstance(v, dict) and v.get("youtube_id"):
             candidate_vids.append(v["youtube_id"])
+
+    # If no pre-mapped video IDs exist (e.g. a brand-new device), dynamically search YouTube with strict title verification
+    if not candidate_vids:
+        try:
+            from ai.youtube_transcript_extractor import is_video_matching_device
+            clean_name = re.sub(r"\s*\([^)]*\)", "", meta.get("name", "")).strip()
+            kr_name = re.sub(r"\s*\([^)]*\)", "", meta.get("name_kr", clean_name)).strip()
+            res = subprocess.run(
+                [sys.executable, "-m", "yt_dlp", "--dump-json", "--flat-playlist", f"ytsearch5:{clean_name} review hands-on"],
+                capture_output=True, text=True, timeout=10
+            )
+            if res.returncode == 0 and res.stdout.strip():
+                for line in res.stdout.strip().split("\n"):
+                    if not line:
+                        continue
+                    vobj = json.loads(line)
+                    vid = vobj.get("id")
+                    vtitle = vobj.get("title", "")
+                    if vid and is_video_matching_device(vtitle, kr_name, clean_name):
+                        candidate_vids.append(vid)
+        except Exception:
+            pass
 
     # Try downloading from candidate video IDs
     seen_vids = set()

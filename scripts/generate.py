@@ -89,13 +89,19 @@ def main():
     print(f"\n🔬 [Pipeline Step 2] '{dev_name}'에 대한 10개 이상 출처 심층 종합 리서치 수행 중...")
     deep_research_data = conduct_10_source_deep_research(dev_obj)
 
-    # STEP 2.5: 정확한 기기 사진 자동 수집 (GSMArena / ZOL / 구글 이미지 검색 / 유튜브 핸즈온 / Wikimedia)
-    try:
-        from auto_image_fetcher import fetch_device_image
-        yt_id = target_candidate.get("trigger_youtube_id") if target_candidate else None
-        fetch_device_image(dev_id, youtube_id=yt_id, force=args.force)
-    except Exception as e:
-        print(f"⚠️ [Image Fetch Warning] 기기 이미지 수집 중 경고: {e}")
+    # STEP 2.5: 정확한 기기 사진 자동 수집 및 고유성 강제 검증 (GSMArena / 유튜브 핸즈온 / 구글 이미지 검색 / ZOL / Wikimedia)
+    from auto_image_fetcher import fetch_device_image
+    yt_id = target_candidate.get("trigger_youtube_id") if target_candidate else None
+    if not yt_id:
+        for yt_item in deep_research_data.get("youtube_transcripts", []):
+            cand_vid = yt_item.get("video_id", "")
+            if cand_vid and not cand_vid.startswith("ref_yt_") and len(cand_vid) == 11:
+                yt_id = cand_vid
+                break
+    img_ok = fetch_device_image(dev_id, youtube_id=yt_id, force=args.force)
+    if not img_ok:
+        print(f"\n⛔ [Pipeline ERROR] '{dev_name}' ({dev_id})의 고유 기기 이미지를 확보하지 못해 잘못된 이미지 매칭 방지를 위해 발행을 중단합니다.")
+        sys.exit(1)
 
     # STEP 3: 100% 팩트 스펙 + 10+ 출처 종합 고품질 리뷰 MDX 생성
     print(f"\n✍️ [Pipeline Step 3] 10+ 출처 리포트 기반 심층 테크 리뷰 MDX 합성 중...")
@@ -139,12 +145,9 @@ def main():
     except Exception as e:
         print(f"⚠️ [Multilingual Sync Warning] 다국어 생성 중 경고: {e}")
 
-    # STEP 6: 이미지 무결성 검증
-    try:
-        print("\n🖼️ [Pipeline Step 6] 전체 기기 이미지 무결성 검증 수행 중...")
-        subprocess.run([sys.executable, "scripts/verify_images.py"], check=True)
-    except Exception as e:
-        print(f"⚠️ [Image Verify Warning] 이미지 검증 중 경고: {e}")
+    # STEP 6: 이미지 무결성 및 중복 해시 검증 (실패 시 즉시 중단)
+    print("\n🖼️ [Pipeline Step 6] 전체 기기 이미지 무결성 및 중복 해시 검증 수행 중...")
+    subprocess.run([sys.executable, "scripts/verify_images.py"], check=True)
 
     # STEP 7: Google Indexing API 실시간 색인 요청
     try:
