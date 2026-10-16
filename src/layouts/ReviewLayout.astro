@@ -43,10 +43,10 @@ const recentReviews = sortedLangReviews
     };
   });
 
-// 1. Direct 100% exact match by slug
-let matchedDevice: any = slug ? devicesData.find(d => d.id === slug) : null;
+// 1. Direct 100% exact match by pureSlug
+let matchedDevice: any = pureSlug ? devicesData.find(d => d.id === pureSlug) : null;
 
-// 2. Robust normalized name matching fallback
+// 2. Robust normalized name matching fallback (exact match first)
 if (!matchedDevice) {
   const normalize = (str?: string) => (str || '').toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
   const target = normalize(frontmatter.device || '');
@@ -55,7 +55,11 @@ if (!matchedDevice) {
     const dId = normalize(d.id);
     const dName = normalize(d.name);
     const dKr = normalize(d.name_kr);
-    return dId === target || dName.includes(target) || dKr.includes(target) || target.includes(dName) || target.includes(dKr);
+    return dId === target || dName === target || dKr === target;
+  }) || devicesData.find(d => {
+    const dName = normalize(d.name);
+    const dKr = normalize(d.name_kr);
+    return dName.includes(target) || dKr.includes(target) || target.includes(dName) || target.includes(dKr);
   });
 }
 

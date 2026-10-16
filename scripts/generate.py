@@ -50,31 +50,31 @@ def main():
             "trigger_title": args.device
         }
     else:
-        # 타겟 RSS 피드 및 타겟 유튜버 최신 영상 피드 스캔
-        print("\n📡 [Pipeline Step 1] 타겟 RSS 피드 및 주요 테크 유튜버 최신 업로드 감지 시작...")
-        candidates = detect_new_devices_from_feeds(sources_file="data/sources.yaml", published_file=published_file)
+        # 타겟 RSS 피드 및 타겟 유튜버 최신 영상 피드 스캔 (출시 1개월 이내 하한선 강제 적용)
+        print("\n📡 [Pipeline Step 1] 타겟 RSS 피드 및 주요 테크 유튜버 최신 업로드 감지 시작 (출시 1개월 이내 신제품 필터)...")
+        candidates = detect_new_devices_from_feeds(sources_file="data/sources.yaml", published_file=published_file, enforce_cutoff=True)
         
         if not candidates:
-            print("\n📡 [Pipeline Step 1-B] RSS/유튜브 피드 미감지 -> 미발행 우선순위 큐(2026/2025 플래그십 & ZOL 핵심) 자동 스캔...")
+            print("\n📡 [Pipeline Step 1-B] RSS/유튜브 피드 미감지 -> 최근 1개월 이내 출시 미발행 우선순위 큐 스캔...")
             from sources.queue_manager import get_next_priority_device
-            next_dev = get_next_priority_device(devices_db, published_data.get("published_devices", []))
+            next_dev = get_next_priority_device(devices_db, published_data.get("published_devices", []), enforce_cutoff=True)
             if not next_dev:
-                print("\n🎉 [Pipeline Complete] 등록된 모든 공인 기기의 리뷰가 이미 완벽하게 발행되었습니다!")
+                print("\n🎉 [Pipeline Complete] 최근 1개월 이내 출시된 신규 기기의 리뷰가 모두 발행 완료되었습니다! (과거 구형 기기 자동 발행 차단됨)")
                 return
             target_candidate = {
                 "device": next_dev,
-                "trigger_type": "Auto Priority Queue",
-                "trigger_source": "2026 Flagship & ZOL Strategic Queue",
-                "trigger_title": f"미발행 자동 우선순위 큐: {next_dev.get('name_kr') or next_dev.get('name')}"
+                "trigger_type": "Auto Priority Queue (1-Month Cutoff)",
+                "trigger_source": "Recent 1-Month Release Strategic Queue",
+                "trigger_title": f"최근 1개월 내 출시 미발행 우선순위 큐: {next_dev.get('name_kr') or next_dev.get('name')}"
             }
-            print(f"\n🎯 [Target Selected from Queue] 미발행 우선순위 큐에서 다음 발행 대상 기기 자동 선택!")
+            print(f"\n🎯 [Target Selected from Queue] 최근 1개월 이내 출시 큐에서 다음 발행 대상 기기 자동 선택!")
             print(f"   기기명: {target_candidate['device']['name']} (ID: {target_candidate['device']['id']})")
             print(f"   출시정보: {target_candidate['device'].get('release_date')} / 분류: {target_candidate['device'].get('category')}")
         else:
             target_candidate = candidates[0]
-            print(f"\n🎯 [Target Detected] {target_candidate['trigger_type']} [{target_candidate['trigger_source']}]에서 신규 기기 감지!")
+            print(f"\n🎯 [Target Detected] {target_candidate['trigger_type']} [{target_candidate['trigger_source']}]에서 신규 최신 기기 감지!")
             print(f"   기기명: {target_candidate['device']['name']} (ID: {target_candidate['device']['id']})")
-            print(f"   트리거 제목: {target_candidate['trigger_title']}")
+            print(f"   출시정보: {target_candidate['device'].get('release_date')} / 트리거 제목: {target_candidate['trigger_title']}")
 
     dev_obj = target_candidate["device"]
     dev_id = dev_obj.get("id")
@@ -89,11 +89,11 @@ def main():
     print(f"\n🔬 [Pipeline Step 2] '{dev_name}'에 대한 10개 이상 출처 심층 종합 리서치 수행 중...")
     deep_research_data = conduct_10_source_deep_research(dev_obj)
 
-    # STEP 2.5: 정확한 기기 사진 자동 수집 (GSMArena / 유튜브 실물 캡처 / Wikimedia)
+    # STEP 2.5: 정확한 기기 사진 자동 수집 (GSMArena / ZOL / 구글 이미지 검색 / 유튜브 핸즈온 / Wikimedia)
     try:
         from auto_image_fetcher import fetch_device_image
         yt_id = target_candidate.get("trigger_youtube_id") if target_candidate else None
-        fetch_device_image(dev_id, youtube_id=yt_id)
+        fetch_device_image(dev_id, youtube_id=yt_id, force=args.force)
     except Exception as e:
         print(f"⚠️ [Image Fetch Warning] 기기 이미지 수집 중 경고: {e}")
 
@@ -115,7 +115,7 @@ def main():
     slug, mdx_content = generate_review_mdx(dev_obj, raw_facts, deep_research_data=deep_research_data)
 
     # STEP 4: 품질 검증 (Quality Gate)
-    is_valid, errors = validate_mdx_content(mdx_content)
+    is_valid, errors = validate_mdx_content(mdx_content, device_obj=dev_obj)
     if not is_valid:
         print(f"\n⛔ [Pipeline ERROR] 품질 검증 실패: {errors}")
         sys.exit(1)

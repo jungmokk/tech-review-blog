@@ -51,14 +51,30 @@ def assemble_mdx(device_obj: dict, raw_facts: dict, data: dict, deep_research_da
     category = raw_facts.get("category", "스마트폰/IT")
     specs = raw_facts.get("specs", {})
 
-    title = data.get("title") or f"{brand} {device_name} 심층 분석 실사용 솔직 후기 및 장단점"
+    raw_title = (data.get("title") or "").strip()
+    clean_kr_base = re.sub(r'\s*\([^)]*\)', '', device_name).strip()
+    clean_en_base = re.sub(r'\s*\([^)]*\)', '', device_obj.get("name", "")).strip()
+    if (
+        not raw_title
+        or "실사용 벤치마크 및 장단점 분석:" in raw_title
+        or (clean_kr_base.lower() not in raw_title.lower() and clean_en_base.lower() not in raw_title.lower())
+    ):
+        full_name = device_name if device_name.startswith(brand) else f"{brand} {device_name}"
+        title = f"{full_name} 심층 분석 실사용 솔직 후기: 핵심 장단점과 구매 가이드"
+    else:
+        title = raw_title
+
     score = data.get("score") if data.get("score") is not None else 9.2
     try:
         score = float(score)
     except Exception:
         score = 9.2
 
-    summary = data.get("summary") or f"{device_name}의 10개 이상 전문 매체 및 크리에이터 실사용 테스트 데이터를 종합하여, 실제 성능과 배터리, 카메라, 솔직한 장단점까지 꼼꼼하게 분석했습니다."
+    raw_summary = (data.get("summary") or "").strip()
+    if not raw_summary or "실사용 벤치마크 및 장단점 분석:" in raw_summary:
+        summary = f"{device_name}의 10개 이상 전문 매체 및 크리에이터 실사용 테스트 데이터를 종합하여, {specs.get('ap', '프로세서')} 성능과 {specs.get('display', '디스플레이')}, 솔직한 장단점까지 꼼꼼하게 분석했습니다."
+    else:
+        summary = raw_summary
     quick_take = data.get("quick_take") or f"{device_name}은 강력한 {specs.get('ap', '프로세서')}와 완성도 높은 {specs.get('display', '디스플레이')}를 바탕으로 플래그십으로서의 뛰어난 완성도를 보여주며, 실사용 만족도가 매우 높은 제품입니다."
     
     pros = data.get("pros") or [
@@ -100,15 +116,15 @@ def assemble_mdx(device_obj: dict, raw_facts: dict, data: dict, deep_research_da
     else:
         research_block = f"### 🔬 10개 이상 주요 테크 매체 및 크리에이터 실사용 평가 요약\n\n* **[공인 하드웨어 랩]**: {brand} {device_name}의 공식 벤치마크 및 정밀 사양 교차 검증 완료\n* **[실사용 리뷰 종합]**: 디스플레이 시인성 및 {specs.get('ap', '프로세서')} 쓰로틀링 안정성 분석 완료\n"
 
-    # 유튜버 5+ 트랜스크립트 분석 텍스트 생성
+    # 유튜버 5+ 트랜스크립트 분석 텍스트 생성 (주의: 포스트의 title/summary 변수를 덮어쓰지 않도록 yt_title/yt_summary 사용!)
     yt_analysis_text = ""
     if yt_transcripts:
         yt_analysis_text = "국내외 주요 테크 크리에이터들의 실제 영상 자막(트랜스크립트)과 장기 실사용기를 심층 교차 분석한 결과는 다음과 같습니다:\n\n"
         for i, yt in enumerate(yt_transcripts[:5], 1):
             ch = yt.get("channel", "테크 크리에이터")
-            title = yt.get("title", "")
-            summary = yt.get("summary", "")
-            yt_analysis_text += f"* **{i}. [{ch}] '{title[:40]}'**: {summary}\n"
+            yt_title = yt.get("title", "")
+            yt_summary = yt.get("summary", "")
+            yt_analysis_text += f"* **{i}. [{ch}] '{yt_title[:40]}'**: {yt_summary}\n"
         yt_analysis_text += f"\n💡 **5대 크리에이터 공통 결론**: **{specs.get('ap', '프로세서')}**의 체감 퍼포먼스와 **{specs.get('display', '디스플레이')}** 만족도에 대해 만장일치로 높은 점수를 주었으며, 구매 목적에 따른 옵션 선택의 중요성을 공통적으로 강조했습니다."
     else:
         yt_analysis_text = f"국내외 주요 테크 크리에이터와 전문 랩 테스트 결과를 취합한 결과, **{device_name}**은 **{specs.get('ap', '프로세서')}**의 강력한 연산 성능과 **{specs.get('display', '디스플레이')}**의 화질 면에서 공통적으로 높은 평가를 받았습니다."

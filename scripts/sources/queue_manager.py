@@ -1,10 +1,50 @@
 import glob
 import os
+import calendar
+from datetime import datetime, timedelta
+
+# 자동 리뷰 발행 출시일 하한선: 현재 시점 기준 최근 1개월(31일) 이내 출시 기기만 허용
+RELEASE_CUTOFF_DAYS = 31
+
+def parse_release_date_end(release_date_str: str, release_year: int = None) -> datetime | None:
+    """
+    기기의 release_date 문자열('YYYY-MM-DD' 또는 'YYYY-MM')을 파싱하여
+    비교 기준 날짜(월 단위만 있을 경우 해당 월의 마지막 날)를 반환합니다.
+    월 정보가 없는 단순 연도('2024' 등)는 구체적 출시일이 불명확한 과거 기기로 간주하여 None을 반환합니다.
+    """
+    if not release_date_str:
+        return None
+    s = str(release_date_str).strip()
+    try:
+        parts = s.split("-")
+        if len(parts) == 3:
+            y, m, d = int(parts[0]), int(parts[1]), int(parts[2])
+            return datetime(y, m, d, 23, 59, 59)
+        elif len(parts) == 2:
+            y, m = int(parts[0]), int(parts[1])
+            last_day = calendar.monthrange(y, m)[1]
+            return datetime(y, m, last_day, 23, 59, 59)
+    except Exception:
+        return None
+    return None
+
+def is_within_release_cutoff(dev: dict, max_days: int = RELEASE_CUTOFF_DAYS, now: datetime = None) -> bool:
+    """
+    기기의 출시일이 현재 시점(now) 기준 최근 1개월(max_days=31일) 이내인지 검증합니다.
+    과거(1개월 초과 경과) 기기는 자동 리뷰 대상에서 100% 배제합니다.
+    """
+    if now is None:
+        now = datetime.now()
+    rel_dt = parse_release_date_end(dev.get("release_date"), dev.get("release_year"))
+    if not rel_dt:
+        return False
+    cutoff_dt = now - timedelta(days=max_days)
+    return rel_dt >= cutoff_dt
 
 def get_priority_score(dev: dict) -> int:
     """
     기기별 우선순위 가중치 계산 함수:
-    1. 출시 연도 (2026년 최우선 > 2025년 > 2024년)
+    1. 출시일 최신성 (최근 1개월 이내 기기 중에서도 더 최근 출시일 우선)
     2. 폼팩터/카테고리 (Foldable, Flagship > High-End, Gaming > Mid-Range)
     3. 수요 및 브랜드 (샤오미, 비보, 화웨이, 오포, 원플러스, 아너, 삼성, 애플 등)
     """
@@ -22,6 +62,11 @@ def get_priority_score(dev: dict) -> int:
         score += 400
     else:
         score += 100
+
+    # Release date month/day bonus
+    rel_dt = parse_release_date_end(dev.get("release_date"), year)
+    if rel_dt:
+        score += (rel_dt.month * 20) + rel_dt.day
     
     # Category weight
     if cat in ['Foldable', 'Flagship']:
@@ -41,29 +86,38 @@ def get_priority_score(dev: dict) -> int:
         
     return score
 
-def get_next_priority_device(devices_db: list, published_ids: list) -> dict:
+def get_next_priority_device(devices_db: list, published_ids: list, enforce_cutoff: bool = True) -> dict:
     """
-    미발행 기기 중 가중치 점수가 가장 높은 1개 기기를 반환합니다.
+    미발행 기기 중 출시 하한선(최근 1개월 이내)을 만족하면서 가중치 점수가 가장 높은 1개 기기를 반환합니다.
     """
     # src/content/reviews 폴더 파일 직접 스캔하여 2중 중복 방지
     review_files = glob.glob("src/content/reviews/*.mdx")
     disk_published = set([os.path.basename(f).replace('.mdx', '') for f in review_files])
     all_published = set(published_ids) | disk_published
 
-    unpublished = [d for d in devices_db if d.get('id') not in all_published]
+    unpublished = [
+        d for d in devices_db
+        if d.get('id') not in all_published
+        and (not enforce_cutoff or is_within_release_cutoff(d))
+    ]
     if not unpublished:
         return None
 
     sorted_queue = sorted(unpublished, key=get_priority_score, reverse=True)
     return sorted_queue[0]
 
-def get_full_priority_queue(devices_db: list, published_ids: list) -> list:
+def get_full_priority_queue(devices_db: list, published_ids: list, enforce_cutoff: bool = True) -> list:
     """
-    미발행 전체 큐를 우선순위 순으로 정렬하여 반환합니다.
+    미발행 전체 큐를 출시 하한선(최근 1개월 이내) 필터링 후 우선순위 순으로 정렬하여 반환합니다.
     """
     review_files = glob.glob("src/content/reviews/*.mdx")
     disk_published = set([os.path.basename(f).replace('.mdx', '') for f in review_files])
     all_published = set(published_ids) | disk_published
 
-    unpublished = [d for d in devices_db if d.get('id') not in all_published]
+    unpublished = [
+        d for d in devices_db
+        if d.get('id') not in all_published
+        and (not enforce_cutoff or is_within_release_cutoff(d))
+    ]
     return sorted(unpublished, key=get_priority_score, reverse=True)
+
